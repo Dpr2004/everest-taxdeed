@@ -92,15 +92,125 @@ class LotListScraper(BaseWorker):
         return [], ""
 
     def _scrape_realauction(self, sale):
-        """Para sites RealAuction. Constroi URL com a data certa."""
+        """Estrategia ALB: extrai IDs do <div id="ALB"> e busca cada lote individual."""
+        import time
         parsed = urlparse(sale["url_sales"])
         base = f"{parsed.scheme}://{parsed.netloc}"
         sale_dt = datetime.strptime(sale["sale_date"], "%Y-%m-%d").date()
-        url = (f"{base}/index.cfm?zaction=AUCTION&Zmethod=PREVIEW"
-               f"&AUCTIONDATE={sale_dt.strftime('%m/%d/%Y')}")
-        self.logger.info(f"{sale['county_codigo']} fetching {url}")
-        resp = fetch(url, timeout=20)
-        return self._parse_realauction_html(resp.text), resp.text
+        preview_url = (f"{base}/index.cfm?zaction=AUCTION&Zmethod=PREVIEW"
+                       f"&AUCTIONDATE={sale_dt.strftime('%m/%d/%Y')}")
+        self.logger.info(f"{sale['county_codigo']} preview {preview_url}")
+        resp = fetch(preview_url, timeout=20)
+        preview_html = resp.text
+
+        # Extrai IDs do ALB (Auction Lot Batch - lista escondida no HTML)
+        soup = BeautifulSoup(preview_html, "lxml")
+        alb_div = soup.find("div", id="ALB")
+        if not alb_div:
+            self.logger.info(f"{sale['county_codigo']} {sale['sale_date']}: sem div ALB")
+            return [], preview_html
+        alb_text = alb_div.get_text(strip=True)
+        alb_ids = [x.strip() for x in alb_text.split(",")
+                   if x.strip() and x.strip().isdigit()]
+        if not alb_ids:
+            self.logger.info(f"{sale['county_codigo']} {sale['sale_date']}: ALB vazio")
+            return [], preview_html
+
+        self.logger.info(
+            f"{sale['county_codigo']} {sale['sale_date']}: {len(alb_ids)} IDs no ALB"
+        )
+
+        # Tentar varios endpoints conhecidos pra cada ID
+        endpoints = [
+            "/index.cfm?zaction=AUCTION&Zmethod=DETAILS&AUCTIONID={id}",
+            "/index.cfm?zaction=AUCTION&Zmethod=DETAIL&AUCTIONID={id}",
+        ]
+        # Detectar endpoint correto com 1 ID
+        first_id = alb_ids[0]
+        working_endpoint = None
+        for ep in endpoints:
+            try:
+                test_url = base + ep.format(id=first_id)
+                t_resp = fetch(test_url, timeout=15)
+                if t_resp.status_code == 200 and len(t_resp.text) > 500:
+                    working_endpoint = ep
+                    self.logger.info(f"{sale['county_codigo']}: endpoint OK = {ep}")
+                    break
+            except Exception:
+                continue
+        if not working_endpoint:
+            self.logger.warning(
+                f"{sale['county_codigo']}: nenhum endpoint DETAILS funcionou"
+            )
+            return [], preview_html
+
+        # Buscar todos os lotes
+        lots = []
+        for i, aid in enumerate(alb_ids):
+            try:
+                d_url = base + working_endpoint.format(id=aid)
+                d_resp = fetch(d_url, timeout=15)
+                lot = self._parse_auction_detail(d_resp.text, aid)
+                if lot.get("parcel_id"):
+                    lots.append(lot)
+            except Exception as e:
+                self.logger.warning(f"Falha lot {aid}: {e}")
+            if (i + 1) % 10 == 0:
+                time.sleep(0.5)  # delay leve a cada 10
+        return lots, preview_html
+
+    def _parse_auction_detail(self, html, auction_id):
+        """Extrai dados de uma pagina de detalhes individual (Realauction)."""
+        soup = BeautifulSoup(html, "lxml")
+        lot = {"raw_data_json": json.dumps({"auction_id": auction_id})[:1500]}
+        text = soup.get_text(" ", strip=True)
+
+        # Regex para campos comuns (varias variacoes)
+        patterns = {
+            "parcel_id": r"Parcel(?:\s*ID|\s*Number|\s*#)?\s*[:\-]?\s*([A-Z0-9\-\.]+)",
+            "case_num": r"Case(?:\s*Number|\s*#)?\s*[:\-]?\s*([A-Z0-9\-]+)",
+            "min_bid": r"(?:Opening|Min(?:imum)?)\s*Bid\s*[:\-]?\s*\$?\s*([0-9,\.]+)",
+            "address": r"(?:Property|Situs)\s*Address\s*[:\-]?\s*([^\n\|]+?)(?:\s{2}|$)",
+            "assessed_value": r"Assessed\s*Value\s*[:\-]?\s*\$?\s*([0-9,\.]+)",
+            "just_value": r"(?:Just|Market)\s*Value\s*[:\-]?\s*\$?\s*([0-9,\.]+)",
+            "legal_description": r"Legal\s*Description\s*[:\-]?\s*([^\n\|]{10,200})",
+        }
+        for key, pat in patterns.items():
+            m = re.search(pat, text, re.I)
+            if m:
+                v = m.group(1).strip()
+                if key in ("min_bid", "assessed_value", "just_value"):
+                    lot[key] = _to_float(v)
+                else:
+                    lot[key] = v
+
+        # Tentar tabelas (estrutura label/value)
+        for table in soup.find_all("table"):
+            for tr in table.find_all("tr"):
+                cells = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
+                if len(cells) >= 2:
+                    label = cells[0].lower()
+                    value = cells[1]
+                    if "parcel" in label and not lot.get("parcel_id"):
+                        lot["parcel_id"] = value
+                    elif "case" in label and not lot.get("case_num"):
+                        lot["case_num"] = value
+                    elif "address" in label and not lot.get("address"):
+                        lot["address"] = value
+                    elif ("opening" in label or "min" in label) and not lot.get("min_bid"):
+                        lot["min_bid"] = _to_float(value)
+                    elif "assessed" in label and not lot.get("assessed_value"):
+                        lot["assessed_value"] = _to_float(value)
+                    elif ("just" in label or "market" in label) and not lot.get("just_value"):
+                        lot["just_value"] = _to_float(value)
+                    elif "legal" in label and not lot.get("legal_description"):
+                        lot["legal_description"] = value
+
+        if not lot.get("parcel_id"):
+            # Fallback: usar auction_id como parcel
+            lot["parcel_id"] = f"AID_{auction_id}"
+
+        return lot
 
     def _parse_realauction_html(self, html):
         """Extrai lotes de HTML RealAuction.
