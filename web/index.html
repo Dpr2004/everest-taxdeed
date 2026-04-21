@@ -3,303 +3,647 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Everest TaxDeed — Dashboard Ao Vivo</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>Everest TaxDeed — Dashboard</title>
+<link rel="icon" href="logo-everest.png" type="image/png">
 <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .navy { background-color: #1F3864; }
-    .navy-text { color: #1F3864; }
-    .gold { background-color: #C9A227; }
-    .gold-text { color: #C9A227; }
-    .status-CONFIRMADO { background-color: #C6EFCE; color: #0D6B35; }
-    .status-PROJETADO { background-color: #FFEB9C; color: #9C6500; }
-    .status-A_VERIFICAR { background-color: #FFC7CE; color: #9C0006; }
-    .decision-LANCE { background-color: #059669; color: white; }
-    .decision-REVISAR { background-color: #D97706; color: white; }
-    .decision-PASSA { background-color: #9CA3AF; color: white; }
-    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    .card-hover { transition: all 0.2s; }
+:root {
+    --midnight: #13123E;
+    --midnight-deep: #0A0927;
+    --royal: #1D418D;
+    --royal-light: #2B5BB7;
+    --gold-100: #F5E6A8;
+    --gold-300: #E8C86A;
+    --gold-500: #C9972B;
+    --gold-700: #8C6815;
+    --silver: #CCCCCC;
+    --white: #FFFFFF;
+    --red: #D64545;
+    --green: #34D399;
+    --bg: #0A0927;
+    --bg-panel: #13123E;
+    --bg-elev: #1A1A4A;
+    --border: rgba(255,255,255,0.10);
+    --border-strong: rgba(255,255,255,0.22);
+    --white-85: rgba(255,255,255,0.85);
+    --white-60: rgba(255,255,255,0.60);
+    --white-40: rgba(255,255,255,0.40);
+    --gold-grad: linear-gradient(180deg, #F5E6A8 0%, #E8C86A 22%, #C9972B 55%, #B2831F 72%, #E8C86A 92%, #F5E6A8 100%);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); }
+body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--white);
+    font-size: 14px;
+    line-height: 1.55;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(29,65,141,0.35), transparent),
+        linear-gradient(180deg, var(--midnight-deep) 0%, var(--midnight) 60%, var(--midnight-deep) 100%);
+    background-attachment: fixed;
+}
+.container { max-width: 1440px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 768px) { .container { padding: 0 16px; } }
+
+/* TOPBAR com logo */
+.topbar {
+    background: rgba(10, 9, 39, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+}
+.topbar-inner {
+    max-width: 1440px; margin: 0 auto; padding: 20px 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+@media (max-width: 768px) { .topbar-inner { padding: 14px 16px; } }
+.brand {
+    display: flex; align-items: center; gap: 18px;
+}
+.brand img {
+    height: 88px; width: auto; display: block;
+    filter: drop-shadow(0 2px 8px rgba(201,151,43,0.15));
+}
+@media (max-width: 768px) { .brand img { height: 60px; } }
+
+.title-stack {
+    display: flex; flex-direction: column; gap: 4px;
+    border-left: 2px solid var(--gold-500);
+    padding-left: 18px;
+}
+@media (max-width: 900px) { .title-stack { display: none; } }
+.title-stack .t1 {
+    font-size: 11px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--gold-500);
+    font-weight: 700;
+}
+.title-stack .t2 {
+    font-size: 18px; font-weight: 700;
+    color: var(--white); letter-spacing: 0.02em;
+}
+
+.meta { text-align: right; font-size: 11px; }
+.meta .label {
+    color: var(--white-40); letter-spacing: 0.14em;
+    text-transform: uppercase; font-size: 10px; font-weight: 600;
+}
+.meta .val { color: var(--white); font-weight: 600; margin-top: 2px; font-size: 13px; }
+
+/* HERO */
+.hero { padding: 48px 0 28px; }
+.eyebrow {
+    font-size: 11px; letter-spacing: 0.24em;
+    color: var(--gold-500); text-transform: uppercase;
+    font-weight: 700; margin-bottom: 10px;
+}
+h1 {
+    font-size: 38px; font-weight: 800;
+    letter-spacing: -0.01em; line-height: 1.1;
+    margin-bottom: 6px;
+}
+@media (max-width: 768px) { h1 { font-size: 26px; } }
+h1 .gold {
+    background: var(--gold-grad);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-sub { color: var(--white-60); max-width: 680px; margin-bottom: 28px; }
+
+/* KPIs */
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
+.kpi {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    transition: all .2s;
+}
+.kpi:hover { border-color: var(--gold-500); transform: translateY(-2px); }
+.kpi-label {
+    font-size: 10px; letter-spacing: 0.2em;
+    color: var(--white-40); text-transform: uppercase;
+    font-weight: 700; margin-bottom: 12px;
+}
+.kpi-val {
+    font-size: 42px; font-weight: 800;
+    line-height: 1; letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+}
+.kpi-val.gold {
+    background: var(--gold-grad);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.kpi-sub { color: var(--white-40); font-size: 12px; margin-top: 8px; }
+
+/* TABS */
+.tabs {
+    display: flex; gap: 4px; margin-top: 40px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+}
+.tab {
+    background: transparent; border: none;
+    padding: 14px 24px;
+    color: var(--white-60);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all .2s; white-space: nowrap;
+    font-family: inherit;
+}
+.tab:hover { color: var(--white); }
+.tab.active { color: var(--gold-300); border-bottom-color: var(--gold-500); }
+
+main { padding: 36px 0 72px; }
+.section-title {
+    font-size: 22px; font-weight: 800;
+    letter-spacing: -0.01em; margin-bottom: 4px;
+}
+.section-title::after {
+    content: ""; display: block;
+    width: 56px; height: 3px;
+    background: var(--gold-grad);
+    margin-top: 10px;
+}
+.section-sub { color: var(--white-60); margin-bottom: 24px; }
+
+/* BADGES */
+.badge {
+    display: inline-block;
+    padding: 5px 11px; border-radius: 999px;
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; font-weight: 700;
+    white-space: nowrap;
+}
+.badge-CONFIRMADO { background: rgba(201,151,43,0.18); color: var(--gold-300); border: 1px solid rgba(201,151,43,0.5); }
+.badge-PROJETADO { background: rgba(29,65,141,0.4); color: #8FB3FF; border: 1px solid rgba(29,65,141,0.7); }
+.badge-A_VERIFICAR { background: rgba(214,69,69,0.15); color: #F5909F; border: 1px solid rgba(214,69,69,0.4); }
+
+/* SEMANA */
+.semana { margin-bottom: 32px; }
+.semana-header {
+    display: flex; align-items: baseline; gap: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px; flex-wrap: wrap;
+}
+.semana-num {
+    font-size: 11px; letter-spacing: 0.22em;
+    color: var(--gold-500); text-transform: uppercase; font-weight: 700;
+}
+.semana-range { color: var(--white-60); font-size: 13px; }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 1100px) { .grid-4 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+/* Card genérico */
+.card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px; transition: all .2s;
+}
+.card:hover {
+    border-color: var(--gold-500);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+}
+.sale-head { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+.sale-date {
+    font-size: 11px; letter-spacing: 0.18em;
+    color: var(--white-40); text-transform: uppercase; font-weight: 600;
+}
+.sale-condado {
+    font-size: 22px; font-weight: 800;
+    margin: 6px 0; letter-spacing: -0.01em;
+}
+.sale-estado {
+    color: var(--gold-500); font-size: 11px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 700;
+}
+.sale-hora { color: var(--white-85); font-size: 14px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.sale-info { color: var(--white-60); font-size: 12px; margin-top: 12px; }
+.sale-info strong { color: var(--white-85); font-weight: 600; }
+.sale-actions {
+    display: flex; gap: 14px; margin-top: 14px;
+    padding-top: 12px; border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+.cta {
+    color: var(--gold-300); text-decoration: none;
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 700;
+}
+.cta:hover { color: var(--gold-100); }
+
+/* FILTROS */
+.filtros {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px; margin-bottom: 18px;
+}
+.filtros-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 768px) { .filtros-grid { grid-template-columns: repeat(2, 1fr); } }
+.filtro-lbl {
+    display: block;
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--white-40);
+    margin-bottom: 6px; font-weight: 700;
+}
+.filtro input, .filtro select {
+    width: 100%;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 9px 12px; border-radius: 8px;
+    font-family: inherit; font-size: 13px;
+}
+.filtro input:focus, .filtro select:focus {
+    outline: none; border-color: var(--gold-500);
+}
+
+/* LOT CARD */
+.lot {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 20px; margin-bottom: 10px;
+    transition: all .2s;
+}
+.lot:hover { border-color: var(--gold-500); }
+.lot-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: start; }
+.lot-tags { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+.lot-tag-condado {
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-500); font-weight: 700;
+}
+.lot-tag-meta { color: var(--white-40); font-size: 11px; font-variant-numeric: tabular-nums; }
+.lot-addr { font-weight: 600; font-size: 15px; color: var(--white); }
+.lot-cidade { color: var(--white-60); font-size: 12px; margin-top: 2px; }
+.lot-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 12px; }
+@media (max-width: 768px) { .lot-stats { grid-template-columns: repeat(2, 1fr); } }
+.lot-stat .lbl {
+    color: var(--white-40); font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
+}
+.lot-stat .val {
+    font-weight: 700; font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    margin-top: 3px; color: var(--white);
+}
+.lot-stat .val.gold { color: var(--gold-300); }
+.lot-stat .val.green { color: var(--green); }
+
+.decision {
+    padding: 5px 11px; border-radius: 999px;
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; font-weight: 800;
+}
+.d-LANCE { background: var(--gold-grad); color: var(--midnight); }
+.d-REVISAR { background: rgba(201,151,43,0.18); color: var(--gold-300); border: 1px solid rgba(201,151,43,0.5); }
+.d-PASSA { background: rgba(255,255,255,0.05); color: var(--white-40); border: 1px solid var(--border-strong); }
+
+.lot-links {
+    display: flex; gap: 16px; margin-top: 12px;
+    padding-top: 12px; border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+/* COUNTY CARD */
+.county-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; margin-bottom: 14px; }
+.county-state {
+    color: var(--gold-500); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700;
+}
+.county-code { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+.county-name { color: var(--white-60); font-size: 13px; margin-top: 2px; }
+.county-stats {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 8px; margin: 14px 0; padding: 12px;
+    background: var(--bg-panel); border-radius: 10px;
+}
+.county-stat-label {
+    font-size: 9px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--white-40); font-weight: 700;
+}
+.county-stat-val {
+    font-size: 20px; font-weight: 800;
+    color: var(--gold-300); margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+}
+.county-info { color: var(--white-60); font-size: 12px; line-height: 1.8; }
+.county-info strong {
+    color: var(--white-40); font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 700;
+}
+
+.empty {
+    text-align: center; padding: 72px 20px;
+    color: var(--white-60);
+}
+
+/* FOOTER */
+footer {
+    background: var(--bg-panel);
+    border-top: 1px solid var(--border);
+    padding: 28px 0; margin-top: 56px;
+}
+.footer-text {
+    text-align: center; color: var(--white-40);
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 600;
+}
 </style>
 </head>
-<body class="bg-gray-50 text-gray-900" x-data="dashboard()" x-init="carregar()">
+<body x-data="app()">
 
-<!-- HEADER -->
-<header class="navy text-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row md:items-center md:justify-between">
-        <div>
-            <h1 class="text-2xl md:text-3xl font-bold">EVEREST <span class="gold-text">TaxDeed</span></h1>
-            <p class="text-sm text-blue-200">Dashboard ao vivo — 11 condados da Flórida</p>
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="brand">
+            <img src="logo-everest.png" alt="Everest Investments Group">
+            <div class="title-stack">
+                <span class="t1">Tax Deed Intelligence</span>
+                <span class="t2">Central de Operações Florida</span>
+            </div>
         </div>
-        <div class="mt-3 md:mt-0 text-sm text-blue-100">
-            <div>Última atualização: <span x-text="dados.gerado_em || '—'" class="font-semibold text-white"></span></div>
-            <div>Próximo update: <span class="font-semibold text-white">amanhã 6:00 AM ET</span></div>
+        <div class="meta">
+            <div class="label">Última Atualização</div>
+            <div class="val" x-text="dados.gerado_em"></div>
         </div>
     </div>
 </header>
 
-<!-- KPIs -->
-<section class="max-w-7xl mx-auto px-4 py-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white rounded-lg shadow p-4 card-hover">
-            <div class="text-xs text-gray-500 uppercase font-semibold">Condados</div>
-            <div class="text-3xl font-bold navy-text" x-text="dados.resumo.total_condados || 0"></div>
-            <div class="text-xs text-gray-400 mt-1" x-text="(dados.resumo.estados || []).join(', ')"></div>
+<div class="container">
+
+<section class="hero">
+    <div class="eyebrow">11 Condados · Florida · Monitoramento Automatizado</div>
+    <h1>Dashboard <span class="gold">Everest TaxDeed</span></h1>
+    <p class="hero-sub">Pipeline em tempo real de leilões tax deed nos condados-alvo. Workers descobrem datas, extraem propriedades e calculam viabilidade automaticamente.</p>
+
+    <div class="kpis">
+        <div class="kpi">
+            <div class="kpi-label">Condados</div>
+            <div class="kpi-val" x-text="dados.resumo.total_condados || 0"></div>
+            <div class="kpi-sub" x-text="(dados.resumo.estados || []).join(' · ')"></div>
         </div>
-        <div class="bg-white rounded-lg shadow p-4 card-hover">
-            <div class="text-xs text-gray-500 uppercase font-semibold">Leilões próx. 8 sem.</div>
-            <div class="text-3xl font-bold navy-text" x-text="dados.resumo.total_sales || 0"></div>
-            <div class="text-xs text-gray-400 mt-1">Confirmados + projetados</div>
+        <div class="kpi">
+            <div class="kpi-label">Leilões · 8 Semanas</div>
+            <div class="kpi-val gold" x-text="dados.resumo.total_sales || 0"></div>
+            <div class="kpi-sub">Confirmados + projetados</div>
         </div>
-        <div class="bg-white rounded-lg shadow p-4 card-hover">
-            <div class="text-xs text-gray-500 uppercase font-semibold">Lotes no pipeline</div>
-            <div class="text-3xl font-bold navy-text" x-text="dados.resumo.total_lots || 0"></div>
-            <div class="text-xs text-gray-400 mt-1">Propriedades a avaliar</div>
+        <div class="kpi">
+            <div class="kpi-label">Propriedades Ativas</div>
+            <div class="kpi-val" x-text="dados.resumo.total_lots || 0"></div>
+            <div class="kpi-sub">No pipeline atual</div>
         </div>
-        <div class="bg-white rounded-lg shadow p-4 card-hover">
-            <div class="text-xs text-gray-500 uppercase font-semibold">Decisão LANCE</div>
-            <div class="text-3xl font-bold text-green-700" x-text="dados.resumo.lances || 0"></div>
-            <div class="text-xs text-gray-400 mt-1">ROI ≥ meta</div>
+        <div class="kpi">
+            <div class="kpi-label">Oportunidades LANCE</div>
+            <div class="kpi-val gold" x-text="dados.resumo.lances || 0"></div>
+            <div class="kpi-sub">ROI acima da meta</div>
         </div>
     </div>
 </section>
 
-<!-- TABS -->
-<nav class="max-w-7xl mx-auto px-4 border-b border-gray-200">
-    <div class="flex gap-1 overflow-x-auto">
-        <button @click="tab='calendario'" :class="tab==='calendario' ? 'navy text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
-                class="px-5 py-3 rounded-t-lg font-semibold text-sm whitespace-nowrap">
-            Calendário
-        </button>
-        <button @click="tab='propriedades'" :class="tab==='propriedades' ? 'navy text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
-                class="px-5 py-3 rounded-t-lg font-semibold text-sm whitespace-nowrap">
-            Propriedades
-        </button>
-        <button @click="tab='condados'" :class="tab==='condados' ? 'navy text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
-                class="px-5 py-3 rounded-t-lg font-semibold text-sm whitespace-nowrap">
-            Condados
-        </button>
-        <button @click="tab='sobre'" :class="tab==='sobre' ? 'navy text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
-                class="px-5 py-3 rounded-t-lg font-semibold text-sm whitespace-nowrap">
-            Sobre
-        </button>
-    </div>
+<nav class="tabs">
+    <button class="tab" :class="aba==='calendario' && 'active'" @click="aba='calendario'">Calendário</button>
+    <button class="tab" :class="aba==='propriedades' && 'active'" @click="aba='propriedades'">Propriedades</button>
+    <button class="tab" :class="aba==='condados' && 'active'" @click="aba='condados'">Condados</button>
+    <button class="tab" :class="aba==='sobre' && 'active'" @click="aba='sobre'">Sobre</button>
 </nav>
 
-<!-- CONTENT -->
-<main class="max-w-7xl mx-auto px-4 py-6">
+<main>
 
-    <!-- CALENDARIO -->
-    <section x-show="tab==='calendario'">
-        <div class="flex flex-wrap items-center gap-3 mb-4">
-            <h2 class="text-xl font-bold navy-text">Próximos 8 semanas de leilões</h2>
-            <div class="ml-auto flex gap-2 flex-wrap text-xs">
-                <span class="px-2 py-1 rounded status-CONFIRMADO">CONFIRMADO</span>
-                <span class="px-2 py-1 rounded status-PROJETADO">PROJETADO</span>
-                <span class="px-2 py-1 rounded status-A_VERIFICAR">A VERIFICAR</span>
-            </div>
+<!-- CALENDARIO -->
+<section x-show="aba==='calendario'">
+    <div style="display:flex; justify-content:space-between; align-items:end; flex-wrap:wrap; gap:12px; margin-bottom:24px;">
+        <div>
+            <div class="eyebrow">Horizonte de 8 Semanas</div>
+            <h2 class="section-title">Calendário de Leilões</h2>
         </div>
-        <div class="space-y-6">
-            <template x-for="(semana, idx) in dados.semanas" :key="idx">
-                <div>
-                    <h3 class="text-sm font-bold text-gray-600 mb-2" x-text="'Semana ' + (idx+1) + ' — ' + semana.label"></h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                        <template x-for="sale in semana.sales" :key="sale.id">
-                            <div class="bg-white rounded-lg shadow p-4 card-hover border-l-4 border-blue-600">
-                                <div class="flex items-start justify-between">
-                                    <div>
-                                        <div class="text-xs text-gray-500" x-text="sale.dia_semana + ' · ' + sale.estado"></div>
-                                        <div class="text-lg font-bold navy-text" x-text="sale.condado"></div>
-                                        <div class="text-sm text-gray-600" x-text="sale.data_fmt + ' · ' + sale.horario"></div>
-                                    </div>
-                                    <span class="text-xs px-2 py-1 rounded font-semibold" :class="'status-' + sale.status" x-text="sale.status.replace('_', ' ')"></span>
-                                </div>
-                                <div class="mt-3 flex gap-2 text-xs">
-                                    <a :href="sale.url_sales" target="_blank" class="text-blue-600 hover:underline">Auction →</a>
-                                    <a :href="sale.url_clerk" target="_blank" class="text-blue-600 hover:underline">Clerk →</a>
-                                </div>
-                                <div class="mt-2 text-xs text-gray-500" x-text="sale.plataforma + ' · ' + (sale.total_lots || 0) + ' lotes'"></div>
-                            </div>
-                        </template>
-                    </div>
-                    <div x-show="semana.sales.length === 0" class="text-sm text-gray-400 italic">Sem leilões nesta semana</div>
-                </div>
-            </template>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="badge badge-CONFIRMADO">Confirmado</span>
+            <span class="badge badge-PROJETADO">Projetado</span>
+            <span class="badge badge-A_VERIFICAR">A Verificar</span>
         </div>
-    </section>
-
-    <!-- PROPRIEDADES -->
-    <section x-show="tab==='propriedades'">
-        <h2 class="text-xl font-bold navy-text mb-4">Propriedades no pipeline</h2>
-
-        <!-- FILTROS -->
-        <div class="bg-white rounded-lg shadow p-4 mb-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
-                <div>
-                    <label class="block text-xs font-semibold text-gray-600 mb-1">Condado</label>
-                    <select x-model="filtroCondado" class="w-full border rounded px-2 py-1 text-sm">
-                        <option value="">Todos</option>
-                        <template x-for="c in dados.condados" :key="c.codigo">
-                            <option :value="c.codigo" x-text="c.codigo + ' — ' + c.nome"></option>
-                        </template>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-600 mb-1">Decisão</label>
-                    <select x-model="filtroDecisao" class="w-full border rounded px-2 py-1 text-sm">
-                        <option value="">Todas</option>
-                        <option value="LANCE">LANCE</option>
-                        <option value="REVISAR">REVISAR</option>
-                        <option value="PASSA">PASSA</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-600 mb-1">Bid Min. ≤</label>
-                    <input type="number" x-model.number="filtroBidMax" placeholder="Ex.: 50000" class="w-full border rounded px-2 py-1 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-600 mb-1">Buscar (endereço/parcel)</label>
-                    <input type="text" x-model="filtroBusca" placeholder="ex.: main st" class="w-full border rounded px-2 py-1 text-sm">
-                </div>
+    </div>
+    <template x-for="(semana, idx) in dados.semanas" :key="idx">
+        <div class="semana">
+            <div class="semana-header">
+                <span class="semana-num" x-text="'Semana ' + String(idx+1).padStart(2,'0')"></span>
+                <span class="semana-range" x-text="semana.label"></span>
             </div>
-            <div class="mt-3 text-xs text-gray-500">
-                Exibindo <span class="font-bold" x-text="lotesFiltrados.length"></span> de <span x-text="(dados.lots || []).length"></span> lotes
-            </div>
-        </div>
-
-        <!-- LISTA DE LOTES -->
-        <div class="space-y-2">
-            <template x-for="lot in lotesFiltrados" :key="lot.id">
-                <div class="bg-white rounded-lg shadow p-4 card-hover">
-                    <div class="flex flex-wrap items-start justify-between gap-3">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-center gap-2 flex-wrap">
-                                <span class="text-xs font-bold gold-text" x-text="lot.condado"></span>
-                                <span class="text-xs text-gray-400">·</span>
-                                <span class="text-xs text-gray-500" x-text="'Parcel: ' + lot.parcel_id"></span>
-                                <span class="text-xs text-gray-400">·</span>
-                                <span class="text-xs text-gray-500" x-text="'Sale: ' + lot.sale_date"></span>
-                                <template x-if="lot.decisao">
-                                    <span class="text-xs px-2 py-0.5 rounded font-semibold ml-auto" :class="'decision-' + lot.decisao" x-text="lot.decisao"></span>
-                                </template>
+            <div x-show="semana.sales.length === 0" class="empty" style="padding:28px;">Sem leilões projetados nesta semana</div>
+            <div class="grid-4">
+                <template x-for="s in semana.sales" :key="s.id">
+                    <div class="card">
+                        <div class="sale-head">
+                            <div>
+                                <div class="sale-date" x-text="s.dia_semana + ' · ' + s.data_fmt"></div>
+                                <div class="sale-condado" x-text="s.condado"></div>
+                                <div class="sale-estado" x-text="s.estado"></div>
                             </div>
-                            <div class="mt-1 font-semibold truncate" x-text="lot.address || '(endereço não disponível)'"></div>
-                            <div class="mt-2 grid grid-cols-2 md:grid-cols-5 gap-3 text-xs">
-                                <div><span class="text-gray-500">Bid Min:</span><br><span class="font-semibold text-gray-900" x-text="fmt_dinheiro(lot.min_bid)"></span></div>
-                                <div><span class="text-gray-500">Just Value:</span><br><span class="font-semibold text-gray-900" x-text="fmt_dinheiro(lot.just_value)"></span></div>
-                                <div><span class="text-gray-500">Assessed:</span><br><span class="font-semibold text-gray-900" x-text="fmt_dinheiro(lot.assessed_value)"></span></div>
-                                <div><span class="text-gray-500">Score:</span><br><span class="font-semibold" x-text="lot.score ? lot.score.toFixed(1) : '—'"></span></div>
-                                <div><span class="text-gray-500">ROI proj.:</span><br><span class="font-semibold text-green-700" x-text="lot.roi ? (lot.roi*100).toFixed(1) + '%' : '—'"></span></div>
-                            </div>
-                            <div class="mt-2 flex gap-3 text-xs">
-                                <a :href="zillow_url(lot)" target="_blank" class="text-blue-600 hover:underline">Zillow →</a>
-                                <a :href="street_view_url(lot)" target="_blank" class="text-blue-600 hover:underline">Street View →</a>
-                                <a :href="redfin_url(lot)" target="_blank" class="text-blue-600 hover:underline">Redfin →</a>
-                                <a :href="fema_url(lot)" target="_blank" class="text-blue-600 hover:underline">FEMA →</a>
-                            </div>
+                            <span class="badge" :class="'badge-' + s.status" x-text="s.status.replace('_',' ')"></span>
+                        </div>
+                        <div class="sale-hora" x-text="s.horario + ' ET'"></div>
+                        <div class="sale-info">
+                            <div><strong x-text="s.plataforma"></strong></div>
+                            <div x-text="(s.total_lots || 0) + ' lotes indexados'"></div>
+                        </div>
+                        <div class="sale-actions">
+                            <a :href="s.url_sales" target="_blank" class="cta">Site Leilão →</a>
+                            <a :href="s.url_clerk" target="_blank" class="cta">Cartório →</a>
                         </div>
                     </div>
-                </div>
-            </template>
-            <div x-show="lotesFiltrados.length === 0" class="text-center py-12 text-gray-400 italic">
-                <div class="text-5xl mb-2">📋</div>
-                <div>Nenhum lote no pipeline ainda.</div>
-                <div class="text-xs mt-2">O lot_list_scraper ainda não encontrou lotes publicados. Aguarde o próximo run ou execute manualmente via GitHub Actions.</div>
+                </template>
             </div>
         </div>
-    </section>
+    </template>
+</section>
 
-    <!-- CONDADOS -->
-    <section x-show="tab==='condados'">
-        <h2 class="text-xl font-bold navy-text mb-4">Condados ativos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            <template x-for="c in dados.condados" :key="c.codigo">
-                <div class="bg-white rounded-lg shadow p-4 card-hover">
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <div class="text-xs text-gray-500" x-text="c.estado"></div>
-                            <div class="text-lg font-bold navy-text" x-text="c.codigo"></div>
-                            <div class="text-sm text-gray-600" x-text="c.nome"></div>
-                        </div>
-                        <span class="text-xs px-2 py-1 rounded font-semibold" :class="'status-' + c.status" x-text="c.status.replace('_', ' ')"></span>
-                    </div>
-                    <div class="mt-3 text-xs text-gray-600">
-                        <div><strong>Plataforma:</strong> <span x-text="c.plataforma"></span></div>
-                        <div><strong>Cadência:</strong> <span x-text="c.cadencia_texto"></span></div>
-                        <div><strong>Horário:</strong> <span x-text="c.horario_et"></span></div>
-                        <div><strong>Depósito:</strong> <span x-text="c.deposito"></span></div>
-                    </div>
-                    <div class="mt-3 flex gap-2 text-xs">
-                        <a :href="c.url_sales" target="_blank" class="text-blue-600 hover:underline">Auction →</a>
-                        <a :href="c.url_clerk" target="_blank" class="text-blue-600 hover:underline">Clerk →</a>
-                        <template x-if="c.url_property_appraiser">
-                            <a :href="c.url_property_appraiser" target="_blank" class="text-blue-600 hover:underline">PA →</a>
-                        </template>
-                    </div>
-                    <div class="mt-2 text-xs text-gray-500">
-                        <span x-text="c.total_sales || 0"></span> sales · <span x-text="c.total_lots || 0"></span> lotes
-                    </div>
-                </div>
-            </template>
-        </div>
-    </section>
+<!-- PROPRIEDADES -->
+<section x-show="aba==='propriedades'">
+    <div class="eyebrow">Pipeline Operacional</div>
+    <h2 class="section-title">Propriedades</h2>
+    <p class="section-sub">Lotes reais extraídos dos sites oficiais. Ordenados por score quando disponível.</p>
 
-    <!-- SOBRE -->
-    <section x-show="tab==='sobre'" class="prose max-w-none">
-        <div class="bg-white rounded-lg shadow p-6">
-            <h2 class="text-xl font-bold navy-text">Everest TaxDeed Workers</h2>
-            <p class="text-gray-700 mt-2">Sistema automatizado de inteligência em tax deed sales para condados dos Estados Unidos. Operado por Daniel Rocha / Everest Investments, com infraestrutura 100% gratuita (GitHub Actions + Supabase + GitHub Pages).</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                <div>
-                    <h3 class="font-semibold navy-text">O que roda automaticamente</h3>
-                    <ul class="text-sm text-gray-700 list-disc pl-5 mt-1">
-                        <li>Calendar Scraper — diário 6:00 AM ET</li>
-                        <li>Lot List Scraper — diário 6:30 AM ET</li>
-                        <li>PDF Semanal — segunda 7:00 AM ET</li>
-                        <li>Email com PDF anexado → dpr2004@hotmail.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold navy-text">Cobertura atual</h3>
-                    <ul class="text-sm text-gray-700 list-disc pl-5 mt-1">
-                        <li>11 condados-alvo Flórida (ativos)</li>
-                        <li>+ 55 condados FL preparados (A_VERIFICAR)</li>
-                        <li>Arquitetura multi-estado pronta (TX, AZ, AL, GA...)</li>
-                    </ul>
-                </div>
+    <div class="filtros">
+        <div class="filtros-grid">
+            <div class="filtro">
+                <label class="filtro-lbl">Condado</label>
+                <select x-model="fCondado">
+                    <option value="">Todos</option>
+                    <template x-for="c in dados.condados" :key="c.codigo">
+                        <option :value="c.codigo" x-text="c.codigo + ' — ' + c.nome"></option>
+                    </template>
+                </select>
             </div>
-            <div class="mt-4 text-xs text-gray-500 border-t pt-4">
-                Versão <span class="font-mono">v1.0</span> — Build <span x-text="dados.gerado_em"></span>
+            <div class="filtro">
+                <label class="filtro-lbl">Decisão</label>
+                <select x-model="fDecisao">
+                    <option value="">Todas</option>
+                    <option value="LANCE">LANCE</option>
+                    <option value="REVISAR">REVISAR</option>
+                    <option value="PASSA">PASSA</option>
+                </select>
+            </div>
+            <div class="filtro">
+                <label class="filtro-lbl">Bid Mín. ≤ (USD)</label>
+                <input type="number" x-model.number="fBid" placeholder="Ex: 50000">
+            </div>
+            <div class="filtro">
+                <label class="filtro-lbl">Buscar endereço/parcel</label>
+                <input type="text" x-model="fBusca" placeholder="Ex: main st">
             </div>
         </div>
-    </section>
+        <div style="margin-top:12px; color:var(--white-40); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; font-weight:600;">
+            Exibindo <span style="color:var(--white);font-weight:800;" x-text="lotesFiltrados.length"></span> de <span x-text="(dados.lots||[]).length"></span> lotes
+        </div>
+    </div>
+
+    <template x-for="l in lotesFiltrados" :key="l.id">
+        <div class="lot">
+            <div class="lot-head">
+                <div style="flex:1; min-width:0;">
+                    <div class="lot-tags">
+                        <span class="lot-tag-condado" x-text="l.condado + ' · ' + l.estado"></span>
+                        <span class="lot-tag-meta" x-text="'Parcel ' + l.parcel_id"></span>
+                        <span class="lot-tag-meta" x-text="'Leilão ' + l.sale_date"></span>
+                    </div>
+                    <div class="lot-addr" x-text="l.address || '(endereço não extraído)'"></div>
+                    <div class="lot-cidade" x-text="(l.city || '') + (l.zip ? ', FL ' + l.zip : '')"></div>
+                    <div class="lot-stats">
+                        <div class="lot-stat"><div class="lbl">Bid Mínimo</div><div class="val" x-text="usd(l.min_bid)"></div></div>
+                        <div class="lot-stat"><div class="lbl">Valor Mercado</div><div class="val" x-text="usd(l.just_value)"></div></div>
+                        <div class="lot-stat"><div class="lbl">Valor Avaliado</div><div class="val" x-text="usd(l.assessed_value)"></div></div>
+                        <div class="lot-stat"><div class="lbl">Score</div><div class="val gold" x-text="l.score ? l.score.toFixed(1) : '—'"></div></div>
+                        <div class="lot-stat"><div class="lbl">ROI Projetado</div><div class="val green" x-text="l.roi ? (l.roi*100).toFixed(1)+'%' : '—'"></div></div>
+                    </div>
+                </div>
+                <template x-if="l.decisao">
+                    <span class="decision" :class="'d-' + l.decisao" x-text="l.decisao"></span>
+                </template>
+            </div>
+            <div class="lot-links">
+                <a :href="zillow(l)" target="_blank" class="cta">Zillow →</a>
+                <a :href="streetview(l)" target="_blank" class="cta">Street View →</a>
+                <a :href="redfin(l)" target="_blank" class="cta">Redfin →</a>
+                <a :href="realtor(l)" target="_blank" class="cta">Realtor →</a>
+                <a :href="fema(l)" target="_blank" class="cta">FEMA →</a>
+            </div>
+        </div>
+    </template>
+    <div x-show="lotesFiltrados.length === 0" class="empty">
+        Nenhum lote corresponde aos filtros.
+    </div>
+</section>
+
+<!-- CONDADOS -->
+<section x-show="aba==='condados'">
+    <div class="eyebrow">Cobertura</div>
+    <h2 class="section-title">Condados Ativos</h2>
+    <p class="section-sub">Detalhes e estatísticas de cada condado monitorado.</p>
+    <div class="grid-3">
+        <template x-for="c in dados.condados" :key="c.codigo">
+            <div class="card">
+                <div class="county-head">
+                    <div>
+                        <div class="county-state" x-text="c.estado"></div>
+                        <div class="county-code" x-text="c.codigo"></div>
+                        <div class="county-name" x-text="c.nome"></div>
+                    </div>
+                    <span class="badge" :class="'badge-' + c.status" x-text="c.status.replace('_',' ')"></span>
+                </div>
+                <div class="county-stats">
+                    <div>
+                        <div class="county-stat-label">Leilões 8sem</div>
+                        <div class="county-stat-val" x-text="c.total_sales || 0"></div>
+                    </div>
+                    <div>
+                        <div class="county-stat-label">Lotes</div>
+                        <div class="county-stat-val" x-text="c.total_lots || 0"></div>
+                    </div>
+                </div>
+                <div class="county-info">
+                    <div><strong>Plataforma</strong> · <span x-text="c.plataforma"></span></div>
+                    <div><strong>Horário</strong> · <span x-text="c.horario_et"></span></div>
+                    <div><strong>Depósito</strong> · <span x-text="c.deposito"></span></div>
+                    <div x-show="c.telefone"><strong>Contato</strong> · <span x-text="c.telefone"></span></div>
+                </div>
+                <div class="lot-links">
+                    <a :href="c.url_sales" target="_blank" class="cta">Site Leilão →</a>
+                    <a :href="c.url_clerk" target="_blank" class="cta">Cartório →</a>
+                    <template x-if="c.url_property_appraiser">
+                        <a :href="c.url_property_appraiser" target="_blank" class="cta">Avaliador →</a>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section x-show="aba==='sobre'">
+    <div class="eyebrow">Sistema</div>
+    <h2 class="section-title">Sobre a Central</h2>
+    <p class="section-sub">Ferramenta interna da Everest Investments Group para operação de tax deed.</p>
+    <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="card">
+            <h3 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-500); margin-bottom:12px; font-weight:700;">Automação</h3>
+            <ul style="color:var(--white-85); font-size:13px; line-height:2; padding-left:20px;">
+                <li>Calendar Scraper diário</li>
+                <li>Lot List Scraper diário</li>
+                <li>PDF Semanal — segundas 7AM ET</li>
+                <li>Email → dpr2004@hotmail.com</li>
+                <li>GitHub Actions + Pages (grátis)</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-500); margin-bottom:12px; font-weight:700;">Cobertura</h3>
+            <ul style="color:var(--white-85); font-size:13px; line-height:2; padding-left:20px;">
+                <li>11 condados-alvo Flórida</li>
+                <li>Arquitetura multi-estado (TX, AZ, AL)</li>
+                <li>Cabe 500+ condados no free tier</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 </main>
 
-<!-- FOOTER -->
-<footer class="navy text-white mt-12 py-6">
-    <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        Daniel Rocha · Everest Investments · Coconut Creek, FL · dpr2004@hotmail.com
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-text">
+            Everest Investments Group · Daniel Rocha · Coconut Creek, FL · dpr2004@hotmail.com
+        </div>
     </div>
 </footer>
 
 <script>
-function dashboard() {
+function app() {
     return {
-        tab: 'calendario',
+        aba: 'calendario',
         dados: { resumo: {}, semanas: [], lots: [], condados: [] },
-        filtroCondado: '',
-        filtroDecisao: '',
-        filtroBidMax: null,
-        filtroBusca: '',
-        async carregar() {
+        fCondado: '', fDecisao: '', fBid: null, fBusca: '',
+        async init() {
             try {
                 const resp = await fetch('data.json?t=' + Date.now());
                 this.dados = await resp.json();
             } catch (e) {
-                console.warn('data.json nao encontrado - rodando em modo vazio', e);
+                console.warn('data.json nao encontrado', e);
                 this.dados = {
-                    gerado_em: 'nunca',
+                    gerado_em: '—',
                     resumo: { total_condados: 0, total_sales: 0, total_lots: 0, lances: 0, estados: [] },
                     semanas: [], lots: [], condados: []
                 };
@@ -308,39 +652,28 @@ function dashboard() {
         get lotesFiltrados() {
             const lots = this.dados.lots || [];
             return lots.filter(l => {
-                if (this.filtroCondado && l.condado !== this.filtroCondado) return false;
-                if (this.filtroDecisao && l.decisao !== this.filtroDecisao) return false;
-                if (this.filtroBidMax && l.min_bid > this.filtroBidMax) return false;
-                if (this.filtroBusca) {
-                    const q = this.filtroBusca.toLowerCase();
-                    const hay = (l.address || '') + ' ' + (l.parcel_id || '');
+                if (this.fCondado && l.condado !== this.fCondado) return false;
+                if (this.fDecisao && l.decisao !== this.fDecisao) return false;
+                if (this.fBid && l.min_bid > this.fBid) return false;
+                if (this.fBusca) {
+                    const q = this.fBusca.toLowerCase();
+                    const hay = (l.address || '') + ' ' + (l.parcel_id || '') + ' ' + (l.city || '');
                     if (!hay.toLowerCase().includes(q)) return false;
                 }
                 return true;
             });
         },
-        fmt_dinheiro(v) {
-            if (!v && v !== 0) return '—';
+        usd(v) {
+            if (v === null || v === undefined) return '—';
             return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(v);
         },
-        zillow_url(lot) {
-            const q = encodeURIComponent((lot.address || '') + ' ' + (lot.city || '') + ' FL');
-            return `https://www.zillow.com/homes/${q}_rb/`;
-        },
-        redfin_url(lot) {
-            const q = encodeURIComponent((lot.address || '') + ', ' + (lot.city || '') + ', FL');
-            return `https://www.redfin.com/stingray/do/location-autocomplete?location=${q}`;
-        },
-        street_view_url(lot) {
-            const q = encodeURIComponent((lot.address || '') + ' ' + (lot.city || '') + ' FL');
-            return `https://www.google.com/maps/search/?api=1&query=${q}`;
-        },
-        fema_url(lot) {
-            return 'https://msc.fema.gov/portal/search';
-        }
+        zillow(l) { const q = encodeURIComponent((l.address||'')+' '+(l.city||'')+' FL'); return `https://www.zillow.com/homes/${q}_rb/`; },
+        redfin(l) { const q = encodeURIComponent((l.address||'')+', '+(l.city||'')+', FL'); return `https://www.redfin.com/stingray/do/location-autocomplete?location=${q}`; },
+        realtor(l) { const q = encodeURIComponent((l.address||'')+' '+(l.city||'')+' FL'); return `https://www.realtor.com/realestateandhomes-search/${q}`; },
+        streetview(l) { const q = encodeURIComponent((l.address||'')+' '+(l.city||'')+' FL'); return `https://www.google.com/maps/search/?api=1&query=${q}`; },
+        fema() { return 'https://msc.fema.gov/portal/search'; }
     };
 }
 </script>
-
 </body>
 </html>

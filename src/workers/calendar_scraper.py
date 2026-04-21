@@ -110,13 +110,20 @@ class CalendarScraper(BaseWorker):
             current_date = self._extract_displayed_date(soup)
             self.logger.debug(f"{codigo} pagina mostra: {current_date}")
 
-            # Confirma com BODY: a area dos lotes precisa ter conteudo, OU pelo menos
-            # deve ser uma data futura listada como sale real. Por enquanto confiar
-            # no display se for >= hoje E <= limite.
+            # Confirmar APENAS se tiver div ALB com IDs (sale real, nao falso positivo)
             if current_date and hoje <= current_date <= limite:
-                if current_date not in datas_encontradas:
+                alb = soup.find("div", id="ALB")
+                alb_text = alb.get_text(strip=True) if alb else ""
+                alb_ids = [x for x in alb_text.split(",") if x.strip().isdigit()]
+                if alb_ids and current_date not in datas_encontradas:
                     datas_encontradas.add(current_date)
-                    self.logger.info(f"{codigo}: data confirmada {current_date}")
+                    self.logger.info(
+                        f"{codigo}: CONFIRMADO {current_date} ({len(alb_ids)} lotes no ALB)"
+                    )
+                elif not alb_ids:
+                    self.logger.debug(
+                        f"{codigo}: {current_date} sem ALB - ignorando (data fantasma)"
+                    )
 
             # Detectar link Next Auction
             next_div = soup.find("div", class_="BLHeaderNext")
