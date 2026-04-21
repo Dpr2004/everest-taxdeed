@@ -1,6 +1,5 @@
 .env
-data/*.db
-data/*.db-journal
+# DBs sao versionados (permite workers trocarem estado)
 data/outputs/
 logs/*.log
 __pycache__/

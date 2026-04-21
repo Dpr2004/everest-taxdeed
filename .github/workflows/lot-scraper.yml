@@ -27,7 +27,10 @@ jobs:
           python-version: "3.11"
           cache: "pip"
       - run: pip install -r requirements.txt
-      - run: python -m src.main --init
+      - name: Init DB + seeds
+        run: python -m src.main --init
+      - name: Calendar Scraper (cria sales agendados no DB)
+        run: python -m src.main --scrape-calendar
       - name: Run Lot List Scraper
         run: |
           if [ -n "${{ github.event.inputs.county }}" ]; then
