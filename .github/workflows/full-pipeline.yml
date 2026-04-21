@@ -7,6 +7,11 @@ on:
         description: "Codigo condado (vazio = todos)"
         required: false
         default: ""
+  schedule:
+    # Todo dia 09:00 UTC = 05:00 AM ET (pipeline completa diaria)
+    - cron: "0 9 * * *"
+    # Reforco as 13:00 UTC = 09:00 AM ET (caso a primeira falhe)
+    - cron: "0 13 * * *"
 
 permissions:
   contents: write
