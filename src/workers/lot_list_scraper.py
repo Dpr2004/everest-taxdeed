@@ -75,15 +75,35 @@ class LotListScraper(BaseWorker):
     # ---------- PARSER LEE (piloto) ----------
     def _parse_lee(self, sale):
         """Lee County via lee.realtaxdeed.com. Plataforma RealAuction."""
-        # A lista publica de proximos sales geralmente esta em:
-        # https://lee.realtaxdeed.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=MM/DD/YYYY
         from datetime import datetime
+        import os
         sale_dt = datetime.strptime(sale["sale_date"], "%Y-%m-%d").date()
         url = (f"https://lee.realtaxdeed.com/index.cfm?zaction=AUCTION&"
                f"Zmethod=PREVIEW&AUCTIONDATE={sale_dt.strftime('%m/%d/%Y')}")
         self.logger.info(f"LEE fetching {url}")
         resp = fetch(url)
-        return self._parse_realauction_html(resp.text)
+        lots = self._parse_realauction_html(resp.text)
+        # DEBUG: salva HTML bruto do primeiro sale pra inspecao
+        if not lots:
+            debug_dir = "/app/data/debug" if os.path.isdir("/app") else "./data/debug"
+            os.makedirs(debug_dir, exist_ok=True)
+            debug_file = f"{debug_dir}/lee_{sale_dt.strftime('%Y%m%d')}.html"
+            if not os.path.exists(debug_file):
+                with open(debug_file, "w", encoding="utf-8") as f:
+                    f.write(resp.text)
+                self.logger.info(f"LEE debug HTML salvo: {debug_file} ({len(resp.text)} bytes)")
+            # Log dos primeiros 3000 chars pra ver estrutura
+            preview = resp.text[:3000].replace("\n", " ")[:2000]
+            self.logger.warning(f"LEE HTML preview (primeiros chars): {preview}")
+            # Procurar endpoint AJAX no HTML (RealAuction tipicamente tem)
+            import re
+            for pattern in [r'url:\s*["\']([^"\']+)["\']', r'fetch\(["\']([^"\']+)["\']',
+                            r'\.ajax\([^)]*url:\s*["\']([^"\']+)["\']']:
+                matches = re.findall(pattern, resp.text)
+                if matches:
+                    self.logger.info(f"LEE: possible AJAX endpoints detected: {matches[:5]}")
+                    break
+        return lots
 
     # ---------- PARSER POLK ----------
     def _parse_polk(self, sale):
