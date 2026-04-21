@@ -6,8 +6,7 @@
       "nome": "Lee County",
       "aba_planilha": "LEE",
       "cadencia": {
-        "tipo": "WEEKLY",
-        "dia_semana": 1
+        "tipo": "VERIFY"
       },
       "horario_et": "10:00",
       "plataforma": "RealAuction",
@@ -16,7 +15,7 @@
       "url_property_appraiser": "https://www.leepa.org/Search/PropertySearch.aspx",
       "telefone": "Lee Clerk",
       "deposito": "$200 ou 5% do bid (o maior)",
-      "status": "CONFIRMADO",
+      "status": "A_VERIFICAR",
       "estado": "FL"
     },
     {
@@ -24,9 +23,7 @@
       "nome": "Polk County",
       "aba_planilha": "POLK",
       "cadencia": {
-        "tipo": "ORDINAL",
-        "ordem": 3,
-        "dia_semana": 3
+        "tipo": "VERIFY"
       },
       "horario_et": "09:30",
       "plataforma": "RealTDA",
@@ -35,7 +32,7 @@
       "url_property_appraiser": "https://www.polkpa.org/CamaDisplay.aspx",
       "telefone": "Polk Clerk",
       "deposito": "Incrementos de $100",
-      "status": "CONFIRMADO",
+      "status": "A_VERIFICAR",
       "estado": "FL"
     },
     {
@@ -43,8 +40,7 @@
       "nome": "Lake County",
       "aba_planilha": "LAKE",
       "cadencia": {
-        "tipo": "WEEKLY",
-        "dia_semana": 1
+        "tipo": "VERIFY"
       },
       "horario_et": "11:15",
       "plataforma": "RealTaxDeed",
@@ -53,7 +49,7 @@
       "url_property_appraiser": "https://www.lakecopropappr.com/",
       "telefone": "(352) 253-2620",
       "deposito": "$200 ou 5% ate 4PM D-1",
-      "status": "PROJETADO",
+      "status": "A_VERIFICAR",
       "estado": "FL"
     },
     {
@@ -61,8 +57,7 @@
       "nome": "Highlands County",
       "aba_planilha": "HIGHLANDS",
       "cadencia": {
-        "tipo": "WEEKLY",
-        "dia_semana": 2
+        "tipo": "VERIFY"
       },
       "horario_et": "10:00",
       "plataforma": "RealTaxDeed",
@@ -71,7 +66,7 @@
       "url_property_appraiser": "https://www.hcpao.org/Search.aspx",
       "telefone": "(863) 402-6586",
       "deposito": "Verificar site",
-      "status": "PROJETADO",
+      "status": "A_VERIFICAR",
       "estado": "FL"
     },
     {
