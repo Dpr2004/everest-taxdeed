@@ -37,5 +37,22 @@ def init_schema():
     try:
         conn.executescript(sql)
         conn.commit()
+        # Migrations automaticas para DBs antigos
+        _apply_migrations(conn)
     finally:
         conn.close()
+
+
+def _apply_migrations(conn):
+    """Adiciona colunas novas em tabelas existentes sem quebrar DB antigo."""
+    migrations = [
+        ("counties", "state", "TEXT NOT NULL DEFAULT 'FL'"),
+    ]
+    for table, column, definition in migrations:
+        cols = [r[1] for r in conn.execute(f"PRAGMA table_info({table})").fetchall()]
+        if column not in cols:
+            try:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {definition}")
+                conn.commit()
+            except Exception:
+                pass

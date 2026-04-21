@@ -47,7 +47,12 @@ class ScoringEngine(BaseWorker):
             lots = cur.fetchall()
 
         for lot in lots:
-            score_data = self._calcular_score(lot)
+            try:
+                score_data = self._calcular_score(lot)
+            except Exception as e:
+                self.errors_count += 1
+                self.logger.warning(f"Score falhou lot {lot['id']}: {e}")
+                continue
             if score_data is None:
                 continue
             with cursor() as cur2:
@@ -75,13 +80,19 @@ class ScoringEngine(BaseWorker):
                 )
 
     def _calcular_score(self, lot):
-        min_bid = lot["min_bid"]
-        if not min_bid or min_bid <= 0:
+        min_bid = lot["min_bid"] or 0
+        if min_bid <= 0:
             return None
 
         # ARV estimado: usar just_value * 0.85 (descontando margem de mercado)
-        arv = lot["just_value"] or lot["assessed_value"] or (min_bid * 4)
-        arv = arv * 0.85
+        just = lot["just_value"] or 0
+        assessed = lot["assessed_value"] or 0
+        if just > 0:
+            arv = float(just) * 0.85
+        elif assessed > 0:
+            arv = float(assessed) * 0.85
+        else:
+            arv = float(min_bid) * 4 * 0.85
 
         # Custo reforma estimado: SQFT * REFORMA_SQFT
         sqft = lot["building_sqft"] or 0

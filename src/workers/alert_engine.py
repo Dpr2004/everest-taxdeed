@@ -18,16 +18,34 @@ from src.db.connection import cursor
 from src.workers.base import BaseWorker
 from src.utils.http import fetch
 
-SCORE_ALERTA = float(os.environ.get("SCORE_ALERTA", "70"))
-ROI_ALERTA = float(os.environ.get("ROI_ALERTA", "0.50"))
-RATIO_SUBAVALIADO = float(os.environ.get("RATIO_SUBAVALIADO", "10"))
+def _env(name, default=""):
+    """Env var com tratamento de string vazia."""
+    v = os.environ.get(name, "") or ""
+    v = v.strip()
+    return v if v else default
 
-SMTP_HOST = os.environ.get("SMTP_HOST", "")
-SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
-SMTP_USER = os.environ.get("SMTP_USER", "")
-SMTP_PASS = os.environ.get("SMTP_PASSWORD", "")
-ALERT_TO = os.environ.get("ALERT_EMAIL_TO", "dpr2004@hotmail.com")
-SLACK_WEBHOOK = os.environ.get("SLACK_WEBHOOK_URL", "")
+def _envf(name, default):
+    try:
+        return float(_env(name, str(default)))
+    except (ValueError, TypeError):
+        return float(default)
+
+def _envi(name, default):
+    try:
+        return int(_env(name, str(default)))
+    except (ValueError, TypeError):
+        return int(default)
+
+SCORE_ALERTA = _envf("SCORE_ALERTA", 70)
+ROI_ALERTA = _envf("ROI_ALERTA", 0.50)
+RATIO_SUBAVALIADO = _envf("RATIO_SUBAVALIADO", 10)
+
+SMTP_HOST = _env("SMTP_HOST")
+SMTP_PORT = _envi("SMTP_PORT", 587)
+SMTP_USER = _env("SMTP_USER")
+SMTP_PASS = _env("SMTP_PASSWORD")
+ALERT_TO = _env("ALERT_EMAIL_TO", "dpr2004@hotmail.com")
+SLACK_WEBHOOK = _env("SLACK_WEBHOOK_URL")
 
 
 class AlertEngine(BaseWorker):
