@@ -1,14 +1,17 @@
-"""Lot List Scraper - dado um sale especifico, baixa a lista de lotes do site
-RealAuction/RealTaxDeed/RealTDA e popula a tabela `lots`.
+"""Lot List Scraper - dado um sale do DB, baixa lista de lotes do site oficial.
 
-Abordagem:
-- Para cada condado, implementar um `_parse_<codigo>` se o HTML for distinto.
-- Cai em um parser generico que tenta tabelas comuns quando nao tem especifico.
+REGRA: ZERO chute. Sempre buscar do site real e validar se ha sale de verdade.
 
-Obs.: RealAuction usa JavaScript-heavy na lista. Se `requests` nao retornar dados,
-adicionar Playwright (ver requirements.txt comentado).
+Para sites RealAuction (RealTaxDeed/RealAuction/RealForeclose/RealTDA):
+- Construir URL: BASE/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=MM/DD/YYYY
+- Se <div role="main"> esta vazio = nao ha sale real nessa data (mesmo se header mostrar)
+- Se tem lotes, parsear tabela ou JSON embedded
 """
 import json
+import os
+import re
+from datetime import datetime
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from src.db.connection import cursor
 from src.workers.base import BaseWorker
@@ -27,23 +30,26 @@ class LotListScraper(BaseWorker):
         with cursor() as cur:
             if self.sale_id:
                 cur.execute("""
-                    SELECT s.*, c.codigo AS county_codigo, c.url_sales, c.plataforma, c.nome AS county_nome
+                    SELECT s.*, c.codigo AS county_codigo, c.url_sales,
+                           c.plataforma, c.nome AS county_nome
                     FROM sales s JOIN counties c ON c.id = s.county_id
                     WHERE s.id = ?
                 """, (self.sale_id,))
                 sales = cur.fetchall()
             elif self.county_code:
                 cur.execute("""
-                    SELECT s.*, c.codigo AS county_codigo, c.url_sales, c.plataforma, c.nome AS county_nome
+                    SELECT s.*, c.codigo AS county_codigo, c.url_sales,
+                           c.plataforma, c.nome AS county_nome
                     FROM sales s JOIN counties c ON c.id = s.county_id
                     WHERE c.codigo = ? AND s.status = 'scheduled'
+                      AND s.sale_date >= DATE('now')
                     ORDER BY s.sale_date ASC
                 """, (self.county_code,))
                 sales = cur.fetchall()
             else:
-                # Todos os sales futuros scheduled
                 cur.execute("""
-                    SELECT s.*, c.codigo AS county_codigo, c.url_sales, c.plataforma, c.nome AS county_nome
+                    SELECT s.*, c.codigo AS county_codigo, c.url_sales,
+                           c.plataforma, c.nome AS county_nome
                     FROM sales s JOIN counties c ON c.id = s.county_id
                     WHERE s.status = 'scheduled' AND s.sale_date >= DATE('now')
                     ORDER BY s.sale_date ASC
@@ -52,92 +58,74 @@ class LotListScraper(BaseWorker):
 
         for sale in sales:
             try:
-                lots = self._scrape_sale(sale)
-                self._save_lots(sale["id"], lots)
-                self.items_processed += len(lots)
-                self.logger.info(
-                    f"{sale['county_codigo']} {sale['sale_date']}: {len(lots)} lotes salvos"
-                )
+                lots, html = self._scrape_sale(sale)
+                if lots:
+                    self._save_lots(sale["id"], lots)
+                    self.items_processed += len(lots)
+                    self.logger.info(
+                        f"OK {sale['county_codigo']} {sale['sale_date']}: {len(lots)} lotes salvos"
+                    )
+                else:
+                    # Salvar HTML pra debug se nao achou lotes
+                    self._save_debug_html(sale, html)
+                    self.logger.warning(
+                        f"VAZIO {sale['county_codigo']} {sale['sale_date']}: "
+                        f"0 lotes (HTML salvo em data/debug/)"
+                    )
             except Exception as e:
                 self.errors_count += 1
                 self.logger.warning(
-                    f"Falha scraping {sale['county_codigo']} {sale['sale_date']}: {e}"
+                    f"FALHA {sale['county_codigo']} {sale['sale_date']}: {e}"
                 )
 
     def _scrape_sale(self, sale):
-        """Orquestra scraping do sale. Usa parser especifico se existir."""
-        code = sale["county_codigo"]
-        parser_method = getattr(self, f"_parse_{code.lower()}", None)
-        if parser_method:
-            return parser_method(sale)
-        return self._parse_generic(sale)
+        """Retorna (lots, html_response_text)."""
+        url_sales = sale["url_sales"] or ""
+        # Detectar plataforma
+        if any(p in url_sales.lower() for p in
+               ["realtaxdeed.com", "realauction.com", "realforeclose.com", "realtda.com"]):
+            return self._scrape_realauction(sale)
+        # Outras plataformas nao implementadas
+        self.logger.warning(
+            f"{sale['county_codigo']}: plataforma nao suportada ({url_sales})"
+        )
+        return [], ""
 
-    # ---------- PARSER LEE (piloto) ----------
-    def _parse_lee(self, sale):
-        """Lee County via lee.realtaxdeed.com. Plataforma RealAuction."""
-        from datetime import datetime
-        import os
+    def _scrape_realauction(self, sale):
+        """Para sites RealAuction. Constroi URL com a data certa."""
+        parsed = urlparse(sale["url_sales"])
+        base = f"{parsed.scheme}://{parsed.netloc}"
         sale_dt = datetime.strptime(sale["sale_date"], "%Y-%m-%d").date()
-        url = (f"https://lee.realtaxdeed.com/index.cfm?zaction=AUCTION&"
-               f"Zmethod=PREVIEW&AUCTIONDATE={sale_dt.strftime('%m/%d/%Y')}")
-        self.logger.info(f"LEE fetching {url}")
-        resp = fetch(url)
-        lots = self._parse_realauction_html(resp.text)
-        # DEBUG: salva HTML bruto do primeiro sale pra inspecao
-        if not lots:
-            debug_dir = "/app/data/debug" if os.path.isdir("/app") else "./data/debug"
-            os.makedirs(debug_dir, exist_ok=True)
-            debug_file = f"{debug_dir}/lee_{sale_dt.strftime('%Y%m%d')}.html"
-            if not os.path.exists(debug_file):
-                with open(debug_file, "w", encoding="utf-8") as f:
-                    f.write(resp.text)
-                self.logger.info(f"LEE debug HTML salvo: {debug_file} ({len(resp.text)} bytes)")
-            # Log dos primeiros 3000 chars pra ver estrutura
-            preview = resp.text[:3000].replace("\n", " ")[:2000]
-            self.logger.warning(f"LEE HTML preview (primeiros chars): {preview}")
-            # Procurar endpoint AJAX no HTML (RealAuction tipicamente tem)
-            import re
-            for pattern in [r'url:\s*["\']([^"\']+)["\']', r'fetch\(["\']([^"\']+)["\']',
-                            r'\.ajax\([^)]*url:\s*["\']([^"\']+)["\']']:
-                matches = re.findall(pattern, resp.text)
-                if matches:
-                    self.logger.info(f"LEE: possible AJAX endpoints detected: {matches[:5]}")
-                    break
-        return lots
-
-    # ---------- PARSER POLK ----------
-    def _parse_polk(self, sale):
-        # Polk usa realtda.com. Tentar endpoint publico.
-        # Este e um stub - melhorar quando testado com site ao vivo.
-        url = "https://www.realtda.com/index.cfm?zaction=USER&Zmethod=CALENDAR"
-        self.logger.info(f"POLK fetching {url}")
-        resp = fetch(url)
-        return self._parse_realauction_html(resp.text)
-
-    # ---------- PARSER GENERICO (RealAuction / RealTaxDeed) ----------
-    def _parse_generic(self, sale):
-        """Usa URL do condado como ponto de partida."""
-        url = sale["url_sales"]
-        self.logger.info(f"{sale['county_codigo']} generic fetching {url}")
-        try:
-            resp = fetch(url)
-            return self._parse_realauction_html(resp.text)
-        except Exception as e:
-            self.logger.warning(f"Generic parser falhou em {url}: {e}")
-            return []
+        url = (f"{base}/index.cfm?zaction=AUCTION&Zmethod=PREVIEW"
+               f"&AUCTIONDATE={sale_dt.strftime('%m/%d/%Y')}")
+        self.logger.info(f"{sale['county_codigo']} fetching {url}")
+        resp = fetch(url, timeout=20)
+        return self._parse_realauction_html(resp.text), resp.text
 
     def _parse_realauction_html(self, html):
-        """Extrai lotes de HTML estilo RealAuction. Heuristica por tabela."""
+        """Extrai lotes de HTML RealAuction.
+
+        Estrategias:
+        1. Procurar tabelas com cabecalhos de Parcel/Bid
+        2. Procurar arrays JSON embedded
+        3. Procurar divs/li com classes especificas (auctionItem, etc)
+        """
         soup = BeautifulSoup(html, "lxml")
         lots = []
 
-        # Estrategia 1: procurar tabelas com cabecalhos comuns
+        # Verificar se a area principal esta vazia (sem sale real)
+        main_div = soup.find("div", attrs={"role": "main"})
+        if main_div and not main_div.get_text(strip=True):
+            return []  # Sem conteudo, sem sale
+
+        # Estrategia 1: tabelas
         for table in soup.find_all("table"):
             headers = [th.get_text(strip=True).lower() for th in table.find_all("th")]
             if not headers:
                 continue
-            if any("parcel" in h or "case" in h or "opening" in h or "bid" in h for h in headers):
-                for tr in table.find_all("tr")[1:]:  # skip header
+            if any("parcel" in h or "case" in h or "opening" in h or "bid" in h or "min" in h
+                   for h in headers):
+                for tr in table.find_all("tr")[1:]:
                     cells = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
                     if not cells:
                         continue
@@ -145,32 +133,51 @@ class LotListScraper(BaseWorker):
                     if lot.get("parcel_id"):
                         lots.append(lot)
 
-        # Estrategia 2: procurar JSON embutido (alguns sites usam fetch interno)
-        if not lots:
-            import re
-            for script in soup.find_all("script"):
-                txt = script.get_text()
-                if "parcelID" in txt or "ParcelID" in txt:
-                    try:
-                        # Tenta extrair arrays JSON
-                        matches = re.findall(r"\[\s*\{.*?\}\s*\]", txt, re.DOTALL)
-                        for m in matches:
-                            try:
-                                arr = json.loads(m)
-                                for item in arr:
-                                    lot = {
-                                        "parcel_id": str(item.get("parcelID") or item.get("ParcelID") or ""),
-                                        "case_num": str(item.get("caseNumber") or ""),
-                                        "min_bid": float(item.get("openingBid", 0) or 0) or None,
-                                        "address": item.get("situsAddress") or "",
-                                        "raw_data_json": json.dumps(item),
-                                    }
-                                    if lot["parcel_id"]:
-                                        lots.append(lot)
-                            except Exception:
-                                continue
-                    except Exception:
-                        pass
+        if lots:
+            return lots
+
+        # Estrategia 2: blocos com classes "auctionItem", "AuctionDetail"
+        for cls in ["AUCTION_DETAILS", "auctionItem", "auctionRow", "AuctionTbl",
+                    "AuctionListRow", "AdvancedAuctionItem"]:
+            for div in soup.find_all(class_=cls):
+                lot = self._extract_lot_from_div(div)
+                if lot.get("parcel_id"):
+                    lots.append(lot)
+            if lots:
+                return lots
+
+        # Estrategia 3: arrays JSON embutidos no JS
+        for script in soup.find_all("script"):
+            txt = script.get_text()
+            if "parcelID" in txt or "ParcelID" in txt or "auctionItem" in txt:
+                try:
+                    matches = re.findall(r"\[\s*\{[^\[\]]*?\}\s*\]", txt, re.DOTALL)
+                    for m in matches:
+                        try:
+                            arr = json.loads(m)
+                            for item in arr:
+                                if not isinstance(item, dict):
+                                    continue
+                                lot = {
+                                    "parcel_id": str(item.get("parcelID")
+                                                     or item.get("ParcelID")
+                                                     or item.get("parcel_id") or ""),
+                                    "case_num": str(item.get("caseNumber")
+                                                    or item.get("CaseNumber") or ""),
+                                    "min_bid": _to_float(item.get("openingBid")
+                                                         or item.get("OpeningBid")
+                                                         or item.get("minBid")),
+                                    "address": item.get("situsAddress")
+                                              or item.get("SitusAddress")
+                                              or item.get("address") or "",
+                                    "raw_data_json": json.dumps(item),
+                                }
+                                if lot["parcel_id"]:
+                                    lots.append(lot)
+                        except Exception:
+                            continue
+                except Exception:
+                    pass
 
         return lots
 
@@ -186,29 +193,57 @@ class LotListScraper(BaseWorker):
                 lot["case_num"] = v
             elif "cert" in h:
                 lot["tax_cert_num"] = v
-            elif "opening" in h or "minimum bid" in h or h == "bid":
-                try:
-                    lot["min_bid"] = float(v.replace("$", "").replace(",", "").strip() or 0)
-                except Exception:
-                    pass
-            elif "address" in h or "situs" in h:
+            elif "opening" in h or "minimum bid" in h or "min bid" in h or h == "bid":
+                lot["min_bid"] = _to_float(v)
+            elif "address" in h or "situs" in h or "property" in h:
                 lot["address"] = v
             elif "city" in h:
                 lot["city"] = v
             elif "assessed" in h:
-                try:
-                    lot["assessed_value"] = float(v.replace("$", "").replace(",", "").strip() or 0)
-                except Exception:
-                    pass
+                lot["assessed_value"] = _to_float(v)
             elif "just" in h or "market" in h:
-                try:
-                    lot["just_value"] = float(v.replace("$", "").replace(",", "").strip() or 0)
-                except Exception:
-                    pass
+                lot["just_value"] = _to_float(v)
             elif "legal" in h:
                 lot["legal_description"] = v
         lot["raw_data_json"] = json.dumps(dict(zip(headers, cells)))
         return lot
+
+    def _extract_lot_from_div(self, div):
+        """Extrai lot de bloco div generico (heuristica)."""
+        lot = {"raw_data_json": str(div)[:2000]}
+        text = div.get_text(" ", strip=True)
+        m = re.search(r"Parcel(?:\s*ID)?[:\s]*([A-Z0-9\-\.]+)", text, re.I)
+        if m:
+            lot["parcel_id"] = m.group(1)
+        m = re.search(r"Case(?:\s*Number)?[:\s]*([A-Z0-9\-]+)", text, re.I)
+        if m:
+            lot["case_num"] = m.group(1)
+        m = re.search(r"(?:Opening|Min(?:imum)?)\s*Bid[:\s]*\$?\s*([0-9,\.]+)", text, re.I)
+        if m:
+            lot["min_bid"] = _to_float(m.group(1))
+        return lot
+
+    def _save_debug_html(self, sale, html):
+        if not html:
+            return
+        try:
+            base = "/app/data/debug" if os.path.isdir("/app") else "./data/debug"
+            os.makedirs(base, exist_ok=True)
+            sale_dt = datetime.strptime(sale["sale_date"], "%Y-%m-%d").date()
+            path = f"{base}/{sale['county_codigo'].lower()}_{sale_dt.strftime('%Y%m%d')}.html"
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(html)
+            # Tambem extrair body pra log facilitar diagnostico
+            soup = BeautifulSoup(html, "lxml")
+            main = soup.find("div", attrs={"role": "main"})
+            body_preview = (main.get_text(" ", strip=True)[:500]
+                           if main else "(sem div role=main)")
+            self.logger.info(
+                f"DEBUG {sale['county_codigo']} {sale['sale_date']}: "
+                f"main_text={body_preview!r}"
+            )
+        except Exception as e:
+            self.logger.warning(f"Falha salvando debug HTML: {e}")
 
     def _save_lots(self, sale_id, lots):
         if not lots:
@@ -236,14 +271,22 @@ class LotListScraper(BaseWorker):
                     lot.get("assessed_value"), lot.get("just_value"),
                     lot.get("raw_data_json"),
                 ))
-            # Atualiza total_lots no sale
             cur.execute(
                 "UPDATE sales SET total_lots = (SELECT COUNT(*) FROM lots WHERE sale_id = ?) "
                 "WHERE id = ?", (sale_id, sale_id)
             )
 
 
+def _to_float(v):
+    if v is None or v == "":
+        return None
+    try:
+        return float(str(v).replace("$", "").replace(",", "").strip() or 0)
+    except (ValueError, TypeError):
+        return None
+
+
 if __name__ == "__main__":
     import sys
-    code = sys.argv[1] if len(sys.argv) > 1 else "LEE"
+    code = sys.argv[1] if len(sys.argv) > 1 else None
     LotListScraper(county_code=code).run()
