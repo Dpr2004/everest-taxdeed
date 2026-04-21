@@ -1,0 +1,70 @@
+name: Enrich (PA + FEMA + Scoring + Alerts)
+
+on:
+  schedule:
+    # Diario 7:00 AM ET (apos lot scraper que roda 6:30)
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      county:
+        description: "Codigo condado (opcional)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      DB_PATH: ./data/taxdeed.db
+      LOG_DIR: ./logs
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      ALERT_EMAIL_TO: dpr2004@hotmail.com
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - name: Init DB
+        run: python -m src.main --init
+      - name: Property Appraiser
+        run: |
+          if [ -n "${{ github.event.inputs.county }}" ]; then
+            python -m src.main --property-appraiser --county "${{ github.event.inputs.county }}"
+          else
+            python -m src.main --property-appraiser
+          fi
+        continue-on-error: true
+      - name: FEMA Flood Zones
+        run: python -m src.main --fema --limit 50
+        continue-on-error: true
+      - name: Scoring Engine
+        run: python -m src.main --scoring
+      - name: Alert Engine (email/slack)
+        run: python -m src.main --alerts
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: enrich-logs
+          path: logs/
+          retention-days: 14
+      - name: Commit DB atualizado
+        if: always()
+        run: |
+          git config user.name "taxdeed-bot"
+          git config user.email "bot@everest.com"
+          git add data/ || true
+          git diff --staged --quiet || git commit -m "chore: enrich $(date -u +%Y-%m-%d)"
+          git push || true

@@ -96,15 +96,17 @@ def main():
                 })
             payload["semanas"].append({"label": label, "sales": sales})
 
-        # ----- Lotes (com scoring se disponivel) -----
+        # ----- Lotes (com scoring + FEMA se disponivel) -----
         cur.execute("""
             SELECT l.*, c.codigo AS condado, c.state AS estado, s.sale_date,
                    sc.max_bid_recommended, sc.projected_profit, sc.projected_roi,
-                   sc.final_score, sc.decision
+                   sc.final_score, sc.decision,
+                   dd.fema_flood_zone, dd.fema_risk
             FROM lots l
             JOIN sales s ON s.id = l.sale_id
             JOIN counties c ON c.id = s.county_id
             LEFT JOIN scores sc ON sc.lot_id = l.id
+            LEFT JOIN dd ON dd.lot_id = l.id
             WHERE s.sale_date >= DATE('now')
             ORDER BY COALESCE(sc.final_score, 0) DESC, l.min_bid ASC
             LIMIT 500
@@ -122,10 +124,15 @@ def main():
                 "min_bid": l["min_bid"],
                 "assessed_value": l["assessed_value"],
                 "just_value": l["just_value"],
+                "building_sqft": l["building_sqft"],
+                "year_built": l["year_built"],
                 "score": l["final_score"],
                 "roi": l["projected_roi"],
                 "decisao": l["decision"],
                 "max_bid": l["max_bid_recommended"],
+                "profit": l["projected_profit"],
+                "fema_zone": l["fema_flood_zone"],
+                "fema_risk": l["fema_risk"],
             })
 
         # ----- Resumo -----

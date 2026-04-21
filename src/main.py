@@ -20,6 +20,10 @@ from src.db.seeds import seed_counties
 from src.workers.calendar_scraper import CalendarScraper
 from src.workers.lot_list_scraper import LotListScraper
 from src.workers.spreadsheet_writer import SpreadsheetWriter
+from src.workers.scoring_engine import ScoringEngine
+from src.workers.property_appraiser import PropertyAppraiser
+from src.workers.fema_checker import FemaChecker
+from src.workers.alert_engine import AlertEngine
 from src.utils.logger import get_logger
 
 logger = get_logger("main")
@@ -42,6 +46,30 @@ def cmd_scrape_lots(county=None):
 
 def cmd_update_spreadsheet(county=None):
     SpreadsheetWriter(county_code=county).run()
+
+
+def cmd_scoring():
+    ScoringEngine().run()
+
+
+def cmd_property_appraiser(county=None, limit=None):
+    PropertyAppraiser(county_code=county, limit=limit).run()
+
+
+def cmd_fema(limit=None):
+    FemaChecker(limit=limit).run()
+
+
+def cmd_alerts():
+    AlertEngine().run()
+
+
+def cmd_enrich(county=None):
+    """Roda pipeline completo: PA + FEMA + Scoring + Alerts."""
+    cmd_property_appraiser(county)
+    cmd_fema()
+    cmd_scoring()
+    cmd_alerts()
 
 
 def cmd_all(county=None):
@@ -93,7 +121,13 @@ def main():
     g.add_argument("--update-spreadsheet", action="store_true")
     g.add_argument("--all", action="store_true")
     g.add_argument("--daemon", action="store_true")
+    g.add_argument("--scoring", action="store_true", help="Calcula scores para lots")
+    g.add_argument("--property-appraiser", action="store_true", help="Enrich via PA")
+    g.add_argument("--fema", action="store_true", help="FEMA flood zones")
+    g.add_argument("--alerts", action="store_true", help="Dispara alertas")
+    g.add_argument("--enrich", action="store_true", help="Pipeline: PA + FEMA + Score + Alerts")
     p.add_argument("--county", default=None, help="Codigo do condado (ex: LEE)")
+    p.add_argument("--limit", default=None, help="Limite de lots a processar", type=int)
 
     args = p.parse_args()
 
@@ -114,6 +148,16 @@ def main():
         except Exception:
             logger.exception("Init falhou - continuando")
         cmd_daemon()
+    elif args.scoring:
+        cmd_scoring()
+    elif args.property_appraiser:
+        cmd_property_appraiser(args.county, args.limit)
+    elif args.fema:
+        cmd_fema(args.limit)
+    elif args.alerts:
+        cmd_alerts()
+    elif args.enrich:
+        cmd_enrich(args.county)
 
 
 if __name__ == "__main__":
