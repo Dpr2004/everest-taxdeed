@@ -1,0 +1,14 @@
+.env
+data/*.db
+data/*.db-journal
+data/outputs/
+logs/*.log
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+# Planilha original do usuario (copiada manualmente pro container)
+data/Planilha_Padrao_11Condados_Everest.xlsx

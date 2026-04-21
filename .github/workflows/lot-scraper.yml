@@ -1,0 +1,51 @@
+name: Lot List Scraper
+
+on:
+  schedule:
+    # Todo dia 6:30 AM ET
+    - cron: '30 10 * * *'
+  workflow_dispatch:
+    inputs:
+      county:
+        description: "Codigo do condado (LEE, POLK, ...) ou vazio para todos"
+        required: false
+        default: ""
+
+jobs:
+  scrape-lots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DB_PATH: ./data/taxdeed.db
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      LOG_DIR: ./logs
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - run: python -m src.main --init
+      - name: Run Lot List Scraper
+        run: |
+          if [ -n "${{ github.event.inputs.county }}" ]; then
+            python -m src.main --scrape-lots --county "${{ github.event.inputs.county }}"
+          else
+            python -m src.main --scrape-lots
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lot-scraper-logs
+          path: logs/
+          retention-days: 14
+      - name: Commit DB + planilha atualizada
+        if: success()
+        run: |
+          git config user.name "taxdeed-bot"
+          git config user.email "bot@everest.com"
+          git add data/taxdeed.db data/Planilha_Padrao_11Condados_Everest.xlsx || true
+          git diff --staged --quiet || git commit -m "chore: lot scraper $(date -u +%Y-%m-%d)"
+          git push || true

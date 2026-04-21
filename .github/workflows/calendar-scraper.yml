@@ -1,0 +1,51 @@
+name: Calendar Scraper
+
+on:
+  schedule:
+    # Todo dia 6:00 AM ET (10:00 UTC em DST, 11:00 UTC fora de DST - usa UTC)
+    - cron: '0 10 * * *'
+  workflow_dispatch:  # permite rodar manual pelo botao no GitHub
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DB_PATH: ./data/taxdeed.db
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      LOG_DIR: ./logs
+      LOG_LEVEL: INFO
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Init DB (idempotent)
+        run: python -m src.main --init
+
+      - name: Run Calendar Scraper
+        run: python -m src.main --scrape-calendar
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: calendar-scraper-logs
+          path: logs/
+          retention-days: 14
+
+      - name: Commit updated DB
+        if: success()
+        run: |
+          git config user.name "taxdeed-bot"
+          git config user.email "bot@everest.com"
+          git add data/taxdeed.db || true
+          git diff --staged --quiet || git commit -m "chore: calendar scraper $(date -u +%Y-%m-%d)"
+          git push || true

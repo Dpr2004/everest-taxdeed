@@ -1,0 +1,52 @@
+name: PDF Semanal Calendario
+
+on:
+  schedule:
+    # Toda segunda-feira 7:00 AM ET (11:00 UTC em DST)
+    - cron: '0 11 * * 1'
+  workflow_dispatch:
+
+jobs:
+  gerar-pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      DB_PATH: ./data/taxdeed.db
+      OUTPUT_DIR: ./data/outputs
+      LOG_DIR: ./logs
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - name: Inicializar DB
+        run: python -m src.main --init
+      - name: Rodar calendar scraper (para ter datas frescas)
+        run: python -m src.main --scrape-calendar
+      - name: Gerar PDF semanal
+        run: python scripts/gerar_pdf_semanal.py
+      - name: Upload PDF como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: calendario-pdf-${{ github.run_number }}
+          path: data/outputs/*.pdf
+          retention-days: 90
+      - name: Commit PDF no repo
+        run: |
+          git config user.name "taxdeed-bot"
+          git config user.email "bot@everest.com"
+          git add data/outputs/*.pdf || true
+          git diff --staged --quiet || git commit -m "chore: pdf semanal $(date -u +%Y-%m-%d)"
+          git push || true
+      - name: Enviar email com PDF anexo
+        if: ${{ secrets.SMTP_HOST != '' }}
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          ALERT_EMAIL_TO: dpr2004@hotmail.com
+          ALERT_EMAIL_FROM: ${{ secrets.SMTP_USER }}
+        run: python scripts/enviar_email_pdf.py

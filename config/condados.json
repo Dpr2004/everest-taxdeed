@@ -1,0 +1,221 @@
+{
+  "janela_semanas": 8,
+  "condados": [
+    {
+      "codigo": "LEE",
+      "nome": "Lee County",
+      "aba_planilha": "LEE",
+      "cadencia": {
+        "tipo": "WEEKLY",
+        "dia_semana": 1
+      },
+      "horario_et": "10:00",
+      "plataforma": "RealAuction",
+      "url_sales": "https://lee.realtaxdeed.com/",
+      "url_clerk": "https://www.leeclerk.org/departments/courts/property-sales/tax-deed-sales",
+      "url_property_appraiser": "https://www.leepa.org/Search/PropertySearch.aspx",
+      "telefone": "Lee Clerk",
+      "deposito": "$200 ou 5% do bid (o maior)",
+      "status": "CONFIRMADO",
+      "estado": "FL"
+    },
+    {
+      "codigo": "POLK",
+      "nome": "Polk County",
+      "aba_planilha": "POLK",
+      "cadencia": {
+        "tipo": "ORDINAL",
+        "ordem": 3,
+        "dia_semana": 3
+      },
+      "horario_et": "09:30",
+      "plataforma": "RealTDA",
+      "url_sales": "https://www.realtda.com/",
+      "url_clerk": "https://www.polkclerkfl.gov/189/Tax-Deeds",
+      "url_property_appraiser": "https://www.polkpa.org/CamaDisplay.aspx",
+      "telefone": "Polk Clerk",
+      "deposito": "Incrementos de $100",
+      "status": "CONFIRMADO",
+      "estado": "FL"
+    },
+    {
+      "codigo": "LAKE",
+      "nome": "Lake County",
+      "aba_planilha": "LAKE",
+      "cadencia": {
+        "tipo": "WEEKLY",
+        "dia_semana": 1
+      },
+      "horario_et": "11:15",
+      "plataforma": "RealTaxDeed",
+      "url_sales": "https://lake.realtaxdeed.com/",
+      "url_clerk": "https://www.lakecountyclerkfl.gov/sales-calendars/",
+      "url_property_appraiser": "https://www.lakecopropappr.com/",
+      "telefone": "(352) 253-2620",
+      "deposito": "$200 ou 5% ate 4PM D-1",
+      "status": "PROJETADO",
+      "estado": "FL"
+    },
+    {
+      "codigo": "HIGHLANDS",
+      "nome": "Highlands County",
+      "aba_planilha": "HIGHLANDS",
+      "cadencia": {
+        "tipo": "WEEKLY",
+        "dia_semana": 2
+      },
+      "horario_et": "10:00",
+      "plataforma": "RealTaxDeed",
+      "url_sales": "https://highlands.realtaxdeed.com/",
+      "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
+      "url_property_appraiser": "https://www.hcpao.org/Search.aspx",
+      "telefone": "(863) 402-6586",
+      "deposito": "Verificar site",
+      "status": "PROJETADO",
+      "estado": "FL"
+    },
+    {
+      "codigo": "MARION",
+      "nome": "Marion County",
+      "aba_planilha": "MARION",
+      "cadencia": {
+        "tipo": "VERIFY"
+      },
+      "horario_et": "10:00",
+      "plataforma": "RealAuction",
+      "url_sales": "https://marion.realtaxdeed.com/",
+      "url_clerk": "https://www.marioncountyclerk.org/departments/records-recording/tax-deeds-and-lands-available-for-taxes/tax-deed-sales/",
+      "url_property_appraiser": "https://www.pa.marion.fl.us/PropertySearch.aspx",
+      "telefone": "(352) 671-5674",
+      "deposito": "Verificar site",
+      "status": "A_VERIFICAR",
+      "estado": "FL"
+    },
+    {
+      "codigo": "ORANGE",
+      "nome": "Orange County",
+      "aba_planilha": "ORANGE",
+      "cadencia": {
+        "tipo": "VERIFY"
+      },
+      "horario_et": "10:00",
+      "plataforma": "RealAuction",
+      "url_sales": "https://orange.realtaxdeed.com/",
+      "url_clerk": "https://www.occompt.com/191/Tax-Deed-Sales",
+      "url_property_appraiser": "https://ocpaweb.ocpafl.org/parcelsearch",
+      "telefone": "(877) 361-7325",
+      "deposito": "Wire ate 4PM D-1",
+      "status": "A_VERIFICAR",
+      "estado": "FL"
+    },
+    {
+      "codigo": "OSCEOLA",
+      "nome": "Osceola County",
+      "aba_planilha": "OSCEOLA",
+      "cadencia": {
+        "tipo": "VERIFY"
+      },
+      "horario_et": "Verificar",
+      "plataforma": "RealAuction",
+      "url_sales": "https://osceola.realtaxdeed.com/",
+      "url_clerk": "https://osceolaclerk.com/tax-deeds/",
+      "url_property_appraiser": "https://ira.property-appraiser.org/PropertySearch.aspx",
+      "telefone": "(407) 742-3500",
+      "deposito": "Verificar site",
+      "status": "A_VERIFICAR",
+      "estado": "FL"
+    },
+    {
+      "codigo": "PUTNAM",
+      "nome": "Putnam County",
+      "aba_planilha": "PUTNAM",
+      "cadencia": {
+        "tipo": "VERIFY"
+      },
+      "horario_et": "Verificar",
+      "plataforma": "RealAuction",
+      "url_sales": "https://putnam.realtaxdeed.com/",
+      "url_clerk": "https://putnamclerk.com/tax-deed-sales/",
+      "url_property_appraiser": "https://www.pa.putnam-fl.com/",
+      "telefone": "Putnam Clerk",
+      "deposito": "Verificar site",
+      "status": "A_VERIFICAR",
+      "estado": "FL"
+    },
+    {
+      "codigo": "ST_LUCIE",
+      "nome": "St. Lucie County",
+      "aba_planilha": "ST_LUCIE",
+      "cadencia": {
+        "tipo": "VERIFY"
+      },
+      "horario_et": "Verificar",
+      "plataforma": "RealAuction",
+      "url_sales": "https://stlucie.realtaxdeed.com/",
+      "url_clerk": "https://stlucieclerk.gov/services/auctions/tax-deeds",
+      "url_property_appraiser": "https://www.paslc.gov/",
+      "telefone": "(772) 462-6900",
+      "deposito": "Verificar site",
+      "status": "A_VERIFICAR",
+      "estado": "FL"
+    },
+    {
+      "codigo": "BREVARD",
+      "nome": "Brevard County",
+      "aba_planilha": "BREVARD",
+      "cadencia": {
+        "tipo": "VERIFY"
+      },
+      "horario_et": "Verificar",
+      "plataforma": "RealForeclose",
+      "url_sales": "https://brevard.realforeclose.com/",
+      "url_clerk": "https://www.brevardclerk.us/tax-deed-sales",
+      "url_property_appraiser": "https://www.bcpao.us/PropertySearch.aspx",
+      "telefone": "Brevard Clerk",
+      "deposito": "Verificar site",
+      "status": "A_VERIFICAR",
+      "estado": "FL"
+    },
+    {
+      "codigo": "CITRUS",
+      "nome": "Citrus County",
+      "aba_planilha": "CITRUS",
+      "cadencia": {
+        "tipo": "VERIFY"
+      },
+      "horario_et": "Verificar",
+      "plataforma": "RealTaxDeed",
+      "url_sales": "https://citrus.realtaxdeed.com/",
+      "url_clerk": "https://www.citrusclerk.org/207/Tax-Deeds",
+      "url_property_appraiser": "https://www.citruspa.org/",
+      "telefone": "(352) 341-6478",
+      "deposito": "Verificar site",
+      "status": "A_VERIFICAR",
+      "estado": "FL"
+    }
+  ],
+  "output": {
+    "planilha_path": "/app/data/Planilha_Padrao_11Condados_Everest.xlsx",
+    "pdf_dir": "/app/data/pdfs",
+    "logs_dir": "/app/logs",
+    "db_path": "/app/data/taxdeed.db"
+  },
+  "scheduling": {
+    "calendar_pdf_cron": "0 7 * * 1",
+    "lot_scraping_cron": "0 6 * * *",
+    "enrichment_cron": "0 */2 * * *"
+  },
+  "alertas": {
+    "slack_webhook": "${SLACK_WEBHOOK}",
+    "email_to": "dpr2004@gmail.com",
+    "score_minimo_alerta": 200
+  },
+  "metadata": {
+    "schema_version": 1,
+    "estados_cobertos": [
+      "FL"
+    ],
+    "total_condados": 11,
+    "observacao": "Arquitetura multi-estado. Para adicionar novo estado, use scripts/adicionar_condado.py"
+  }
+}
