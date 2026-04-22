@@ -146,9 +146,12 @@ def gerar_svg(features, outpath):
             continue
         attrs = f'data-fips="{fips}" data-name="{name_orig}"'
         if is_target:
+            # target="_top" forca navegacao na janela principal (nao dentro do <object>)
             paths_alvo.append(
-                f'<a class="fl-link" xlink:href="county.html?c={code}">'
-                f'<path class="fl-target" {attrs} data-code="{code}" d="{d}"/>'
+                f'<a class="fl-link" xlink:href="county.html?c={code}" target="_top">'
+                f'<path class="fl-target" {attrs} data-code="{code}" d="{d}">'
+                f'<title>{name_orig} County · click para detalhes</title>'
+                f'</path>'
                 f'</a>'
             )
         else:

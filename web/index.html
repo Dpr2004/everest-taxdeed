@@ -380,14 +380,16 @@ main { padding: 36px 0 72px; }
     width: 100%;
     height: calc(100% - 28px);
 }
-.fl-real-map {
-    position: absolute;
-    inset: 0;
+.fl-map svg {
     width: 100%;
     height: 100%;
-    z-index: 1;
-    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.4));
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(19,18,62,0.15));
 }
+.fl-map svg .fl-other { fill: #FFFFFF; stroke: rgba(19,18,62,0.35); stroke-width: 0.9; transition: fill .18s; cursor: default; }
+.fl-map svg .fl-other:hover { fill: #E8E4D5; stroke: rgba(19,18,62,0.6); }
+.fl-map svg .fl-target { fill: #1D418D; stroke: #C9972B; stroke-width: 1.8; cursor: pointer; transition: all .2s; }
+.fl-map svg .fl-target:hover { fill: #C9972B; stroke: #8C6815; stroke-width: 2.5; }
 .fl-targets-list {
     margin-top: 14px;
     display: grid;
@@ -524,11 +526,8 @@ footer {
         </div>
         <div class="fl-map-wrap">
             <div class="fl-map-title">Florida · 67 Condados · Alvos em Dourado</div>
-            <div class="fl-map">
-                <!-- SVG real gerado via US Census (scripts/gerar_mapa_fl.py) -->
-                <object type="image/svg+xml" data="fl-counties.svg" class="fl-real-map"
-                        aria-label="Mapa oficial da Florida com 67 condados"></object>
-            </div>
+            <!-- SVG injetado inline via fetch (evita problema de navegacao dentro de <object>) -->
+            <div class="fl-map" id="fl-map-container" x-init="carregarMapa()"></div>
             <div class="map-legend">
                 <span>Norte FL</span>
                 <span x-text="(dados.resumo?.total_lots || 0) + ' lotes · 11 de 67 condados'"></span>
@@ -827,7 +826,34 @@ function app() {
         redfin(l) { const q = encodeURIComponent((l.address||'')+', '+(l.city||'')+', FL'); return `https://www.redfin.com/stingray/do/location-autocomplete?location=${q}`; },
         realtor(l) { const q = encodeURIComponent((l.address||'')+' '+(l.city||'')+' FL'); return `https://www.realtor.com/realestateandhomes-search/${q}`; },
         streetview(l) { const q = encodeURIComponent((l.address||'')+' '+(l.city||'')+' FL'); return `https://www.google.com/maps/search/?api=1&query=${q}`; },
-        fema() { return 'https://msc.fema.gov/portal/search'; }
+        fema() { return 'https://msc.fema.gov/portal/search'; },
+        async carregarMapa() {
+            try {
+                const resp = await fetch('fl-counties.svg?v=' + Date.now());
+                if (!resp.ok) throw new Error('SVG nao encontrado');
+                const svgText = await resp.text();
+                const container = document.getElementById('fl-map-container');
+                if (!container) return;
+                container.innerHTML = svgText;
+                // Anexa click handler em cada condado-alvo (navega pagina inteira)
+                container.querySelectorAll('.fl-target').forEach(path => {
+                    const code = path.getAttribute('data-code');
+                    if (!code) return;
+                    path.style.cursor = 'pointer';
+                    path.addEventListener('click', () => {
+                        window.location.href = 'county.html?c=' + code;
+                    });
+                });
+                // Remove <a> wrappers que podem interferir (fallback)
+                container.querySelectorAll('a.fl-link').forEach(a => {
+                    a.removeAttribute('href');
+                });
+            } catch (e) {
+                console.error('[mapa]', e);
+                const container = document.getElementById('fl-map-container');
+                if (container) container.innerHTML = '<div style="color:rgba(19,18,62,0.5);text-align:center;padding:60px;font-size:12px;">Mapa em geracao...</div>';
+            }
+        }
     };
 }
 </script>
