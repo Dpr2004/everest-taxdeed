@@ -358,16 +358,22 @@ main { padding: 36px 0 72px; }
 
 .fl-map-wrap {
     position: relative;
-    background: linear-gradient(135deg, rgba(29,65,141,0.2) 0%, rgba(19,18,62,0.5) 100%);
-    border: 1px solid var(--border);
+    background: linear-gradient(180deg, #F5F3EC 0%, #E8E4D5 100%);
+    border: 1px solid rgba(201,151,43,0.35);
     border-radius: 16px;
     padding: 16px;
     aspect-ratio: 1 / 1.05;
     overflow: hidden;
+    box-shadow: inset 0 2px 8px rgba(19,18,62,0.06);
 }
 .fl-map-title {
-    font-size: 10px; letter-spacing: 0.2em; color: var(--gold-500);
-    text-transform: uppercase; font-weight: 700; margin-bottom: 8px;
+    font-size: 10px; letter-spacing: 0.2em; color: var(--midnight);
+    text-transform: uppercase; font-weight: 800; margin-bottom: 8px;
+}
+.map-legend {
+    margin-top: 10px; display: flex; justify-content: space-between;
+    font-size: 10px; color: rgba(19,18,62,0.55); letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 700;
 }
 .fl-map {
     position: relative;

@@ -1,15 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid meet">
-<defs>
-  <linearGradient id="flGold" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#F5E6A8"/>
-    <stop offset="60%" stop-color="#C9972B"/>
-    <stop offset="100%" stop-color="#8C6815"/>
-  </linearGradient>
-</defs>
 <style>
-  text { font-family: "Inter", sans-serif; fill: rgba(201,151,43,0.7); }
+  text { font-family: "Inter", sans-serif; fill: rgba(19,18,62,0.6); }
 </style>
-<text x="500" y="430" text-anchor="middle" font-size="20" font-weight="700">Mapa real gerado automaticamente</text>
-<text x="500" y="460" text-anchor="middle" font-size="14" opacity="0.7">Aguardando proxima execucao do Full Pipeline...</text>
-<text x="500" y="480" text-anchor="middle" font-size="12" opacity="0.5">(67 condados oficiais do US Census)</text>
+<rect x="0" y="0" width="1000" height="900" fill="transparent"/>
+<text x="500" y="420" text-anchor="middle" font-size="22" font-weight="800">Mapa real em geracao</text>
+<text x="500" y="460" text-anchor="middle" font-size="14" opacity="0.75">Aguardando proximo Full Pipeline terminar</text>
+<text x="500" y="485" text-anchor="middle" font-size="12" opacity="0.5">67 condados oficiais do US Census Bureau</text>
 </svg>

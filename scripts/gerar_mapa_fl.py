@@ -168,10 +168,10 @@ def gerar_svg(features, outpath):
   </filter>
 </defs>
 <style>
-  .fl-other {{ fill: rgba(19,18,62,0.55); stroke: rgba(255,255,255,0.10); stroke-width: 0.6; transition: fill .18s; }}
-  .fl-other:hover {{ fill: rgba(29,65,141,0.55); stroke: rgba(255,255,255,0.22); }}
-  .fl-target {{ fill: rgba(29,65,141,0.75); stroke: rgba(201,151,43,0.85); stroke-width: 1.4; cursor: pointer; transition: all .2s; }}
-  .fl-target:hover {{ fill: url(#flGold); stroke: #F5E6A8; stroke-width: 2; filter: url(#flGlow); }}
+  .fl-other {{ fill: #FFFFFF; stroke: rgba(19,18,62,0.35); stroke-width: 0.9; transition: fill .18s; }}
+  .fl-other:hover {{ fill: #E8E4D5; stroke: rgba(19,18,62,0.6); }}
+  .fl-target {{ fill: #1D418D; stroke: #C9972B; stroke-width: 1.8; cursor: pointer; transition: all .2s; }}
+  .fl-target:hover {{ fill: url(#flGold); stroke: #8C6815; stroke-width: 2.5; filter: url(#flGlow); }}
   .fl-link {{ cursor: pointer; }}
 </style>
 {chr(10).join(paths_outros)}
