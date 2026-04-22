@@ -35,6 +35,7 @@ jobs:
       SMTP_USER: ${{ secrets.SMTP_USER }}
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       ALERT_EMAIL_TO: dpr2004@hotmail.com
+      REGRID_API_KEY: ${{ secrets.REGRID_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -59,7 +60,11 @@ jobs:
             python -m src.main --scrape-lots
           fi
 
-      - name: 4) Property Appraiser (enriquece)
+      - name: 3b) Regrid Enricher (API oficial - dados canonicos de parcela)
+        run: python -m src.main --regrid
+        continue-on-error: true
+
+      - name: 4) Property Appraiser (fallback/complemento)
         run: python -m src.main --property-appraiser
         continue-on-error: true
 

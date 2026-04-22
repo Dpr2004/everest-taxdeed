@@ -24,6 +24,7 @@ from src.workers.scoring_engine import ScoringEngine
 from src.workers.property_appraiser import PropertyAppraiser
 from src.workers.fema_checker import FemaChecker
 from src.workers.alert_engine import AlertEngine
+from src.workers.regrid_enricher import RegridEnricher
 from src.utils.logger import get_logger
 
 logger = get_logger("main")
@@ -62,6 +63,10 @@ def cmd_fema(limit=None):
 
 def cmd_alerts():
     AlertEngine().run()
+
+
+def cmd_regrid():
+    RegridEnricher().run()
 
 
 def cmd_enrich(county=None):
@@ -126,6 +131,7 @@ def main():
     g.add_argument("--fema", action="store_true", help="FEMA flood zones")
     g.add_argument("--alerts", action="store_true", help="Dispara alertas")
     g.add_argument("--enrich", action="store_true", help="Pipeline: PA + FEMA + Score + Alerts")
+    g.add_argument("--regrid", action="store_true", help="Enriquece via API Regrid (dados canonicos)")
     p.add_argument("--county", default=None, help="Codigo do condado (ex: LEE)")
     p.add_argument("--limit", default=None, help="Limite de lots a processar", type=int)
 
@@ -158,6 +164,8 @@ def main():
         cmd_alerts()
     elif args.enrich:
         cmd_enrich(args.county)
+    elif args.regrid:
+        cmd_regrid()
 
 
 if __name__ == "__main__":
