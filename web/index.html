@@ -374,16 +374,52 @@ main { padding: 36px 0 72px; }
     width: 100%;
     height: calc(100% - 28px);
 }
-.fl-map::before {
-    content: "";
+.fl-real-map {
     position: absolute;
     inset: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 420'><path d='M50,40 L180,30 L290,45 L340,100 L370,180 L360,260 L340,300 L300,340 L260,390 L230,400 L220,380 L200,360 L180,340 L170,310 L150,280 L120,240 L100,200 L80,160 L60,110 Z' fill='none' stroke='rgba(201,151,43,0.4)' stroke-width='2'/></svg>");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.85;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.4));
+}
+.fl-targets-list {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 6px;
+}
+.fl-target-chip {
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(19,18,62,0.75);
+    border: 1px solid rgba(201,151,43,0.3);
+    border-radius: 6px;
+    padding: 6px 9px;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold-300);
+    text-decoration: none;
+    transition: all .18s;
+    white-space: nowrap;
+}
+.fl-target-chip:hover {
+    background: linear-gradient(135deg, #C9972B 0%, #E8C86A 100%);
+    color: var(--midnight);
+    border-color: var(--gold-100);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(201,151,43,0.35);
+}
+.fl-target-chip .count {
+    display: inline-block;
+    padding: 1px 6px; border-radius: 999px;
+    background: rgba(201,151,43,0.28);
+    color: var(--gold-100); font-size: 9px;
+    font-weight: 800;
+}
+.fl-target-chip:hover .count {
+    background: rgba(19,18,62,0.35);
+    color: var(--gold-100);
 }
 .fl-county {
     position: absolute;
@@ -481,21 +517,25 @@ footer {
                target="_blank" class="btn-atualizar">⚡ Atualizar Dados Agora</a>
         </div>
         <div class="fl-map-wrap">
-            <div class="fl-map-title">Mapa dos Condados · Click para detalhes</div>
+            <div class="fl-map-title">Florida · 67 Condados · Alvos em Dourado</div>
             <div class="fl-map">
-                <template x-for="c in dados.condados" :key="c.codigo">
-                    <a :href="'county.html?c=' + c.codigo"
-                       class="fl-county"
-                       :style="'left:' + (mapPos[c.codigo]?.x || 50) + '%; top:' + (mapPos[c.codigo]?.y || 50) + '%;'">
-                        <span x-text="c.codigo"></span>
-                        <span class="count" x-text="c.total_lots || 0"></span>
-                    </a>
-                </template>
+                <!-- SVG real gerado via US Census (scripts/gerar_mapa_fl.py) -->
+                <object type="image/svg+xml" data="fl-counties.svg" class="fl-real-map"
+                        aria-label="Mapa oficial da Florida com 67 condados"></object>
             </div>
             <div class="map-legend">
                 <span>Norte FL</span>
-                <span x-text="(dados.resumo?.total_lots || 0) + ' lotes totais'"></span>
+                <span x-text="(dados.resumo?.total_lots || 0) + ' lotes · 11 de 67 condados'"></span>
                 <span>Sul FL</span>
+            </div>
+            <!-- Lista compacta dos 11 alvos com contagem -->
+            <div class="fl-targets-list">
+                <template x-for="c in dados.condados" :key="c.codigo">
+                    <a :href="'county.html?c=' + c.codigo" class="fl-target-chip">
+                        <span class="name" x-text="c.codigo.replace('_',' ')"></span>
+                        <span class="count" x-text="c.total_lots || 0"></span>
+                    </a>
+                </template>
             </div>
         </div>
     </div>
@@ -746,19 +786,6 @@ function app() {
         aba: 'calendario',
         dados: { resumo: {}, semanas: [], lots: [], condados: [] },
         fCondado: '', fDecisao: '', fBid: null, fBusca: '',
-        mapPos: {
-            CITRUS:    { x: 22, y: 28 },
-            MARION:    { x: 36, y: 22 },
-            PUTNAM:    { x: 52, y: 18 },
-            LAKE:      { x: 48, y: 32 },
-            ORANGE:    { x: 58, y: 38 },
-            BREVARD:   { x: 72, y: 40 },
-            OSCEOLA:   { x: 56, y: 50 },
-            POLK:      { x: 40, y: 44 },
-            HIGHLANDS: { x: 46, y: 62 },
-            ST_LUCIE:  { x: 74, y: 58 },
-            LEE:       { x: 42, y: 78 }
-        },
         async init() {
             try {
                 const resp = await fetch('data.json?t=' + Date.now());

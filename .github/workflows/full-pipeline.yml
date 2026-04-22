@@ -75,6 +75,10 @@ jobs:
         run: python -m src.main --alerts
         continue-on-error: true
 
+      - name: 7b) Gerar mapa real FL (67 condados do US Census)
+        run: python scripts/gerar_mapa_fl.py
+        continue-on-error: true
+
       - name: 8) Gerar data.json para o site
         run: python scripts/gerar_site_dados.py
 
@@ -82,7 +86,7 @@ jobs:
         run: |
           git config user.name "taxdeed-bot"
           git config user.email "bot@everest.com"
-          git add data/ web/data.json || true
+          git add data/ web/data.json web/fl-counties.svg || true
           git diff --staged --quiet || git commit -m "chore: full pipeline $(date -u +%Y-%m-%d_%H%M)"
           git push || true
 
