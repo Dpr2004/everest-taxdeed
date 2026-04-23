@@ -85,12 +85,12 @@ def buscar_candidatos():
                 l.id as lot_id, l.parcel_id, l.address, l.city,
                 l.min_bid, l.just_value,
                 s.sale_date, c.codigo as condado, c.state as estado,
-                f.flood_zone,
+                d.fema_flood_zone as flood_zone,
                 sc.final_score as workers_score, sc.decision as workers_decision
             FROM lots l
             JOIN sales s ON s.id = l.sale_id
             JOIN counties c ON c.id = s.county_id
-            LEFT JOIN fema_data f ON f.lot_id = l.id
+            LEFT JOIN dd d ON d.lot_id = l.id
             LEFT JOIN scores sc ON sc.lot_id = l.id
             WHERE s.sale_date >= DATE('now')
               AND l.min_bid > 0
