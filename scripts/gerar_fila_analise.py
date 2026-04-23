@@ -24,6 +24,9 @@ import urllib.error
 from datetime import date
 from pathlib import Path
 
+# Adiciona a raiz do repo ao sys.path para importar src.*
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from src.db.connection import cursor
 
 
