@@ -1,5 +1,5 @@
 {
-  "gerado_em": "22/Apr/2026 18:10",
+  "gerado_em": "23/Apr/2026 15:25",
   "resumo": {
     "total_condados": 11,
     "total_sales": 14,
@@ -11247,8 +11247,8 @@
       "status": "A_VERIFICAR",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 2,
-      "total_lots": 162
+      "total_sales": 3,
+      "total_lots": 164
     },
     {
       "codigo": "CITRUS",
