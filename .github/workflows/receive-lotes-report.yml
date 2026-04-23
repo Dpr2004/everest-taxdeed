@@ -1,0 +1,61 @@
+name: Receive LOTES Analyzer Report
+
+# Dispara quando o LOTES Analyzer (PC casa Daniel) conclui uma analise.
+# O server.js do LOTES envia POST /dispatches com event_type=lotes_report
+# e payload com parcel_id, verdict, score, etc.
+
+on:
+  repository_dispatch:
+    types: [lotes_report]
+
+permissions:
+  contents: write
+
+jobs:
+  save-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Salvar report em web/reports/
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+        run: |
+          mkdir -p web/reports
+          PARCEL=$(echo "$PAYLOAD" | jq -r '.parcel_id')
+          if [ -z "$PARCEL" ] || [ "$PARCEL" = "null" ]; then
+            echo "ERRO: parcel_id ausente no payload"
+            exit 1
+          fi
+          echo "$PAYLOAD" > "web/reports/${PARCEL}.json"
+
+          # Se vier markdown, salvar separado
+          MD=$(echo "$PAYLOAD" | jq -r '.report_markdown // ""')
+          if [ -n "$MD" ] && [ "$MD" != "null" ]; then
+            echo "$MD" > "web/reports/${PARCEL}.md"
+          fi
+
+          echo "Report salvo para parcel $PARCEL"
+
+      - name: Commit + push
+        run: |
+          git config user.name "lotes-bot"
+          git config user.email "bot@everest.com"
+          git add web/reports/
+          git diff --staged --quiet || git commit -m "chore: report LOTES $(date -u +%Y-%m-%d_%H%M)"
+          git push || true
+
+  deploy-pages:
+    needs: save-report
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./web
+      - uses: actions/deploy-pages@v4

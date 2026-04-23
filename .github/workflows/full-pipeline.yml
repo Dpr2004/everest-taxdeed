@@ -84,6 +84,16 @@ jobs:
         run: python scripts/gerar_mapa_fl.py
         continue-on-error: true
 
+      - name: 7c) Gerar fila de candidatos para LOTES Analyzer
+        env:
+          LOTES_TUNNEL_URL: ${{ secrets.LOTES_TUNNEL_URL }}
+          LOTES_API_KEY: ${{ secrets.LOTES_API_KEY }}
+          FILA_AUTO_SEND: ${{ secrets.FILA_AUTO_SEND || 'false' }}
+          FILA_RATIO_MIN: "3.0"
+          FILA_TOP_N: "50"
+        run: python scripts/gerar_fila_analise.py
+        continue-on-error: true
+
       - name: 8) Gerar data.json para o site
         run: python scripts/gerar_site_dados.py
 
@@ -91,7 +101,7 @@ jobs:
         run: |
           git config user.name "taxdeed-bot"
           git config user.email "bot@everest.com"
-          git add data/ web/data.json web/fl-counties.svg || true
+          git add data/ web/data.json web/fl-counties.svg web/fila-analise.json || true
           git diff --staged --quiet || git commit -m "chore: full pipeline $(date -u +%Y-%m-%d_%H%M)"
           git push || true
 
