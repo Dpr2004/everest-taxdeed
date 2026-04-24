@@ -1,13 +1,24 @@
-.env
-# DBs sao versionados (permite workers trocarem estado)
+﻿# Profiles de browser (NUNCA commitar - contém sessão/senha)
+data/browser_profile/
+data/debug/
 data/outputs/
-logs/*.log
+data/taxdeed.db
+data/taxdeed.db-journal
+
+# Python
 __pycache__/
 *.pyc
 .venv/
-.vscode/
-.idea/
-*.swp
+venv/
+
+# OS
 .DS_Store
-# Planilha original do usuario (copiada manualmente pro container)
-data/Planilha_Padrao_11Condados_Everest.xlsx
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Playwright
+.playwright/
+node_modules/

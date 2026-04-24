@@ -19,6 +19,7 @@ from src.db.connection import init_schema
 from src.db.seeds import seed_counties
 from src.workers.calendar_scraper import CalendarScraper
 from src.workers.lot_list_scraper import LotListScraper
+from src.workers.lot_scraper_playwright import LotScraperPlaywright
 from src.workers.spreadsheet_writer import SpreadsheetWriter
 from src.workers.scoring_engine import ScoringEngine
 from src.workers.property_appraiser import PropertyAppraiser
@@ -43,6 +44,12 @@ def cmd_scrape_calendar():
 
 def cmd_scrape_lots(county=None):
     LotListScraper(county_code=county).run()
+
+
+def cmd_scrape_lots_playwright(county=None):
+    """Scraper Playwright - autenticado no RealAuction. Requer:
+    REALAUCTION_USER e REALAUCTION_PASS env vars."""
+    LotScraperPlaywright(county_code=county).run()
 
 
 def cmd_update_spreadsheet(county=None):
@@ -123,6 +130,8 @@ def main():
     g.add_argument("--init", action="store_true", help="Inicializa DB e seeds")
     g.add_argument("--scrape-calendar", action="store_true")
     g.add_argument("--scrape-lots", action="store_true")
+    g.add_argument("--scrape-lots-playwright", action="store_true",
+                   help="Scraper autenticado via Playwright (usa REALAUCTION_USER/PASS)")
     g.add_argument("--update-spreadsheet", action="store_true")
     g.add_argument("--all", action="store_true")
     g.add_argument("--daemon", action="store_true")
@@ -143,6 +152,8 @@ def main():
         cmd_scrape_calendar()
     elif args.scrape_lots:
         cmd_scrape_lots(args.county)
+    elif args.scrape_lots_playwright:
+        cmd_scrape_lots_playwright(args.county)
     elif args.update_spreadsheet:
         cmd_update_spreadsheet(args.county)
     elif args.all:

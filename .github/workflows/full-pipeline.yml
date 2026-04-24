@@ -36,6 +36,10 @@ jobs:
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       ALERT_EMAIL_TO: dpr2004@hotmail.com
       REGRID_API_KEY: ${{ secrets.REGRID_API_KEY }}
+      REALAUCTION_USER: ${{ secrets.REALAUCTION_USER }}
+      REALAUCTION_PASS: ${{ secrets.REALAUCTION_PASS }}
+      PLAYWRIGHT_HEADLESS: "true"
+      PLAYWRIGHT_CHANNEL: ""
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,19 +50,32 @@ jobs:
           cache: "pip"
       - run: pip install -r requirements.txt
 
+      - name: Install Playwright browsers
+        run: python -m playwright install --with-deps chromium
+
       - name: 1) Init DB
         run: python -m src.main --init
 
       - name: 2) Calendar Scraper (datas reais via ALB)
         run: python -m src.main --scrape-calendar
 
-      - name: 3) Lot List Scraper (propriedades reais)
+      - name: 3) Lot Scraper autenticado (Playwright + login RealAuction)
+        run: |
+          if [ -n "${{ github.event.inputs.county }}" ]; then
+            python -m src.main --scrape-lots-playwright --county "${{ github.event.inputs.county }}"
+          else
+            python -m src.main --scrape-lots-playwright
+          fi
+        continue-on-error: true
+
+      - name: 3b) Lot List Scraper fallback (urllib - caso o Playwright falhe)
         run: |
           if [ -n "${{ github.event.inputs.county }}" ]; then
             python -m src.main --scrape-lots --county "${{ github.event.inputs.county }}"
           else
             python -m src.main --scrape-lots
           fi
+        continue-on-error: true
 
       - name: 3b) Regrid Enricher (API oficial - dados canonicos de parcela)
         run: python -m src.main --regrid
