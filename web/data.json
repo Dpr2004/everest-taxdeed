@@ -1,10 +1,10 @@
 {
-  "gerado_em": "24/Apr/2026 10:29",
+  "gerado_em": "24/Apr/2026 15:38",
   "resumo": {
     "total_condados": 11,
     "total_sales": 14,
     "total_lots": 500,
-    "lances": 0,
+    "lances": 5,
     "estados": [
       "FL"
     ]
@@ -28,7 +28,7 @@
           "url_sales": "https://highlands.realtaxdeed.com/",
           "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
           "status": "A_VERIFICAR",
-          "total_lots": 19
+          "total_lots": 29
         },
         {
           "id": 7,
@@ -76,7 +76,7 @@
           "url_sales": "https://highlands.realtaxdeed.com/",
           "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
           "status": "A_VERIFICAR",
-          "total_lots": 31
+          "total_lots": 41
         },
         {
           "id": 6,
@@ -89,7 +89,7 @@
           "url_sales": "https://marion.realtaxdeed.com/",
           "url_clerk": "https://www.marioncountyclerk.org/departments/records-recording/tax-deeds-and-lands-available-for-taxes/tax-deed-sales/",
           "status": "A_VERIFICAR",
-          "total_lots": 92
+          "total_lots": 102
         },
         {
           "id": 10,
@@ -115,7 +115,7 @@
           "url_sales": "https://brevard.realforeclose.com/",
           "url_clerk": "https://www.brevardclerk.us/tax-deed-sales",
           "status": "A_VERIFICAR",
-          "total_lots": 117
+          "total_lots": 127
         }
       ]
     },
@@ -146,7 +146,7 @@
           "url_sales": "https://highlands.realtaxdeed.com/",
           "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
           "status": "A_VERIFICAR",
-          "total_lots": 31
+          "total_lots": 41
         }
       ]
     },
@@ -164,7 +164,7 @@
           "url_sales": "https://highlands.realtaxdeed.com/",
           "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
           "status": "A_VERIFICAR",
-          "total_lots": 26
+          "total_lots": 36
         },
         {
           "id": 11,
@@ -177,7 +177,7 @@
           "url_sales": "https://putnam.realtaxdeed.com/",
           "url_clerk": "https://putnamclerk.com/tax-deed-sales/",
           "status": "A_VERIFICAR",
-          "total_lots": 37
+          "total_lots": 47
         }
       ]
     },
@@ -195,7 +195,7 @@
           "url_sales": "https://lake.realtaxdeed.com/",
           "url_clerk": "https://www.lakecountyclerkfl.gov/sales-calendars/",
           "status": "A_VERIFICAR",
-          "total_lots": 6
+          "total_lots": 12
         },
         {
           "id": 8,
@@ -208,7 +208,7 @@
           "url_sales": "https://orange.realtaxdeed.com/",
           "url_clerk": "https://www.occompt.com/191/Tax-Deed-Sales",
           "status": "A_VERIFICAR",
-          "total_lots": 18
+          "total_lots": 28
         }
       ]
     },
@@ -226,12 +226,232 @@
           "url_sales": "https://brevard.realforeclose.com/",
           "url_clerk": "https://www.brevardclerk.us/tax-deed-sales",
           "status": "A_VERIFICAR",
-          "total_lots": 45
+          "total_lots": 55
         }
       ]
     }
   ],
   "lots": [
+    {
+      "id": 2837,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-04-29",
+      "parcel_id": "S-20-34-29-080-1300-0080",
+      "address": "1436 HITAKEE AVE",
+      "city": "SEBRING",
+      "zip": "33870",
+      "min_bid": 9371.19,
+      "assessed_value": 96959.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 0.7749,
+      "decisao": "LANCE",
+      "max_bid": 0.0,
+      "profit": 35980.75,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2847,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-05-13",
+      "parcel_id": "C-01-33-28-010-0000-8999",
+      "address": "2665 N ITHICA RD",
+      "city": "AVON PARK",
+      "zip": "33825",
+      "min_bid": 14305.37,
+      "assessed_value": 246223.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 2.4021,
+      "decisao": "LANCE",
+      "max_bid": 85218.48,
+      "profit": 147771.02,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2910,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-06-04",
+      "parcel_id": "252229360800060",
+      "address": "27 N MILLS AVE",
+      "city": "ORLANDO",
+      "zip": "32801",
+      "min_bid": 84045.17,
+      "assessed_value": 373772.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.2704,
+      "decisao": "LANCE",
+      "max_bid": 163278.46,
+      "profit": 177774.53,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2859,
+      "condado": "MARION",
+      "estado": "FL",
+      "sale_date": "2026-05-13",
+      "parcel_id": "3739-002-004",
+      "address": "11366 SE 40TH AVE",
+      "city": "BELLEVIEW",
+      "zip": "34420",
+      "min_bid": 21177.82,
+      "assessed_value": 109710.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 89.4,
+      "roi": 0.5777,
+      "decisao": "LANCE",
+      "max_bid": 1672.52,
+      "profit": 34145.4,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2838,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-04-29",
+      "parcel_id": "P-06-37-30-040-0210-0110",
+      "address": "217 PALMETTO ST",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 7361.77,
+      "assessed_value": 82947.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 84.3,
+      "roi": 0.6218,
+      "decisao": "LANCE",
+      "max_bid": 0.0,
+      "profit": 27032.78,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2844,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-05-13",
+      "parcel_id": "C-14-37-29-190-0010-0620",
+      "address": null,
+      "city": null,
+      "zip": null,
+      "min_bid": 3796.81,
+      "assessed_value": 66000.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 77.4,
+      "roi": 0.4476,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 17345.19,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2848,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-05-13",
+      "parcel_id": "A-23-33-28-130-0010-0010",
+      "address": "600 S FAIRVIEW TER",
+      "city": "AVON PARK",
+      "zip": "33825",
+      "min_bid": 5819.26,
+      "assessed_value": 66310.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 76.1,
+      "roi": 0.3815,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 15565.16,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2923,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-06-11",
+      "parcel_id": "2914066",
+      "address": "0 UNKNOWN",
+      "city": null,
+      "zip": null,
+      "min_bid": 4673.65,
+      "assessed_value": 59000.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 69.0,
+      "roi": 0.2808,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 10994.35,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2849,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-05-13",
+      "parcel_id": "C-08-37-30-070-0000-0190",
+      "address": "13644 JOSEPHINE AVE",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 5513.77,
+      "assessed_value": 53065.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 36.8,
+      "roi": 0.1392,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": 5513.06,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 2911,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-06-04",
+      "parcel_id": "322229182800180",
+      "address": "4665 PIEDMONT CT",
+      "city": "ORLANDO",
+      "zip": "32811",
+      "min_bid": 238292.81,
+      "assessed_value": 364969.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 28.2,
+      "roi": 0.0567,
+      "decisao": "PASSA",
+      "max_bid": 157891.03,
+      "profit": 16642.95,
+      "fema_zone": null,
+      "fema_risk": null
+    },
     {
       "id": 1,
       "condado": "HIGHLANDS",
@@ -11011,226 +11231,6 @@
       "profit": null,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 491,
-      "condado": "PUTNAM",
-      "estado": "FL",
-      "sale_date": "2026-05-27",
-      "parcel_id": "AID_1497853",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 492,
-      "condado": "PUTNAM",
-      "estado": "FL",
-      "sale_date": "2026-05-27",
-      "parcel_id": "AID_1497854",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 493,
-      "condado": "PUTNAM",
-      "estado": "FL",
-      "sale_date": "2026-05-27",
-      "parcel_id": "AID_1497855",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 494,
-      "condado": "PUTNAM",
-      "estado": "FL",
-      "sale_date": "2026-05-27",
-      "parcel_id": "AID_1497856",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 495,
-      "condado": "PUTNAM",
-      "estado": "FL",
-      "sale_date": "2026-05-27",
-      "parcel_id": "AID_1497857",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 496,
-      "condado": "PUTNAM",
-      "estado": "FL",
-      "sale_date": "2026-05-27",
-      "parcel_id": "AID_1497858",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 497,
-      "condado": "LAKE",
-      "estado": "FL",
-      "sale_date": "2026-06-02",
-      "parcel_id": "AID_1498965",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 498,
-      "condado": "LAKE",
-      "estado": "FL",
-      "sale_date": "2026-06-02",
-      "parcel_id": "AID_1498966",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 499,
-      "condado": "LAKE",
-      "estado": "FL",
-      "sale_date": "2026-06-02",
-      "parcel_id": "AID_1498967",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 500,
-      "condado": "LAKE",
-      "estado": "FL",
-      "sale_date": "2026-06-02",
-      "parcel_id": "AID_1498968",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": null,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": null,
-      "roi": null,
-      "decisao": null,
-      "max_bid": null,
-      "profit": null,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11248,7 +11248,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 164
+      "total_lots": 186
     },
     {
       "codigo": "CITRUS",
@@ -11280,7 +11280,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 4,
-      "total_lots": 107
+      "total_lots": 147
     },
     {
       "codigo": "LAKE",
@@ -11296,7 +11296,7 @@
       "horario_et": "11:15",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 1,
-      "total_lots": 6
+      "total_lots": 12
     },
     {
       "codigo": "LEE",
@@ -11328,7 +11328,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 1,
-      "total_lots": 92
+      "total_lots": 102
     },
     {
       "codigo": "ORANGE",
@@ -11344,7 +11344,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 2,
-      "total_lots": 23
+      "total_lots": 33
     },
     {
       "codigo": "OSCEOLA",
@@ -11392,7 +11392,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 2,
-      "total_lots": 108
+      "total_lots": 118
     },
     {
       "codigo": "ST_LUCIE",
