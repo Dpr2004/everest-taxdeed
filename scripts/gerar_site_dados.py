@@ -41,7 +41,7 @@ def main():
         cur.execute("""
             SELECT c.*,
                 (SELECT COUNT(*) FROM sales s WHERE s.county_id = c.id AND s.sale_date >= DATE('now')) AS total_sales,
-                (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id WHERE s.county_id = c.id) AS total_lots
+                (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id WHERE s.county_id = c.id AND l.parcel_id NOT LIKE 'AID_%') AS total_lots
             FROM counties c
             WHERE c.ativo = 1
             ORDER BY c.state, c.codigo
@@ -108,6 +108,8 @@ def main():
             LEFT JOIN scores sc ON sc.lot_id = l.id
             LEFT JOIN dd ON dd.lot_id = l.id
             WHERE s.sale_date >= DATE('now')
+              AND l.parcel_id NOT LIKE 'AID_%'
+              AND (l.min_bid > 0 OR l.address IS NOT NULL)
             ORDER BY COALESCE(sc.final_score, 0) DESC, l.min_bid ASC
             LIMIT 500
         """)

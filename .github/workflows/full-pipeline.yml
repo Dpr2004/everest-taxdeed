@@ -59,6 +59,10 @@ jobs:
       - name: 2) Calendar Scraper (datas reais via ALB)
         run: python -m src.main --scrape-calendar
 
+      - name: 2b) Limpar lotes fake (AID_*) do scraper antigo
+        run: python scripts/limpar_lotes_fake.py
+        continue-on-error: true
+
       - name: 3) Lot Scraper autenticado (Playwright + login RealAuction)
         run: |
           if [ -n "${{ github.event.inputs.county }}" ]; then

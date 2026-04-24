@@ -93,6 +93,7 @@ def buscar_candidatos():
             LEFT JOIN dd d ON d.lot_id = l.id
             LEFT JOIN scores sc ON sc.lot_id = l.id
             WHERE s.sale_date >= DATE('now')
+              AND l.parcel_id NOT LIKE 'AID_%'
               AND l.min_bid > 0
               AND l.just_value > 0
             ORDER BY s.sale_date ASC
