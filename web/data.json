@@ -1,5 +1,5 @@
 {
-  "gerado_em": "26/Apr/2026 14:30",
+  "gerado_em": "27/Apr/2026 11:18",
   "resumo": {
     "total_condados": 11,
     "total_sales": 14,
@@ -10,10 +10,6 @@
     ]
   },
   "semanas": [
-    {
-      "label": "20/Apr a 26/Apr/2026",
-      "sales": []
-    },
     {
       "label": "27/Apr a 03/May/2026",
       "sales": [
@@ -229,6 +225,10 @@
           "total_lots": 55
         }
       ]
+    },
+    {
+      "label": "15/Jun a 21/Jun/2026",
+      "sales": []
     }
   ],
   "lots": [
