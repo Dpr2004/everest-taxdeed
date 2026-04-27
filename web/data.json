@@ -1,9 +1,9 @@
 {
-  "gerado_em": "27/Apr/2026 11:18",
+  "gerado_em": "27/Apr/2026 15:33",
   "resumo": {
     "total_condados": 11,
     "total_sales": 14,
-    "total_lots": 102,
+    "total_lots": 103,
     "lances": 5,
     "estados": [
       "FL"
@@ -204,7 +204,7 @@
           "url_sales": "https://orange.realtaxdeed.com/",
           "url_clerk": "https://www.occompt.com/191/Tax-Deed-Sales",
           "status": "A_VERIFICAR",
-          "total_lots": 28
+          "total_lots": 29
         }
       ]
     },
@@ -1254,15 +1254,15 @@
       "city": null,
       "zip": null,
       "min_bid": 1525.29,
-      "assessed_value": null,
+      "assessed_value": 770.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.84,
+      "roi": -0.9796,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -27224.18,
+      "profit": -31393.15,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -1443,6 +1443,28 @@
       "fema_risk": null
     },
     {
+      "id": 9312,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-06-04",
+      "parcel_id": "242232621403640",
+      "address": "DILL RD",
+      "city": "ORLANDO",
+      "zip": "32820",
+      "min_bid": 1591.67,
+      "assessed_value": 1375.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9637,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30986.42,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 2908,
       "condado": "LAKE",
       "estado": "FL",
@@ -1474,15 +1496,15 @@
       "city": null,
       "zip": null,
       "min_bid": 1622.83,
-      "assessed_value": null,
+      "assessed_value": 770.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.8304,
+      "roi": -0.9796,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -27016.62,
+      "profit": -31490.69,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -1672,15 +1694,15 @@
       "city": null,
       "zip": null,
       "min_bid": 1729.95,
-      "assessed_value": null,
+      "assessed_value": 2520.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.82,
+      "roi": -0.9338,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -26788.67,
+      "profit": -30229.31,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -2588,7 +2610,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 2,
-      "total_lots": 10
+      "total_lots": 11
     },
     {
       "codigo": "OSCEOLA",
