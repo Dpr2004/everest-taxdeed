@@ -1,9 +1,9 @@
 {
-  "gerado_em": "27/Apr/2026 15:33",
+  "gerado_em": "28/Apr/2026 11:20",
   "resumo": {
     "total_condados": 11,
-    "total_sales": 14,
-    "total_lots": 103,
+    "total_sales": 15,
+    "total_lots": 104,
     "lances": 5,
     "estados": [
       "FL"
@@ -59,7 +59,7 @@
           "url_sales": "https://citrus.realtaxdeed.com/",
           "url_clerk": "https://www.citrusclerk.org/207/Tax-Deeds",
           "status": "A_VERIFICAR",
-          "total_lots": 39
+          "total_lots": 38
         },
         {
           "id": 3,
@@ -160,7 +160,7 @@
           "url_sales": "https://highlands.realtaxdeed.com/",
           "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
           "status": "A_VERIFICAR",
-          "total_lots": 36
+          "total_lots": 37
         },
         {
           "id": 11,
@@ -228,7 +228,21 @@
     },
     {
       "label": "15/Jun a 21/Jun/2026",
-      "sales": []
+      "sales": [
+        {
+          "id": 246,
+          "data_fmt": "17/Jun/2026",
+          "dia_semana": "Qua",
+          "condado": "MARION",
+          "estado": "FL",
+          "horario": "10:00",
+          "plataforma": "RealAuction",
+          "url_sales": "https://marion.realtaxdeed.com/",
+          "url_clerk": "https://www.marioncountyclerk.org/departments/records-recording/tax-deeds-and-lands-available-for-taxes/tax-deed-sales/",
+          "status": "A_VERIFICAR",
+          "total_lots": 88
+        }
+      ]
     }
   ],
   "lots": [
@@ -1839,6 +1853,28 @@
       "fema_risk": null
     },
     {
+      "id": 9959,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-05-27",
+      "parcel_id": "C-35-34-28-021-0060-0020",
+      "address": "479 HUMMINGBIRD AVE",
+      "city": "SEBRING",
+      "zip": "33872",
+      "min_bid": 2124.72,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7822,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -25948.6,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 2839,
       "condado": "HIGHLANDS",
       "estado": "FL",
@@ -2546,7 +2582,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 4,
-      "total_lots": 41
+      "total_lots": 42
     },
     {
       "codigo": "LAKE",
@@ -2593,7 +2629,7 @@
       "status": "A_VERIFICAR",
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 1,
+      "total_sales": 2,
       "total_lots": 10
     },
     {
