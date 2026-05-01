@@ -54,11 +54,14 @@ jobs:
 
       - name: Run post-auction scraper
         env:
-          REALAUCTION_USER:  ${{ secrets.REALAUCTION_USER }}
-          REALAUCTION_PASS:  ${{ secrets.REALAUCTION_PASS }}
-          LOTES_TUNNEL_URL:  ${{ secrets.LOTES_TUNNEL_URL }}
-          LOTES_API_KEY:     ${{ secrets.LOTES_API_KEY }}
-          DRY_RUN:           ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+          REALAUCTION_USER:    ${{ secrets.REALAUCTION_USER }}
+          REALAUCTION_PASS:    ${{ secrets.REALAUCTION_PASS }}
+          LOTES_TUNNEL_URL:    ${{ secrets.LOTES_TUNNEL_URL }}
+          LOTES_API_KEY:       ${{ secrets.LOTES_API_KEY }}
+          DRY_RUN:             ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+          # CI nao tem XServer e nao tem Chrome real, so Chromium do Playwright
+          PLAYWRIGHT_HEADLESS: 'true'
+          PLAYWRIGHT_CHANNEL:  ''
         run: |
           ARGS="--days ${{ github.event.inputs.days_back || '7' }}"
           if [ -n "${{ github.event.inputs.counties }}" ]; then
