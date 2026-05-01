@@ -20,6 +20,10 @@ on:
         description: 'DRY_RUN (nao envia ao LOTES)'
         type: boolean
         default: false
+      debug_dump_html:
+        description: 'DEBUG: dumpa HTML do primeiro .AUCTION_ITEM (use pra ajustar selectors)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -62,6 +66,7 @@ jobs:
           # CI nao tem XServer e nao tem Chrome real, so Chromium do Playwright
           PLAYWRIGHT_HEADLESS: 'true'
           PLAYWRIGHT_CHANNEL:  ''
+          DEBUG_DUMP_HTML:     ${{ github.event.inputs.debug_dump_html == 'true' && '1' || '' }}
         run: |
           ARGS="--days ${{ github.event.inputs.days_back || '7' }}"
           if [ -n "${{ github.event.inputs.counties }}" ]; then

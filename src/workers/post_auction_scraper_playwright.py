@@ -232,6 +232,17 @@ class PostAuctionScraperPlaywright(BaseWorker):
         items = page.locator(SELECTORS["auction_item"]).all()
         self.logger.info(f"  {len(items)} lotes em {county} {date_str}")
 
+        # DEBUG: dumpa HTML do primeiro item se DEBUG_DUMP_HTML setado
+        if items and os.environ.get("DEBUG_DUMP_HTML"):
+            try:
+                html = items[0].inner_html(timeout=3000)
+                self.logger.info(
+                    f"  [DEBUG_DUMP_HTML] {county} {date_str} primeiro .AUCTION_ITEM:\n"
+                    f"=== BEGIN HTML ===\n{html[:5000]}\n=== END HTML ==="
+                )
+            except Exception as e:
+                self.logger.warning(f"  [DEBUG_DUMP_HTML] falhou: {e}")
+
         results = []
         for item in items:
             try:
