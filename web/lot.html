@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise — Everest TaxDeed</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="everest-icon.png" type="image/png" sizes="256x256">
+<link rel="apple-touch-icon" href="everest-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+:root {
+    --midnight: #13123E; --midnight-deep: #0A0927; --royal: #1D418D;
+    --gold-100: #F5E6A8; --gold-300: #E8C86A; --gold-500: #C9972B; --gold-700: #8C6815;
+    --white: #FFF; --red: #D64545; --green: #34D399; --yellow: #FBBF24;
+    --bg: #0A0927; --bg-panel: #13123E; --bg-elev: #1A1A4A;
+    --white-85: rgba(255,255,255,0.85); --white-60: rgba(255,255,255,0.60); --white-40: rgba(255,255,255,0.40);
+    --border: rgba(255,255,255,0.10);
+    --gold-grad: linear-gradient(180deg, #F5E6A8 0%, #E8C86A 22%, #C9972B 55%, #B2831F 72%, #E8C86A 92%, #F5E6A8 100%);
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--white); line-height: 1.55; font-size: 14px; }
+
+.topbar { background: var(--bg-panel); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+.topbar-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand-link { display: flex; align-items: center; gap: 10px; color: var(--white); text-decoration: none; }
+.brand-link img { width: 36px; height: 36px; border-radius: 8px; }
+.brand-name { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-300); }
+.back-link { color: var(--gold-500); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.back-link:hover { color: var(--gold-300); }
+
+.actions-bar { display: flex; gap: 8px; align-items: center; }
+.btn-print { background: linear-gradient(135deg, var(--gold-300), var(--gold-500)); color: var(--midnight); border: none; padding: 10px 18px; border-radius: 8px; font-weight: 800; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; box-shadow: 0 4px 12px rgba(201,151,43,0.3); display: inline-flex; align-items: center; gap: 6px; }
+.btn-print:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(201,151,43,0.45); }
+.btn-print svg { width: 16px; height: 16px; }
+.btn-outline { background: transparent; color: var(--gold-300); border: 1.5px solid var(--gold-500); padding: 10px 16px; border-radius: 8px; font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+
+.hero { background: linear-gradient(135deg, var(--bg-panel), var(--bg-elev)); border: 1px solid var(--border); border-radius: 14px; padding: 32px; margin-bottom: 24px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: radial-gradient(circle, rgba(201,151,43,0.18), transparent 70%); pointer-events: none; }
+.eyebrow { color: var(--gold-500); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+.parcel-title { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; line-height: 1.15; margin: 0 0 8px; color: var(--white); }
+.parcel-meta { color: var(--white-60); font-size: 14px; margin-bottom: 24px; }
+.parcel-meta strong { color: var(--gold-300); }
+
+.verdict-badge { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; border: 1.5px solid; }
+.verdict-LANCE, .verdict-COMPRAR, .verdict-BUY { background: rgba(52,211,153,0.12); color: var(--green); border-color: var(--green); }
+.verdict-CONDITIONAL { background: rgba(232,200,106,0.12); color: var(--gold-300); border-color: var(--gold-500); }
+.verdict-REVISAR, .verdict-INVESTIGATE, .verdict-INVESTIGAR { background: rgba(251,191,36,0.12); color: var(--yellow); border-color: var(--yellow); }
+.verdict-PASSA, .verdict-PASS, .verdict-PASSAR { background: rgba(214,69,69,0.12); color: var(--red); border-color: var(--red); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 24px; }
+.stat-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,151,43,0.18); border-radius: 10px; padding: 14px 16px; }
+.stat-lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white-40); margin-bottom: 4px; }
+.stat-val { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--white); }
+.stat-val.gold { color: var(--gold-300); }
+.stat-val.green { color: var(--green); }
+.stat-val.red { color: var(--red); }
+
+.section { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; }
+.section-title { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: var(--gold-300); margin: 0 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(201,151,43,0.25); }
+.reason-item { padding: 14px 16px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold-500); border-radius: 0 8px 8px 0; margin-bottom: 10px; }
+.reason-num { font-family: 'Playfair Display', serif; color: var(--gold-300); font-weight: 700; font-size: 18px; margin-right: 8px; }
+.flag-item { padding: 10px 14px; background: rgba(214,69,69,0.08); border-left: 3px solid var(--red); border-radius: 0 6px 6px 0; margin-bottom: 6px; font-size: 13px; }
+.flag-item.yellow { background: rgba(251,191,36,0.08); border-left-color: var(--yellow); }
+.flag-item.green { background: rgba(52,211,153,0.08); border-left-color: var(--green); }
+
+.markdown-body { color: var(--white-85); font-size: 14px; line-height: 1.7; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3 { font-family: 'Playfair Display', serif; color: var(--gold-300); margin-top: 24px; margin-bottom: 12px; }
+.markdown-body h1 { font-size: 22px; border-bottom: 1px solid rgba(201,151,43,0.3); padding-bottom: 8px; }
+.markdown-body h2 { font-size: 18px; }
+.markdown-body h3 { font-size: 16px; }
+.markdown-body table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+.markdown-body th, .markdown-body td { padding: 8px 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left; }
+.markdown-body th { background: rgba(201,151,43,0.12); color: var(--gold-300); font-weight: 700; }
+.markdown-body code { background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+.markdown-body blockquote { border-left: 3px solid var(--gold-500); margin: 12px 0; padding: 8px 16px; background: rgba(201,151,43,0.06); color: var(--white-85); }
+.markdown-body ul, .markdown-body ol { padding-left: 24px; }
+.markdown-body strong { color: var(--white); }
+.markdown-body a { color: var(--gold-300); }
+
+.links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 8px; }
+.link-ext { padding: 10px 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(201,151,43,0.2); border-radius: 6px; color: var(--gold-300); text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; transition: all .18s; }
+.link-ext:hover { background: rgba(201,151,43,0.12); border-color: var(--gold-500); color: var(--gold-100); }
+
+.empty { text-align: center; padding: 40px; color: var(--white-60); }
+.loading { text-align: center; padding: 60px 20px; color: var(--white-60); }
+
+footer { background: var(--bg-panel); border-top: 1px solid var(--border); padding: 24px 0; margin-top: 48px; }
+.foot-text { text-align: center; color: var(--white-40); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
+
+/* ===== PRINT ===== */
+@media print {
+    body { background: white !important; color: #000 !important; font-size: 11pt; }
+    .topbar, footer, .btn-print, .btn-outline, .links-grid, .actions-bar { display: none !important; }
+    .container { padding: 0 !important; max-width: 100% !important; }
+    .hero, .section { background: white !important; border: 1px solid #ccc !important; color: #000 !important; page-break-inside: avoid; box-shadow: none !important; padding: 16px !important; margin-bottom: 12px !important; }
+    .hero::before { display: none !important; }
+    .parcel-title, .section-title, .markdown-body h1, .markdown-body h2, .markdown-body h3 { color: #13123E !important; }
+    .eyebrow, .stat-lbl { color: #C9972B !important; }
+    .stat-val { color: #000 !important; }
+    .stat-val.gold, .stat-val.green { color: #13123E !important; }
+    .verdict-badge { border-width: 2px !important; padding: 6px 14px !important; font-size: 10pt !important; }
+    .reason-item, .flag-item { background: #F5F5F5 !important; color: #000 !important; page-break-inside: avoid; }
+    .markdown-body { color: #000 !important; }
+    .markdown-body th { background: #FBE9C7 !important; color: #13123E !important; }
+    .markdown-body strong { color: #000 !important; }
+    .markdown-body table, .markdown-body tr, .markdown-body td { page-break-inside: avoid; }
+    a[href]::after { content: ""; }
+    .stat-box { background: #FAFAFA !important; border-color: #ccc !important; }
+    /* Header impresso */
+    body::before { content: "EVEREST INVESTMENTS GROUP — Tax Deed Analysis"; display: block; font-family: 'Playfair Display', serif; font-size: 14pt; font-weight: 700; color: #C9972B; text-align: center; padding: 12pt 0; border-bottom: 2px solid #C9972B; margin-bottom: 16pt; letter-spacing: 0.2em; text-transform: uppercase; }
+}
+</style>
+</head>
+<body x-data="lotPage()" x-init="init()">
+
+<header class="topbar no-print">
+    <div class="topbar-inner">
+        <a href="index.html" class="brand-link">
+            <img src="everest-icon.png" alt="Everest">
+            <span class="brand-name">Everest TaxDeed</span>
+        </a>
+        <div class="actions-bar">
+            <a :href="'county.html?c=' + (lot.codigo_condado || '')" class="back-link">← Voltar ao Condado</a>
+            <button @click="window.print()" class="btn-print">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+                Imprimir
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <div x-show="loading" class="loading">Carregando análise...</div>
+
+    <template x-if="!loading && !lot.parcel_id">
+        <div class="empty">
+            <h2 style="font-family: 'Playfair Display', serif; color: var(--gold-300);">Propriedade não encontrada</h2>
+            <p>Parcel <code x-text="parcelId"></code> não está no pipeline.</p>
+            <a href="index.html" class="back-link">← Voltar ao Dashboard</a>
+        </div>
+    </template>
+
+    <template x-if="!loading && lot.parcel_id">
+        <div>
+            <!-- HERO -->
+            <section class="hero">
+                <div class="eyebrow" x-text="(lot.condado || '—') + ' · ' + (lot.estado || 'FL')"></div>
+                <h1 class="parcel-title" x-text="lot.address || ('Parcel ' + lot.parcel_id)"></h1>
+                <div class="parcel-meta">
+                    <strong>Parcel ID:</strong> <span x-text="lot.parcel_id"></span>
+                    <span x-show="lot.city"> · <span x-text="lot.city"></span></span>
+                    <span x-show="lot.zip"> · FL <span x-text="lot.zip"></span></span>
+                    <span x-show="lot.sale_date"> · Leilão <strong x-text="lot.sale_date"></strong></span>
+                </div>
+
+                <template x-if="report.verdict || lot.decisao">
+                    <div>
+                        <span class="verdict-badge" :class="'verdict-' + verdictClass()" x-text="verdictLabel()"></span>
+                    </div>
+                </template>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-lbl">Bid Mínimo</div>
+                        <div class="stat-val" x-text="usd(lot.min_bid)"></div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-lbl">V. Avaliado</div>
+                        <div class="stat-val" x-text="usd(lot.assessed_value)"></div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-lbl">V. Mercado (ARV)</div>
+                        <div class="stat-val gold" x-text="usd(lot.just_value)"></div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-lbl">Score</div>
+                        <div class="stat-val gold" x-text="(report.final_score || lot.score) ? (report.final_score || lot.score).toFixed(1) : '—'"></div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-lbl">ROI Projetado</div>
+                        <div class="stat-val green" x-text="lot.roi ? (lot.roi*100).toFixed(1)+'%' : '—'"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOP 3 RAZOES -->
+            <template x-if="report.top_3_reasons && report.top_3_reasons.length">
+                <section class="section">
+                    <h2 class="section-title">Top 3 Razões</h2>
+                    <template x-for="(r, i) in report.top_3_reasons" :key="i">
+                        <div class="reason-item"><span class="reason-num" x-text="(i+1) + '.'"></span><span x-text="r"></span></div>
+                    </template>
+                </section>
+            </template>
+
+            <!-- FLAGS -->
+            <template x-if="report.flags && report.flags.length">
+                <section class="section">
+                    <h2 class="section-title">Flags</h2>
+                    <template x-for="(f, i) in report.flags" :key="i">
+                        <div class="flag-item" :class="(f.type || '').toLowerCase()" x-text="(f.type || '') + ': ' + (f.text || f)"></div>
+                    </template>
+                </section>
+            </template>
+
+            <!-- RED FLAGS -->
+            <template x-if="report.red_flags && report.red_flags.length">
+                <section class="section">
+                    <h2 class="section-title">Red Flags</h2>
+                    <template x-for="(f, i) in report.red_flags" :key="i">
+                        <div class="flag-item" x-text="f"></div>
+                    </template>
+                </section>
+            </template>
+
+            <!-- RELATORIO COMPLETO MARKDOWN -->
+            <template x-if="markdownHtml">
+                <section class="section">
+                    <h2 class="section-title">Relatório Completo (12 Agentes)</h2>
+                    <div class="markdown-body" x-html="markdownHtml"></div>
+                </section>
+            </template>
+
+            <!-- LINKS EXTERNOS -->
+            <section class="section no-print">
+                <h2 class="section-title">Pesquisar Externamente</h2>
+                <div class="links-grid">
+                    <a :href="zillow()" target="_blank" class="link-ext">Zillow →</a>
+                    <a :href="streetview()" target="_blank" class="link-ext">Street View →</a>
+                    <a :href="redfin()" target="_blank" class="link-ext">Redfin →</a>
+                    <a :href="realtor()" target="_blank" class="link-ext">Realtor →</a>
+                    <a href="https://msc.fema.gov/portal/search" target="_blank" class="link-ext">FEMA Flood →</a>
+                </div>
+            </section>
+        </div>
+    </template>
+</div>
+
+<footer class="no-print">
+    <div class="container">
+        <div class="foot-text">Everest Investments Group · Daniel Rocha · Coconut Creek, FL</div>
+    </div>
+</footer>
+
+<script>
+function lotPage() {
+    return {
+        parcelId: new URLSearchParams(window.location.search).get('p') || '',
+        loading: true,
+        lot: {},
+        report: {},
+        markdownHtml: '',
+
+        async init() {
+            if (!this.parcelId) {
+                this.loading = false;
+                return;
+            }
+
+            // 1) Carrega data.json pra dados basicos do lote
+            try {
+                const resp = await fetch('data.json?t=' + Date.now());
+                const dados = await resp.json();
+                const found = (dados.lots || []).find(l => l.parcel_id === this.parcelId);
+                if (found) {
+                    this.lot = found;
+                    // codigo do condado pra back link
+                    const cnt = (dados.condados || []).find(c => c.codigo === found.condado);
+                    this.lot.codigo_condado = found.condado;
+                }
+            } catch (e) {
+                console.error('data.json:', e);
+            }
+
+            // 2) Tenta carregar reports/{parcel}.json (analise completa)
+            try {
+                const r = await fetch(`reports/${this.parcelId}.json?t=` + Date.now());
+                if (r.ok) this.report = await r.json();
+            } catch (e) { /* sem report ainda */ }
+
+            // 3) Tenta carregar reports/{parcel}.md (relatorio markdown)
+            try {
+                const r = await fetch(`reports/${this.parcelId}.md?t=` + Date.now());
+                if (r.ok) {
+                    const md = await r.text();
+                    this.markdownHtml = marked.parse(md);
+                }
+            } catch (e) { /* sem markdown */ }
+
+            this.loading = false;
+            // Update title
+            if (this.lot.address) document.title = this.lot.address + ' — Everest TaxDeed';
+        },
+
+        verdictLabel() {
+            return (this.report.verdict || this.lot.decisao || '').split('—')[0].trim().toUpperCase();
+        },
+        verdictClass() {
+            const v = this.verdictLabel();
+            if (v.startsWith('COMPRAR') || v.startsWith('BUY') || v.startsWith('LANCE')) return 'COMPRAR';
+            if (v.startsWith('CONDITIONAL')) return 'CONDITIONAL';
+            if (v.startsWith('INVESTIGAR') || v.startsWith('INVESTIGATE') || v.startsWith('REVISAR')) return 'INVESTIGAR';
+            if (v.startsWith('PASS') || v.startsWith('PASSAR')) return 'PASSAR';
+            return 'CONDITIONAL';
+        },
+        usd(v) {
+            if (v === null || v === undefined) return '—';
+            return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(v);
+        },
+        zillow() { const q = encodeURIComponent((this.lot.address||'')+' '+(this.lot.city||'')+' FL'); return `https://www.zillow.com/homes/${q}_rb/`; },
+        redfin() { const q = encodeURIComponent((this.lot.address||'')+', '+(this.lot.city||'')+', FL'); return `https://www.redfin.com/stingray/do/location-autocomplete?location=${q}`; },
+        realtor() { const q = encodeURIComponent((this.lot.address||'')+' '+(this.lot.city||'')+' FL'); return `https://www.realtor.com/realestateandhomes-search/${q}`; },
+        streetview() { const q = encodeURIComponent((this.lot.address||'')+' '+(this.lot.city||'')+' FL'); return `https://www.google.com/maps/search/?api=1&query=${q}`; },
+    };
+}
+</script>
+</body>
+</html>

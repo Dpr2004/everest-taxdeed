@@ -296,6 +296,10 @@ main { padding: 36px 0 72px; }
     transition: all .2s;
 }
 .lot:hover { border-color: var(--gold-500); }
+.lot-clickable { cursor: pointer; transition: all 0.22s; }
+.lot-clickable:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(201,151,43,0.28), 0 0 0 1px var(--gold-500) inset; }
+.lot-cta-hint { margin-top: 12px; padding-top: 12px; border-top: 1px dashed rgba(201,151,43,0.25); text-align: right; color: var(--gold-300); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s; }
+.lot-clickable:hover .lot-cta-hint { opacity: 1; }
 .lot-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: start; }
 .lot-tags { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
 .lot-tag-condado {
@@ -727,7 +731,9 @@ footer {
     </div>
 
     <template x-for="l in lotesFiltrados" :key="l.id">
-        <div class="lot">
+        <div class="lot lot-clickable"
+             @click="window.location.href='lot.html?p=' + l.parcel_id"
+             :title="'Ver análise completa de ' + (l.address || l.parcel_id)">
             <div class="lot-head">
                 <div style="flex:1; min-width:0;">
                     <div class="lot-tags">
@@ -749,12 +755,13 @@ footer {
                     <span class="decision" :class="'d-' + l.decisao" x-text="l.decisao"></span>
                 </template>
             </div>
+            <div class="lot-cta-hint">Ver análise completa →</div>
             <div class="lot-links">
-                <a :href="zillow(l)" target="_blank" class="cta">Zillow →</a>
-                <a :href="streetview(l)" target="_blank" class="cta">Street View →</a>
-                <a :href="redfin(l)" target="_blank" class="cta">Redfin →</a>
-                <a :href="realtor(l)" target="_blank" class="cta">Realtor →</a>
-                <a :href="fema(l)" target="_blank" class="cta">FEMA →</a>
+                <a :href="zillow(l)" target="_blank" class="cta" @click.stop>Zillow →</a>
+                <a :href="streetview(l)" target="_blank" class="cta" @click.stop>Street View →</a>
+                <a :href="redfin(l)" target="_blank" class="cta" @click.stop>Redfin →</a>
+                <a :href="realtor(l)" target="_blank" class="cta" @click.stop>Realtor →</a>
+                <a :href="fema(l)" target="_blank" class="cta" @click.stop>FEMA →</a>
             </div>
         </div>
     </template>

@@ -77,6 +77,10 @@ h1 .gold { background: var(--gold-grad); -webkit-background-clip: text; backgrou
     border-radius: 12px; padding: 16px 20px; transition: all .2s;
 }
 .sale-item:hover, .lot-item:hover { border-color: var(--gold-500); }
+.lot-item-clickable { cursor: pointer; transition: all 0.22s; }
+.lot-item-clickable:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(201,151,43,0.25), 0 0 0 1px var(--gold-500) inset; }
+.lot-cta-hint { margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(201,151,43,0.25); text-align: right; opacity: 0.7; transition: opacity 0.2s; }
+.lot-item-clickable:hover .lot-cta-hint { opacity: 1; }
 
 .info-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 6px; }
 .tag { font-size: 10px; letter-spacing: 0.12em; color: var(--white-40); text-transform: uppercase; font-weight: 700; }
@@ -179,7 +183,9 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
     <h2 class="section-title">Propriedades no Pipeline</h2>
     <div class="lot-list">
         <template x-for="l in lots" :key="l.id">
-            <div class="lot-item">
+            <div class="lot-item lot-item-clickable"
+                 @click="window.location.href='lot.html?p=' + l.parcel_id"
+                 :title="'Ver análise completa de ' + (l.address || l.parcel_id)">
                 <div class="info-row">
                     <span class="tag gold" x-text="'Parcel ' + l.parcel_id"></span>
                     <span class="tag" x-text="'Leilão ' + l.sale_date"></span>
@@ -196,12 +202,15 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
                     <div class="stat"><div class="l">Score</div><div class="v gold" x-text="l.score ? l.score.toFixed(1) : '—'"></div></div>
                     <div class="stat"><div class="l">ROI Proj.</div><div class="v green" x-text="l.roi ? (l.roi*100).toFixed(1)+'%' : '—'"></div></div>
                 </div>
+                <div class="lot-cta-hint">
+                    <span style="color: var(--gold-300); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Ver análise completa →</span>
+                </div>
                 <div class="links-ext">
-                    <a :href="zillow(l)" target="_blank" class="cta">Zillow →</a>
-                    <a :href="streetview(l)" target="_blank" class="cta">Street View →</a>
-                    <a :href="redfin(l)" target="_blank" class="cta">Redfin →</a>
-                    <a :href="realtor(l)" target="_blank" class="cta">Realtor →</a>
-                    <a href="https://msc.fema.gov/portal/search" target="_blank" class="cta">FEMA →</a>
+                    <a :href="zillow(l)" target="_blank" class="cta" @click.stop>Zillow →</a>
+                    <a :href="streetview(l)" target="_blank" class="cta" @click.stop>Street View →</a>
+                    <a :href="redfin(l)" target="_blank" class="cta" @click.stop>Redfin →</a>
+                    <a :href="realtor(l)" target="_blank" class="cta" @click.stop>Realtor →</a>
+                    <a href="https://msc.fema.gov/portal/search" target="_blank" class="cta" @click.stop>FEMA →</a>
                 </div>
             </div>
         </template>
