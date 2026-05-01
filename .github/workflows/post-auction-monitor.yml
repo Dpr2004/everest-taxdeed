@@ -13,7 +13,7 @@ on:
         required: false
         default: '7'
       counties:
-        description: 'Condados (space-separated, vazio=todos)'
+        description: 'Condados comma-separated (ex: "St. Lucie,Highlands"). Vazio = todos'
         required: false
         default: ''
       dry_run:
@@ -68,11 +68,14 @@ jobs:
           PLAYWRIGHT_CHANNEL:  ''
           DEBUG_DUMP_HTML:     ${{ github.event.inputs.debug_dump_html == 'true' && '1' || '' }}
         run: |
-          ARGS="--days ${{ github.event.inputs.days_back || '7' }}"
           if [ -n "${{ github.event.inputs.counties }}" ]; then
-            ARGS="$ARGS --counties ${{ github.event.inputs.counties }}"
+            python -m src.workers.post_auction_scraper_playwright \
+              --days "${{ github.event.inputs.days_back || '7' }}" \
+              --counties "${{ github.event.inputs.counties }}"
+          else
+            python -m src.workers.post_auction_scraper_playwright \
+              --days "${{ github.event.inputs.days_back || '7' }}"
           fi
-          python -m src.workers.post_auction_scraper_playwright $ARGS
 
       - name: Upload logs on failure
         if: failure()

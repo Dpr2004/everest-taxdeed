@@ -364,9 +364,15 @@ class PostAuctionScraperPlaywright(BaseWorker):
 def _parse_args():
     parser = argparse.ArgumentParser(description="Post-auction scraper (Fase 4)")
     parser.add_argument("--days", type=int, help="Dias atras pra checar (default: 7)")
-    parser.add_argument("--counties", nargs="+", help="Condados (default: todos Tier Everest)")
+    parser.add_argument(
+        "--counties",
+        help="Condados comma-separated (ex: 'St. Lucie,Highlands'). Default: todos Tier Everest",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Nao envia ao LOTES")
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.counties:
+        args.counties = [c.strip() for c in args.counties.split(",") if c.strip()]
+    return args
 
 
 if __name__ == "__main__":
