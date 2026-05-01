@@ -300,6 +300,13 @@ class PostAuctionScraperPlaywright(BaseWorker):
             if not d or not d.get("parcel_id"):
                 continue
 
+            pid = d["parcel_id"].strip()
+            # Filtra placeholders RealAuction (lotes multi-parcel ou timeshare):
+            # esses nao sao parcel_ids reais e nao tem nota correspondente no LOTES
+            if pid.upper() in ("MULTIPLE PARCEL", "TIMESHARE", "MULTIPLE PARCELS", "N/A", ""):
+                self.logger.debug(f"  skip placeholder parcel_id: {pid}")
+                continue
+
             results.append({
                 "parcel_id":    d["parcel_id"],
                 "status":       normalize_status(d.get("status_raw", "")),
