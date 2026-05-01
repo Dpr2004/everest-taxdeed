@@ -26,8 +26,8 @@
         "tipo": "VERIFY"
       },
       "horario_et": "09:30",
-      "plataforma": "RealTDA",
-      "url_sales": "https://www.realtda.com/",
+      "plataforma": "RealTaxDeed",
+      "url_sales": "https://polk.realtaxdeed.com/",
       "url_clerk": "https://www.polkclerkfl.gov/189/Tax-Deeds",
       "url_property_appraiser": "https://www.polkpa.org/CamaDisplay.aspx",
       "telefone": "Polk Clerk",

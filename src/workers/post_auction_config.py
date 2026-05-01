@@ -18,17 +18,19 @@ Estrutura HTML do .AUCTION_ITEM (Grant Street Group):
 """
 
 COUNTY_DOMAINS = {
-    "Polk":      "polk.realforeclose.com",
-    "Marion":    "marion.realforeclose.com",
-    "Highlands": "highlands.realforeclose.com",
-    "Lake":      "lake.realforeclose.com",
-    "Orange":    "orange.realforeclose.com",
-    "Osceola":   "osceola.realforeclose.com",
-    "Putnam":    "putnam.realforeclose.com",
-    "St. Lucie": "stlucie.realforeclose.com",
-    "Lee":       "lee.realforeclose.com",
+    # Subdominios validados via config/condados.json (fonte da verdade do projeto)
+    # Quase todos sao *.realtaxdeed.com; Brevard sozinho usa *.realforeclose.com
+    "Polk":      "polk.realtaxdeed.com",
+    "Marion":    "marion.realtaxdeed.com",
+    "Highlands": "highlands.realtaxdeed.com",
+    "Lake":      "lake.realtaxdeed.com",
+    "Orange":    "orange.realtaxdeed.com",
+    "Osceola":   "osceola.realtaxdeed.com",
+    "Putnam":    "putnam.realtaxdeed.com",
+    "St. Lucie": "stlucie.realtaxdeed.com",
+    "Lee":       "lee.realtaxdeed.com",
     "Brevard":   "brevard.realforeclose.com",
-    "Citrus":    "citrus.realforeclose.com",
+    "Citrus":    "citrus.realtaxdeed.com",
 }
 
 # Endpoint pattern para listar leiloes por data
