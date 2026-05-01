@@ -1,16 +1,22 @@
+"""post_auction_config.py — Config Tier Everest (11 condados RealAuction).
+
+Selectors validados via DEBUG_DUMP_HTML em Citrus 04/30/2026.
+
+Estrutura HTML do .AUCTION_ITEM (Grant Street Group):
+  .AUCTION_ITEM
+    .AUCTION_STATS
+      .ASTAT_MSGA          -> status text ("Auction Sold", "Auction Cancelled", etc)
+      .ASTAT_MSGD          -> winning amount ("$900.00")
+      .ASTAT_MSG_SOLDTO_MSG -> "Plaintiff" / "3rd Party" / "Cancelled"
+    .AUCTION_DETAILS
+      table.ad_tab tr
+        td.AD_LBL          -> label da row ("Parcel ID:", "Property Address:", etc)
+        td.AD_DTA          -> valor da row
+    .AUCTION_ITEM_ACTION_PANEL.{WINNING|LOOSING}
+      .ASTAT_MSGG          -> "You won this Auction" / "You did not win"
+      .ASTAT_MSGH          -> nickname da conta logada (NAO o winner real)
 """
-post_auction_config.py — Configuracao por condado para post-auction monitoring.
 
-Mapeia cada condado Tier Everest ao seu dominio RealAuction (Grant Street Group)
-e selectors CSS especificos quando necessario.
-
-NOTA SOBRE SELECTORS: o RealAuction tem template padrao para os 11 condados,
-mas alguns variam levemente. Os selectors abaixo sao chute educado baseado
-em estrutura padrao Grant Street. Validar via Playwright recorder em pelo
-menos 1 condado antes de ativar todos os 11.
-"""
-
-# Domain por condado — todos sao subdominios .realforeclose.com (ou variante)
 COUNTY_DOMAINS = {
     "Polk":      "polk.realforeclose.com",
     "Marion":    "marion.realforeclose.com",
@@ -25,39 +31,29 @@ COUNTY_DOMAINS = {
     "Citrus":    "citrus.realforeclose.com",
 }
 
-# Selectors CSS — Grant Street Group standard template
-# VALIDAR via inspecao manual antes de production
-SELECTORS = {
-    "auction_item":     ".AUCTION_ITEM",
-    "parcel_id":        ".AUCTION_ITEM .ad_tab .parcel-id, .AUCTION_ITEM [data-parcel]",
-    "status":           ".AUCTION_ITEM .ad_status, .AUCTION_ITEM .auction-status",
-    "winning_bidder":   ".AUCTION_ITEM .ad_winning_bidder, .AUCTION_ITEM .winning-bidder",
-    "winning_amount":   ".AUCTION_ITEM .ad_winning_amount, .AUCTION_ITEM .winning-amount",
-    "case_number":      ".AUCTION_ITEM .case-number",
-}
-
-# Endpoint pattern para listar leiloes por data (mesmo do lot_scraper)
+# Endpoint pattern para listar leiloes por data
 DAYLIST_PATH = "/index.cfm?zaction=AUCTION&Zmethod=DAYLIST&AUCTIONDATE={date}"
 
-# Status normalization — mapeia variacoes para os 4 valores canonicos
+# Status normalization — RealAuction tem prefixo "Auction "
 STATUS_MAP = {
-    "sold":               "sold",
-    "auction sold":       "sold",
-    "winning bid":        "sold",
-    "redeemed":           "redeemed",
-    "redemption":         "redeemed",
-    "owner redeemed":     "redeemed",
-    "cancelled":          "cancelled",
-    "canceled":           "cancelled",
-    "withdrawn":          "cancelled",
-    "no bidders":         "no-bidders",
-    "no bidder":          "no-bidders",
-    "no winning bidder":  "no-bidders",
+    "auction sold":         "sold",
+    "sold":                 "sold",
+    "auction redeemed":     "redeemed",
+    "redeemed":             "redeemed",
+    "auction cancelled":    "cancelled",
+    "auction canceled":     "cancelled",
+    "cancelled":            "cancelled",
+    "canceled":             "cancelled",
+    "withdrawn":            "cancelled",
+    "no bidders":           "no-bidders",
+    "no winning bidder":    "no-bidders",
+    "auction closed":       "closed",
+    "closed":               "closed",
 }
 
+
 def normalize_status(raw_status: str) -> str:
-    """Converte texto de status do RealAuction para canonical (sold/redeemed/cancelled/no-bidders)."""
+    """Converte texto de status do RealAuction para canonical."""
     if not raw_status:
         return "unknown"
-    key = raw_status.strip().lower()
-    return STATUS_MAP.get(key, "unknown")
+    return STATUS_MAP.get(raw_status.strip().lower(), "unknown")

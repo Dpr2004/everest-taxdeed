@@ -50,10 +50,57 @@ except ImportError:
 
 from src.workers.post_auction_config import (
     COUNTY_DOMAINS,
-    SELECTORS,
     DAYLIST_PATH,
     normalize_status,
 )
+
+# Selector raiz do auction item (validado em Citrus)
+AUCTION_ITEM_SELECTOR = ".AUCTION_ITEM"
+
+# JS que extrai todos os campos de um item de uma vez (mais robusto que multiple locators)
+EXTRACT_ITEM_JS = r"""
+(el) => {
+  const get = (sel) => {
+    const n = el.querySelector(sel);
+    return n ? (n.innerText || '').trim() : '';
+  };
+  // Parse rows da tabela de detalhes (ad_tab)
+  const fields = {};
+  el.querySelectorAll('.AUCTION_DETAILS table.ad_tab tr').forEach(r => {
+    const lbl = r.querySelector('td.AD_LBL');
+    const dta = r.querySelector('td.AD_DTA');
+    if (lbl && dta) {
+      const k = (lbl.innerText || '').trim().replace(/:$/, '').trim();
+      const v = (dta.innerText || '').trim();
+      if (k) fields[k] = v;
+    }
+  });
+  // Detecta se a conta logada (Everest) ganhou
+  const panel = el.querySelector('.AUCTION_ITEM_ACTION_PANEL');
+  let everest_won = false;
+  if (panel) {
+    const cls = panel.className || '';
+    if (/\bWINNING\b/.test(cls)) everest_won = true;
+    else if (/\bLOOSING\b|\bLOSING\b/.test(cls)) everest_won = false;
+    // fallback: olhar texto da mensagem
+    const msg = (el.querySelector('.ASTAT_MSGG') || {}).innerText || '';
+    if (/you won/i.test(msg)) everest_won = true;
+    else if (/did not win/i.test(msg)) everest_won = false;
+  }
+  return {
+    status_raw:  get('.ASTAT_MSGA'),
+    amount_raw:  get('.ASTAT_MSGD'),
+    sold_to:     get('.ASTAT_MSG_SOLDTO_MSG'),
+    nickname:    get('.ASTAT_MSGH'),
+    you_won_msg: get('.ASTAT_MSGG'),
+    parcel_id:   fields['Parcel ID'] || '',
+    address:     fields['Property Address'] || '',
+    case_num:    fields['Case #'] || '',
+    auction_type:fields['Auction Type'] || '',
+    everest_won: everest_won
+  };
+}
+"""
 
 # Mesmo stealth JS do lot_scraper
 STEALTH_JS = """
@@ -224,12 +271,12 @@ class PostAuctionScraperPlaywright(BaseWorker):
             return []
 
         try:
-            page.wait_for_selector(SELECTORS["auction_item"], timeout=8000)
+            page.wait_for_selector(AUCTION_ITEM_SELECTOR, timeout=8000)
         except Exception:
             self.logger.info(f"  sem .AUCTION_ITEM em {county} {date_str} (provavel sem leilao nesse dia)")
             return []
 
-        items = page.locator(SELECTORS["auction_item"]).all()
+        items = page.locator(AUCTION_ITEM_SELECTOR).all()
         self.logger.info(f"  {len(items)} lotes em {county} {date_str}")
 
         # DEBUG: dumpa HTML do primeiro item se DEBUG_DUMP_HTML setado
@@ -246,44 +293,35 @@ class PostAuctionScraperPlaywright(BaseWorker):
         results = []
         for item in items:
             try:
-                parcel_id = item.locator(SELECTORS["parcel_id"]).first.inner_text(timeout=2000).strip()
-            except Exception:
+                d = item.evaluate(EXTRACT_ITEM_JS)
+            except Exception as e:
+                self.logger.debug(f"  evaluate falhou: {e}")
                 continue
-            if not parcel_id:
+            if not d or not d.get("parcel_id"):
                 continue
-
-            try:
-                raw_status = item.locator(SELECTORS["status"]).first.inner_text(timeout=2000).strip()
-            except Exception:
-                raw_status = ""
-
-            try:
-                winner = item.locator(SELECTORS["winning_bidder"]).first.inner_text(timeout=2000).strip()
-            except Exception:
-                winner = ""
-
-            try:
-                amount_str = item.locator(SELECTORS["winning_amount"]).first.inner_text(timeout=2000).strip()
-            except Exception:
-                amount_str = ""
 
             results.append({
-                "parcel_id":    parcel_id,
-                "status":       normalize_status(raw_status),
-                "winner":       winner or None,
-                "final_amount": _to_float(amount_str),
+                "parcel_id":    d["parcel_id"],
+                "status":       normalize_status(d.get("status_raw", "")),
+                "winner":       d.get("nickname") or None,  # nickname da conta logada
+                "final_amount": _to_float(d.get("amount_raw", "")),
                 "auction_date": target_date.isoformat(),
+                "everest_won":  bool(d.get("everest_won")),
+                "address":      d.get("address") or None,
+                "sold_to":      d.get("sold_to") or None,
                 "_county":      county,
-                "_raw_status":  raw_status,
+                "_raw_status":  d.get("status_raw", ""),
+                "_you_won_msg": d.get("you_won_msg", ""),
             })
 
         return results
 
     def _send_to_lotes(self, result):
         if self.dry_run:
+            won_marker = " [EVEREST GANHOU]" if result.get("everest_won") else ""
             self.logger.info(
                 f"  [DRY-RUN] {result['parcel_id']} -> {result['status']} "
-                f"(winner={result['winner']}, amount=${result['final_amount']:.2f})"
+                f"(amount=${result['final_amount']:.2f}, sold_to={result.get('sold_to')}){won_marker}"
             )
             return True
 
@@ -293,6 +331,9 @@ class PostAuctionScraperPlaywright(BaseWorker):
             "winner":       result["winner"],
             "final_amount": result["final_amount"],
             "auction_date": result["auction_date"],
+            "everest_won":  bool(result.get("everest_won")),
+            "address":      result.get("address"),
+            "sold_to":      result.get("sold_to"),
         }
 
         try:
