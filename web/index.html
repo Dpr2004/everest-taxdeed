@@ -210,6 +210,20 @@ main { padding: 36px 0 72px; }
     border-radius: 14px;
     padding: 20px; transition: all .2s;
 }
+/* Card de leilao clicavel — leva pra pagina do condado */
+.sale-card-clickable { cursor: pointer; }
+.sale-card-clickable:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-500) !important;
+    box-shadow: 0 14px 36px rgba(201,151,43,0.32), 0 0 0 1px rgba(201,151,43,0.5) inset;
+}
+.sale-card-clickable .sale-condado {
+    transition: color 0.2s;
+}
+.sale-card-clickable:hover .sale-condado {
+    color: var(--gold-300);
+}
+
 .card:hover {
     border-color: var(--gold-500);
     transform: translateY(-2px);
@@ -390,6 +404,49 @@ main { padding: 36px 0 72px; }
 .fl-map svg .fl-other:hover { fill: #E8E4D5; stroke: rgba(19,18,62,0.6); }
 .fl-map svg .fl-target { fill: #1D418D; stroke: #C9972B; stroke-width: 1.8; cursor: pointer; transition: all .2s; }
 .fl-map svg .fl-target:hover { fill: #C9972B; stroke: #8C6815; stroke-width: 2.5; }
+
+/* Tooltip dourado destacado mostrando nome do condado no hover */
+.fl-county-tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: linear-gradient(135deg, #C9972B 0%, #E8C86A 100%);
+    color: #131243;
+    border: 1.5px solid #8C6815;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(19,18,62,0.45), 0 0 0 1px rgba(255,255,255,0.25) inset;
+    z-index: 9999;
+    opacity: 0;
+    transform: translate(-50%, calc(-100% - 14px));
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+.fl-county-tooltip.visible { opacity: 1; }
+.fl-county-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 7px solid transparent;
+    border-top-color: #C9972B;
+    filter: drop-shadow(0 2px 2px rgba(19,18,62,0.3));
+}
+.fl-county-tooltip.target {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC04A 50%, #C9972B 100%);
+    border-color: #5A3F0A;
+    font-size: 15px;
+    box-shadow: 0 10px 28px rgba(201,151,43,0.55), 0 0 0 2px rgba(255,255,255,0.3) inset, 0 0 20px rgba(255,215,0,0.4);
+}
+.fl-county-tooltip.target::before {
+    content: '★ ';
+    color: #5A3F0A;
+}
 .fl-targets-list {
     margin-top: 14px;
     display: grid;
@@ -600,7 +657,9 @@ footer {
             <div x-show="semana.sales.length === 0" class="empty" style="padding:28px;">Sem leilões projetados nesta semana</div>
             <div class="grid-4">
                 <template x-for="s in semana.sales" :key="s.id">
-                    <div class="card">
+                    <div class="card sale-card-clickable"
+                         @click="window.location.href='county.html?c=' + (s.codigo || s.condado)"
+                         :title="'Ver página completa de ' + s.condado">
                         <div class="sale-head">
                             <div>
                                 <div class="sale-date" x-text="s.dia_semana + ' · ' + s.data_fmt"></div>
@@ -615,8 +674,8 @@ footer {
                             <div x-text="(s.total_lots || 0) + ' lotes indexados'"></div>
                         </div>
                         <div class="sale-actions">
-                            <a :href="s.url_sales" target="_blank" class="cta">Site Leilão →</a>
-                            <a :href="s.url_clerk" target="_blank" class="cta">Cartório →</a>
+                            <a :href="s.url_sales" target="_blank" class="cta" @click.stop>Site Leilão →</a>
+                            <a :href="s.url_clerk" target="_blank" class="cta" @click.stop>Cartório →</a>
                         </div>
                     </div>
                 </template>
@@ -847,6 +906,32 @@ function app() {
                 // Remove <a> wrappers que podem interferir (fallback)
                 container.querySelectorAll('a.fl-link').forEach(a => {
                     a.removeAttribute('href');
+                });
+
+                // Tooltip dourado destacado mostrando nome do condado no hover
+                let tooltip = document.getElementById('fl-county-tooltip');
+                if (!tooltip) {
+                    tooltip = document.createElement('div');
+                    tooltip.id = 'fl-county-tooltip';
+                    tooltip.className = 'fl-county-tooltip';
+                    document.body.appendChild(tooltip);
+                }
+                container.querySelectorAll('path[data-name]').forEach(path => {
+                    const name = path.getAttribute('data-name');
+                    if (!name) return;
+                    const isTarget = path.classList.contains('fl-target');
+                    path.addEventListener('mouseenter', () => {
+                        tooltip.textContent = name;
+                        tooltip.classList.toggle('target', isTarget);
+                        tooltip.classList.add('visible');
+                    });
+                    path.addEventListener('mouseleave', () => {
+                        tooltip.classList.remove('visible');
+                    });
+                    path.addEventListener('mousemove', (e) => {
+                        tooltip.style.left = e.clientX + 'px';
+                        tooltip.style.top = e.clientY + 'px';
+                    });
                 });
             } catch (e) {
                 console.error('[mapa]', e);
