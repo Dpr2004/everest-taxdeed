@@ -1,0 +1,77 @@
+name: Post-Auction Monitor
+
+# Roda todo dia 8 AM ET (12 UTC) — apos a maioria dos leiloes da manha
+# Scrapeia resultados pos-leilao dos 11 condados Tier Everest e envia ao LOTES Analyzer
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 8 AM ET (assumindo EDT/UTC-4; ajuste pra 12 se EST)
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: 'Dias atras para checar (default: 7)'
+        required: false
+        default: '7'
+      counties:
+        description: 'Condados (space-separated, vazio=todos)'
+        required: false
+        default: ''
+      dry_run:
+        description: 'DRY_RUN (nao envia ao LOTES)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: post-auction-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright Chromium
+        run: |
+          playwright install --with-deps chromium
+
+      - name: Run post-auction scraper
+        env:
+          REALAUCTION_USER:  ${{ secrets.REALAUCTION_USER }}
+          REALAUCTION_PASS:  ${{ secrets.REALAUCTION_PASS }}
+          LOTES_TUNNEL_URL:  ${{ secrets.LOTES_TUNNEL_URL }}
+          LOTES_API_KEY:     ${{ secrets.LOTES_API_KEY }}
+          DRY_RUN:           ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+        run: |
+          ARGS="--days ${{ github.event.inputs.days_back || '7' }}"
+          if [ -n "${{ github.event.inputs.counties }}" ]; then
+            ARGS="$ARGS --counties ${{ github.event.inputs.counties }}"
+          fi
+          python -m src.workers.post_auction_scraper_playwright $ARGS
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-auction-logs
+          path: |
+            *.log
+            screenshots/
+          retention-days: 7
