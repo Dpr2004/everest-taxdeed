@@ -1,0 +1,41 @@
+{
+  "parcel_id": "C-04-34-28-080-0980-0060",
+  "completed_at": "2026-05-01T17:57:02.150Z",
+  "final_score": 77,
+  "verdict": "COMPRAR",
+  "final_verdict": "COMPRAR",
+  "red_flags": [],
+  "flags": [
+    "FLAG: Highlands County is NOT in the 15 supported FL counties — data verification may be less reliable",
+    "FLAG: Must verify Sun N Lake district assessment amount before bidding (863-382-2196)",
+    "FLAG: Quiet title action required — budget $3,000 as midpoint estimate",
+    "FLAG: Bulk investor owner — investigate why AUKLAND PASTURES LLC let this go to tax deed"
+  ],
+  "top_3_reasons": [
+    "1. Exceptional ROI at opening bid: 240.7% profit margin ($15,543 on $6,457 total investment) even with conservative $22K valuation",
+    "2. Strong infrastructure: all utilities available (city water, sewer, electric), paved roads, Flood Zone X, R1 zoning — no surprises on development costs",
+    "3. Active builder presence (D.R. Horton) validates market demand in Sun N Lake Estates"
+  ],
+  "lessons_learned": [],
+  "next_steps": [
+    "1. CALL Sun N Lake Improvement District at 863-382-2196 to verify exact assessment amount",
+    "2. Confirm max bid at $8,000 — do not exceed under any circumstances",
+    "3. Budget $3,000 for quiet title action (midpoint of $1,500-$4,500 range)",
+    "4. Post-acquisition: list for resale at $24,000-$26,000, targeting D.R. Horton or local builders",
+    "5. Timeline estimate: 3-6 months from acquisition to sale (quiet title 60-90 days + marketing)"
+  ],
+  "address": "8113 DOMENICO ST, SEBRING, FL 33872",
+  "condado": "Highlands",
+  "estado": "FL",
+  "property_type": "Vacant Residential Land",
+  "opening_bid": 3956.74,
+  "min_bid": 3956.74,
+  "just_value": 14000,
+  "market_value": 14000,
+  "assessed_value": 14000,
+  "flood_zone": "X",
+  "year_built": null,
+  "lot_size_sqft": 10000,
+  "zoning": "R1",
+  "vmf_final": 22000
+}

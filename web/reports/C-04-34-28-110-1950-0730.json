@@ -1,0 +1,88 @@
+{
+  "parcel_id": "C-04-34-28-110-1950-0730",
+  "completed_at": "2026-05-01T17:57:02.156Z",
+  "final_score": 63,
+  "verdict": "CONDITIONAL BUY",
+  "final_verdict": "CONDITIONAL BUY",
+  "recommendation": "CONDITIONAL BUY",
+  "red_flags": [],
+  "flags": [
+    {
+      "type": "RED",
+      "text": "FEMA flood zone nao confirmado"
+    },
+    {
+      "type": "RED",
+      "text": "SNL delinq balance nao confirmado"
+    },
+    {
+      "type": "RED",
+      "text": "Portal RealTaxDeed 403"
+    },
+    {
+      "type": "YELLOW",
+      "text": "Bulk sale 2004 $5.4M na chain — complica title"
+    },
+    {
+      "type": "YELLOW",
+      "text": "Code enforcement nao verificado"
+    },
+    {
+      "type": "YELLOW",
+      "text": "Acclaim chain nao verificada"
+    },
+    {
+      "type": "GREEN",
+      "text": "BUNDLE PLAY — adjacente 0740 no mesmo leilao"
+    },
+    {
+      "type": "GREEN",
+      "text": "Owner individual couple 21 anos estavel"
+    },
+    {
+      "type": "GREEN",
+      "text": "Opening baixo — margem 40,7%"
+    },
+    {
+      "type": "GREEN",
+      "text": "Full infra SNL + R1 buildable 80x125"
+    },
+    {
+      "type": "GREEN",
+      "text": "35 dias de folga para verificacoes"
+    }
+  ],
+  "top_3_reasons": [
+    "Opening $2.314,77 gera margem 40,7% conservadora; ROI 68% no opening",
+    "**Bundle play** — adjacente (0740) no mesmo leilao permite double-lot exit premium $30K+",
+    "Owner couple 21 anos estavel, R1 buildable, full infra SNL, 35 dias de folga para verificacoes"
+  ],
+  "lessons_learned": [
+    "Adjacent lots mesmo leilao = bundle opportunity = valor extra",
+    "Bulk sale 2004 $5.4M aparece em multiplos parcels SNL Unit 11 — padrao developer divestiture",
+    "Owner couple + 21 anos = title estavel pos-bulk"
+  ],
+  "next_steps": [
+    "19/05 D-1 — SNL District delinq balance",
+    "19/05 D-1 — Code Enforcement (863) 402-6643",
+    "19/05 D-1 — Clerk Tax Deed case + liens (863) 402-6586",
+    "19/05 D-1 — Acclaim chain Vargas/Pachas + cobertura bulk 2004",
+    "20/05 07:30 — FEMA MSC flood zone 5900 Alcala",
+    "20/05 09:30 — RealTaxDeed portal confirmar opening final",
+    "20/05 10:00 — Leilao: **estrategia dual-lot**, start $2.400 ambos, hard cap $5.500 cada"
+  ],
+  "address": "5900 ALCALA AVE, SEBRING, FL 33872",
+  "condado": "Highlands",
+  "estado": "FL",
+  "property_type": "Vacant Land (R1 Single Family)",
+  "opening_bid": 2314.77,
+  "min_bid": 2314.77,
+  "just_value": 14000,
+  "market_value": 14000,
+  "assessed_value": 3221,
+  "flood_zone": "NAO CONFIRMADO — SNL Unit 11 mix Zone X (interior) e Zone A (perto Josephine Creek). Alcala Ave interior provavel Zone X, REQUER verificacao msc.fema.gov",
+  "year_built": "N/A (vacant)",
+  "lot_size_sqft": 10000,
+  "zoning": "R1 (Single Family Residential)",
+  "vmf_final": 13000
+}

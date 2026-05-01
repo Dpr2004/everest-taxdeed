@@ -293,6 +293,24 @@ function lotPage() {
                 }
             } catch (e) { /* sem markdown */ }
 
+            // Fallback: se nao achou no data.json mas tem report, popula lot do report
+            if (!this.lot.parcel_id && this.report.parcel_id) {
+                this.lot = {
+                    parcel_id: this.report.parcel_id,
+                    address: this.report.address || '',
+                    city: this.report.city || '',
+                    condado: this.report.condado || this.report.county || '',
+                    estado: this.report.estado || this.report.state || 'FL',
+                    sale_date: this.report.sale_date || this.report.auction_date || '',
+                    min_bid: this.report.min_bid || this.report.opening_bid,
+                    just_value: this.report.just_value || this.report.market_value,
+                    assessed_value: this.report.assessed_value,
+                    score: this.report.final_score,
+                    decisao: (this.report.verdict || '').split('—')[0].trim(),
+                    codigo_condado: (this.report.condado || this.report.county || '').toUpperCase().replace(/\s+/g, '_'),
+                };
+            }
+
             this.loading = false;
             // Update title
             if (this.lot.address) document.title = this.lot.address + ' — Everest TaxDeed';

@@ -1,0 +1,94 @@
+{
+  "parcel_id": "C-06-35-29-010-0050-0070",
+  "completed_at": "2026-05-01T17:57:02.160Z",
+  "final_score": 22,
+  "verdict": "PASSAR — Pre-HUD MH 1971 uninsurable (HUD 1976 code) + MH title HSMV 82040/82109 bifurcation UNRESOLVED + max_safe_bid $0 ao opening $30,834 + owner-occupied homestead (GONZALEZ) redemption 25-45% + triple hazard sinkhole-HIGH/flood-AE/wind-II + comps WEAK (zero A/B) + liquidity LOW. Max bid $0.",
+  "final_verdict": "PASSAR",
+  "recommendation": "PASSAR",
+  "red_flags": [
+    "Dealbreakers cumulativos independentes (uninsurability + title cloud + math impossivel + occupancy + hazards)",
+    "Opening bid aparentemente atrativo e armadilha classica pre-HUD MH",
+    "Max_safe_bid = $0 sobrevive teste de sensibilidade mesmo com todos unresolveds resolvidos favoravelmente",
+    "Liquidity LOW + buyer pool restrict cash-only reduz exit optionality em 80%"
+  ],
+  "flags": [
+    {
+      "type": "RED",
+      "text": "Pre-HUD MH 1971 UNINSURABLE — Citizens/Peninsula/AIC todas recusam"
+    },
+    {
+      "type": "RED",
+      "text": "MH title bifurcation HSMV 82040 vs 82109 UNRESOLVED — potencial surviving $5-15K"
+    },
+    {
+      "type": "RED",
+      "text": "Max_safe_bid = $0 em todos cenarios matematicos"
+    },
+    {
+      "type": "RED",
+      "text": "Opening $30,834 = 103% do quick_sale_value base $30K"
+    },
+    {
+      "type": "RED",
+      "text": "Owner-occupied GONZALEZ homestead + redemption 25-45% + ejectment 3-7 meses"
+    },
+    {
+      "type": "RED",
+      "text": "Sinkhole HIGH (Sebring ridge zone) — stigma permanente"
+    },
+    {
+      "type": "RED",
+      "text": "Flood AE confirmado FEMA — BFE elevation required qualquer reconstrucao"
+    },
+    {
+      "type": "YELLOW",
+      "text": "Wind zone II = premium +30-50% quando insurable futuro"
+    },
+    {
+      "type": "YELLOW",
+      "text": "Highlands PA sales data block — comp research degraded"
+    },
+    {
+      "type": "YELLOW",
+      "text": "Septic/well status FDOH nao confirmado"
+    },
+    {
+      "type": "YELLOW",
+      "text": "SWFWMD wetlands overlay possivel por proximidade Little Lake Jackson"
+    }
+  ],
+  "top_3_reasons": [
+    "Matematica impossivel — max_safe_bid = $0 em todos cenarios. VMF conservador land-only $35K < custos pessimistas $82K SEM nenhum bid. Opening $30,834 resulta em ROI NEGATIVO -34% (base) a -70% (pessimistic). Mesmo no optimistic miracle case (VMF $75K, custos $35K), margem sobre opening e $9K com probabilidade joint <5% de execucao perfeita em 8 fatores simultaneos.",
+    "Dealbreakers regulatorios cumulativos — Pre-HUD MH 1971 NAO atende HUD wind zone II code (standard pos-1976), resultando em uninsurability universal (Citizens/Peninsula/AIC/Homeowners). Sem seguro = sem financiamento conventional/FHA/VA/USDA = cash-only buyer pool (15-20% do mercado FL). MH title bifurcation HSMV 82040 vs 82109 nao confirmado adiciona potencial surviving encumbrance $5-15K estrutural. Triple hazard (sinkhole HIGH Sebring ridge + flood AE + wind II) reduz land-only value 20-30%.",
+    "Entry risk elevado — Owner-occupied GONZALEZ PEGGY J (idosa, homestead provavel em propriedade waterfront) tem 25-45% probabilidade de last-minute redemption (mais alto que media 15-30% para owner-occupied com homestead). Se auction proceed, ejectment $2.5-8K + 3-7 meses cronograma. Outros bidders podem overpay por misreading do discount como oportunidade — estrategia otima e deixar eles tomarem o prejuizo."
+  ],
+  "lessons_learned": [
+    "Pre-1976 mobile homes em FL = auto-PASS regulatorio. HUD wind zone code e binding; nenhuma seguradora admitida em FL cobre pre-HUD standalone. Adicionar triagem automatica: year_built < 1976 AND asset_type = mobile_manufactured → PASS sem analise profunda.",
+    "Opening bid MUITO abaixo do JV (<25%) em MH improved property e SINAL de hidden dealbreakers, nao oportunidade. Tax cert stacks grandes sobre parcels de baixo valor real indicam anos de non-payment = owner distressed + estrutura possivelmente nao-funcional regulatoriamente.",
+    "MH title bifurcation (HSMV 82040 active vs 82109 retired) e due diligence item obrigatorio pre-leilao — deve ser resolvido via HSMV database call antes de qualquer investimento em analise profunda. Custo $0-50 + 2-5 dias. Se nao-resoluvel, PASS.",
+    "Sebring ridge (Highlands County) tem Zona Sinkhole HIGH documentada pelo Florida Geological Survey. Adicionar ao county-quirks.md como filtro: Highlands + Sebring + waterfront = sinkhole surcharge +20-30% insurance + disclosure permanente.",
+    "Owner-occupied + homestead + elderly owner = ESG/reputational signal. Investidor institutional deve considerar PR risk de ejectment de idosa em residencia primaria waterfront, alem de custo financeiro."
+  ],
+  "next_steps": [
+    "NAO LICITAR em 13/05/2026 sob nenhuma circunstancia.",
+    "Adicionar parcel C-06-35-29-010-0050-0070 + owner GONZALEZ PEGGY J a blacklist permanente.",
+    "Adicionar filtro global de triagem: pre-1976 MH em FL = auto-PASS regulatorio (sincronia com HUD 1976 code).",
+    "Adicionar filtro regional: Highlands + Sebring waterfront = sinkhole + flood AE surcharge obrigatoria no scoring.",
+    "Monitorar resultado do leilao 13/05/2026 (winning bid, se houver; redemption se ocorrer) para calibracao.",
+    "Revisar portfolio Highlands proximos 3 meses pre-filtrando: year_built >= 1976 AND flood zone nao AE AND nao-owner-occupied quando possivel."
+  ],
+  "address": "1424 Schlosser Rd, Sebring, FL 33875",
+  "condado": "Highlands",
+  "estado": "FL",
+  "property_type": "mobile_manufactured (pre-HUD 1971)",
+  "opening_bid": 30834.15,
+  "min_bid": 30834.15,
+  "just_value": 40000,
+  "market_value": 40000,
+  "assessed_value": 157952,
+  "flood_zone": "AE (FEMA confirmado)",
+  "year_built": 1971,
+  "lot_size_sqft": 13068,
+  "zoning": "RE (Residential Estate Highlands) — provavel",
+  "vmf_final": 35000
+}
