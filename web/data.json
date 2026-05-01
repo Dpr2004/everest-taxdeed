@@ -1,5 +1,5 @@
 {
-  "gerado_em": "01/May/2026 10:38",
+  "gerado_em": "01/May/2026 15:54",
   "resumo": {
     "total_condados": 11,
     "total_sales": 17,
@@ -72,7 +72,7 @@
           "url_sales": "https://highlands.realtaxdeed.com/",
           "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
           "status": "A_VERIFICAR",
-          "total_lots": 41
+          "total_lots": 42
         },
         {
           "id": 6,

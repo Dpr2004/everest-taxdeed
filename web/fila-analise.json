@@ -1,6 +1,9 @@
 {
   "gerado_em": "2026-05-01",
   "total_candidatos": 0,
+  "total_leiloes": 0,
   "ratio_minimo": 3.0,
+  "top_per_auction": 10,
+  "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": []
 }
