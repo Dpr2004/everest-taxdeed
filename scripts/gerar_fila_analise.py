@@ -2,15 +2,16 @@
 analise profunda no LOTES Analyzer.
 
 Filtros rigorosos (zero simulacao, so dados reais do DB):
-- Ratio just_value / min_bid >= 3.0 (oportunidade financeira real)
+- Ratio just_value / min_bid >= 2.0 (max_bid <= 50% market value, mandato Daniel)
 - min_bid > 0 (descartar lotes sem bid definido)
 - just_value > 0 (descartar lotes sem avaliacao)
 - FEMA X, AE, ou desconhecido (NAO V/VE zona catastrofica)
 - sale_date futuro (nao analisar o que ja passou)
 
-Ranking:
+Ranking (Fase 6 — auto-prospecting):
 - Score = (just_value / min_bid) * weight_fema * weight_condado
-- Top 50 por dia entram na fila
+- Top N **por (condado, data_leilao)** — default 10 (1 leilao = 10 melhores)
+- Pra cada proximo leilao de cada condado, isola as 10 melhores oportunidades
 
 Integracao:
 - Se FILA_AUTO_SEND=true e LOTES_TUNNEL_URL estiver setado, faz POST /api/queue
@@ -31,9 +32,17 @@ from src.db.connection import cursor
 
 
 # Filtros duros
-RATIO_MIN = float(os.environ.get("FILA_RATIO_MIN", "3.0"))
+# RATIO_MIN = 2.0 -> opening_bid <= 50% just_value (mandato Daniel: max bid <= 50% market)
+# Pode ser overridden via env var pra ser mais conservador (3.0 = 33%)
+RATIO_MIN = float(os.environ.get("FILA_RATIO_MIN", "2.0"))
 FEMA_BANIDOS = {"V", "VE"}  # zonas catastroficas de seguro caro/impossivel
-TOP_N = int(os.environ.get("FILA_TOP_N", "50"))
+
+# Fase 6: Top N **por leilao** (county + sale_date), nao top global
+TOP_PER_AUCTION = int(os.environ.get("FILA_TOP_PER_AUCTION", "10"))
+
+# Cap global de seguranca (caso muitos condados tenham leiloes simultaneos)
+# Default 110 = 11 condados Tier Everest x 10 lotes
+TOP_N_GLOBAL = int(os.environ.get("FILA_TOP_N_GLOBAL", "110"))
 
 # Integracao LOTES Analyzer
 LOTES_TUNNEL_URL = os.environ.get("LOTES_TUNNEL_URL", "").rstrip("/")
@@ -149,6 +158,7 @@ def main():
     analisados = carregar_analisados_recentes()
     print(f"[fila] Ja analisados (reports existentes): {len(analisados)}")
 
+    # Filtra + scora
     ranqueados = []
     for c in candidatos:
         if ja_analisado(c["parcel_id"], analisados):
@@ -158,15 +168,39 @@ def main():
             c["ranking_score"] = round(s, 2)
             ranqueados.append(c)
 
-    ranqueados.sort(key=lambda x: x["ranking_score"], reverse=True)
-    top = ranqueados[:TOP_N]
-    print(f"[fila] Top {TOP_N} candidatos apos filtros: {len(top)}")
+    print(f"[fila] Apos filtros (ratio>={RATIO_MIN}, FEMA, etc): {len(ranqueados)}")
+
+    # Fase 6: Group by (condado, sale_date), top N por grupo
+    grupos = {}
+    for c in ranqueados:
+        key = (c["condado"], c["sale_date"])
+        grupos.setdefault(key, []).append(c)
+
+    top = []
+    for (condado, sale_date), lotes in grupos.items():
+        lotes.sort(key=lambda x: x["ranking_score"], reverse=True)
+        top_grupo = lotes[:TOP_PER_AUCTION]
+        print(f"[fila]   {condado} {sale_date}: {len(lotes)} candidatos -> top {len(top_grupo)}")
+        top.extend(top_grupo)
+
+    # Re-sort global pra processar melhores primeiro
+    top.sort(key=lambda x: x["ranking_score"], reverse=True)
+
+    # Cap global de seguranca
+    if len(top) > TOP_N_GLOBAL:
+        print(f"[fila] Cap global aplicado: {len(top)} -> {TOP_N_GLOBAL}")
+        top = top[:TOP_N_GLOBAL]
+
+    print(f"[fila] Total final na fila: {len(top)} lotes ({len(grupos)} leiloes distintos)")
 
     # Formato publico (dashboard consome)
     payload = {
         "gerado_em": date.today().isoformat(),
         "total_candidatos": len(top),
+        "total_leiloes": len(grupos),
         "ratio_minimo": RATIO_MIN,
+        "top_per_auction": TOP_PER_AUCTION,
+        "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
         "lotes": [
             {
                 "parcel": c["parcel_id"],
