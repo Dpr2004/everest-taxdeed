@@ -19,6 +19,7 @@ SOURCES = [
 # Condados-alvo Everest (FIPS code Florida = 12, county codes oficiais)
 # Fonte: https://www.census.gov/library/reference/code-lists/ansi.html#county
 FIPS_ALVO = {
+    # Tier original (11)
     "12017": "CITRUS",
     "12083": "MARION",
     "12107": "PUTNAM",
@@ -30,6 +31,15 @@ FIPS_ALVO = {
     "12055": "HIGHLANDS",
     "12111": "ST_LUCIE",
     "12071": "LEE",
+    # Expansao Centro/Costa Atl + Norte (8)
+    "12057": "HILLSBOROUGH",
+    "12101": "PASCO",
+    "12053": "HERNANDO",
+    "12127": "VOLUSIA",
+    "12035": "FLAGLER",
+    "12001": "ALACHUA",
+    "12031": "DUVAL",
+    "12075": "LEVY",
 }
 
 
