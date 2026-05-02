@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Everest TaxDeed — Fluxograma</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="everest-icon.png" type="image/png" sizes="256x256">
+<link rel="apple-touch-icon" href="everest-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --midnight: #13123E; --midnight-deep: #0A0927; --royal: #1D418D;
+    --gold-100: #F5E6A8; --gold-300: #E8C86A; --gold-500: #C9972B; --gold-700: #8C6815;
+    --white: #FFF; --red: #D64545; --green: #34D399;
+    --bg: #0A0927; --bg-panel: #13123E; --bg-elev: #1A1A4A;
+    --white-85: rgba(255,255,255,0.85); --white-60: rgba(255,255,255,0.60); --white-40: rgba(255,255,255,0.40);
+    --border: rgba(255,255,255,0.10);
+    --gold-grad: linear-gradient(180deg, #F5E6A8 0%, #E8C86A 22%, #C9972B 55%, #B2831F 72%, #E8C86A 92%, #F5E6A8 100%);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--white); line-height: 1.55; min-height: 100vh; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(29,65,141,0.35), transparent), linear-gradient(180deg, var(--midnight-deep) 0%, var(--midnight) 60%, var(--midnight-deep) 100%); background-attachment: fixed; }
+
+.topbar { background: rgba(10,9,39,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; padding: 14px 0; }
+.topbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand-link { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; }
+.brand-link img { height: 56px; width: auto; display: block; }
+.brand-name { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-300); }
+.actions-bar { display: flex; gap: 10px; }
+.back-link { color: var(--gold-500); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 10px 14px; border: 1px solid transparent; }
+.back-link:hover { color: var(--gold-300); }
+.btn-print { background: linear-gradient(135deg, var(--gold-300), var(--gold-500)); color: var(--midnight); border: none; padding: 10px 20px; border-radius: 8px; font-weight: 800; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; box-shadow: 0 4px 12px rgba(201,151,43,0.3); display: inline-flex; align-items: center; gap: 6px; }
+.btn-print:hover { transform: translateY(-1px); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 48px 24px; }
+
+.hero { text-align: center; padding: 28px 0 48px; position: relative; }
+.eyebrow { color: var(--gold-500); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+.hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 14px; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { color: var(--white-60); font-size: 16px; max-width: 720px; margin: 0 auto; }
+
+@media (max-width: 768px) { .hero h1 { font-size: 32px; } }
+
+/* FLUXOGRAMA */
+.flow { display: flex; flex-direction: column; gap: 28px; margin-top: 24px; }
+.step { display: grid; grid-template-columns: 80px 1fr; gap: 24px; background: linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01)); border: 1px solid var(--border); border-left: 4px solid var(--gold-500); border-radius: 14px; padding: 28px 32px; position: relative; transition: all 0.25s; }
+.step:hover { border-color: rgba(201,151,43,0.5); border-left-color: var(--gold-300); transform: translateX(4px); }
+@media (max-width: 768px) { .step { grid-template-columns: 60px 1fr; padding: 20px; gap: 16px; } }
+
+.step-num { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 800; color: var(--gold-500); line-height: 1; opacity: 0.85; }
+@media (max-width: 768px) { .step-num { font-size: 40px; } }
+
+.step-content h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--gold-300); margin-bottom: 6px; }
+.step-content .step-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(29,65,141,0.4); color: #8FB3FF; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; }
+.step-content > p { color: var(--white-85); font-size: 14px; line-height: 1.65; margin-bottom: 14px; }
+.step-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 14px; }
+.step-list-item { padding: 10px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(201,151,43,0.18); border-radius: 8px; font-size: 12px; color: var(--white-85); }
+.step-list-item strong { display: block; color: var(--gold-300); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+
+.arrow { display: flex; justify-content: center; padding: 4px 0; }
+.arrow svg { width: 32px; height: 32px; opacity: 0.5; }
+
+/* CALLOUTS */
+.callouts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 56px; }
+.callout { background: rgba(201,151,43,0.06); border: 1px solid rgba(201,151,43,0.3); border-radius: 12px; padding: 22px; text-align: center; }
+.callout-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 800; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 6px; }
+.callout-lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white-60); font-weight: 700; }
+
+/* MANIFESTO BAR */
+.manifesto { margin-top: 56px; padding: 32px; background: linear-gradient(135deg, rgba(19,18,62,0.6), rgba(10,9,39,0.6)); border: 1.5px solid var(--gold-500); border-radius: 16px; text-align: center; }
+.manifesto h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold-300); margin-bottom: 14px; }
+.manifesto p { color: var(--white-85); font-size: 14px; line-height: 1.7; max-width: 760px; margin: 0 auto 8px; }
+.manifesto p strong { color: var(--gold-300); }
+
+footer { background: var(--bg-panel); border-top: 1px solid var(--border); padding: 28px 0; margin-top: 48px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; text-align: center; }
+.footer-brand { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-500); margin-bottom: 6px; }
+.footer-meta { color: var(--white-40); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
+
+.print-only { display: none; }
+
+/* ===== PRINT ===== */
+@media print {
+    body { background: white !important; color: #000 !important; font-size: 11pt; }
+    .topbar, footer, .btn-print, .back-link, .actions-bar, .no-print { display: none !important; }
+    .container { padding: 0 !important; max-width: 100% !important; }
+    .hero h1 { color: #C9972B !important; -webkit-text-fill-color: #C9972B !important; background: none !important; }
+    .hero p, .step-content > p, .step-list-item, .manifesto p { color: #000 !important; }
+    .eyebrow, .step-content h2, .callout-lbl, .manifesto h3 { color: #C9972B !important; }
+    .step { background: #FAFAFA !important; border: 1px solid #ccc !important; border-left: 4px solid #C9972B !important; page-break-inside: avoid; box-shadow: none !important; padding: 16px !important; }
+    .step-num, .callout-num { color: #C9972B !important; -webkit-text-fill-color: #C9972B !important; background: none !important; }
+    .step-list-item { background: #FFF !important; border-color: #ccc !important; }
+    .step-list-item strong { color: #C9972B !important; }
+    .arrow svg { opacity: 0.7; }
+    .callout { background: #FFF8E8 !important; border-color: #C9972B !important; }
+    .manifesto { background: #FFF8E8 !important; border-color: #C9972B !important; page-break-inside: avoid; }
+    .step-content .step-tag { background: #FBE9C7 !important; color: #C9972B !important; }
+    /* Print header com logo */
+    .print-only.print-header { display: flex !important; align-items: center; justify-content: space-between; padding: 6pt 14pt 14pt; border-bottom: 2.5pt solid #C9972B; margin-bottom: 18pt; page-break-after: avoid; }
+    .print-only.print-header img { height: 80pt; width: auto; }
+    .print-brand-doc { text-align: right; font-size: 9pt; color: #555; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; line-height: 1.4; }
+    /* Print footer */
+    .print-only.print-footer { display: block !important; margin-top: 24pt; padding-top: 10pt; border-top: 1pt solid #C9972B; text-align: center; font-size: 8pt; color: #666; letter-spacing: 0.12em; }
+    .print-only.print-footer strong { color: #C9972B; font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.18em; }
+}
+</style>
+</head>
+<body>
+
+<!-- Print header (so aparece no print) -->
+<div class="print-only print-header">
+    <img src="logo-everest.png" alt="Everest Investments Group">
+    <div class="print-brand-doc">
+        Sistema TaxDeed Intelligence<br>
+        <span id="print-date"></span>
+    </div>
+</div>
+
+<header class="topbar no-print">
+    <div class="topbar-inner">
+        <a href="index.html" class="brand-link">
+            <img src="logo-everest.png" alt="Everest Investments Group">
+            <span class="brand-name">Tax Deed Intelligence</span>
+        </a>
+        <div class="actions-bar">
+            <a href="index.html" class="back-link">← Dashboard</a>
+            <button onclick="window.print()" class="btn-print">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+                Imprimir
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="hero">
+        <div class="eyebrow">Como Funciona o Sistema</div>
+        <h1>Da Descoberta ao Leilão<br>100% Automatizado</h1>
+        <p>Pipeline de 5 etapas que descobre, analisa, valida e entrega oportunidades de tax deed nos 11 condados Tier Everest da Flórida — sem intervenção manual.</p>
+    </section>
+
+    <!-- CALLOUTS RÁPIDOS -->
+    <div class="callouts">
+        <div class="callout"><div class="callout-num">11</div><div class="callout-lbl">Condados Florida</div></div>
+        <div class="callout"><div class="callout-num">12</div><div class="callout-lbl">Agentes de Análise</div></div>
+        <div class="callout"><div class="callout-num">10</div><div class="callout-lbl">Top Lotes / Leilão</div></div>
+        <div class="callout"><div class="callout-num">50%</div><div class="callout-lbl">Cap Max do Bid</div></div>
+    </div>
+
+    <!-- FLUXOGRAMA -->
+    <div class="flow" style="margin-top: 56px;">
+
+        <!-- ETAPA 1 -->
+        <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+                <span class="step-tag">Tier 1 · Descoberta</span>
+                <h2>Varredura Automática Diária</h2>
+                <p>Todo dia <strong>5h e 9h ET</strong>, o sistema vasculha os sites oficiais dos 11 condados Tier Everest na Flórida e extrai todos os lotes upcoming via Playwright autenticado.</p>
+                <div class="step-list">
+                    <div class="step-list-item"><strong>Calendar Scraper</strong> Datas de leilão futuras</div>
+                    <div class="step-list-item"><strong>Lot Scraper</strong> Parcel ID, opening bid, endereço</div>
+                    <div class="step-list-item"><strong>Property Appraiser</strong> Just value, ano, sqft</div>
+                    <div class="step-list-item"><strong>FEMA Flood Zones</strong> Risco de inundação oficial</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow no-print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7" stroke="#C9972B"/></svg></div>
+
+        <!-- ETAPA 2 -->
+        <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+                <span class="step-tag">Filtro Inteligente</span>
+                <h2>Top 10 Oportunidades por Leilão</h2>
+                <p>Filtros rigorosos eliminam ruído. Apenas as 10 melhores oportunidades de cada leilão de cada condado entram na fila de análise profunda.</p>
+                <div class="step-list">
+                    <div class="step-list-item"><strong>Cap 50%</strong> Opening bid ≤ 50% do market value</div>
+                    <div class="step-list-item"><strong>Sem zona V/VE</strong> Exclui flood catastrófica</div>
+                    <div class="step-list-item"><strong>Ranking</strong> Score por ratio + condado + FEMA</div>
+                    <div class="step-list-item"><strong>Top 10 / leilão</strong> Por (condado + data)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow no-print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7" stroke="#C9972B"/></svg></div>
+
+        <!-- ETAPA 3 -->
+        <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+                <span class="step-tag">Tier 2 · Análise Multi-Agente</span>
+                <h2>Due Diligence com 12 Agentes Especializados</h2>
+                <p>Cada lote passa por <strong>12 agentes</strong> (~20 min/lote) que cruzam dados de fontes oficiais. Nenhum BUY é emitido com pendências críticas — <strong>mandato inviolável</strong>.</p>
+                <div class="step-list">
+                    <div class="step-list-item"><strong>00 · Asset Class</strong> Lote vago vs improved</div>
+                    <div class="step-list-item"><strong>01 · Auction Rules</strong> FL Stat 197 + quirks</div>
+                    <div class="step-list-item"><strong>02 · Official Data</strong> Property Appraiser</div>
+                    <div class="step-list-item"><strong>03 · Title & Liens</strong> IRS, HOA, judgments</div>
+                    <div class="step-list-item"><strong>04 · Physical</strong> Zoning, acesso, utilities</div>
+                    <div class="step-list-item"><strong>05 · Market & Exit</strong> VMF + cenários conservadores</div>
+                    <div class="step-list-item"><strong>06 · QA Committee</strong> Kill switch + cap 50%</div>
+                    <div class="step-list-item"><strong>07 · Occupancy</strong> Owner / tenant / vacant</div>
+                    <div class="step-list-item"><strong>08 · County Quirks</strong> Regras locais específicas</div>
+                    <div class="step-list-item"><strong>09 · Drive-by</strong> Verificação visual</div>
+                    <div class="step-list-item"><strong>10 · Insurance</strong> Viabilidade de seguro</div>
+                    <div class="step-list-item"><strong>11 · Environmental</strong> Wetlands, sinkhole, contamination</div>
+                    <div class="step-list-item"><strong>12 · Verification</strong> Gate final pré-lance</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow no-print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7" stroke="#C9972B"/></svg></div>
+
+        <!-- ETAPA 4 -->
+        <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+                <span class="step-tag">Veredicto + Notificação</span>
+                <h2>Briefing Resumido por Email</h2>
+                <p>Apenas oportunidades reais (<strong>BUY</strong> ou <strong>CONDITIONAL BUY</strong>) chegam por email — agrupadas por leilão. Sem spam, sem ruído.</p>
+                <div class="step-list">
+                    <div class="step-list-item"><strong>Email D-1 · 18h ET</strong> Briefing véspera com top oportunidades</div>
+                    <div class="step-list-item"><strong>Email Dia D · 6h ET</strong> Lembrete na manhã do leilão</div>
+                    <div class="step-list-item"><strong>Veredicto Filtrado</strong> Apenas BUY/CONDITIONAL · Top 15 ranqueados</div>
+                    <div class="step-list-item"><strong>Link Direto</strong> Análise completa em 1 clique</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow no-print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7" stroke="#C9972B"/></svg></div>
+
+        <!-- ETAPA 5 -->
+        <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+                <span class="step-tag">Pós-Leilão · Loop Fechado</span>
+                <h2>Acompanhamento Automático do Resultado</h2>
+                <p>D+1 às 8h ET, sistema verifica resultado real (sold/redeemed/cancelled) e atualiza automaticamente o portfolio. Você nunca perde o que aconteceu.</p>
+                <div class="step-list">
+                    <div class="step-list-item"><strong>Detecção Automática</strong> Class WINNING/LOOSING</div>
+                    <div class="step-list-item"><strong>Portfolio</strong> Cria nota se Everest arrematou</div>
+                    <div class="step-list-item"><strong>Stats por Condado</strong> Win rate, ROI realizado, padrões</div>
+                    <div class="step-list-item"><strong>Retrospectiva</strong> Calibração mensal do sistema</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+        <h3>Mandato Inviolável</h3>
+        <p><strong>Proteção de capital acima de justificativa de compra.</strong> Cada decisão é validada por 12 agentes independentes. Bid máximo nunca passa de <strong>50% do market value</strong>. Pendências críticas bloqueiam BUY automaticamente.</p>
+        <p>Zero simulação. Apenas dados oficiais. Conservador sempre. <strong>Subestimar &gt; superestimar.</strong></p>
+    </section>
+
+</div>
+
+<footer class="no-print">
+    <div class="footer-inner">
+        <div class="footer-brand">Everest Investments Group</div>
+        <div class="footer-meta">Tax Deed Intelligence · Florida · Coconut Creek</div>
+    </div>
+</footer>
+
+<!-- Print footer -->
+<div class="print-only print-footer">
+    <strong>EVEREST INVESTMENTS GROUP</strong> · Tax Deed Intelligence · Coconut Creek, FL · everestinvestmentsgroup.com<br>
+    <span style="font-size:7pt;">Documento confidencial · Sistema proprietário</span>
+</div>
+
+<script>
+document.getElementById('print-date').textContent = new Date().toLocaleDateString('pt-BR');
+</script>
+</body>
+</html>
