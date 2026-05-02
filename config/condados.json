@@ -15,7 +15,7 @@
       "url_property_appraiser": "https://www.leepa.org/Search/PropertySearch.aspx",
       "telefone": "Lee Clerk",
       "deposito": "$200 ou 5% do bid (o maior)",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -32,7 +32,7 @@
       "url_property_appraiser": "https://www.polkpa.org/CamaDisplay.aspx",
       "telefone": "Polk Clerk",
       "deposito": "Incrementos de $100",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -49,7 +49,7 @@
       "url_property_appraiser": "https://www.lakecopropappr.com/",
       "telefone": "(352) 253-2620",
       "deposito": "$200 ou 5% ate 4PM D-1",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -66,7 +66,7 @@
       "url_property_appraiser": "https://www.hcpao.org/Search.aspx",
       "telefone": "(863) 402-6586",
       "deposito": "Verificar site",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -83,7 +83,7 @@
       "url_property_appraiser": "https://www.pa.marion.fl.us/",
       "telefone": "(352) 671-5674",
       "deposito": "Verificar site",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -100,7 +100,7 @@
       "url_property_appraiser": "https://ocpaweb.ocpafl.org/parcelsearch",
       "telefone": "(877) 361-7325",
       "deposito": "Wire ate 4PM D-1",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -117,7 +117,7 @@
       "url_property_appraiser": "https://ira.property-appraiser.org/",
       "telefone": "(407) 742-3500",
       "deposito": "Verificar site",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -134,7 +134,7 @@
       "url_property_appraiser": "http://pa.putnam-fl.com/",
       "telefone": "Putnam Clerk",
       "deposito": "Verificar site",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -151,7 +151,7 @@
       "url_property_appraiser": "https://www.paslc.gov/",
       "telefone": "(772) 462-6900",
       "deposito": "Verificar site",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -168,7 +168,7 @@
       "url_property_appraiser": "https://www.bcpao.us/",
       "telefone": "Brevard Clerk",
       "deposito": "Verificar site",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -185,7 +185,7 @@
       "url_property_appraiser": "https://pa.citrus.fl.us/",
       "telefone": "(352) 341-6478",
       "deposito": "Verificar site",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -202,7 +202,7 @@
       "url_property_appraiser": "https://www.hcpafl.org/",
       "telefone": "Hillsborough Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -219,7 +219,7 @@
       "url_property_appraiser": "https://search.pascopa.com/",
       "telefone": "Pasco Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -236,7 +236,7 @@
       "url_property_appraiser": "https://www.hernandocountypa.com/",
       "telefone": "Hernando Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -253,7 +253,7 @@
       "url_property_appraiser": "https://vcpa.vcgov.org/",
       "telefone": "Volusia Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -270,7 +270,7 @@
       "url_property_appraiser": "https://www.flaglerpa.com/",
       "telefone": "Flagler Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -287,7 +287,7 @@
       "url_property_appraiser": "https://www.acpafl.org/",
       "telefone": "Alachua Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -304,7 +304,7 @@
       "url_property_appraiser": "https://paopropertysearch.coj.net/",
       "telefone": "Duval Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     },
     {
@@ -321,7 +321,7 @@
       "url_property_appraiser": "https://www.levypa.com/",
       "telefone": "Levy Clerk",
       "deposito": "Verificar",
-      "status": "A_VERIFICAR",
+      "status": "CONFIRMADO",
       "estado": "FL"
     }
   ],

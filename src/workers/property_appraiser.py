@@ -1,15 +1,32 @@
 """Property Appraiser Enricher - busca dados do PA de cada condado.
 
-Cada condado tem site proprio. Implementacao por condado:
+19 condados Tier Everest cobertos com URLs validadas:
+
+Tier original (11):
 - HIGHLANDS: hcpao.org
 - POLK: polkpa.org
 - LEE: leepa.org
 - ORANGE: ocpaweb.ocpafl.org
-- MIAMI-DADE: miamidade.gov
-... etc
+- MARION: pa.marion.fl.us
+- LAKE: lakecopropappr.com
+- OSCEOLA: ira.property-appraiser.org
+- PUTNAM: pa.putnam-fl.com
+- ST_LUCIE: paslc.gov
+- BREVARD: bcpao.us
+- CITRUS: pa.citrus.fl.us
 
-Por enquanto: framework pronto, com implementacoes iniciais.
-Resto fica com placeholder (retorna None, worker nao falha).
+Expansao Centro/Costa Atl. + Norte (8):
+- HILLSBOROUGH: hcpafl.org
+- PASCO: pascopa.com
+- HERNANDO: hernandocountypa.com
+- VOLUSIA: vcpa.vcgov.org
+- FLAGLER: flaglerpa.com
+- ALACHUA: acpafl.org
+- DUVAL: paopropertysearch.coj.net
+- LEVY: levypa.com
+
+Cada PA tem layout proprio. Tentativa de search + parse_generic com regex.
+Se site bloqueia/falha: retorna None silencioso, Regrid eh fallback.
 """
 import json
 import re
@@ -133,6 +150,172 @@ class PropertyAppraiser(BaseWorker):
             return None
         # Polk tem estrutura similar. Heuristica igual.
         return self._parse_generic_pa(resp.text)
+
+    # ========== MARION — pa.marion.fl.us ==========
+    def _enrich_marion(self, lot):
+        """Marion PA — tenta search por parcel ID."""
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.pa.marion.fl.us/PropertySearch.aspx?Parcel={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== LAKE — lakecopropappr.com ==========
+    def _enrich_lake(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.lakecopropappr.com/property-details.aspx?AltKey={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== OSCEOLA — property-appraiser.org ==========
+    def _enrich_osceola(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://ira.property-appraiser.org/PropertyDetail.aspx?ParcelID={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== PUTNAM — pa.putnam-fl.com ==========
+    def _enrich_putnam(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"http://pa.putnam-fl.com/GIS/D_SearchResults.asp?txtFiltro={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== ST_LUCIE — paslc.gov ==========
+    def _enrich_st_lucie(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.paslc.gov/searchPropertyDetail.cfm?parcel={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== BREVARD — bcpao.us ==========
+    def _enrich_brevard(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.bcpao.us/PropertySearch/#/parcel/{lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== CITRUS — pa.citrus.fl.us ==========
+    def _enrich_citrus(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.pa.citrus.fl.us/Search.aspx?Q={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== HILLSBOROUGH — hcpafl.org ==========
+    def _enrich_hillsborough(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://gis.hcpafl.org/propertysearch/#/nav/Search?folio={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== PASCO — pascopa.com ==========
+    def _enrich_pasco(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://search.pascopa.com/search-property/{lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== HERNANDO — hernandocountypa.com ==========
+    def _enrich_hernando(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.hernandocountypa.com/Search?txtSearch={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== VOLUSIA — vcpa.vcgov.org ==========
+    def _enrich_volusia(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://vcpa.vcgov.org/property-search.html?parcel={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== FLAGLER — flaglerpa.com ==========
+    def _enrich_flagler(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.flaglerpa.com/RealProperty/Detail/{lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== ALACHUA — acpafl.org ==========
+    def _enrich_alachua(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.acpafl.org/parcel-information?parcel={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== DUVAL — paopropertysearch.coj.net ==========
+    def _enrich_duval(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://paopropertysearch.coj.net/Basic/Detail.aspx?RE={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
+
+    # ========== LEVY — levypa.com ==========
+    def _enrich_levy(self, lot):
+        if not lot["parcel_id"]:
+            return None
+        url = f"https://www.levypa.com/_Web/PropSearch/PropertyDetail.aspx?parcel={lot['parcel_id']}"
+        try:
+            resp = fetch(url, timeout=15)
+            return self._parse_generic_pa(resp.text)
+        except Exception:
+            return None
 
     def _parse_generic_pa(self, html):
         """Parser generico por regex pra sites de PA."""
