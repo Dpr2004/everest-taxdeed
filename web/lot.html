@@ -7,14 +7,10 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="everest-icon.png" type="image/png" sizes="256x256">
 <link rel="apple-touch-icon" href="everest-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
-/* ===== Fontes oficiais Everest ===== */
-@font-face { font-family: 'Manti Sans'; src: url('fonts/MantiSans.otf') format('opentype'); font-display: swap; font-weight: normal; }
-@font-face { font-family: 'Garet Book'; src: url('fonts/GaretBook.ttf') format('truetype'); font-display: swap; font-weight: normal; }
-
 :root {
     --midnight: #13123E; --midnight-deep: #0A0927; --royal: #1D418D;
     --gold-100: #F5E6A8; --gold-300: #E8C86A; --gold-500: #C9972B; --gold-700: #8C6815;
@@ -25,17 +21,13 @@
     --gold-grad: linear-gradient(180deg, #F5E6A8 0%, #E8C86A 22%, #C9972B 55%, #B2831F 72%, #E8C86A 92%, #F5E6A8 100%);
 }
 * { box-sizing: border-box; }
-body { margin: 0; padding: 0; font-family: 'Garet Book', 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--white); line-height: 1.55; font-size: 14px; }
+body { margin: 0; padding: 0; font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--white); line-height: 1.55; font-size: 14px; }
 
 .topbar { background: var(--bg-panel); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
 .topbar-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.brand-link { display: flex; align-items: center; gap: 16px; color: var(--white); text-decoration: none; transition: transform 0.2s; }
-.brand-link:hover { transform: translateY(-1px); }
-.brand-link img { height: 72px; width: auto; display: block; filter: drop-shadow(0 4px 16px rgba(201,151,43,0.4)); }
-.brand-text { display: flex; flex-direction: column; line-height: 1.15; border-left: 2px solid var(--gold-500); padding-left: 16px; }
-.brand-name { font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', Georgia, serif; font-weight: 800; font-size: 18px; letter-spacing: 0.22em; text-transform: uppercase; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--gold-300); }
-.brand-tag { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white-60); font-weight: 600; margin-top: 4px; }
-@media (max-width: 768px) { .brand-link img { height: 56px; } .brand-name { font-size: 15px; } }
+.brand-link { display: flex; align-items: center; gap: 10px; color: var(--white); text-decoration: none; }
+.brand-link img { width: 36px; height: 36px; border-radius: 8px; }
+.brand-name { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-300); }
 .back-link { color: var(--gold-500); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
 .back-link:hover { color: var(--gold-300); }
 
@@ -50,7 +42,7 @@ body { margin: 0; padding: 0; font-family: 'Garet Book', 'Inter', -apple-system,
 .hero { background: linear-gradient(135deg, var(--bg-panel), var(--bg-elev)); border: 1px solid var(--border); border-radius: 14px; padding: 32px; margin-bottom: 24px; position: relative; overflow: hidden; }
 .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: radial-gradient(circle, rgba(201,151,43,0.18), transparent 70%); pointer-events: none; }
 .eyebrow { color: var(--gold-500); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
-.parcel-title { font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; line-height: 1.15; margin: 0 0 8px; color: var(--white); }
+.parcel-title { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; line-height: 1.15; margin: 0 0 8px; color: var(--white); }
 .parcel-meta { color: var(--white-60); font-size: 14px; margin-bottom: 24px; }
 .parcel-meta strong { color: var(--gold-300); }
 
@@ -63,21 +55,21 @@ body { margin: 0; padding: 0; font-family: 'Garet Book', 'Inter', -apple-system,
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 24px; }
 .stat-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,151,43,0.18); border-radius: 10px; padding: 14px 16px; }
 .stat-lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white-40); margin-bottom: 4px; }
-.stat-val { font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--white); }
+.stat-val { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--white); }
 .stat-val.gold { color: var(--gold-300); }
 .stat-val.green { color: var(--green); }
 .stat-val.red { color: var(--red); }
 
 .section { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; }
-.section-title { font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: var(--gold-300); margin: 0 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(201,151,43,0.25); }
+.section-title { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: var(--gold-300); margin: 0 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(201,151,43,0.25); }
 .reason-item { padding: 14px 16px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold-500); border-radius: 0 8px 8px 0; margin-bottom: 10px; }
-.reason-num { font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', serif; color: var(--gold-300); font-weight: 700; font-size: 18px; margin-right: 8px; }
+.reason-num { font-family: 'Playfair Display', serif; color: var(--gold-300); font-weight: 700; font-size: 18px; margin-right: 8px; }
 .flag-item { padding: 10px 14px; background: rgba(214,69,69,0.08); border-left: 3px solid var(--red); border-radius: 0 6px 6px 0; margin-bottom: 6px; font-size: 13px; }
 .flag-item.yellow { background: rgba(251,191,36,0.08); border-left-color: var(--yellow); }
 .flag-item.green { background: rgba(52,211,153,0.08); border-left-color: var(--green); }
 
 .markdown-body { color: var(--white-85); font-size: 14px; line-height: 1.7; }
-.markdown-body h1, .markdown-body h2, .markdown-body h3 { font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', serif; color: var(--gold-300); margin-top: 24px; margin-bottom: 12px; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3 { font-family: 'Playfair Display', serif; color: var(--gold-300); margin-top: 24px; margin-bottom: 12px; }
 .markdown-body h1 { font-size: 22px; border-bottom: 1px solid rgba(201,151,43,0.3); padding-bottom: 8px; }
 .markdown-body h2 { font-size: 18px; }
 .markdown-body h3 { font-size: 16px; }
@@ -100,13 +92,10 @@ body { margin: 0; padding: 0; font-family: 'Garet Book', 'Inter', -apple-system,
 footer { background: var(--bg-panel); border-top: 1px solid var(--border); padding: 24px 0; margin-top: 48px; }
 .foot-text { text-align: center; color: var(--white-40); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
 
-/* Print header/footer (escondido na tela) */
-.print-only { display: none; }
-
 /* ===== PRINT ===== */
 @media print {
     body { background: white !important; color: #000 !important; font-size: 11pt; }
-    .topbar, footer, .btn-print, .btn-outline, .links-grid, .actions-bar, .no-print { display: none !important; }
+    .topbar, footer, .btn-print, .btn-outline, .links-grid, .actions-bar { display: none !important; }
     .container { padding: 0 !important; max-width: 100% !important; }
     .hero, .section { background: white !important; border: 1px solid #ccc !important; color: #000 !important; page-break-inside: avoid; box-shadow: none !important; padding: 16px !important; margin-bottom: 12px !important; }
     .hero::before { display: none !important; }
@@ -122,37 +111,18 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
     .markdown-body table, .markdown-body tr, .markdown-body td { page-break-inside: avoid; }
     a[href]::after { content: ""; }
     .stat-box { background: #FAFAFA !important; border-color: #ccc !important; }
-
-    /* Print header com logo Everest oficial (horizontal) */
-    .print-only.print-header { display: flex !important; align-items: center; justify-content: space-between; gap: 18pt; padding: 6pt 14pt 14pt; border-bottom: 2.5pt solid #C9972B; margin-bottom: 18pt; page-break-after: avoid; }
-    .print-only.print-header img { height: 80pt; width: auto; }
-    .print-brand-doc { text-align: right; font-size: 9pt; color: #555; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; line-height: 1.4; }
-
-    /* Print footer com assinatura Everest */
-    .print-only.print-footer { display: block !important; margin-top: 24pt; padding-top: 10pt; border-top: 1pt solid #C9972B; text-align: center; font-size: 8pt; color: #666; letter-spacing: 0.12em; page-break-before: avoid; }
-    .print-only.print-footer strong { color: #C9972B; font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.18em; }
+    /* Header impresso */
+    body::before { content: "EVEREST INVESTMENTS GROUP — Tax Deed Analysis"; display: block; font-family: 'Playfair Display', serif; font-size: 14pt; font-weight: 700; color: #C9972B; text-align: center; padding: 12pt 0; border-bottom: 2px solid #C9972B; margin-bottom: 16pt; letter-spacing: 0.2em; text-transform: uppercase; }
 }
 </style>
 </head>
 <body x-data="lotPage()" x-init="init()">
 
-<!-- Header impresso (so aparece no print) -->
-<div class="print-only print-header">
-    <img src="logo-everest.png" alt="Everest Investments Group">
-    <div class="print-brand-doc">
-        Análise de Propriedade<br>
-        <span x-text="new Date().toLocaleDateString('pt-BR')"></span>
-    </div>
-</div>
-
 <header class="topbar no-print">
     <div class="topbar-inner">
         <a href="index.html" class="brand-link">
-            <img src="logo-everest.png" alt="Everest Investments Group">
-            <div class="brand-text">
-                <span class="brand-name">Everest</span>
-                <span class="brand-tag">Tax Deed Intelligence</span>
-            </div>
+            <img src="everest-icon.png" alt="Everest">
+            <span class="brand-name">Everest TaxDeed</span>
         </a>
         <div class="actions-bar">
             <a :href="'county.html?c=' + (lot.codigo_condado || '')" class="back-link">← Voltar ao Condado</a>
@@ -170,7 +140,7 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
 
     <template x-if="!loading && !lot.parcel_id">
         <div class="empty">
-            <h2 style="font-family: 'Manti Sans', 'Montserrat', 'Playfair Display', serif; color: var(--gold-300);">Propriedade não encontrada</h2>
+            <h2 style="font-family: 'Playfair Display', serif; color: var(--gold-300);">Propriedade não encontrada</h2>
             <p>Parcel <code x-text="parcelId"></code> não está no pipeline.</p>
             <a href="index.html" class="back-link">← Voltar ao Dashboard</a>
         </div>
@@ -277,12 +247,6 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
         <div class="foot-text">Everest Investments Group · Daniel Rocha · Coconut Creek, FL</div>
     </div>
 </footer>
-
-<!-- Footer impresso (so aparece no print) -->
-<div class="print-only print-footer">
-    <strong>EVEREST INVESTMENTS GROUP</strong> · Tax Deed Intelligence · Coconut Creek, FL · everestinvestmentsgroup.com<br>
-    <span style="font-size:7pt;">Documento gerado pelo sistema LOTES Analyzer · Análise multi-agente (12 fases) · Confidencial</span>
-</div>
 
 <script>
 function lotPage() {

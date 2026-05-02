@@ -7,13 +7,8 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="everest-icon.png" type="image/png" sizes="256x256">
 <link rel="apple-touch-icon" href="everest-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <style>
-/* ===== Fontes oficiais Everest ===== */
-@font-face { font-family: 'Manti Sans'; src: url('fonts/MantiSans.otf') format('opentype'); font-display: swap; font-weight: normal; }
-@font-face { font-family: 'Garet Book'; src: url('fonts/GaretBook.ttf') format('truetype'); font-display: swap; font-weight: normal; }
-
 :root {
     --midnight: #13123E; --midnight-deep: #0A0927; --royal: #1D418D;
     --gold-100: #F5E6A8; --gold-300: #E8C86A; --gold-500: #C9972B; --gold-700: #8C6815;
@@ -26,7 +21,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: var(--bg); }
 body {
-    font-family: "Garet Book", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--white); font-size: 14px; line-height: 1.55; min-height: 100vh;
     background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(29,65,141,0.35), transparent),
                 linear-gradient(180deg, var(--midnight-deep) 0%, var(--midnight) 60%, var(--midnight-deep) 100%);
@@ -44,7 +39,7 @@ body {
 
 .hero { padding: 40px 0 24px; }
 .eyebrow { font-size: 11px; letter-spacing: 0.24em; color: var(--gold-500); text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
-h1 { font-family: 'Manti Sans', 'Montserrat', sans-serif; font-size: 42px; font-weight: 900; letter-spacing: 0.02em; margin-bottom: 6px; }
+h1 { font-size: 38px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 6px; }
 h1 .gold { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 
 .acoes { display: flex; gap: 12px; margin: 20px 0 30px; flex-wrap: wrap; }
@@ -73,7 +68,7 @@ h1 .gold { background: var(--gold-grad); -webkit-background-clip: text; backgrou
 .kpi-val.gold { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .kpi-sub { color: var(--white-40); font-size: 11px; margin-top: 6px; }
 
-.section-title { font-family: 'Manti Sans', 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 0.03em; margin: 36px 0 14px; }
+.section-title { font-size: 20px; font-weight: 800; margin: 36px 0 14px; }
 .section-title::after { content: ""; display: block; width: 52px; height: 3px; background: var(--gold-grad); margin-top: 8px; }
 
 .sale-list, .lot-list { display: grid; gap: 12px; }
