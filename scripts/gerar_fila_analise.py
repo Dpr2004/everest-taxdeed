@@ -51,17 +51,27 @@ AUTO_SEND = os.environ.get("FILA_AUTO_SEND", "false").lower() == "true"
 
 # Pesos por condado (1.0 = neutro). Ajuste manual baseado em experiencia.
 COUNTY_WEIGHTS = {
+    # === Tier Everest original (11) ===
     "POLK": 1.0,
     "MARION": 1.0,
-    "HIGHLANDS": 1.1,   # GDC lots tem upside
+    "HIGHLANDS": 1.1,    # GDC lots tem upside
     "LAKE": 1.0,
-    "ORANGE": 0.9,      # mercado competitivo, menos margem
+    "ORANGE": 0.9,       # mercado competitivo, menos margem
     "OSCEOLA": 1.0,
-    "PUTNAM": 1.1,      # rural, menor competicao
-    "ST_LUCIE": 1.1,    # GDC Port St Lucie
-    "LEE": 0.85,        # pos-Ian risco alto
+    "PUTNAM": 1.1,       # rural, menor competicao
+    "ST_LUCIE": 1.1,     # GDC Port St Lucie
+    "LEE": 0.85,         # pos-Ian risco alto
     "BREVARD": 1.0,
     "CITRUS": 1.05,
+    # === Expansao Centro/Costa Atlantica + Norte (8) — ajustar pesos com dados reais ===
+    "HILLSBOROUGH": 0.85, # Tampa, mercado super competitivo
+    "PASCO": 1.05,        # Wesley Chapel/Dade City — crescimento + margem
+    "HERNANDO": 1.05,     # rural-suburb, menor competicao
+    "VOLUSIA": 0.95,      # Daytona — competicao media
+    "FLAGLER": 1.0,
+    "ALACHUA": 1.0,       # Gainesville — universidade, demanda estavel
+    "DUVAL": 0.9,         # Jacksonville — alto volume mas concorrido
+    "LEVY": 1.1,          # rural, baixa competicao
 }
 
 

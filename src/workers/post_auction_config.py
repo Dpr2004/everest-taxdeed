@@ -18,19 +18,27 @@ Estrutura HTML do .AUCTION_ITEM (Grant Street Group):
 """
 
 COUNTY_DOMAINS = {
-    # Subdominios validados via config/condados.json (fonte da verdade do projeto)
-    # Quase todos sao *.realtaxdeed.com; Brevard sozinho usa *.realforeclose.com
-    "Polk":      "polk.realtaxdeed.com",
-    "Marion":    "marion.realtaxdeed.com",
-    "Highlands": "highlands.realtaxdeed.com",
-    "Lake":      "lake.realtaxdeed.com",
-    "Orange":    "orange.realtaxdeed.com",
-    "Osceola":   "osceola.realtaxdeed.com",
-    "Putnam":    "putnam.realtaxdeed.com",
-    "St. Lucie": "stlucie.realtaxdeed.com",
-    "Lee":       "lee.realtaxdeed.com",
-    "Brevard":   "brevard.realforeclose.com",
-    "Citrus":    "citrus.realtaxdeed.com",
+    # === Tier Everest original (11) ===
+    "Polk":         "polk.realtaxdeed.com",
+    "Marion":       "marion.realtaxdeed.com",
+    "Highlands":    "highlands.realtaxdeed.com",
+    "Lake":         "lake.realtaxdeed.com",
+    "Orange":       "orange.realtaxdeed.com",
+    "Osceola":      "osceola.realtaxdeed.com",
+    "Putnam":       "putnam.realtaxdeed.com",
+    "St. Lucie":    "stlucie.realtaxdeed.com",
+    "Lee":          "lee.realtaxdeed.com",
+    "Brevard":      "brevard.realforeclose.com",
+    "Citrus":       "citrus.realtaxdeed.com",
+    # === Expansao Centro/Costa Atlantica + Norte (8) ===
+    "Hillsborough": "hillsborough.realtaxdeed.com",
+    "Pasco":        "pasco.realforeclose.com",
+    "Hernando":     "hernando.realforeclose.com",
+    "Volusia":      "volusia.realforeclose.com",
+    "Flagler":      "flagler.realtaxdeed.com",
+    "Alachua":      "alachua.realtaxdeed.com",
+    "Duval":        "duval.realtaxdeed.com",
+    "Levy":         "levy.realtaxdeed.com",
 }
 
 # Endpoint pattern para listar leiloes por data

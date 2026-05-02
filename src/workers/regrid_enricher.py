@@ -27,6 +27,7 @@ MAX_LOTES = int(os.environ.get("REGRID_MAX_LOTES", "500"))
 # Codigo condado Everest -> slug Regrid (verificar em app.regrid.com/us/fl/<slug>)
 # Slugs oficiais Regrid seguem formato lowercase com hifen
 CONDADO_SLUG = {
+    # Tier Everest original (11)
     "CITRUS": "citrus",
     "MARION": "marion",
     "PUTNAM": "putnam",
@@ -38,6 +39,15 @@ CONDADO_SLUG = {
     "HIGHLANDS": "highlands",
     "ST_LUCIE": "st-lucie",
     "LEE": "lee",
+    # Expansao (8) — Centro/Costa Atlantica + Norte
+    "HILLSBOROUGH": "hillsborough",
+    "PASCO": "pasco",
+    "HERNANDO": "hernando",
+    "VOLUSIA": "volusia",
+    "FLAGLER": "flagler",
+    "ALACHUA": "alachua",
+    "DUVAL": "duval",
+    "LEVY": "levy",
 }
 
 
