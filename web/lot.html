@@ -25,8 +25,8 @@ body { margin: 0; padding: 0; font-family: 'Inter', -apple-system, sans-serif; b
 
 .topbar { background: var(--bg-panel); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
 .topbar-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.brand-link { display: flex; align-items: center; gap: 10px; color: var(--white); text-decoration: none; }
-.brand-link img { width: 36px; height: 36px; border-radius: 8px; }
+.brand-link { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; }
+.brand-link img { height: 56px; width: auto; display: block; border-radius: 6px; }
 .brand-name { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-300); }
 .back-link { color: var(--gold-500); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
 .back-link:hover { color: var(--gold-300); }
@@ -121,8 +121,8 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
 <header class="topbar no-print">
     <div class="topbar-inner">
         <a href="index.html" class="brand-link">
-            <img src="everest-icon.png" alt="Everest">
-            <span class="brand-name">Everest TaxDeed</span>
+            <img src="logo-everest.png" alt="Everest Investments Group">
+            <span class="brand-name">Tax Deed Intelligence</span>
         </a>
         <div class="actions-bar">
             <a :href="'county.html?c=' + (lot.codigo_condado || '')" class="back-link">← Voltar ao Condado</a>
