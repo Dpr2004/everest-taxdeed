@@ -196,8 +196,15 @@ def main():
         print(f"[fila]   {condado} {sale_date}: {len(lotes)} candidatos -> top {len(top_grupo)}")
         top.extend(top_grupo)
 
-    # Re-sort global pra processar melhores primeiro
-    top.sort(key=lambda x: x["ranking_score"], reverse=True)
+    # Re-sort global: SEMPRE prioridade leiloes mais proximos primeiro
+    # (regra Daniel 2026-05-03). Dentro do mesmo dia, melhor ranking_score primeiro.
+    # Override por condado: se FILA_COUNTY_FIRST=POLK,etc setado, esses condados
+    # vao no topo da fila independente da data.
+    county_priority = [c.strip().upper() for c in os.environ.get("FILA_COUNTY_FIRST", "").split(",") if c.strip()]
+    def _sort_key(lot):
+        cond_priority = 0 if lot["condado"].upper() in county_priority else 1
+        return (cond_priority, lot["sale_date"], -lot["ranking_score"])
+    top.sort(key=_sort_key)
 
     # Cap global de seguranca
     if len(top) > TOP_N_GLOBAL:
