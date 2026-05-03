@@ -182,11 +182,18 @@ class LotScraperPlaywright(BaseWorker):
             raise last_err
         self._dismiss_notice(page)
 
+        # Aguarda AJAX terminar (auctions sao populados async apos login).
+        # Sem isso, ~6 condados (Putnam, Citrus, Duval, Alachua, Hillsborough, Flagler)
+        # retornavam 0 lotes apesar de TEREM lotes — selector batia em pagina pre-AJAX.
+        try:
+            page.wait_for_load_state("networkidle", timeout=15000)
+        except Exception:
+            pass  # alguns sites tem polling longo, ignora
         try:
             page.wait_for_selector("#Area_W .AUCTION_ITEM, #Area_C .AUCTION_ITEM, #Area_R .AUCTION_ITEM",
-                                   timeout=10000)
+                                   timeout=15000)
         except Exception:
-            self.logger.info(f"{sale['codigo']} {sale['sale_date']}: nenhuma AUCTION_ITEM carregou em 10s")
+            self.logger.info(f"{sale['codigo']} {sale['sale_date']}: nenhuma AUCTION_ITEM carregou em ~30s")
         page.wait_for_timeout(2000)
 
         locators = [
