@@ -40,6 +40,8 @@ jobs:
       REALAUCTION_PASS: ${{ secrets.REALAUCTION_PASS }}
       PLAYWRIGHT_HEADLESS: "true"
       PLAYWRIGHT_CHANNEL: ""
+      PA_LIMIT_PER_RUN: "200"
+      PA_TIME_BUDGET_SEC: "900"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -64,6 +66,7 @@ jobs:
         continue-on-error: true
 
       - name: 3) Lot Scraper autenticado (Playwright + login RealAuction)
+        timeout-minutes: 12
         run: |
           if [ -n "${{ github.event.inputs.county }}" ]; then
             python -m src.main --scrape-lots-playwright --county "${{ github.event.inputs.county }}"
@@ -73,6 +76,7 @@ jobs:
         continue-on-error: true
 
       - name: 3b) Lot List Scraper fallback (urllib - caso o Playwright falhe)
+        timeout-minutes: 5
         run: |
           if [ -n "${{ github.event.inputs.county }}" ]; then
             python -m src.main --scrape-lots --county "${{ github.event.inputs.county }}"
@@ -82,14 +86,17 @@ jobs:
         continue-on-error: true
 
       - name: 3b) Regrid Enricher (API oficial - dados canonicos de parcela)
+        timeout-minutes: 6
         run: python -m src.main --regrid
         continue-on-error: true
 
       - name: 4) Property Appraiser (fallback/complemento)
+        timeout-minutes: 20
         run: python -m src.main --property-appraiser
         continue-on-error: true
 
       - name: 5) FEMA Flood Zones
+        timeout-minutes: 8
         run: python -m src.main --fema --limit 100
         continue-on-error: true
 
