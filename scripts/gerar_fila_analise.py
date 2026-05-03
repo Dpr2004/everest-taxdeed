@@ -76,7 +76,10 @@ COUNTY_WEIGHTS = {
 
 
 def score_lote(row):
-    jv = row["just_value"] or 0
+    # Fallback assessed_value quando just_value vazio.
+    # Regrid as vezes retorna so assessval (assessed) sem parval (just).
+    # Em FL, assessed <= just (cap homestead/SOH), entao mais conservador.
+    jv = row["just_value"] or row["assessed_value"] or 0
     bid = row["min_bid"] or 0
     if bid <= 0 or jv <= 0:
         return 0
@@ -102,7 +105,7 @@ def buscar_candidatos():
         cur.execute("""
             SELECT
                 l.id as lot_id, l.parcel_id, l.address, l.city,
-                l.min_bid, l.just_value,
+                l.min_bid, l.just_value, l.assessed_value,
                 s.sale_date, c.codigo as condado, c.state as estado,
                 d.fema_flood_zone as flood_zone,
                 sc.final_score as workers_score, sc.decision as workers_decision
@@ -114,7 +117,7 @@ def buscar_candidatos():
             WHERE s.sale_date >= DATE('now')
               AND l.parcel_id NOT LIKE 'AID_%'
               AND l.min_bid > 0
-              AND l.just_value > 0
+              AND (l.just_value > 0 OR l.assessed_value > 0)
             ORDER BY s.sale_date ASC
         """)
         return [dict(r) for r in cur.fetchall()]
