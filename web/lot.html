@@ -176,7 +176,7 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
                     </div>
                     <div class="stat-box">
                         <div class="stat-lbl">V. Mercado (ARV)</div>
-                        <div class="stat-val gold" x-text="usd(lot.just_value)"></div>
+                        <div class="stat-val gold" x-text="usd(lot.just_value || lot.assessed_value)"></div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-lbl">Score</div>
@@ -186,8 +186,68 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); paddi
                         <div class="stat-lbl">ROI Projetado</div>
                         <div class="stat-val green" x-text="lot.roi ? (lot.roi*100).toFixed(1)+'%' : '—'"></div>
                     </div>
+                    <div class="stat-box">
+                        <div class="stat-lbl">Max Bid Recomendado</div>
+                        <div class="stat-val gold" x-text="usd(lot.max_bid)"></div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-lbl">Lucro Projetado</div>
+                        <div class="stat-val green" x-text="usd(lot.profit)"></div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-lbl">Ratio jv/bid</div>
+                        <div class="stat-val gold" x-text="(((lot.just_value || lot.assessed_value || 0) / (lot.min_bid || 1))).toFixed(1) + 'x'"></div>
+                    </div>
                 </div>
             </section>
+
+            <!-- STATUS DA ANALISE PROFUNDA -->
+            <template x-if="!markdownHtml && !report.top_3_reasons">
+                <section class="section" style="background: rgba(201,151,43,0.08); border: 1px solid rgba(201,151,43,0.4);">
+                    <h2 class="section-title">Análise Profunda — Status</h2>
+                    <p style="color: var(--white-85); margin: 0 0 12px 0;">
+                        ⏳ <strong>Análise dos 12 agentes em andamento.</strong> O LOTES Analyzer
+                        está processando esta propriedade — devida diligência completa (auction rules,
+                        title/liens, physical viability, market exit, financial committee) leva
+                        ~20 min por lote. Quando finalizar, o relatório completo aparece nesta página
+                        automaticamente.
+                    </p>
+                    <p style="color: var(--white-85); margin: 0;">
+                        Os números acima são <strong>pré-análise</strong> do Tier 1 (Workers GitHub Actions):
+                        scoring matemático conservador baseado em ratio bid/valor + flood zone + pesos por condado.
+                        Vão ser <strong>refinados</strong> pela due diligence dos 12 agentes.
+                    </p>
+                </section>
+            </template>
+
+            <!-- PRE-ANALISE: METODOLOGIA TIER 1 -->
+            <template x-if="!markdownHtml && (lot.decisao || lot.score)">
+                <section class="section">
+                    <h2 class="section-title">Pré-Análise (Tier 1 Workers)</h2>
+                    <table class="markdown-body" style="width:100%; border-collapse:collapse;">
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Decisão pré-análise</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="lot.decisao || '—'"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Score (0-100)</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="(lot.score || 0).toFixed(1)"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Bid mínimo (opening)</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="usd(lot.min_bid)"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Max bid Everest (50% market)</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="usd(lot.max_bid)"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Lucro projetado (max_bid)</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="usd(lot.profit)"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>ROI projetado</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="lot.roi ? (lot.roi*100).toFixed(1)+'%' : '—'"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Valor avaliado (assessed)</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="usd(lot.assessed_value)"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Valor mercado (just/ARV)</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="lot.just_value ? usd(lot.just_value) : '— (ainda não enriquecido pelo PA)'"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>Tipo construído</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="lot.building_sqft ? (lot.building_sqft + ' sqft, ' + (lot.year_built || '?') + ' built') : 'Vacant land ou não enriquecido'"></td></tr>
+                        <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);"><strong>FEMA flood zone</strong></td>
+                            <td style="padding:8px;border:1px solid rgba(255,255,255,0.1);" x-text="lot.fema_zone || 'Não verificado ainda'"></td></tr>
+                    </table>
+                </section>
+            </template>
 
             <!-- TOP 3 RAZOES -->
             <template x-if="report.top_3_reasons && report.top_3_reasons.length">
