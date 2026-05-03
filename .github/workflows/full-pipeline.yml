@@ -95,9 +95,9 @@ jobs:
         run: python -m src.main --property-appraiser
         continue-on-error: true
 
-      - name: 5) FEMA Flood Zones
-        timeout-minutes: 8
-        run: python -m src.main --fema --limit 100
+      - name: 5) FEMA Flood Zones (FL prioridade — mandatorio)
+        timeout-minutes: 14
+        run: python -m src.main --fema --limit 300
         continue-on-error: true
 
       - name: 6) Scoring Engine

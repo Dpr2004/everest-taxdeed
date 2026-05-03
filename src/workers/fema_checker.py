@@ -39,18 +39,22 @@ class FemaChecker(BaseWorker):
         self.limit = limit
 
     def execute(self):
+        # FL e mandatorio (furacao/inundacao). Outros estados = best effort.
+        # Aceita lots sem address completo: geocode tenta city+state como fallback.
         with cursor() as cur:
             q = """
                 SELECT l.id, l.parcel_id, l.address, l.city, l.zip,
-                       c.state AS estado
+                       c.state AS estado, c.codigo AS county_code
                 FROM lots l
                 JOIN sales s ON s.id = l.sale_id
                 JOIN counties c ON c.id = s.county_id
                 LEFT JOIN dd ON dd.lot_id = l.id
                 WHERE s.sale_date >= DATE('now')
-                  AND l.address IS NOT NULL
-                  AND l.address != ''
+                  AND l.parcel_id NOT LIKE 'AID_%'
                   AND (dd.fema_flood_zone IS NULL OR dd.fema_flood_zone = '')
+                ORDER BY
+                    CASE c.state WHEN 'FL' THEN 0 ELSE 1 END,
+                    s.sale_date ASC
             """
             if self.limit:
                 q += f" LIMIT {int(self.limit)}"
@@ -80,21 +84,33 @@ class FemaChecker(BaseWorker):
                 self.logger.warning(f"FEMA {lot['parcel_id']}: {e}")
 
     def _geocode(self, lot):
-        """Geocodifica endereco via Nominatim (OpenStreetMap)."""
-        parts = [lot["address"], lot["city"], lot["estado"]]
-        q = ", ".join([p for p in parts if p])
-        if not q:
-            return None
-        url = f"https://nominatim.openstreetmap.org/search?q={quote(q)}&format=json&limit=1"
-        try:
-            resp = fetch(url, timeout=15)
-            data = resp.json()
-            if not data:
-                return None
-            return float(data[0]["lat"]), float(data[0]["lon"])
-        except Exception as e:
-            self.logger.debug(f"geocode falhou: {e}")
-            return None
+        """Geocodifica endereco via Nominatim (OpenStreetMap).
+
+        Estrategia em cascata pra nunca skipar FL:
+        1. address + city + state
+        2. city + state (vacant lots sem address detalhado)
+        3. county_code + state (ultima tentativa — coords aproximadas do condado)
+        """
+        candidates = []
+        if lot.get("address") and lot["address"].strip():
+            candidates.append(", ".join(p for p in [lot["address"], lot.get("city"), lot.get("estado")] if p))
+        if lot.get("city"):
+            candidates.append(", ".join(p for p in [lot["city"], lot.get("estado")] if p))
+        # fallback condado-level apenas pra FL (manter precisao alta nos demais)
+        if lot.get("estado") == "FL" and lot.get("county_code"):
+            candidates.append(f"{lot['county_code'].title()} County, FL")
+
+        for q in candidates:
+            url = f"https://nominatim.openstreetmap.org/search?q={quote(q)}&format=json&limit=1"
+            try:
+                resp = fetch(url, timeout=15)
+                data = resp.json()
+                if data:
+                    return float(data[0]["lat"]), float(data[0]["lon"])
+            except Exception as e:
+                self.logger.debug(f"geocode '{q}' falhou: {e}")
+            time.sleep(1.1)  # rate limit Nominatim
+        return None
 
     def _query_fema(self, lat, lng):
         """Consulta FEMA NFHL MapServer via REST API."""
