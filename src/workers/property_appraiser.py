@@ -29,11 +29,19 @@ Cada PA tem layout proprio. Tentativa de search + parse_generic com regex.
 Se site bloqueia/falha: retorna None silencioso, Regrid eh fallback.
 """
 import json
+import os
 import re
+import time
 from bs4 import BeautifulSoup
 from src.db.connection import cursor
 from src.workers.base import BaseWorker
 from src.utils.http import fetch
+
+
+# Counties cujo PA roda em SPA com hash routing (React/Angular).
+# requests.get retorna shell vazio -> regex nunca acha nada e queima 30s+ por lote.
+# Migrar pra Playwright quando priorizado. Por enquanto: skip silencioso.
+_SPA_COUNTIES = {"hillsborough", "brevard"}
 
 
 class PropertyAppraiser(BaseWorker):
@@ -42,7 +50,13 @@ class PropertyAppraiser(BaseWorker):
     def __init__(self, county_code=None, limit=None):
         super().__init__()
         self.county_code = county_code
+        # CLI --limit > env PA_LIMIT_PER_RUN > sem limite
+        if limit is None:
+            env_limit = os.environ.get("PA_LIMIT_PER_RUN")
+            limit = int(env_limit) if env_limit and env_limit.isdigit() else None
         self.limit = limit
+        # Kill switch global: tempo total maximo do worker em segundos
+        self.time_budget_sec = int(os.environ.get("PA_TIME_BUDGET_SEC", "900"))
 
     def execute(self):
         # Busca lots que ainda nao foram enriquecidos (sem sqft/year_built)
@@ -65,11 +79,28 @@ class PropertyAppraiser(BaseWorker):
             cur.execute(q, params)
             lots = cur.fetchall()
 
-        self.logger.info(f"PA enrich: {len(lots)} lots para processar")
+        self.logger.info(
+            f"PA enrich: {len(lots)} lots para processar "
+            f"(limit={self.limit}, time_budget={self.time_budget_sec}s)"
+        )
 
+        started = time.monotonic()
+        spa_skipped = 0
         for lot in lots:
+            elapsed = time.monotonic() - started
+            if elapsed >= self.time_budget_sec:
+                self.logger.warning(
+                    f"PA kill switch: tempo esgotado ({elapsed:.0f}s >= "
+                    f"{self.time_budget_sec}s). Processados {self.items_processed}, "
+                    f"restavam {len(lots) - self.items_processed - self.errors_count - spa_skipped}."
+                )
+                break
+            county_lc = (lot["county_codigo"] or "").lower()
+            if county_lc in _SPA_COUNTIES:
+                spa_skipped += 1
+                continue
             try:
-                method = getattr(self, f"_enrich_{lot['county_codigo'].lower()}", None)
+                method = getattr(self, f"_enrich_{county_lc}", None)
                 if not method:
                     self.logger.debug(f"Sem enricher pra {lot['county_codigo']}")
                     continue
@@ -80,6 +111,12 @@ class PropertyAppraiser(BaseWorker):
             except Exception as e:
                 self.errors_count += 1
                 self.logger.warning(f"PA falha {lot['parcel_id']}: {e}")
+
+        if spa_skipped:
+            self.logger.info(
+                f"PA SPA skip: {spa_skipped} lotes em condados SPA "
+                f"({sorted(_SPA_COUNTIES)}) - precisam Playwright"
+            )
 
     def _save(self, lot_id, data):
         fields = []
