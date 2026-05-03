@@ -117,8 +117,8 @@ jobs:
           LOTES_TUNNEL_URL: ${{ secrets.LOTES_TUNNEL_URL }}
           LOTES_API_KEY: ${{ secrets.LOTES_API_KEY }}
           FILA_AUTO_SEND: ${{ secrets.FILA_AUTO_SEND || 'false' }}
-          FILA_RATIO_MIN: "3.0"
-          FILA_TOP_N: "50"
+          FILA_RATIO_MIN: "2.0"
+          FILA_TOP_N: "100"
         run: python scripts/gerar_fila_analise.py
         continue-on-error: true
 
