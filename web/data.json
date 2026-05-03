@@ -1,8 +1,8 @@
 {
-  "gerado_em": "03/May/2026 10:48",
+  "gerado_em": "03/May/2026 08:40",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 31,
+    "total_sales": 29,
     "total_lots": 202,
     "lances": 41,
     "estados": [
@@ -12,34 +12,7 @@
   "semanas": [
     {
       "label": "27/Apr a 03/May/2026",
-      "sales": [
-        {
-          "id": 2,
-          "data_fmt": "29/Apr/2026",
-          "dia_semana": "Qua",
-          "condado": "HIGHLANDS",
-          "estado": "FL",
-          "horario": "10:00",
-          "plataforma": "RealTaxDeed",
-          "url_sales": "https://highlands.realtaxdeed.com/",
-          "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
-          "status": "CONFIRMADO",
-          "total_lots": 30
-        },
-        {
-          "id": 7,
-          "data_fmt": "30/Apr/2026",
-          "dia_semana": "Qui",
-          "condado": "ORANGE",
-          "estado": "FL",
-          "horario": "10:00",
-          "plataforma": "RealTaxDeed",
-          "url_sales": "https://orange.realtaxdeed.com/",
-          "url_clerk": "https://www.occompt.com/191/Tax-Deed-Sales",
-          "status": "CONFIRMADO",
-          "total_lots": 5
-        }
-      ]
+      "sales": []
     },
     {
       "label": "04/May a 10/May/2026",

@@ -76,6 +76,7 @@ def main():
                        c.codigo, c.state, c.plataforma, c.url_sales, c.url_clerk, c.status
                 FROM sales s JOIN counties c ON c.id = s.county_id
                 WHERE s.sale_date BETWEEN ? AND ?
+                  AND s.sale_date >= DATE('now')
                 ORDER BY s.sale_date, c.codigo
             """, (ini.isoformat(), fim_sem.isoformat()))
             sales = []
