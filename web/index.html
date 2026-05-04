@@ -581,7 +581,64 @@ footer {
 
 <div class="container">
 
-<section class="hero">
+<!-- HERO MODO CONDADO (so visivel quando ?c=XXX na URL) -->
+<section class="hero" x-show="modoCondado" x-cloak>
+    <a href="?" style="color:var(--gold-300);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;display:inline-block;margin-bottom:18px;">← Voltar ao Dashboard</a>
+    <div class="eyebrow" x-text="(condadoAtual.estado || 'FL') + ' · ' + ((condadoAtual.status || 'ativo').replace('_',' '))"></div>
+    <h1>Condado <span class="gold" x-text="(condadoAtual.codigo || codigo).replace('_',' ')"></span></h1>
+    <p style="color:var(--white-60);font-size:15px;margin-bottom:6px;" x-text="condadoAtual.nome || ''"></p>
+    <p style="color:var(--white-40);font-size:12px;">
+        Plataforma: <span x-text="condadoAtual.plataforma || '—'"></span> ·
+        Horário: <span x-text="condadoAtual.horario_et || '—'"></span> ·
+        Depósito: <span x-text="condadoAtual.deposito || '—'"></span>
+    </p>
+    <div style="display:flex;gap:12px;margin:20px 0 8px;flex-wrap:wrap;">
+        <a :href="condadoAtual.url_sales" target="_blank" class="btn-atualizar" x-show="condadoAtual.url_sales">Site Oficial do Leilão →</a>
+        <a :href="condadoAtual.url_clerk" target="_blank" style="background:transparent;color:var(--gold-300);padding:13px 28px;border-radius:10px;border:1px solid var(--border-strong);font-weight:700;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;display:inline-block;" x-show="condadoAtual.url_clerk">Cartório do Condado →</a>
+        <a :href="condadoAtual.url_property_appraiser" target="_blank" style="background:transparent;color:var(--gold-300);padding:13px 28px;border-radius:10px;border:1px solid var(--border-strong);font-weight:700;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;display:inline-block;" x-show="condadoAtual.url_property_appraiser">Avaliador de Imóveis →</a>
+    </div>
+
+    <div class="kpis" style="margin-top:24px;">
+        <div class="kpi">
+            <div class="kpi-label">Leilões 8 Sem.</div>
+            <div class="kpi-val" x-text="salesDoCondado.length"></div>
+            <div class="kpi-sub">Confirmados</div>
+        </div>
+        <div class="kpi">
+            <div class="kpi-label">Propriedades</div>
+            <div class="kpi-val gold" x-text="lotesDoCondado.length"></div>
+            <div class="kpi-sub">No pipeline</div>
+        </div>
+        <div class="kpi">
+            <div class="kpi-label">Decisão LANCE</div>
+            <div class="kpi-val" x-text="lotesDoCondado.filter(l => l.decisao === 'LANCE').length"></div>
+            <div class="kpi-sub">ROI ≥ meta</div>
+        </div>
+        <div class="kpi">
+            <div class="kpi-label">Média Bid Mín.</div>
+            <div class="kpi-val gold" style="font-size:28px;" x-text="mediaBidCondado()"></div>
+            <div class="kpi-sub">USD</div>
+        </div>
+    </div>
+
+    <div x-show="salesDoCondado.length" style="margin-top:32px;">
+        <div class="eyebrow">Próximos Leilões deste Condado</div>
+        <div style="display:grid;gap:10px;margin-top:10px;">
+            <template x-for="s in salesDoCondado" :key="s.id">
+                <div style="background:var(--bg-elev);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+                    <div>
+                        <span class="badge badge-CONFIRMADO" x-text="s.data_fmt + ' · ' + s.dia_semana"></span>
+                        <span style="color:var(--white-60);font-size:12px;margin-left:8px;" x-text="s.horario + ' ET · ' + (s.total_lots || 0) + ' lotes'"></span>
+                    </div>
+                    <a :href="s.url_sales" target="_blank" class="cta">Abrir Leilão →</a>
+                </div>
+            </template>
+        </div>
+    </div>
+</section>
+
+<!-- HERO GLOBAL (so visivel sem ?c= na URL) -->
+<section class="hero" x-show="!modoCondado">
     <div class="hero-split">
         <div>
             <div class="eyebrow">11 Condados · Florida · Monitoramento Automatizado</div>
@@ -602,7 +659,7 @@ footer {
             <!-- Lista compacta dos 11 alvos com contagem -->
             <div class="fl-targets-list">
                 <template x-for="c in dados.condados" :key="c.codigo">
-                    <a :href="'county.html?c=' + c.codigo" class="fl-target-chip">
+                    <a :href="'?c=' + c.codigo" class="fl-target-chip">
                         <span class="name" x-text="c.codigo.replace('_',' ')"></span>
                         <span class="count" x-text="c.total_lots || 0"></span>
                     </a>
@@ -667,7 +724,7 @@ footer {
             <div class="grid-4">
                 <template x-for="s in semana.sales" :key="s.id">
                     <div class="card sale-card-clickable"
-                         @click="window.location.href='county.html?c=' + (s.codigo || s.condado)"
+                         @click="window.location.href='?c=' + (s.codigo || s.condado)"
                          :title="'Ver página completa de ' + s.condado">
                         <div class="sale-head">
                             <div>
@@ -862,6 +919,29 @@ function app() {
         aba: 'calendario',
         dados: { resumo: {}, semanas: [], lots: [], condados: [] },
         fCondado: '', fDecisao: '', fBid: null, fBusca: '',
+        codigo: new URLSearchParams(window.location.search).get('c') || '',
+        get modoCondado() { return !!this.codigo; },
+        get condadoAtual() {
+            return (this.dados.condados || []).find(c => c.codigo === this.codigo) || { codigo: this.codigo };
+        },
+        get salesDoCondado() {
+            const out = [];
+            (this.dados.semanas || []).forEach(sem => {
+                (sem.sales || []).forEach(s => {
+                    if (s.codigo === this.codigo || s.condado === this.codigo) out.push(s);
+                });
+            });
+            return out.sort((a,b) => (a.sale_date || '9999-12-31').localeCompare(b.sale_date || '9999-12-31'));
+        },
+        get lotesDoCondado() {
+            return (this.dados.lots || []).filter(l => l.condado === this.codigo);
+        },
+        mediaBidCondado() {
+            const vals = this.lotesDoCondado.map(l => l.min_bid).filter(v => v && v > 0);
+            if (!vals.length) return '—';
+            const avg = vals.reduce((a,b) => a+b, 0) / vals.length;
+            return this.usd(avg);
+        },
         async init() {
             try {
                 const resp = await fetch('data.json?t=' + Date.now());
@@ -873,6 +953,11 @@ function app() {
                     resumo: { total_condados: 0, total_sales: 0, total_lots: 0, lances: 0, estados: [] },
                     semanas: [], lots: [], condados: []
                 };
+            }
+            // Modo condado: pre-aplica filtro e vai pra aba propriedades
+            if (this.codigo) {
+                this.fCondado = this.codigo;
+                this.aba = 'propriedades';
             }
         },
         get lotesFiltrados() {
@@ -912,7 +997,7 @@ function app() {
                     if (!code) return;
                     path.style.cursor = 'pointer';
                     path.addEventListener('click', () => {
-                        window.location.href = 'county.html?c=' + code;
+                        window.location.href = '?c=' + code;
                     });
                 });
                 // Remove <a> wrappers que podem interferir (fallback)
