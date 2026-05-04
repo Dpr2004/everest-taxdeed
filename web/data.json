@@ -1,8 +1,8 @@
 {
-  "gerado_em": "04/May/2026 11:21",
+  "gerado_em": "04/May/2026 09:54",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 78,
+    "total_sales": 80,
     "total_lots": 290,
     "lances": 41,
     "estados": [
@@ -63,7 +63,7 @@
           "url_sales": "https://pasco.realforeclose.com/",
           "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
           "status": "CONFIRMADO",
-          "total_lots": 1
+          "total_lots": 2
         },
         {
           "id": 661,
@@ -77,6 +77,19 @@
           "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
           "status": "CONFIRMADO",
           "total_lots": 2
+        },
+        {
+          "id": 729,
+          "data_fmt": "06/May/2026",
+          "dia_semana": "Qua",
+          "condado": "PASCO",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://pasco.realforeclose.com/",
+          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
+          "status": "CONFIRMADO",
+          "total_lots": 1
         },
         {
           "id": 662,
@@ -103,6 +116,19 @@
           "url_clerk": "https://www.hillsclerk.com/Additional-Services/Foreclosures-and-Tax-Deeds",
           "status": "CONFIRMADO",
           "total_lots": 19
+        },
+        {
+          "id": 730,
+          "data_fmt": "07/May/2026",
+          "dia_semana": "Qui",
+          "condado": "PASCO",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://pasco.realforeclose.com/",
+          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
+          "status": "CONFIRMADO",
+          "total_lots": 1
         },
         {
           "id": 663,
@@ -372,7 +398,7 @@
           "url_sales": "https://pasco.realforeclose.com/",
           "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
           "status": "CONFIRMADO",
-          "total_lots": 4
+          "total_lots": 5
         },
         {
           "id": 670,
@@ -7685,7 +7711,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 17,
+      "total_sales": 19,
       "total_lots": 21
     },
     {
