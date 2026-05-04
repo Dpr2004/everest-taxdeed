@@ -90,6 +90,11 @@ jobs:
         run: python -m src.main --regrid
         continue-on-error: true
 
+      - name: 3c) PA SPA Playwright (Hillsborough/Brevard/Orange)
+        timeout-minutes: 15
+        run: python -m src.main --pa-spa --limit 100
+        continue-on-error: true
+
       - name: 4) Property Appraiser (fallback/complemento)
         timeout-minutes: 20
         run: python -m src.main --property-appraiser

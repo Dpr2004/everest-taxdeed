@@ -23,6 +23,7 @@ from src.workers.lot_scraper_playwright import LotScraperPlaywright
 from src.workers.spreadsheet_writer import SpreadsheetWriter
 from src.workers.scoring_engine import ScoringEngine
 from src.workers.property_appraiser import PropertyAppraiser
+from src.workers.pa_playwright_spa import PAPlaywrightSPA
 from src.workers.fema_checker import FemaChecker
 from src.workers.alert_engine import AlertEngine
 from src.workers.regrid_enricher import RegridEnricher
@@ -62,6 +63,12 @@ def cmd_scoring():
 
 def cmd_property_appraiser(county=None, limit=None):
     PropertyAppraiser(county_code=county, limit=limit).run()
+
+
+def cmd_pa_spa(county=None, limit=None):
+    """PA enricher Playwright pra condados SPA (Hillsborough/Brevard/Orange).
+    Roda APOS regrid_enricher e ANTES do property_appraiser (curl)."""
+    PAPlaywrightSPA(county_code=county, limit=limit).run()
 
 
 def cmd_fema(limit=None):
@@ -137,6 +144,8 @@ def main():
     g.add_argument("--daemon", action="store_true")
     g.add_argument("--scoring", action="store_true", help="Calcula scores para lots")
     g.add_argument("--property-appraiser", action="store_true", help="Enrich via PA")
+    g.add_argument("--pa-spa", action="store_true",
+                   help="PA enricher Playwright pra condados SPA (Hillsborough/Brevard/Orange)")
     g.add_argument("--fema", action="store_true", help="FEMA flood zones")
     g.add_argument("--alerts", action="store_true", help="Dispara alertas")
     g.add_argument("--enrich", action="store_true", help="Pipeline: PA + FEMA + Score + Alerts")
@@ -169,6 +178,8 @@ def main():
         cmd_scoring()
     elif args.property_appraiser:
         cmd_property_appraiser(args.county, args.limit)
+    elif args.pa_spa:
+        cmd_pa_spa(args.county, args.limit)
     elif args.fema:
         cmd_fema(args.limit)
     elif args.alerts:
