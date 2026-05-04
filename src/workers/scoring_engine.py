@@ -135,9 +135,25 @@ class ScoringEngine(BaseWorker):
         score = max(0, roi_component + profit_component + confidence_component)
 
         # Decisao
+        # SAFEGUARD: ratio JV/bid alto (>=4.0) com dados insuficientes (sem
+        # property_type/sqft) NUNCA vai pra PASSA silencioso — marcar REVISAR
+        # pra LOTES decidir. Caso real 2026-05-04: parcel 162231807902030
+        # (1910 Park Manor Dr Orlando, opening $4.6k, assessed $26.6k = ratio
+        # 5.78x) ia pra PASSA porque scoring assumia reforma default $25k sem
+        # property_type vindo do PA SPA Orange. Daniel viu manualmente que era
+        # oportunidade real e flagrou bug.
+        bid_v = float(min_bid or 0)
+        ratio_jvbid = (float(just) / bid_v) if (just > 0 and bid_v > 0) else (
+            (float(assessed) / bid_v) if (assessed > 0 and bid_v > 0) else 0
+        )
+        dados_insuficientes = not (lot["building_sqft"] and lot["property_type"])
+
         if roi >= ROI_MIN and profit >= META_LUCRO * 0.7:
             decision = "LANCE"
         elif roi >= ROI_MIN * 0.7:
+            decision = "REVISAR"
+        elif ratio_jvbid >= 4.0 and dados_insuficientes:
+            # Oportunidade potencial mascarada por dados ausentes — manda pra LOTES
             decision = "REVISAR"
         else:
             decision = "PASSA"

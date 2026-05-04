@@ -2854,11 +2854,13 @@
       "year_built": null,
       "score": 48.8,
       "roi": 0.1922,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 7545.17,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=10.9x mas sqft missing"
     },
     {
       "id": 2849,
@@ -2876,11 +2878,13 @@
       "year_built": null,
       "score": 36.8,
       "roi": 0.1392,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 5513.06,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=9.6x mas sqft missing"
     },
     {
       "id": 18845,
@@ -2898,11 +2902,13 @@
       "year_built": null,
       "score": 35.7,
       "roi": 0.1347,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 5227.77,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=10.7x mas sqft missing"
     },
     {
       "id": 22614,
@@ -3208,11 +3214,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.8399,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -26764.45,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=6.1x mas sqft missing"
     },
     {
       "id": 2867,
@@ -3918,11 +3926,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7264,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -23700.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=7.3x mas sqft missing"
     },
     {
       "id": 18836,
@@ -4050,11 +4060,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7527,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -24527.67,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=6.4x mas sqft missing"
     },
     {
       "id": 2896,
@@ -4094,11 +4106,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7268,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -23743.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=7.1x mas sqft missing"
     },
     {
       "id": 2926,
@@ -4116,11 +4130,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7268,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -23743.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=7.1x mas sqft missing"
     },
     {
       "id": 2928,
@@ -4138,11 +4154,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7268,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -23743.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=7.1x mas sqft missing"
     },
     {
       "id": 3597,
@@ -4382,11 +4400,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7938,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -25865.25,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=5.0x mas sqft missing"
     },
     {
       "id": 2917,
@@ -4604,11 +4624,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.8158,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -26616.72,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=4.2x mas sqft missing"
     },
     {
       "id": 2851,
@@ -4714,11 +4736,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.6594,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -21861.04,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=7.5x mas sqft missing"
     },
     {
       "id": 2909,
@@ -4824,11 +4848,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7216,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -23948.44,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=5.5x mas sqft missing"
     },
     {
       "id": 18870,
@@ -5222,11 +5248,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.4559,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -15666.32,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=9.2x mas sqft missing"
     },
     {
       "id": 18861,
@@ -5334,11 +5362,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.4816,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -16573.87,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=8.3x mas sqft missing"
     },
     {
       "id": 2920,
@@ -5356,11 +5386,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2495,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -8758.48,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=12.3x mas sqft missing"
     },
     {
       "id": 2927,
@@ -5378,11 +5410,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2975,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -10617.09,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=9.2x mas sqft missing"
     },
     {
       "id": 15746,
@@ -5400,11 +5434,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2979,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -10640.04,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=9.1x mas sqft missing"
     },
     {
       "id": 18738,
@@ -5600,11 +5636,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.5781,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -20485.56,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=4.7x mas sqft missing"
     },
     {
       "id": 18804,
@@ -5622,11 +5660,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.1462,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -5380.46,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=9.7x mas sqft missing"
     },
     {
       "id": 11410,
@@ -5666,11 +5706,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.0858,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -3191.15,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=10.0x mas sqft missing"
     },
     {
       "id": 2858,
@@ -5732,11 +5774,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.3861,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -14241.03,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=5.8x mas sqft missing"
     },
     {
       "id": 18853,
@@ -5798,11 +5842,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.315,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -11777.85,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=6.2x mas sqft missing"
     },
     {
       "id": 11402,
@@ -5820,11 +5866,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.4097,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -15311.05,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=5.1x mas sqft missing"
     },
     {
       "id": 11401,
@@ -5974,11 +6022,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2663,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -10849.22,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=4.5x mas sqft missing"
     },
     {
       "id": 11405,
@@ -5996,11 +6046,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2403,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -10063.66,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "safeguard_dados_insuficientes",
+      "decisao_motivo": "ratio JV/bid=4.2x mas sqft missing"
     },
     {
       "id": 18840,
