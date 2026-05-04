@@ -225,21 +225,33 @@ class LotScraperPlaywright(BaseWorker):
                     val = row.locator("td.AD_DTA").inner_text(timeout=1000).strip()
                 except Exception:
                     continue
-                if "parcel" in lbl:
+                # Parser tolerante a variacoes de label entre condados:
+                # RealTaxDeed (highlands, polk, marion, etc) usa labels padrao.
+                # RealForeclose (brevard, pasco, volusia, hernando) pode usar
+                # 'starting bid', 'minimum bid', 'amount due', 'judgment amount'.
+                # Pasco/Volusia tinham 0 bid no diagnostico — provavel label diff.
+                if "parcel" in lbl or "folio" in lbl:
                     lot["parcel_id"] = val
                 elif "case" in lbl:
                     lot["case_num"] = val
                 elif "certificate" in lbl:
                     lot["tax_cert_num"] = val
-                elif "opening bid" in lbl or lbl.startswith("min"):
-                    lot["min_bid"] = _to_float(val)
-                elif "property address" in lbl or lbl == "address:":
+                elif (lbl.startswith("opening") or lbl.startswith("starting") or
+                      lbl.startswith("minimum") or lbl.startswith("min ") or lbl == "min" or
+                      "opening bid" in lbl or "starting bid" in lbl or "minimum bid" in lbl or
+                      "judgment amount" in lbl or "amount due" in lbl or
+                      "tax amount" in lbl or lbl == "bid:"):
+                    if not lot.get("min_bid"):  # primeiro match ganha
+                        lot["min_bid"] = _to_float(val)
+                elif "property address" in lbl or lbl == "address:" or lbl.startswith("address"):
                     address_parts.append(val)
                 elif lbl == "" and val:
                     address_parts.append(val)
                 elif "assessed" in lbl:
                     lot["assessed_value"] = _to_float(val)
-                elif "just" in lbl or "market value" in lbl:
+                elif ("just" in lbl or "market value" in lbl or lbl == "market" or
+                      "estimated value" in lbl or "appraised" in lbl or
+                      "total value" in lbl):
                     lot["just_value"] = _to_float(val)
 
             if address_parts:
