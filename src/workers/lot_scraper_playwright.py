@@ -162,6 +162,17 @@ class LotScraperPlaywright(BaseWorker):
         base = f"{parsed.scheme}://{parsed.netloc}"
         if parsed.netloc != last_domain:
             self._login(page, base)
+            # Se login falhou (credencial nao tem acesso a esse subdomain),
+            # abortar — nao adianta tentar DAYLIST sem auth.
+            try:
+                auth_fail = page.evaluate("() => window.__LOTES_AUTH_FAIL || false")
+                if auth_fail:
+                    self.logger.warning(
+                        f"{sale['codigo']}: pulando — sem auth nesse subdomain"
+                    )
+                    return
+            except Exception:
+                pass
 
         sale_dt = datetime.strptime(sale["sale_date"], "%Y-%m-%d")
         date_mmddyyyy = sale_dt.strftime("%m/%d/%Y")
@@ -276,9 +287,16 @@ class LotScraperPlaywright(BaseWorker):
             )
 
     def _login(self, page, base):
-        """Faz login se necessario. Profile persistente pode ja estar logado."""
+        """Faz login se necessario. Profile persistente pode ja estar logado.
+
+        Importante: cada subdomain RealAuction (alachua, osceola, etc) e
+        CONTA INDEPENDENTE. Mesma credential pode nao estar registrada em
+        todos. Pos-login, verificar se realmente entrou — se cair em
+        Splash Page novamente, marcar como FALHA AUTH (nao silencioso).
+        """
         page.goto(f"{base}/", wait_until="domcontentloaded", timeout=20000)
         page.wait_for_timeout(1500)
+        login_attempted = False
         try:
             if page.locator("#LogName").is_visible(timeout=3000):
                 self.logger.info(f"Logando em {base}")
@@ -287,10 +305,28 @@ class LotScraperPlaywright(BaseWorker):
                 page.click("#LogButton")
                 page.wait_for_load_state("networkidle", timeout=15000)
                 page.wait_for_timeout(3000)
+                login_attempted = True
             else:
                 self.logger.info(f"Ja logado em {base} (profile persistente)")
         except Exception as e:
             self.logger.warning(f"Login erro em {base}: {e}")
+
+        # VERIFICACAO: depois do login, confere se REALMENTE entrou.
+        # Splash page persistente = credencial nao tem acesso nesse subdomain.
+        try:
+            still_splash = page.locator("#LogName").is_visible(timeout=2000)
+            if still_splash:
+                # Login falhou — credencial Everest2026 nao tem acesso
+                self.logger.warning(
+                    f"AUTH_FAIL em {base}: credencial nao tem acesso a esse subdomain. "
+                    f"Provavel: registro RealAuction necessario por condado. "
+                    f"Lots desse condado nao serao scrapeados."
+                )
+                # Marca pra _scrape_sale verificar e abortar o sale
+                page.evaluate("() => { window.__LOTES_AUTH_FAIL = true; }")
+        except Exception:
+            pass
+
         self._dismiss_notice(page)
         page.wait_for_timeout(1500)
 

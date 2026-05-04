@@ -15,8 +15,9 @@
       "url_property_appraiser": "https://www.leepa.org/Search/PropertySearch.aspx",
       "telefone": "Lee Clerk",
       "deposito": "$200 ou 5% do bid (o maior)",
-      "status": "CONFIRMADO",
-      "estado": "FL"
+      "status": "SEM_ATIVIDADE_2026Q2",
+      "estado": "FL",
+      "nota_status": "Verificado 2026-05-04: sem leilão programado nos próximos 3 meses. Re-checar trimestralmente."
     },
     {
       "codigo": "POLK",
@@ -151,8 +152,9 @@
       "url_property_appraiser": "https://www.paslc.gov/",
       "telefone": "(772) 462-6900",
       "deposito": "Verificar site",
-      "status": "CONFIRMADO",
-      "estado": "FL"
+      "status": "SEM_ATIVIDADE_2026Q2",
+      "estado": "FL",
+      "nota_status": "Verificado 2026-05-04: sem leilão programado nos próximos 3 meses. Re-checar trimestralmente."
     },
     {
       "codigo": "BREVARD",
@@ -236,8 +238,9 @@
       "url_property_appraiser": "https://www.hernandocountypa.com/",
       "telefone": "Hernando Clerk",
       "deposito": "Verificar",
-      "status": "CONFIRMADO",
-      "estado": "FL"
+      "status": "SEM_ATIVIDADE_2026Q2",
+      "estado": "FL",
+      "nota_status": "Verificado 2026-05-04: sem leilão programado nos próximos 3 meses. Re-checar trimestralmente."
     },
     {
       "codigo": "VOLUSIA",
@@ -321,8 +324,9 @@
       "url_property_appraiser": "https://www.levypa.com/",
       "telefone": "Levy Clerk",
       "deposito": "Verificar",
-      "status": "CONFIRMADO",
-      "estado": "FL"
+      "status": "SEM_ATIVIDADE_2026Q2",
+      "estado": "FL",
+      "nota_status": "Verificado 2026-05-04: sem leilão programado nos próximos 3 meses. Re-checar trimestralmente."
     }
   ],
   "output": {
