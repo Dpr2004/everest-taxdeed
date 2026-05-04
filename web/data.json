@@ -4,7 +4,7 @@
     "total_condados": 19,
     "total_sales": 80,
     "total_lots": 295,
-    "lances": 59,
+    "lances": 40,
     "estados": [
       "FL"
     ]
@@ -1108,11 +1108,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 4.5969,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 185076.68,
       "profit": 285807.71,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 14995,
@@ -1152,11 +1154,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.8,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 78233.72,
       "profit": 147065.18,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18810,
@@ -1218,11 +1222,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.1273,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 108007.52,
       "profit": 182563.8,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18862,
@@ -1284,11 +1290,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.446,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 130494.24,
       "profit": 210955.24,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18767,
@@ -1460,11 +1468,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.408,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 77189.04,
       "profit": 139997.76,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 14991,
@@ -1614,11 +1624,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 1.0307,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 13576.53,
       "profit": 55724.01,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 22877,
@@ -1636,11 +1648,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.4955,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 166464.54,
       "profit": 250474.16,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 14994,
@@ -1790,11 +1804,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.5495,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 122470.3,
       "profit": 187488.97,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 1/12 agentes"
     },
     {
       "id": 18786,
@@ -1812,11 +1828,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.7534,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 140421.49,
       "profit": 209774.32,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "verdict inconclusivo (13/12 agentes)"
     },
     {
       "id": 22619,
@@ -1834,11 +1852,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 1.0573,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 33257.84,
       "profit": 70469.24,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 14987,
@@ -1922,11 +1942,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.9841,
-      "decisao": "LANCE",
+      "decisao": "PASSA",
       "max_bid": 46890.75,
       "profit": 77402.06,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 18720,
@@ -2010,11 +2032,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.9726,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 82743.55,
       "profit": 101496.76,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 22724,
@@ -2032,11 +2056,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.6215,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 71479.08,
       "profit": 72902.79,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 2910,
@@ -2076,11 +2102,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.4355,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 68926.42,
       "profit": 56630.28,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 22634,
@@ -2098,11 +2126,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.8763,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 130011.98,
       "profit": 126800.71,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18718,
@@ -2142,11 +2172,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.5795,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 115040.62,
       "profit": 91981.33,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 22623,
@@ -2164,11 +2196,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.3982,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 96460.92,
       "profit": 64046.46,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 11416,
@@ -2208,11 +2242,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.5987,
-      "decisao": "LANCE",
+      "decisao": "PASSA",
       "max_bid": 153276.55,
       "profit": 113773.55,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 22565,
@@ -2230,11 +2266,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.3884,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 137108.73,
       "profit": 78715.07,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 22688,
@@ -2454,7 +2492,9 @@
       "max_bid": 0.0,
       "profit": 20087.64,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 1/12 agentes"
     },
     {
       "id": 18781,
@@ -2498,7 +2538,9 @@
       "max_bid": 24273.68,
       "profit": 26730.46,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 2844,
@@ -2516,11 +2558,13 @@
       "year_built": null,
       "score": 77.4,
       "roi": 0.4476,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": 17345.19,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 18769,
@@ -2608,7 +2652,9 @@
       "max_bid": 24900.98,
       "profit": 25869.39,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18805,
@@ -2696,7 +2742,9 @@
       "max_bid": 43846.05,
       "profit": 27669.0,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 2923,
@@ -2714,11 +2762,13 @@
       "year_built": null,
       "score": 69.0,
       "roi": 0.2808,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": 10994.35,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 18844,
@@ -2780,11 +2830,13 @@
       "year_built": null,
       "score": 51.0,
       "roi": 0.1766,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 6093.0,
       "profit": 14920.96,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18848,
@@ -3000,11 +3052,13 @@
       "year_built": null,
       "score": null,
       "roi": null,
-      "decisao": null,
+      "decisao": "REVISAR",
       "max_bid": null,
       "profit": null,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 2907,
@@ -3330,11 +3384,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.8788,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -28064.78,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
     },
     {
       "id": 18857,
@@ -3510,7 +3566,9 @@
       "max_bid": 0.0,
       "profit": -29712.8,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 2870,
@@ -3814,11 +3872,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.8688,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -28002.76,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
     },
     {
       "id": 18856,
@@ -4210,11 +4270,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7274,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -23818.64,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 1/12 agentes"
     },
     {
       "id": 2918,
@@ -4456,7 +4518,9 @@
       "max_bid": 0.0,
       "profit": -23884.28,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 2880,
@@ -5090,11 +5154,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.9245,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -30495.07,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 2/2 agentes"
     },
     {
       "id": 2877,
@@ -5222,11 +5288,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2815,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -9825.86,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 1/12 agentes"
     },
     {
       "id": 2904,
@@ -5358,7 +5426,9 @@
       "max_bid": 0.0,
       "profit": -28531.8,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 18737,
@@ -6124,11 +6194,13 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2509,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -16361.83,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "verdict inconclusivo (13/12 agentes)"
     },
     {
       "id": 18849,
