@@ -1,0 +1,49 @@
+{
+  "completed_at": "2026-05-04T17:30:55.109Z",
+  "parcel_id": "813016050110",
+  "red_flags": [
+    {
+      "severity": "red",
+      "text": "Mandato Everest 50% VMF violado — opening bid já está acima do do_not_exceed; nenhum lance defensável"
+    },
+    {
+      "severity": "red",
+      "text": "Address não resolvido bloqueia FEMA, drive-by remoto, comps específicos, FIRM flood, NWI wetlands, CLUE report"
+    },
+    {
+      "severity": "red",
+      "text": "Occupancy unknown em single_family aciona regra inviolável do Agente 07"
+    },
+    {
+      "severity": "red",
+      "text": "Zero verificação de title/liens/code/probate/IRS/bankruptcy 3 dias antes do leilão"
+    },
+    {
+      "severity": "red",
+      "text": "Roof original 2004 (22 anos) bloqueia bind privado — exit retail mortgage-dependente inviável sem $14-22K hard cost"
+    },
+    {
+      "severity": "red",
+      "text": "Repair confidence LOW estrutural (sem inspeção interior + sem drive-by físico)"
+    },
+    {
+      "severity": "red",
+      "text": "Comps grade A/B inexistentes — VMF $260K é proxy de mediana de condado, não validado por subdivision/neighborhood"
+    },
+    {
+      "severity": "yellow",
+      "text": "Volusia 3 furacões major 2022-2024 — open claim probability elevada"
+    },
+    {
+      "severity": "yellow",
+      "text": "Corredor cárstico DeLand/Deltona com sinkholes confirmados pós-Milton 2024"
+    },
+    {
+      "severity": "yellow",
+      "text": "Wire transfer único método aceito + deadline 12:00 PM ET próximo dia útil + forfeiture sem exceção"
+    }
+  ],
+  "report_markdown": "# Análise — Parcel 813016050110\n\n**Condado:** Volusia, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $149,666  \n**Data do leilão:** 2026-05-07  \n**Asset type:** single_family  \n**Gerado em:** 2026-05-04 17:30 UTC  \n\n---\n\n## 🎯 Veredicto Final\n\n**PASS** — Score 0/100 — Confiança: high\n\n## 🚩 Red Flags\n\n- Mandato Everest 50% VMF violado — opening bid já está acima do do_not_exceed; nenhum lance defensável\n- Address não resolvido bloqueia FEMA, drive-by remoto, comps específicos, FIRM flood, NWI wetlands, CLUE report\n- Occupancy unknown em single_family aciona regra inviolável do Agente 07\n- Zero verificação de title/liens/code/probate/IRS/bankruptcy 3 dias antes do leilão\n- Roof original 2004 (22 anos) bloqueia bind privado — exit retail mortgage-dependente inviável sem $14-22K hard cost\n- Repair confidence LOW estrutural (sem inspeção interior + sem drive-by físico)\n- Comps grade A/B inexistentes — VMF $260K é proxy de mediana de condado, não validado por subdivision/neighborhood\n- Volusia 3 furacões major 2022-2024 — open claim probability elevada\n- Corredor cárstico DeLand/Deltona com sinkholes confirmados pós-Milton 2024\n- Wire transfer único método aceito + deadline 12:00 PM ET próximo dia útil + forfeiture sem exceção\n\n## ❓ Items Não Resolvidos (Critical)\n\n- address_lookup_failed_blocks_all_parcel_specific_research\n- owner_name_unresolved_blocks_PACER_probate_obit_section8_eviction_filings\n- occupancy_status_unknown_single_family_inviolable_rule_blocks_BUY\n- interior_inspection_not_performed\n- drive_by_physical_not_completed_3_days_before_auction\n- title_chain_20yr_not_verified\n- code_enforcement_balance_not_verified\n- FEMA_FIRM_flood_zone_not_obtained\n- CLUE_report_not_obtained_open_claim_status_unknown\n- wind_mitigation_inspection_not_performed\n\n## 🏛️ Regras do Leilão & County Quirks\n\n**Auction rules:**\n- Redemption permanece aberta até remissão do pagamento integral pelo arrematante — risco de redemption pós-leilão antes do wire.\n- Forfeiture do depósito sem exceção em caso de wire chegando após 12:00 PM ET no próximo dia útil.\n- Cash não é aceito desde 2022 — bidder deve ter cashier's check/wire/ACH/deposit balance pré-funded.\n- F.S. 197.562 garante 'immediate possession' mas não automatiza eviction — writ of possession via court ainda pode ser necessário para casa ocupada (asset_type = single_family).\n\n**Quirks do condado:**\n- Plataforma RealAuction em volusia.realtaxdeed.com (FATO — clerk.org confirmou)\n- Deposit 5% do final bid OU $200 (o maior). Deadline ACH = 4 dias úteis antes; wire = 2:00 PM ET dia útil anterior (FATO — clerk.org)\n- Saldo deve chegar via wire em até 24h após sale OU até 12:00 PM ET próximo dia útil. Forfeit do deposit se atrasar (FATO — clerk.org). Validado pelo Agente 01 como yellow flag de wire timing.\n- Documentary stamps $0.70/$100 do transfer amount = 0,70% (FATO — clerk.org). Sobre opening bid $149.665,53 = aprox $1.047,66 em doc stamps adicionais.\n- Sem buyer premium em tax deed FL — confirmado ausente em clerk.org (FATO).\n- Redenção do owner válida ATÉ o wire do saldo do high bidder, NÃO até o lance. Se owner pagar antes do wire chegar, sale é cancelado e bidder recebe deposit de volta (FATO — clerk.org). Reforça yellow flag do Agente 01.\n\n## 💰 Dívidas Investigadas (Title & Liens)\n\n\n### Achados críticos (title)\n\n- Zero verificacao de titulo possivel — todas as fontes Volusia (Clerk Official Records, Tax Deed Inquiry, VCPA, Lands Available) retornam disclaimer/403/interface vazia\n- Endereco e owner name continuam desconhecidos (heranca de Agente 02 FAILED + Agente 09 unresolved) — inviabiliza qualquer search por nome no Clerk\n- Code enforcement / demolition liens / MSBU / IRS / HOA / probate / bankruptcy — TODOS unverified em single_family valorizado ($149K opening bid)\n- Categorias que SOBREVIVEM ao tax deed em FL (Stat 197.552) nao foram cross-checked: code, demo, special assessments, IRS 120d, condo HOA last 12mo\n- Janela de 3 dias uteis ate o leilao 2026-05-07 — suficiente apenas para due diligence manual telefonica + drive-by, nao para title search completo\n- Reserva conservadora $8K-$25K (base case) ou ate $162K (worst case) deve ser deduzida do max safe bid pelo Agente 5 — caso nenhum dado seja resolvido\n\n### ⚠️ Items pendentes (UNVERIFIED — investigar manualmente)\n\n- address_unresolved_blocks_all_title_research\n- owner_name_unresolved_blocks_clerk_name_search\n- chain_of_title_20yr_not_verified\n- active_mortgages_status_not_verified\n- code_enforcement_liens_not_verified_CRITICAL_FOR_SFH\n- demolition_orders_not_verified_CRITICAL_FOR_SFH\n- special_assessments_CDD_MSBU_not_verified_SURVIVES\n- HOA_POA_debts_not_verified\n\n## 🏗️ Viabilidade Física\n\n- Year built 2004 e MAJOR POSITIVE — elimina 6+ categorias de hidden costs (asbestos, lead, polybutylene, FPE, knob-and-tube, sub-FBC wind code)\n- Just value county $317K vs opening bid $149K = ratio 0,47 (passa Everest mandate <=50% VMF)\n- Owner manteve capital deployment ate 2021 (water heater + pool pump + solar) = padrao atipico de tax deed (geralmente abandono total)\n- Sem inspecao interior + sem drive-by + 3 dias ate leilao = unresolved critical bloqueia BUY\n\n## 🌿 Riscos Ambientais\n\n- **Sinkhole risk:** medium\n- **Wetlands:** unknown\n- **Contamination:** medium\n\n**Hazards identificados:**\n- **?** (medium): Hot zone oeste (DeLand/Deltona/Orange City/DeBary/US 17-92). Sem endereço, não dá para confirmar se parcel está em zona cárstica.\n- **?** (high): Probabilidade elevada de unrepaired damage, blue tarp, ou open insurance claim em tax deed properties.\n- **?** (medium): FEMA RL list specific check impossível sem endereço — UNRESOLVED.\n- **?** (low_to_medium): Para single_family já desenvolvido, wetlands menos crítico que para lote vago, mas drainage/filling restrictions possíveis.\n- **?** (medium): $5-25K mitigation se confirmado pré-1978/1980.\n\n---\n\n## 📊 Metodologia\n\nPipeline: COMPLETO (12 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | ✓ |\n| 01-auction-rules | ✓ |\n| 08-county-quirks | ✓ |\n| 02-official-data-property | — |\n| 09-drive-by-photo-verification | ✓ |\n| 11-environmental-hazards | ✓ |\n| 03-title-liens-legal | ✓ |\n| 07-occupancy-investigation | ✓ |\n| 04-physical-viability | ✓ |\n| 10-insurance-feasibility | ✓ |\n| 05-market-exit-financial | ✓ |\n| 06-qa-investment-committee | ✓ |\n| 12-verification-engine | ✓ |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
+  "top_3_reasons": [],
+  "verdict": "PASS"
+}
