@@ -887,7 +887,7 @@ function app() {
                     if (!hay.toLowerCase().includes(q)) return false;
                 }
                 return true;
-            });
+            }).sort((a, b) => (a.sale_date || '9999-12-31').localeCompare(b.sale_date || '9999-12-31'));
         },
         usd(v) {
             if (v === null || v === undefined) return '—';
