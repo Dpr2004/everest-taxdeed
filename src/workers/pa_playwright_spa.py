@@ -399,13 +399,18 @@ class PAPlaywrightSPA(BaseWorker):
         return data if data else None
 
     PATTERNS_GENERIC = {
-        "assessed_value": r"(?:Total\s*)?Assessed\s*(?:Value)?[:\s]*\$?([\d,]+)",
-        "just_value": r"(?:Just|Market|Total\s*Just)\s*(?:Value)?[:\s]*\$?([\d,]+)",
-        "building_sqft": r"(?:Heated|Living|Total\s*Living|Gross\s*Living)\s*(?:Area|SF|SqFt)?[:\s]*([\d,]+)",
-        "year_built": r"Year\s*(?:Built|Constructed)?[:\s]*(\d{4})",
-        "lot_sqft": r"(?:Land|Lot)\s*(?:Size|Area)[:\s]*([\d,]+)",
-        "zoning": r"Zoning[:\s]*([A-Z0-9\-]+)",
-        "property_type": r"(?:Property\s*Use|DOR|Use\s*Code|Use\s*Description)[:\s]*([A-Z0-9\-\s]{2,30})",
+        # $ pattern obrigatorio pra valores (evita capturar numero solto)
+        "assessed_value": r"(?:Total\s*)?Assessed\s*(?:Value)?[:\s]+\$\s*([\d,]+)",
+        "just_value": r"(?:Just|Market|Total\s*Just)\s*(?:Value)?[:\s]+\$\s*([\d,]+)",
+        "building_sqft": r"(?:Heated|Living|Total\s*Living|Gross\s*Living|Bldg)\s*(?:Area|SF|SqFt|Sq\s*Ft)?[:\s]+([\d,]+)",
+        "year_built": r"Year\s*(?:Built|Constructed)?[:\s]+(\d{4})",
+        "lot_sqft": r"(?:Land|Lot)\s*(?:Size|Area|Sq(?:\s*Ft)?)[:\s]+([\d,]+)",
+        # Zoning so' aceita formato real (letra+numero), nao palavras tipo "Info"
+        "zoning": r"Zoning[:\s]+(?!Info|Code|Type)([A-Z][A-Z0-9\-\/]{1,15})",
+        # Property type formato "0010 - VACANT RESIDENTIAL" ou "Single Family"
+        "property_type": r"(?:Property\s*Use|DOR|Use\s*Code|Use\s*Description)[:\s]+([0-9A-Z][\w\s\-]{2,40})",
+        "bedrooms": r"Bedrooms?[:\s]+(\d{1,2})",
+        "bathrooms": r"Bathrooms?[:\s]+([\d.]{1,4})",
     }
 
     # ============================================================
