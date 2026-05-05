@@ -29,7 +29,8 @@ except ImportError:
 # Inclui POLK e MARION mesmo nao sendo SPA — Playwright pode renderizar
 # campos lazy-loaded que regex puro perde. Volume justifica: Polk 50 lots,
 # Marion 200 lots, todos com 0% sqft hoje.
-SPA_COUNTIES = {"HILLSBOROUGH", "BREVARD", "ORANGE", "POLK", "MARION"}
+SPA_COUNTIES = {"HILLSBOROUGH", "BREVARD", "ORANGE", "POLK", "MARION",
+                "HIGHLANDS", "VOLUSIA", "PUTNAM", "LAKE", "PASCO"}
 
 
 def _to_float(s):
@@ -351,6 +352,96 @@ class PAPlaywrightSPA(BaseWorker):
                 else:
                     data[field] = _to_float(v)
         return data if data else None
+
+
+    # ============================================================
+    # Helper generico: load URL + wait + extract via patterns
+    # ============================================================
+    def _generic_load(self, page, url, timeout_ms=20000, wait_ms=2500):
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+        except Exception:
+            return None
+        try:
+            page.wait_for_load_state("networkidle", timeout=12000)
+        except Exception:
+            pass
+        page.wait_for_timeout(wait_ms)
+        try:
+            return page.evaluate("() => document.body.innerText")
+        except Exception:
+            return None
+
+    def _generic_extract(self, text, patterns):
+        if not text:
+            return None
+        if any(s in text.lower() for s in ("no records", "results found", "no parcel", "not found")):
+            return None
+        data = {}
+        for field, pat in patterns.items():
+            m = re.search(pat, text, re.I)
+            if m:
+                v = m.group(1).replace(",", "").strip()
+                if field in ("zoning", "property_type"):
+                    data[field] = v[:30]
+                else:
+                    data[field] = _to_float(v)
+        return data if data else None
+
+    PATTERNS_GENERIC = {
+        "assessed_value": r"(?:Total\s*)?Assessed\s*(?:Value)?[:\s]*\$?([\d,]+)",
+        "just_value": r"(?:Just|Market|Total\s*Just)\s*(?:Value)?[:\s]*\$?([\d,]+)",
+        "building_sqft": r"(?:Heated|Living|Total\s*Living|Gross\s*Living)\s*(?:Area|SF|SqFt)?[:\s]*([\d,]+)",
+        "year_built": r"Year\s*(?:Built|Constructed)?[:\s]*(\d{4})",
+        "lot_sqft": r"(?:Land|Lot)\s*(?:Size|Area)[:\s]*([\d,]+)",
+        "zoning": r"Zoning[:\s]*([A-Z0-9\-]+)",
+        "property_type": r"(?:Property\s*Use|DOR|Use\s*Code|Use\s*Description)[:\s]*([A-Z0-9\-\s]{2,30})",
+    }
+
+    # ============================================================
+    # HIGHLANDS — hcpao.org
+    # ============================================================
+    def _enrich_highlands(self, page, lot):
+        parcel = lot["parcel_id"].replace("-", "").replace(".", "")
+        url = f"https://www.hcpao.org/search/parcel/{parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # VOLUSIA — vcpa.vcgov.org
+    # ============================================================
+    def _enrich_volusia(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://vcpa.vcgov.org/parcel.html?parcel={parcel}"
+        text = self._generic_load(page, url, wait_ms=3000)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # PUTNAM — pa.putnam-fl.com
+    # ============================================================
+    def _enrich_putnam(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"http://pa.putnam-fl.com/GIS/D_SearchResults.asp?txtFiltro={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # LAKE — lakecopropappr.com
+    # ============================================================
+    def _enrich_lake(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://www.lakecopropappr.com/property-details.aspx?AltKey={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # PASCO — pascopa.com
+    # ============================================================
+    def _enrich_pasco(self, page, lot):
+        parcel = lot["parcel_id"].replace("-", "")
+        url = f"https://search.pascopa.com/Search/?ParcelID={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
 
 
 if __name__ == "__main__":

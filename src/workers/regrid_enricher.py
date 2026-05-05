@@ -19,6 +19,13 @@ import requests
 from src.db.connection import cursor
 from src.workers.base import BaseWorker
 
+# Endpoint correto API v2 (verificado 2026-05-04 via Regrid docs):
+# /api/v2/parcels/apn (lookup por APN/parcelnumb)
+# /api/v2/parcels/address (busca por endereco)
+# /api/v2/parcels/point (lookup por lat/lon)
+#
+# ANTES: codigo usava /parcels/parcelnumb que retorna 404 — endpoint inexistente.
+# Documentado em https://support.regrid.com/api/parcel-api-endpoints
 REGRID_BASE = "https://app.regrid.com/api/v2/parcels"
 TOKEN = os.environ.get("REGRID_API_KEY", "").strip()
 REQ_PER_SEC = float(os.environ.get("REGRID_RATE", "5"))
@@ -65,26 +72,35 @@ class RegridEnricher(BaseWorker):
 
         self.logger.info(f"REGRID_API_KEY presente (len={len(TOKEN)}, prefix={TOKEN[:6]}...)")
 
-        # SMOKE TEST: faz 1 request conhecido pra verificar token + endpoint
-        # ANTES de iterar. Se token invalido/endpoint mudou, falha rapido com
-        # log claro em vez de "items=0 errs=0" enganoso.
+        # SMOKE TEST: faz 1 request conhecido pra verificar token + endpoint + PLANO
+        # ANTES de iterar. Detecta 401 (token bad), 403 (plano sem cobertura FL),
+        # 402 (quota), 404 (endpoint mudou).
         try:
             test_resp = requests.get(
-                f"{REGRID_BASE}/parcelnumb",
-                params={"parcelnumb": "test", "path": "/us/fl/polk", "token": TOKEN},
+                f"{REGRID_BASE}/apn",
+                params={"parcelnumb": "00000000", "path": "/us/fl/polk", "token": TOKEN},
                 timeout=15,
             )
-            self.logger.info(f"Smoke test Regrid: HTTP {test_resp.status_code}")
+            self.logger.info(f"Smoke test Regrid /apn: HTTP {test_resp.status_code}")
             if test_resp.status_code == 401:
-                self.logger.error("Regrid retornou 401 UNAUTHORIZED — token INVALIDO ou EXPIRADO. Verificar/renovar em app.regrid.com")
+                self.logger.error("Regrid 401 UNAUTHORIZED — token INVALIDO ou EXPIRADO. Renovar em app.regrid.com")
                 self.candidates_count = 1
                 self.errors_count = 1
                 return
-            if test_resp.status_code in (403, 402):
-                self.logger.error(f"Regrid {test_resp.status_code} — provavel quota excedida ou plano expirado: {test_resp.text[:300]}")
+            if test_resp.status_code == 403:
+                # Caso conhecido 2026-05-04: trial token sem cobertura FL
+                self.logger.error(f"Regrid 403 FORBIDDEN — plano nao cobre FL. {test_resp.text[:200]}. Upgrade em regrid.com/buy")
                 self.candidates_count = 1
                 self.errors_count = 1
                 return
+            if test_resp.status_code == 402:
+                self.logger.error(f"Regrid 402 PAYMENT REQUIRED — quota excedida: {test_resp.text[:200]}")
+                self.candidates_count = 1
+                self.errors_count = 1
+                return
+            if test_resp.status_code == 404:
+                self.logger.error(f"Regrid 404 — endpoint /apn mudou? Verificar docs.")
+                # Continua mesmo assim — pode ser parcel especifico nao existir
             if test_resp.status_code >= 500:
                 self.logger.error(f"Regrid 5xx — API com problema. Tentando mesmo assim: {test_resp.text[:200]}")
         except Exception as e:
@@ -168,7 +184,7 @@ class RegridEnricher(BaseWorker):
         variations = list(dict.fromkeys(variations))  # dedup preservando ordem
 
         for pn in variations:
-            url = f"{REGRID_BASE}/parcelnumb"
+            url = f"{REGRID_BASE}/apn"
             params = {
                 "parcelnumb": pn,
                 "path": f"/us/fl/{slug}",
