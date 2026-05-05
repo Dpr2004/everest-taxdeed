@@ -101,9 +101,11 @@ jobs:
         run: python -m src.main --regrid
         continue-on-error: true
 
-      - name: 3c) PA SPA Playwright (Hillsborough/Brevard/Orange)
-        timeout-minutes: 15
-        run: python -m src.main --pa-spa --limit 100
+      - name: 3c) PA SPA Playwright (Hillsborough/Brevard/Orange/Polk/Marion)
+        # Estendido pra 5 condados (antes 3). Limit 200 cobre todos elegiveis.
+        # Timeout 25min porque cada lote leva ~5-10s no Playwright (load+render+parse).
+        timeout-minutes: 25
+        run: python -m src.main --pa-spa --limit 200
         continue-on-error: true
 
       - name: 4) Property Appraiser (fallback/complemento)
