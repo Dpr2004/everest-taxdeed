@@ -187,14 +187,15 @@ class PAPlaywrightSPA(BaseWorker):
         parcel = lot["parcel_id"].replace("-", "").replace(".", "")
         url = f"https://www.bcpao.us/PropertySearch/#/parcel/{parcel}"
         try:
-            page.goto(url, wait_until="domcontentloaded", timeout=20000)
+            page.goto(url, wait_until="domcontentloaded", timeout=30000)
         except Exception:
             return None
         try:
-            page.wait_for_load_state("networkidle", timeout=15000)
+            page.wait_for_load_state("networkidle", timeout=20000)
         except Exception:
             pass
-        page.wait_for_timeout(3000)
+        # BCPAO SPA precisa wait 8s pra renderizar dados via XHR
+        page.wait_for_timeout(8000)
 
         try:
             text = page.evaluate("() => document.body.innerText")
@@ -202,23 +203,33 @@ class PAPlaywrightSPA(BaseWorker):
             return None
 
         data = {}
-        # Brevard BCPAO usa labels especificos. Patterns expandidos:
+        # Patterns calibrados em texto real BCPAO (validado 2026-05-05):
+        # "Site Address: 7468 BABCOCK ST SE PALM BAY FL 32909"
+        # "Property Use: 0010 - VACANT RESIDENTIAL LAND (SINGLE FAMILY, PLATTED)"
+        # "Total Acres: 0.23" (converter pra lot_sqft)
+        # "Market Value: $40,000" / "Assessed Value Non-School: $9,330"
         patterns = {
-            # Valores: BCPAO mostra "Assessed Value" ou "Total Tax Value"
-            "assessed_value": r"(?:Assessed|Total\s*Assessed|Tax(?:able)?)\s*(?:Value)?[:\s]+\$?([\d,]+)",
-            "just_value": r"(?:Market|Just|Total\s*Market)\s*(?:Value)?[:\s]+\$?([\d,]+)",
-            # SqFt: BCPAO mostra "Total Living" ou "Heated SqFt"
-            "building_sqft": r"(?:Total\s*Living|Heated\s*Sq|Living\s*Area|Total\s*Area|Bldg)[:\s]+([\d,]+)",
-            "year_built": r"Year\s*Built[:\s]+(\d{4})",
-            # Lot: pode aparecer como "Land Sq Ft" ou "Acreage"
-            "lot_sqft": r"(?:Land\s*Sq|Lot\s*Sq|Total\s*Land)[:\s]+([\d,]+)",
-            # Zoning: aceita formato letra-numero
-            "zoning": r"Zoning[:\s]+([A-Z][A-Z0-9\-\/]{0,15})",
-            # Use code BCPAO formato "0010 - VACANT RESIDENTIAL"
-            "property_type": r"(?:Property\s*Use|Use\s*Code|DOR\s*Use)[:\s]*([0-9A-Z][\w\s\-]{2,40})",
-            # Address — BCPAO mostra como "Site Address" ou "Property Location"
-            "address": r"(?:Site|Property|Situs)\s*Address[:\s]*([^\n]{8,80})",
+            # Valores: BCPAO formata sem espaco entre $ e numero
+            "assessed_value": r"Assessed\s*Value\s*Non-School[:\s]*\$?\s*([\d,]+)",
+            "just_value": r"Market\s*Value[:\s]*\$?\s*([\d,]+)",
+            # Building sqft (raro em vacant land — Brevard maioria e' terra)
+            "building_sqft": r"(?:Total\s*Living|Heated\s*SqFt|Living\s*Area)[:\s]*([\d,]+)",
+            "year_built": r"Year\s*Built[:\s]*(\d{4})",
+            # Address: aceita ate 80 chars (full street)
+            "address": r"Site\s*Address[:\s]*([^\n]{8,80})",
+            # Property use BCPAO "0010 - VACANT RESIDENTIAL LAND"
+            "property_type": r"Property\s*Use[:\s]*([0-9]{4}\s*-\s*[A-Z][\w\s,\(\)]{2,80})",
         }
+        # Total Acres especifico — converte pra lot_sqft (1 acre = 43560 sqft)
+        m_acres = re.search(r"Total\s*Acres[:\s]*([\d.]+)", text, re.I)
+        if m_acres:
+            try:
+                acres = float(m_acres.group(1))
+                if acres > 0:
+                    data["lot_sqft"] = round(acres * 43560)
+            except ValueError:
+                pass
+
         for field, pat in patterns.items():
             m = re.search(pat, text, re.I)
             if m:
