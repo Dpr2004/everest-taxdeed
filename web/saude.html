@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everest TaxDeed — Saúde do Sistema</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="everest-icon.png" type="image/png" sizes="256x256">
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<style>
+:root {
+  --midnight: #13123E; --midnight-deep: #0A0927;
+  --gold-100: #F5E6A8; --gold-300: #E8C86A; --gold-500: #C9972B;
+  --white: #FFF; --white-60: rgba(255,255,255,0.60); --white-40: rgba(255,255,255,0.40);
+  --bg: #0A0927; --bg-elev: #1A1A4A;
+  --border: rgba(255,255,255,0.10); --border-strong: rgba(255,255,255,0.22);
+  --green: #34d399; --yellow: #fbbf24; --red: #f87171; --gray: #6b7280;
+  --crit: #ef4444; --alta: #f97316; --media: #eab308;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Inter", sans-serif; color: var(--white); background: var(--bg);
+  font-size: 14px; line-height: 1.5; min-height: 100vh;
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(29,65,141,0.35), transparent),
+              linear-gradient(180deg, var(--midnight-deep) 0%, var(--midnight) 60%, var(--midnight-deep) 100%);
+}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.topbar { background: rgba(10,9,39,0.92); border-bottom: 1px solid var(--border); padding: 16px 24px; }
+.topbar-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.brand-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; font-weight: 700; }
+.brand-link img { height: 48px; }
+.back-link { color: var(--gold-300); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+
+.hero { padding: 32px 0 16px; }
+.eyebrow { font-size: 11px; letter-spacing: 0.20em; color: var(--gold-500); text-transform: uppercase; font-weight: 700; }
+h1 { font-size: 32px; font-weight: 800; margin-top: 8px; }
+.gold { color: var(--gold-300); }
+.subtitulo { color: var(--white-60); margin-top: 4px; font-size: 14px; }
+
+.kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 24px 0; }
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
+.kpi { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.kpi-label { font-size: 10px; letter-spacing: 0.14em; color: var(--white-40); text-transform: uppercase; font-weight: 700; }
+.kpi-val { font-size: 28px; font-weight: 800; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.kpi-sub { color: var(--white-40); font-size: 11px; margin-top: 4px; }
+.kpi-val.green { color: var(--green); }
+.kpi-val.yellow { color: var(--yellow); }
+.kpi-val.red { color: var(--red); }
+.kpi-val.gold { color: var(--gold-300); }
+
+.section-title { font-size: 18px; font-weight: 800; margin: 32px 0 12px; }
+.section-title::after { content: ""; display: block; width: 48px; height: 3px; background: var(--gold-300); margin-top: 6px; }
+.section-sub { color: var(--white-60); font-size: 13px; margin-top: -8px; margin-bottom: 14px; }
+
+.problemas-list { display: grid; gap: 8px; }
+.problema { background: var(--bg-elev); border-left: 3px solid var(--gray); border-radius: 8px; padding: 12px 14px; display: flex; gap: 12px; align-items: start; }
+.problema.CRITICA { border-left-color: var(--crit); }
+.problema.ALTA { border-left-color: var(--alta); }
+.problema.MEDIA { border-left-color: var(--media); }
+.problema.BAIXA { border-left-color: var(--gray); }
+.sev-tag { font-size: 10px; padding: 3px 8px; border-radius: 4px; font-weight: 800; letter-spacing: 0.1em; flex-shrink: 0; }
+.sev-tag.CRITICA { background: rgba(239,68,68,0.2); color: var(--crit); }
+.sev-tag.ALTA { background: rgba(249,115,22,0.2); color: var(--alta); }
+.sev-tag.MEDIA { background: rgba(234,179,8,0.2); color: var(--media); }
+.sev-tag.BAIXA { background: rgba(107,114,128,0.2); color: var(--gray); }
+.problema-msg { font-size: 13px; flex: 1; }
+
+.condados-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.condado-card { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+.condado-card.verde { border-left: 4px solid var(--green); }
+.condado-card.amarelo { border-left: 4px solid var(--yellow); }
+.condado-card.vermelho { border-left: 4px solid var(--red); }
+.condado-card.vazio { border-left: 4px solid var(--gray); opacity: 0.6; }
+.condado-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+.condado-cod { font-size: 14px; font-weight: 800; letter-spacing: 0.05em; }
+.score-badge { font-size: 18px; font-weight: 800; padding: 2px 10px; border-radius: 6px; font-variant-numeric: tabular-nums; }
+.score-badge.verde { background: rgba(52,211,153,0.18); color: var(--green); }
+.score-badge.amarelo { background: rgba(251,191,36,0.18); color: var(--yellow); }
+.score-badge.vermelho { background: rgba(248,113,113,0.18); color: var(--red); }
+.score-badge.vazio { background: rgba(107,114,128,0.18); color: var(--gray); }
+.condado-meta { font-size: 11px; color: var(--white-60); margin-bottom: 8px; }
+.cob-row { display: flex; gap: 6px; margin: 8px 0; }
+.cob-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; position: relative; }
+.cob-bar-fill { height: 100%; background: var(--gold-300); transition: width 0.3s; }
+.cob-labels { display: flex; gap: 6px; font-size: 10px; color: var(--white-40); margin-bottom: 8px; }
+.cob-labels span { flex: 1; text-align: center; }
+.condado-issues { font-size: 11px; color: var(--white-60); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); }
+.condado-issues ul { list-style: none; padding-left: 0; }
+.condado-issues li { padding: 2px 0; padding-left: 12px; position: relative; }
+.condado-issues li::before { content: "•"; position: absolute; left: 0; color: var(--red); }
+
+.workers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+.worker { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }
+.worker.success { border-left: 3px solid var(--green); }
+.worker.degraded { border-left: 3px solid var(--yellow); }
+.worker.failed { border-left: 3px solid var(--red); }
+.worker-name { font-size: 12px; font-weight: 700; }
+.worker-stats { font-size: 11px; color: var(--white-60); margin-top: 4px; font-variant-numeric: tabular-nums; }
+
+footer { background: rgba(10,9,39,0.6); border-top: 1px solid var(--border); padding: 20px 0; margin-top: 48px; text-align: center; color: var(--white-40); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+</style>
+</head>
+<body x-data="saudePage()" x-init="init()">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand-link">
+      <img src="logo-everest.png" alt="Everest">
+      <span>Everest TaxDeed</span>
+    </a>
+    <a href="index.html" class="back-link">← Dashboard</a>
+  </div>
+</header>
+
+<div class="container">
+
+<section class="hero">
+  <div class="eyebrow">Status real do sistema</div>
+  <h1>Saúde do <span class="gold">Pipeline</span></h1>
+  <p class="subtitulo">Auditoria automática rodada a cada cron. Mostra o que está confiável vs onde tem bug. Sem maquiagem.</p>
+  <p class="subtitulo" style="font-size:11px;margin-top:8px;color:var(--white-40);">Última geração: <span x-text="dados.gerado_em"></span></p>
+</section>
+
+<div class="kpis">
+  <div class="kpi">
+    <div class="kpi-label">Saúde Geral</div>
+    <div class="kpi-val" :class="dados.resumo.saude_geral_pct >= 70 ? 'green' : (dados.resumo.saude_geral_pct >= 40 ? 'yellow' : 'red')" x-text="(dados.resumo.saude_geral_pct||0) + '%'"></div>
+    <div class="kpi-sub">condados verdes / ativos</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Verde</div>
+    <div class="kpi-val green" x-text="dados.resumo.condados_verdes||0"></div>
+    <div class="kpi-sub">qualidade ≥70</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Amarelo</div>
+    <div class="kpi-val yellow" x-text="dados.resumo.condados_amarelos||0"></div>
+    <div class="kpi-sub">40-70</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Vermelho</div>
+    <div class="kpi-val red" x-text="dados.resumo.condados_vermelhos||0"></div>
+    <div class="kpi-sub">&lt;40 — não confiável</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Problemas Críticos</div>
+    <div class="kpi-val red" x-text="dados.resumo.problemas_criticos||0"></div>
+    <div class="kpi-sub">CRITICA + ALTA</div>
+  </div>
+</div>
+
+<section>
+  <h2 class="section-title">🚨 Problemas Detectados</h2>
+  <p class="section-sub">Ordenados por gravidade. Use isso pra priorizar correções.</p>
+  <div class="problemas-list">
+    <template x-for="p in dados.problemas" :key="p.msg">
+      <div class="problema" :class="p.severidade">
+        <span class="sev-tag" :class="p.severidade" x-text="p.severidade"></span>
+        <span class="problema-msg" x-text="p.msg"></span>
+      </div>
+    </template>
+    <div x-show="!dados.problemas?.length" class="problema">
+      <span class="problema-msg" style="color:var(--green);">✓ Nenhum problema detectado.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">🏛️ Condados</h2>
+  <p class="section-sub">Cada card = qualidade do dado disponível. Clique pra abrir o condado no dashboard.</p>
+  <div class="condados-grid">
+    <template x-for="c in dados.condados" :key="c.codigo">
+      <a :href="'index.html?c=' + c.codigo" class="condado-card" :class="c.status" style="text-decoration:none;color:inherit;">
+        <div class="condado-head">
+          <span class="condado-cod" x-text="c.codigo"></span>
+          <span class="score-badge" :class="c.status" x-text="c.status === 'vazio' ? '—' : c.quality_score"></span>
+        </div>
+        <div class="condado-meta">
+          <span x-text="c.nome || c.codigo"></span> · <span x-text="c.sales_futuras + ' leilões'"></span> · <span x-text="c.lots_validos + ' lots'"></span>
+        </div>
+
+        <div class="cob-row">
+          <div class="cob-bar"><div class="cob-bar-fill" :style="'width:' + (c.cobertura?.address_pct || 0) + '%'"></div></div>
+          <div class="cob-bar"><div class="cob-bar-fill" :style="'width:' + (c.cobertura?.value_pct || 0) + '%'"></div></div>
+          <div class="cob-bar"><div class="cob-bar-fill" :style="'width:' + (c.cobertura?.sqft_pct || 0) + '%'"></div></div>
+        </div>
+        <div class="cob-labels">
+          <span x-text="'Addr ' + (c.cobertura?.address_pct || 0) + '%'"></span>
+          <span x-text="'Val ' + (c.cobertura?.value_pct || 0) + '%'"></span>
+          <span x-text="'SqFt ' + (c.cobertura?.sqft_pct || 0) + '%'"></span>
+        </div>
+
+        <div class="condado-issues" x-show="c.issues?.length">
+          <ul>
+            <template x-for="i in c.issues" :key="i">
+              <li x-text="i"></li>
+            </template>
+          </ul>
+        </div>
+      </a>
+    </template>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">⚙️ Workers (últimas 24h)</h2>
+  <p class="section-sub">Jobs do GitHub Actions. Status real: success / degraded (rodou mas processou pouco) / failed.</p>
+  <div class="workers-grid">
+    <template x-for="w in dados.workers" :key="w.worker">
+      <div class="worker" :class="w.status">
+        <div class="worker-name" x-text="w.worker"></div>
+        <div class="worker-stats">
+          <span x-text="w.status.toUpperCase()"></span> · <span x-text="w.items + ' items'"></span> · <span x-text="w.errors + ' erros'"></span>
+        </div>
+        <div class="worker-stats" style="font-size:10px;margin-top:4px;color:var(--white-40);" x-text="w.ran_at"></div>
+      </div>
+    </template>
+  </div>
+</section>
+
+<section x-show="dados.fila_status?.candidatos">
+  <h2 class="section-title">📋 Fila LOTES</h2>
+  <div class="kpi" style="max-width:400px;">
+    <div class="kpi-label">Candidatos prontos pra LOTES</div>
+    <div class="kpi-val gold" x-text="dados.fila_status?.candidatos || 0"></div>
+    <div class="kpi-sub" x-text="'ratio ≥' + (dados.fila_status?.ratio_minimo || '?') + ' · top ' + (dados.fila_status?.top_per_auction || '?') + '/leilão'"></div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Everest Investments Group · Daniel Rocha · Coconut Creek, FL
+</footer>
+
+<script>
+function saudePage() {
+  return {
+    dados: { resumo: {}, condados: [], workers: [], problemas: [], fila_status: {} },
+    async init() {
+      try {
+        const r = await fetch('saude.json?t=' + Date.now());
+        this.dados = await r.json();
+      } catch (e) {
+        console.error('saude.json nao encontrado', e);
+      }
+    }
+  };
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+"""
+audit_full.py — gera web/saude.json com snapshot do estado real do sistema.
+
+Inclui:
+- Por condado: cobertura (lots, address, assessed, sqft, sale_date plausivel)
+  + quality_score 0-100 + status (verde/amarelo/vermelho)
+- Lista de problemas detectados em ordem de gravidade
+- Snapshot dos workers (run_logs) — saudaveis vs degraded vs falhando
+- Fila LOTES, reports recentes
+- Heuristicas de plausibilidade: leiloes diarios = suspeito; 0% sqft = bug
+
+Output: web/saude.json (consumido por web/saude.html)
+
+USO:
+  python scripts/audit_full.py
+"""
+import json
+import sqlite3
+import sys
+from collections import Counter, defaultdict
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DB = ROOT / "data" / "taxdeed.db"
+DATA_JSON = ROOT / "web" / "data.json"
+FILA = ROOT / "web" / "fila-analise.json"
+REPORTS = ROOT / "web" / "reports"
+OUT = ROOT / "web" / "saude.json"
+
+# Quality scoring weights (somam 100)
+W_ADDR = 20      # % lots com address
+W_ASSESSED = 15  # % com assessed_value (just_value tambem conta)
+W_SQFT = 15      # % com building_sqft (so importa pra propriedades; lotes vagos OK sem)
+W_DATES = 25     # leiloes plausiveis (nao diarios)
+W_LOTES = 15     # % lots com analise LOTES (verdict real)
+W_RECENCY = 10   # ultima atualizacao do scraper recente
+
+
+def main():
+    if not DB.exists():
+        print(f"[ERRO] DB nao existe: {DB}", file=sys.stderr)
+        sys.exit(1)
+
+    conn = sqlite3.connect(DB)
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+
+    saude = {
+        "gerado_em": datetime.now(timezone.utc).isoformat(),
+        "resumo": {},
+        "condados": [],
+        "workers": [],
+        "problemas": [],
+        "fila_status": {},
+    }
+
+    # 1. Cobertura + qualidade por condado
+    c.execute("""
+        SELECT cs.codigo, cs.nome, cs.state, cs.status as cond_status, cs.url_sales,
+          (SELECT COUNT(*) FROM sales s WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now')) as sales_fut,
+          (SELECT MIN(s.sale_date) FROM sales s WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now')) as proxima_sale,
+          (SELECT MAX(s.sale_date) FROM sales s WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now')) as ultima_sale,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%') as lots_validos,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%' AND l.address IS NOT NULL AND l.address != '') as lots_com_addr,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%' AND (l.assessed_value IS NOT NULL OR l.just_value IS NOT NULL)) as lots_com_value,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%' AND l.building_sqft IS NOT NULL) as lots_com_sqft,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id LIKE 'AID_%') as lots_aid,
+          (SELECT MAX(l.scraped_at) FROM lots l JOIN sales s ON s.id = l.sale_id WHERE s.county_id = cs.id) as ultimo_scrape
+        FROM counties cs ORDER BY cs.codigo
+    """)
+
+    counties = list(c.fetchall())
+
+    # Carrega data.json pra cross-check decisoes + reports webhook recebidos
+    decisoes_por_cond = defaultdict(lambda: Counter())
+    if DATA_JSON.exists():
+        with open(DATA_JSON, encoding='utf-8') as f:
+            data_json = json.load(f)
+        for l in data_json.get('lots', []):
+            decisoes_por_cond[l.get('condado')][l.get('decisao')] += 1
+
+    # Reports webhook (verdict real)
+    parcels_com_verdict = set()
+    if REPORTS.exists():
+        for f in REPORTS.glob('*.json'):
+            try:
+                d = json.loads(f.read_text(encoding='utf-8'))
+                if d.get('verdict') or d.get('final_verdict'):
+                    parcels_com_verdict.add(d.get('parcel_id') or f.stem)
+            except Exception:
+                pass
+
+    total_lots_valid = 0
+    total_problems_critical = 0
+
+    for row in counties:
+        cod = row['codigo']
+        sales_fut = row['sales_fut'] or 0
+        lots_v = row['lots_validos'] or 0
+        lots_addr = row['lots_com_addr'] or 0
+        lots_value = row['lots_com_value'] or 0
+        lots_sqft = row['lots_com_sqft'] or 0
+        lots_aid = row['lots_aid'] or 0
+
+        # Plausibilidade de datas — leiloes diarios = suspeito
+        dates_suspeitas = False
+        date_warning = ""
+        if sales_fut >= 4 and row['proxima_sale'] and row['ultima_sale']:
+            try:
+                d1 = datetime.fromisoformat(row['proxima_sale']).date()
+                d2 = datetime.fromisoformat(row['ultima_sale']).date()
+                dias_intervalo = (d2 - d1).days
+                # Se ratio sales/dias > 0.5 e' suspeito (>1 leilao por 2 dias)
+                if dias_intervalo > 0 and (sales_fut / dias_intervalo) > 0.5:
+                    dates_suspeitas = True
+                    date_warning = f"{sales_fut} leiloes em {dias_intervalo} dias (densidade {sales_fut/dias_intervalo:.2f}/dia — provavel duplicacao)"
+            except Exception:
+                pass
+
+        # Quality score 0-100
+        addr_pct = (lots_addr / lots_v) if lots_v else 0
+        value_pct = (lots_value / lots_v) if lots_v else 0
+        sqft_pct = (lots_sqft / lots_v) if lots_v else 0
+        date_score = 0 if dates_suspeitas else 1
+        # Pra LOTES: contar lotes do condado com verdict real
+        cond_lots_in_data = sum(decisoes_por_cond[cod].values()) if cod in decisoes_por_cond else 0
+        lotes_score = 1 if cond_lots_in_data > 0 else 0
+        # Recency
+        recency_score = 0
+        if row['ultimo_scrape']:
+            try:
+                ts = datetime.fromisoformat(row['ultimo_scrape'].replace('Z', ''))
+                if datetime.now() - ts < timedelta(days=2):
+                    recency_score = 1
+            except Exception:
+                pass
+
+        if lots_v == 0:
+            quality = 0
+        else:
+            quality = int(
+                W_ADDR * addr_pct
+                + W_ASSESSED * value_pct
+                + W_SQFT * sqft_pct
+                + W_DATES * date_score
+                + W_LOTES * lotes_score
+                + W_RECENCY * recency_score
+            )
+
+        # Status visual
+        if sales_fut == 0:
+            status = "vazio"
+        elif quality >= 70:
+            status = "verde"
+        elif quality >= 40:
+            status = "amarelo"
+        else:
+            status = "vermelho"
+
+        # Issues do condado
+        issues = []
+        if sales_fut == 0:
+            issues.append("Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)")
+        if dates_suspeitas:
+            issues.append(date_warning)
+            total_problems_critical += 1
+        if lots_v > 0 and addr_pct < 0.5:
+            issues.append(f"address missing em {lots_v - lots_addr}/{lots_v} ({(1-addr_pct)*100:.0f}%) — scraper de lot incompleto")
+        if lots_v > 0 and value_pct < 0.5:
+            issues.append(f"assessed/just_value missing em {lots_v - lots_value}/{lots_v} — Regrid/PA falhou")
+        if lots_v > 0 and sqft_pct == 0:
+            issues.append("0% lots com building_sqft — PA enricher quebrado pra este condado")
+        if lots_aid > 0:
+            issues.append(f"{lots_aid} placeholders AID_* (lot_scraper sem parcel_id real)")
+
+        total_lots_valid += lots_v
+
+        saude["condados"].append({
+            "codigo": cod,
+            "nome": row['nome'],
+            "state": row['state'],
+            "url_sales": row['url_sales'],
+            "sales_futuras": sales_fut,
+            "proxima_sale": row['proxima_sale'],
+            "ultima_sale": row['ultima_sale'],
+            "lots_validos": lots_v,
+            "cobertura": {
+                "address_pct": round(addr_pct * 100, 1),
+                "value_pct": round(value_pct * 100, 1),
+                "sqft_pct": round(sqft_pct * 100, 1),
+            },
+            "decisoes": dict(decisoes_por_cond[cod]) if cod in decisoes_por_cond else {},
+            "quality_score": quality,
+            "status": status,
+            "issues": issues,
+        })
+
+    # 2. Workers (run_logs) — ultimas 24h
+    c.execute("PRAGMA table_info(run_logs)")
+    log_cols = [r[1] for r in c.fetchall()]
+
+    c.execute("""
+        SELECT worker, status, items_processed, errors_count, started_at, finished_at, log_text
+        FROM run_logs
+        WHERE started_at >= datetime('now', '-1 day')
+        ORDER BY id DESC
+    """)
+    workers_recent = []
+    workers_seen = set()
+    for r in c.fetchall():
+        if r['worker'] in workers_seen:
+            continue
+        workers_seen.add(r['worker'])
+        w_status = r['status']
+        # Re-classifica como degraded se items=0 e nao for legitimo
+        if w_status == "success" and (r['items_processed'] or 0) == 0 and (r['errors_count'] or 0) > 0:
+            w_status = "degraded"
+        workers_recent.append({
+            "worker": r['worker'],
+            "status": w_status,
+            "items": r['items_processed'] or 0,
+            "errors": r['errors_count'] or 0,
+            "ran_at": r['started_at'],
+            "log": (r['log_text'] or "")[:300],
+        })
+    saude["workers"] = workers_recent
+
+    # 3. Problemas globais detectados
+    if any(w["status"] in ("degraded", "failed") for w in workers_recent):
+        for w in workers_recent:
+            if w["status"] in ("degraded", "failed"):
+                saude["problemas"].append({
+                    "severidade": "ALTA",
+                    "categoria": "worker",
+                    "msg": f"Worker {w['worker']} com status {w['status']} ({w['items']} items, {w['errors']} erros) — {w['log'][:150] or 'sem log'}",
+                })
+
+    # PA enricher cronico
+    pa = next((w for w in workers_recent if w["worker"] == "property_appraiser"), None)
+    if pa and pa["items"] < 20:
+        saude["problemas"].append({
+            "severidade": "CRITICA",
+            "categoria": "enrichment",
+            "msg": f"PA enricher processa so {pa['items']} lots/run (parser regex generico falhando) — building_sqft/year_built/property_type ausentes — bug epico, requer migracao Playwright",
+        })
+
+    # Regrid quebrado
+    rg = next((w for w in workers_recent if w["worker"] == "regrid_enricher"), None)
+    if rg and rg["items"] == 0:
+        saude["problemas"].append({
+            "severidade": "ALTA",
+            "categoria": "enrichment",
+            "msg": "Regrid enricher items=0 (verificar REGRID_API_KEY no GitHub Secrets)",
+        })
+
+    # FEMA quebrado
+    fc = next((w for w in workers_recent if w["worker"] == "fema_checker"), None)
+    if fc and fc["errors"] > 100:
+        saude["problemas"].append({
+            "severidade": "MEDIA",
+            "categoria": "enrichment",
+            "msg": f"FEMA checker {fc['errors']} erros — depende de address (cascata do PA enricher)",
+        })
+
+    # Por condado: criticos
+    for c_info in saude["condados"]:
+        for issue in c_info["issues"]:
+            sev = "CRITICA" if "duplicacao" in issue or "0% lots" in issue else "MEDIA"
+            saude["problemas"].append({
+                "severidade": sev,
+                "categoria": "condado",
+                "condado": c_info["codigo"],
+                "msg": f"{c_info['codigo']}: {issue}",
+            })
+
+    # Ordena problemas: CRITICA -> ALTA -> MEDIA -> BAIXA
+    sev_order = {"CRITICA": 0, "ALTA": 1, "MEDIA": 2, "BAIXA": 3}
+    saude["problemas"].sort(key=lambda p: sev_order.get(p["severidade"], 9))
+
+    # 4. Resumo
+    n_verde = sum(1 for c in saude["condados"] if c["status"] == "verde")
+    n_amarelo = sum(1 for c in saude["condados"] if c["status"] == "amarelo")
+    n_vermelho = sum(1 for c in saude["condados"] if c["status"] == "vermelho")
+    n_vazio = sum(1 for c in saude["condados"] if c["status"] == "vazio")
+
+    saude["resumo"] = {
+        "total_condados": len(saude["condados"]),
+        "condados_verdes": n_verde,
+        "condados_amarelos": n_amarelo,
+        "condados_vermelhos": n_vermelho,
+        "condados_vazios": n_vazio,
+        "total_lots_validos": total_lots_valid,
+        "lots_com_verdict_lotes": len(parcels_com_verdict),
+        "problemas_criticos": sum(1 for p in saude["problemas"] if p["severidade"] in ("CRITICA", "ALTA")),
+        "saude_geral_pct": int(100 * n_verde / max(len(saude["condados"]) - n_vazio, 1)),
+    }
+
+    # 5. Fila status
+    if FILA.exists():
+        try:
+            with open(FILA, encoding='utf-8') as f:
+                fila = json.load(f)
+            saude["fila_status"] = {
+                "candidatos": len(fila.get("lotes", [])),
+                "ratio_minimo": fila.get("ratio_minimo"),
+                "top_per_auction": fila.get("top_per_auction"),
+                "gerado_em": fila.get("gerado_em"),
+            }
+        except Exception:
+            pass
+
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(saude, indent=2, ensure_ascii=False), encoding='utf-8')
+    print(f"[saude] Gravado: {OUT}")
+    print(f"[saude] {n_verde} verdes / {n_amarelo} amarelos / {n_vermelho} vermelhos / {n_vazio} vazios")
+    print(f"[saude] {len(saude['problemas'])} problemas detectados ({saude['resumo']['problemas_criticos']} criticos/altos)")
+
+
+if __name__ == "__main__":
+    main()

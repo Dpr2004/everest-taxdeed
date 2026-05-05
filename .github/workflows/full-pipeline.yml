@@ -85,6 +85,13 @@ jobs:
           fi
         continue-on-error: true
 
+      - name: 3a-dedup) Dedupe sales fictícias (1 por semana por condado)
+        # calendar_scraper as vezes cria sales falsas (mesmo condado em dias
+        # consecutivos da mesma semana). Tax deed real e' SEMANAL/MENSAL.
+        # Mantem so a sale com mais lots por (condado, semana ISO).
+        run: python scripts/dedup_sales.py
+        continue-on-error: true
+
       - name: 3b) Regrid Enricher (API oficial - dados canonicos de parcela)
         timeout-minutes: 6
         run: python -m src.main --regrid
@@ -130,6 +137,10 @@ jobs:
       - name: 8) Gerar data.json para o site
         run: python scripts/gerar_site_dados.py
 
+      - name: 8a) Auditoria de saude do sistema (gera web/saude.json)
+        run: python scripts/audit_full.py
+        continue-on-error: true
+
       - name: 8b) Sincronizar veredictos reais dos 12 agentes (LOTES) com data.json
         # Le web/reports/{parcel}.json (payload webhook do LOTES) e sobrescreve
         # `decisao` no data.json com veredicto REAL do comite. Detecta tambem
@@ -141,7 +152,7 @@ jobs:
         run: |
           git config user.name "taxdeed-bot"
           git config user.email "bot@everest.com"
-          git add data/ web/data.json web/fl-counties.svg web/fila-analise.json || true
+          git add data/ web/data.json web/saude.json web/fl-counties.svg web/fila-analise.json || true
           git diff --staged --quiet || git commit -m "chore: full pipeline $(date -u +%Y-%m-%d_%H%M)"
           git push || true
 

@@ -1,0 +1,636 @@
+{
+  "gerado_em": "2026-05-05T00:37:58.183313+00:00",
+  "resumo": {
+    "total_condados": 19,
+    "condados_verdes": 10,
+    "condados_amarelos": 0,
+    "condados_vermelhos": 5,
+    "condados_vazios": 4,
+    "total_lots_validos": 246,
+    "lots_com_verdict_lotes": 13,
+    "problemas_criticos": 13,
+    "saude_geral_pct": 66
+  },
+  "condados": [
+    {
+      "codigo": "ALACHUA",
+      "nome": "Alachua County",
+      "state": "FL",
+      "url_sales": "https://alachua.realtaxdeed.com/",
+      "sales_futuras": 3,
+      "proxima_sale": "2026-05-05",
+      "ultima_sale": "2026-06-23",
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vermelho",
+      "issues": []
+    },
+    {
+      "codigo": "BREVARD",
+      "nome": "Brevard County",
+      "state": "FL",
+      "url_sales": "https://brevard.realforeclose.com/",
+      "sales_futuras": 3,
+      "proxima_sale": "2026-05-14",
+      "ultima_sale": "2026-07-16",
+      "lots_validos": 26,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 100.0,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "PASSA": 25,
+        "REVISAR": 1
+      },
+      "quality_score": 85,
+      "status": "verde",
+      "issues": [
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "CITRUS",
+      "nome": "Citrus County",
+      "state": "FL",
+      "url_sales": "https://citrus.realtaxdeed.com/",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-05-13",
+      "ultima_sale": "2026-05-13",
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vermelho",
+      "issues": []
+    },
+    {
+      "codigo": "DUVAL",
+      "nome": "Duval County (Jacksonville)",
+      "state": "FL",
+      "url_sales": "https://duval.realtaxdeed.com/",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-05-13",
+      "ultima_sale": "2026-06-10",
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vermelho",
+      "issues": []
+    },
+    {
+      "codigo": "FLAGLER",
+      "nome": "Flagler County",
+      "state": "FL",
+      "url_sales": "https://flagler.realtaxdeed.com/",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-05-12",
+      "ultima_sale": "2026-05-12",
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vermelho",
+      "issues": []
+    },
+    {
+      "codigo": "HERNANDO",
+      "nome": "Hernando County",
+      "state": "FL",
+      "url_sales": "https://hernando.realforeclose.com/",
+      "sales_futuras": 0,
+      "proxima_sale": null,
+      "ultima_sale": null,
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vazio",
+      "issues": [
+        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+      ]
+    },
+    {
+      "codigo": "HIGHLANDS",
+      "nome": "Highlands County",
+      "state": "FL",
+      "url_sales": "https://highlands.realtaxdeed.com/",
+      "sales_futuras": 4,
+      "proxima_sale": "2026-05-13",
+      "ultima_sale": "2026-06-10",
+      "lots_validos": 35,
+      "cobertura": {
+        "address_pct": 97.1,
+        "value_pct": 88.6,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "LANCE": 1,
+        "PASSA": 30,
+        "REVISAR": 4
+      },
+      "quality_score": 82,
+      "status": "verde",
+      "issues": [
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "HILLSBOROUGH",
+      "nome": "Hillsborough County",
+      "state": "FL",
+      "url_sales": "https://hillsborough.realtaxdeed.com/",
+      "sales_futuras": 10,
+      "proxima_sale": "2026-05-07",
+      "ultima_sale": "2026-07-23",
+      "lots_validos": 62,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 80.6,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "LANCE": 27,
+        "REVISAR": 8,
+        "PASSA": 27
+      },
+      "quality_score": 82,
+      "status": "verde",
+      "issues": [
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "LAKE",
+      "nome": "Lake County",
+      "state": "FL",
+      "url_sales": "https://lake.realtaxdeed.com/",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-06-02",
+      "ultima_sale": "2026-07-21",
+      "lots_validos": 7,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 0.0,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "LANCE": 1,
+        "PASSA": 6
+      },
+      "quality_score": 70,
+      "status": "verde",
+      "issues": [
+        "assessed/just_value missing em 7/7 — Regrid/PA falhou",
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "LEE",
+      "nome": "Lee County",
+      "state": "FL",
+      "url_sales": "https://lee.realtaxdeed.com/",
+      "sales_futuras": 0,
+      "proxima_sale": null,
+      "ultima_sale": null,
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vazio",
+      "issues": [
+        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+      ]
+    },
+    {
+      "codigo": "LEVY",
+      "nome": "Levy County",
+      "state": "FL",
+      "url_sales": "https://levy.realtaxdeed.com/",
+      "sales_futuras": 0,
+      "proxima_sale": null,
+      "ultima_sale": null,
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vazio",
+      "issues": [
+        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+      ]
+    },
+    {
+      "codigo": "MARION",
+      "nome": "Marion County",
+      "state": "FL",
+      "url_sales": "https://marion.realtaxdeed.com/",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-05-13",
+      "ultima_sale": "2026-06-17",
+      "lots_validos": 20,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 100.0,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "LANCE": 1,
+        "PASSA": 19
+      },
+      "quality_score": 85,
+      "status": "verde",
+      "issues": [
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "ORANGE",
+      "nome": "Orange County",
+      "state": "FL",
+      "url_sales": "https://orange.realtaxdeed.com/",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-06-04",
+      "ultima_sale": "2026-06-18",
+      "lots_validos": 21,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 100.0,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "LANCE": 9,
+        "REVISAR": 1,
+        "PASSA": 11
+      },
+      "quality_score": 85,
+      "status": "verde",
+      "issues": [
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "OSCEOLA",
+      "nome": "Osceola County",
+      "state": "FL",
+      "url_sales": "https://osceola.realtaxdeed.com/",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-05-19",
+      "ultima_sale": "2026-05-31",
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vermelho",
+      "issues": []
+    },
+    {
+      "codigo": "PASCO",
+      "nome": "Pasco County",
+      "state": "FL",
+      "url_sales": "https://pasco.realforeclose.com/",
+      "sales_futuras": 7,
+      "proxima_sale": "2026-05-05",
+      "ultima_sale": "2026-06-22",
+      "lots_validos": 12,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 100.0,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "REVISAR": 4,
+        "PASSA": 8
+      },
+      "quality_score": 85,
+      "status": "verde",
+      "issues": [
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "POLK",
+      "nome": "Polk County",
+      "state": "FL",
+      "url_sales": "https://polk.realtaxdeed.com/",
+      "sales_futuras": 3,
+      "proxima_sale": "2026-05-21",
+      "ultima_sale": "2026-07-16",
+      "lots_validos": 21,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 47.6,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "PASSA": 21
+      },
+      "quality_score": 77,
+      "status": "verde",
+      "issues": [
+        "assessed/just_value missing em 11/21 — Regrid/PA falhou",
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "PUTNAM",
+      "nome": "Putnam County",
+      "state": "FL",
+      "url_sales": "https://putnam.realtaxdeed.com/",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-05-13",
+      "ultima_sale": "2026-05-27",
+      "lots_validos": 10,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 0.0,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "PASSA": 10
+      },
+      "quality_score": 70,
+      "status": "verde",
+      "issues": [
+        "assessed/just_value missing em 10/10 — Regrid/PA falhou",
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    },
+    {
+      "codigo": "ST_LUCIE",
+      "nome": "St. Lucie County",
+      "state": "FL",
+      "url_sales": "https://stlucie.realtaxdeed.com/",
+      "sales_futuras": 0,
+      "proxima_sale": null,
+      "ultima_sale": null,
+      "lots_validos": 0,
+      "cobertura": {
+        "address_pct": 0,
+        "value_pct": 0,
+        "sqft_pct": 0
+      },
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vazio",
+      "issues": [
+        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+      ]
+    },
+    {
+      "codigo": "VOLUSIA",
+      "nome": "Volusia County",
+      "state": "FL",
+      "url_sales": "https://volusia.realforeclose.com/",
+      "sales_futuras": 7,
+      "proxima_sale": "2026-05-07",
+      "ultima_sale": "2026-06-18",
+      "lots_validos": 32,
+      "cobertura": {
+        "address_pct": 100.0,
+        "value_pct": 96.9,
+        "sqft_pct": 0.0
+      },
+      "decisoes": {
+        "REVISAR": 4,
+        "PASSA": 27,
+        "LANCE": 1
+      },
+      "quality_score": 84,
+      "status": "verde",
+      "issues": [
+        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+      ]
+    }
+  ],
+  "workers": [
+    {
+      "worker": "alert_engine",
+      "status": "success",
+      "items": 0,
+      "errors": 0,
+      "ran_at": "2026-05-04 15:32:45",
+      "log": ""
+    },
+    {
+      "worker": "scoring_engine",
+      "status": "success",
+      "items": 294,
+      "errors": 0,
+      "ran_at": "2026-05-04 15:32:44",
+      "log": ""
+    },
+    {
+      "worker": "fema_checker",
+      "status": "degraded",
+      "items": 0,
+      "errors": 295,
+      "ran_at": "2026-05-04 15:32:44",
+      "log": ""
+    },
+    {
+      "worker": "property_appraiser",
+      "status": "success",
+      "items": 1,
+      "errors": 0,
+      "ran_at": "2026-05-04 15:29:34",
+      "log": ""
+    },
+    {
+      "worker": "regrid_enricher",
+      "status": "success",
+      "items": 0,
+      "errors": 0,
+      "ran_at": "2026-05-04 15:27:03",
+      "log": ""
+    },
+    {
+      "worker": "lot_list_scraper",
+      "status": "success",
+      "items": 936,
+      "errors": 0,
+      "ran_at": "2026-05-04 15:25:22",
+      "log": ""
+    },
+    {
+      "worker": "lot_scraper_playwright",
+      "status": "success",
+      "items": 280,
+      "errors": 0,
+      "ran_at": "2026-05-04 15:13:10",
+      "log": ""
+    },
+    {
+      "worker": "calendar_scraper",
+      "status": "success",
+      "items": 86,
+      "errors": 0,
+      "ran_at": "2026-05-04 15:12:48",
+      "log": ""
+    }
+  ],
+  "problemas": [
+    {
+      "severidade": "CRITICA",
+      "categoria": "enrichment",
+      "msg": "PA enricher processa so 1 lots/run (parser regex generico falhando) — building_sqft/year_built/property_type ausentes — bug epico, requer migracao Playwright"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "BREVARD",
+      "msg": "BREVARD: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "HIGHLANDS",
+      "msg": "HIGHLANDS: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "HILLSBOROUGH",
+      "msg": "HILLSBOROUGH: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "LAKE",
+      "msg": "LAKE: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "MARION",
+      "msg": "MARION: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "ORANGE",
+      "msg": "ORANGE: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "PASCO",
+      "msg": "PASCO: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "POLK",
+      "msg": "POLK: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "PUTNAM",
+      "msg": "PUTNAM: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "VOLUSIA",
+      "msg": "VOLUSIA: 0% lots com building_sqft — PA enricher quebrado pra este condado"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker fema_checker com status degraded (0 items, 295 erros) — sem log"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
+      "msg": "Regrid enricher items=0 (verificar REGRID_API_KEY no GitHub Secrets)"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "enrichment",
+      "msg": "FEMA checker 295 erros — depende de address (cascata do PA enricher)"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "HERNANDO",
+      "msg": "HERNANDO: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "LAKE",
+      "msg": "LAKE: assessed/just_value missing em 7/7 — Regrid/PA falhou"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "LEE",
+      "msg": "LEE: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "LEVY",
+      "msg": "LEVY: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "POLK",
+      "msg": "POLK: assessed/just_value missing em 11/21 — Regrid/PA falhou"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "PUTNAM",
+      "msg": "PUTNAM: assessed/just_value missing em 10/10 — Regrid/PA falhou"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "ST_LUCIE",
+      "msg": "ST_LUCIE: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+    }
+  ],
+  "fila_status": {
+    "candidatos": 21,
+    "ratio_minimo": 2.0,
+    "top_per_auction": 10,
+    "gerado_em": "2026-05-04"
+  }
+}
