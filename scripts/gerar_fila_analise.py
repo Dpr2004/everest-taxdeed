@@ -42,7 +42,13 @@ TOP_PER_AUCTION = int(os.environ.get("FILA_TOP_PER_AUCTION", "10"))
 
 # Cap global de seguranca (caso muitos condados tenham leiloes simultaneos)
 # Default 110 = 11 condados Tier Everest x 10 lotes
-TOP_N_GLOBAL = int(os.environ.get("FILA_TOP_N_GLOBAL", "110"))
+# Aceita ambos nomes (FILA_TOP_N e FILA_TOP_N_GLOBAL) por historico —
+# workflow define apenas FILA_TOP_N, antes ignorado por mismatch de nome.
+TOP_N_GLOBAL = int(
+    os.environ.get("FILA_TOP_N")
+    or os.environ.get("FILA_TOP_N_GLOBAL")
+    or "110"
+)
 
 # Integracao LOTES Analyzer
 LOTES_TUNNEL_URL = os.environ.get("LOTES_TUNNEL_URL", "").rstrip("/")
