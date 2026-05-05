@@ -141,15 +141,18 @@ jobs:
       - name: 8) Gerar data.json para o site
         run: python scripts/gerar_site_dados.py
 
-      - name: 8a) Auditoria de saude do sistema (gera web/saude.json)
-        run: python scripts/audit_full.py
-        continue-on-error: true
-
-      - name: 8b) Sincronizar veredictos reais dos 12 agentes (LOTES) com data.json
+      - name: 8a) Sincronizar veredictos reais dos 12 agentes (LOTES) com data.json
         # Le web/reports/{parcel}.json (payload webhook do LOTES) e sobrescreve
         # `decisao` no data.json com veredicto REAL do comite. Detecta tambem
         # reports parciais (0/N agentes) e rebaixa pra REVISAR. Protege capital.
+        # IMPORTANTE: roda ANTES do audit pra saude.json refletir estado final.
         run: python scripts/sync_veredictos.py
+        continue-on-error: true
+
+      - name: 8b) Auditoria de saude do sistema (gera web/saude.json)
+        # Roda DEPOIS do sync pra saude refletir decisoes reais do comite,
+        # nao a heuristica do scoring inicial.
+        run: python scripts/audit_full.py
         continue-on-error: true
 
       - name: 9) Commit DB + data.json
