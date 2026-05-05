@@ -79,6 +79,7 @@ class PropertyAppraiser(BaseWorker):
             cur.execute(q, params)
             lots = cur.fetchall()
 
+        self.candidates_count = len(lots)
         self.logger.info(
             f"PA enrich: {len(lots)} lots para processar "
             f"(limit={self.limit}, time_budget={self.time_budget_sec}s)"
@@ -86,6 +87,10 @@ class PropertyAppraiser(BaseWorker):
 
         started = time.monotonic()
         spa_skipped = 0
+        no_method = 0
+        none_returned = 0  # parser retornou None (regex nao casou) — silent failure
+        from collections import Counter
+        none_por_county = Counter()
         for lot in lots:
             elapsed = time.monotonic() - started
             if elapsed >= self.time_budget_sec:
@@ -102,12 +107,16 @@ class PropertyAppraiser(BaseWorker):
             try:
                 method = getattr(self, f"_enrich_{county_lc}", None)
                 if not method:
+                    no_method += 1
                     self.logger.debug(f"Sem enricher pra {lot['county_codigo']}")
                     continue
                 data = method(lot)
                 if data:
                     self._save(lot["id"], data)
                     self.items_processed += 1
+                else:
+                    none_returned += 1
+                    none_por_county[county_lc] += 1
             except Exception as e:
                 self.errors_count += 1
                 self.logger.warning(f"PA falha {lot['parcel_id']}: {e}")
@@ -117,6 +126,18 @@ class PropertyAppraiser(BaseWorker):
                 f"PA SPA skip: {spa_skipped} lotes em condados SPA "
                 f"({sorted(_SPA_COUNTIES)}) - precisam Playwright"
             )
+        if no_method:
+            self.logger.warning(f"PA sem enricher implementado: {no_method} lotes")
+        # Silent failure surfacing — most insidious bug do PA enricher
+        if none_returned:
+            top = ", ".join(f"{c}={n}" for c,n in none_por_county.most_common(5))
+            self.logger.error(
+                f"PA SILENT FAIL: {none_returned} lotes parser retornou None "
+                f"(site bloqueando, regex nao casou, layout mudou). "
+                f"Top 5 condados afetados: {top}"
+            )
+            # Conta como erros pra base.run() detectar degraded
+            self.errors_count += none_returned
 
     def _save(self, lot_id, data):
         fields = []

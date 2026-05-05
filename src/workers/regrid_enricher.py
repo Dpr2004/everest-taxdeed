@@ -56,7 +56,10 @@ class RegridEnricher(BaseWorker):
 
     def execute(self):
         if not TOKEN:
+            # FAIL LOUD: secret faltando e' bug de config, nao "tudo bem"
             self.logger.error("REGRID_API_KEY nao configurado - pulando")
+            self.candidates_count = 1  # forca status DEGRADED no base.run()
+            self.errors_count = 1
             return
 
         lotes = self._buscar_lotes_incompletos()
@@ -64,6 +67,7 @@ class RegridEnricher(BaseWorker):
             self.logger.info("Nenhum lote precisa enriquecimento Regrid")
             return
 
+        self.candidates_count = len(lotes)
         self.logger.info(f"Enriquecendo {len(lotes)} lotes via Regrid API")
 
         delay = 1.0 / max(REQ_PER_SEC, 1)

@@ -61,6 +61,7 @@ class FemaChecker(BaseWorker):
             cur.execute(q)
             lots = cur.fetchall()
 
+        self.candidates_count = len(lots)
         self.logger.info(f"FEMA: {len(lots)} lots para verificar")
 
         for lot in lots:
