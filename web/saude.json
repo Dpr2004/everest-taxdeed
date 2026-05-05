@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-05T00:45:03.272464+00:00",
+  "gerado_em": "2026-05-05T00:52:45.966505+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 10,
@@ -42,17 +42,19 @@
       "ultima_sale": "2026-07-16",
       "lots_validos": 26,
       "cobertura": {
-        "address_pct": 100.0,
+        "address_pct": 34.6,
         "value_pct": 100.0,
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "PASSA": 25,
-        "REVISAR": 1
+        "REVISAR": 1,
+        "PASSA": 25
       },
-      "quality_score": 85,
+      "quality_score": 71,
       "status": "verde",
-      "issues": []
+      "issues": [
+        "address missing em 17/26 (65%) — scraper de lot incompleto"
+      ]
     },
     {
       "codigo": "CITRUS",
@@ -146,8 +148,8 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 30,
-        "REVISAR": 4
+        "REVISAR": 2,
+        "PASSA": 32
       },
       "quality_score": 82,
       "status": "verde",
@@ -168,8 +170,8 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 27,
-        "REVISAR": 8,
+        "LANCE": 29,
+        "REVISAR": 6,
         "PASSA": 27
       },
       "quality_score": 82,
@@ -248,7 +250,7 @@
       "ultima_sale": "2026-06-17",
       "lots_validos": 20,
       "cobertura": {
-        "address_pct": 100.0,
+        "address_pct": 50.0,
         "value_pct": 100.0,
         "sqft_pct": 0.0
       },
@@ -256,7 +258,7 @@
         "LANCE": 1,
         "PASSA": 19
       },
-      "quality_score": 85,
+      "quality_score": 75,
       "status": "verde",
       "issues": []
     },
@@ -317,8 +319,8 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "REVISAR": 4,
-        "PASSA": 8
+        "LANCE": 3,
+        "PASSA": 9
       },
       "quality_score": 85,
       "status": "verde",
@@ -404,9 +406,9 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "REVISAR": 4,
-        "PASSA": 27,
-        "LANCE": 1
+        "LANCE": 5,
+        "REVISAR": 1,
+        "PASSA": 26
       },
       "quality_score": 84,
       "status": "verde",
@@ -504,6 +506,12 @@
       "severidade": "MEDIA",
       "categoria": "enrichment",
       "msg": "FEMA checker 295 erros — depende de address (cascata do PA enricher)"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "BREVARD",
+      "msg": "BREVARD: address missing em 17/26 (65%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",

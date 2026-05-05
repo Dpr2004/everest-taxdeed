@@ -1,10 +1,10 @@
 {
-  "gerado_em": "04/May/2026 20:37",
+  "gerado_em": "04/May/2026 20:52",
   "resumo": {
     "total_condados": 19,
     "total_sales": 45,
     "total_lots": 246,
-    "lances": 40,
+    "lances": 49,
     "estados": [
       "FL"
     ]
@@ -675,13 +675,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.8,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 78233.72,
       "profit": 147065.18,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "parcial 0/11 agentes"
+      "fema_risk": null
     },
     {
       "id": 18810,
@@ -1073,13 +1071,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 1.0307,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 13576.53,
       "profit": 55724.01,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "parcial 0/11 agentes"
+      "fema_risk": null
     },
     {
       "id": 22877,
@@ -1097,13 +1093,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.4955,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 166464.54,
       "profit": 250474.16,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
+      "fema_risk": null
     },
     {
       "id": 14994,
@@ -1253,13 +1247,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.5495,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 122470.3,
       "profit": 187488.97,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "verdict inconclusivo (None/None agentes)"
+      "fema_risk": null
     },
     {
       "id": 18786,
@@ -1277,13 +1269,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.7534,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 140421.49,
       "profit": 209774.32,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "verdict inconclusivo (None/None agentes)"
+      "fema_risk": null
     },
     {
       "id": 22619,
@@ -1301,13 +1291,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 1.0573,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 33257.84,
       "profit": 70469.24,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "parcial 0/11 agentes"
+      "fema_risk": null
     },
     {
       "id": 14987,
@@ -1501,13 +1489,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.3982,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 96460.92,
       "profit": 64046.46,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "parcial 0/11 agentes"
+      "fema_risk": null
     },
     {
       "id": 11416,
@@ -1547,13 +1533,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.5987,
-      "decisao": "PASSA",
+      "decisao": "LANCE",
       "max_bid": 153276.55,
       "profit": 113773.55,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "fema_risk": null
     },
     {
       "id": 22565,
@@ -1571,13 +1555,11 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.3884,
-      "decisao": "REVISAR",
+      "decisao": "LANCE",
       "max_bid": 137108.73,
       "profit": 78715.07,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "parcial 0/11 agentes"
+      "fema_risk": null
     },
     {
       "id": 22688,
@@ -1797,9 +1779,7 @@
       "max_bid": 0.0,
       "profit": 20087.64,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "verdict inconclusivo (None/None agentes)"
+      "fema_risk": null
     },
     {
       "id": 18781,
@@ -1839,13 +1819,11 @@
       "year_built": null,
       "score": 77.4,
       "roi": 0.4476,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 17345.19,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "fema_risk": null
     },
     {
       "id": 18769,
@@ -1963,7 +1941,7 @@
       "estado": "FL",
       "sale_date": "2026-06-11",
       "parcel_id": "2914066",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 4673.65,
@@ -1973,13 +1951,11 @@
       "year_built": null,
       "score": 69.0,
       "roi": 0.2808,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 10994.35,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "fema_risk": null
     },
     {
       "id": 18844,
@@ -2041,13 +2017,11 @@
       "year_built": null,
       "score": 51.0,
       "roi": 0.1766,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 6093.0,
       "profit": 14920.96,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "parcial 0/11 agentes"
+      "fema_risk": null
     },
     {
       "id": 18848,
@@ -2363,7 +2337,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "2002531",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1053.27,
@@ -2385,7 +2359,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "2001080",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1055.56,
@@ -2407,7 +2381,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "2003781",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1074.94,
@@ -2451,7 +2425,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "2003475",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1114.66,
@@ -2527,13 +2501,11 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.8788,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -28064.78,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
+      "fema_risk": null
     },
     {
       "id": 18857,
@@ -2695,7 +2667,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "2003722",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1252.54,
@@ -2709,9 +2681,7 @@
       "max_bid": 0.0,
       "profit": -29712.8,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "fema_risk": null
     },
     {
       "id": 2870,
@@ -2719,7 +2689,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "2003789",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1299.61,
@@ -2983,7 +2953,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "2741712",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1403.83,
@@ -3015,13 +2985,11 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.8688,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -28002.76,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
+      "fema_risk": null
     },
     {
       "id": 18856,
@@ -3051,7 +3019,7 @@
       "estado": "FL",
       "sale_date": "2026-06-11",
       "parcel_id": "2909462",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1441.73,
@@ -3293,7 +3261,7 @@
       "estado": "FL",
       "sale_date": "2026-07-16",
       "parcel_id": "2001537",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1525.29,
@@ -3413,13 +3381,11 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.7274,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -23818.64,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "verdict inconclusivo (None/None agentes)"
+      "fema_risk": null
     },
     {
       "id": 2918,
@@ -3471,7 +3437,7 @@
       "estado": "FL",
       "sale_date": "2026-07-16",
       "parcel_id": "2314439",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1570.74,
@@ -3625,7 +3591,7 @@
       "estado": "FL",
       "sale_date": "2026-07-16",
       "parcel_id": "2000831",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1622.83,
@@ -3661,9 +3627,7 @@
       "max_bid": 0.0,
       "profit": -23884.28,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "fema_risk": null
     },
     {
       "id": 2880,
@@ -3737,7 +3701,7 @@
       "estado": "FL",
       "sale_date": "2026-07-16",
       "parcel_id": "2103278",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1675.46,
@@ -3825,7 +3789,7 @@
       "estado": "FL",
       "sale_date": "2026-07-16",
       "parcel_id": "2000013",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 1729.95,
@@ -4023,7 +3987,7 @@
       "estado": "FL",
       "sale_date": "2026-05-13",
       "parcel_id": "0013-032-007",
-      "address": "NO SITUS",
+      "address": null,
       "city": "FORT MCCOY",
       "zip": "32134",
       "min_bid": 2030.82,
@@ -4045,7 +4009,7 @@
       "estado": "FL",
       "sale_date": "2026-05-13",
       "parcel_id": "0013-032-013",
-      "address": "NO SITUS",
+      "address": null,
       "city": "FORT MCCOY",
       "zip": "32134",
       "min_bid": 2030.82,
@@ -4067,7 +4031,7 @@
       "estado": "FL",
       "sale_date": "2026-05-13",
       "parcel_id": "0013-032-012",
-      "address": "NO SITUS",
+      "address": null,
       "city": "FORT MCCOY",
       "zip": "32134",
       "min_bid": 2051.42,
@@ -4243,7 +4207,7 @@
       "estado": "FL",
       "sale_date": "2026-05-14",
       "parcel_id": "3019439",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 2306.72,
@@ -4485,7 +4449,7 @@
       "estado": "FL",
       "sale_date": "2026-06-11",
       "parcel_id": "2949237",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 2530.48,
@@ -4507,7 +4471,7 @@
       "estado": "FL",
       "sale_date": "2026-06-11",
       "parcel_id": "2904116",
-      "address": "0 UNKNOWN",
+      "address": null,
       "city": null,
       "zip": null,
       "min_bid": 3216.09,
@@ -4565,9 +4529,7 @@
       "max_bid": 0.0,
       "profit": -28531.8,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "fema_risk": null
     },
     {
       "id": 18737,
@@ -4597,7 +4559,7 @@
       "estado": "FL",
       "sale_date": "2026-05-13",
       "parcel_id": "3529-007-016",
-      "address": "NO SITUS",
+      "address": null,
       "city": "DUNNELLON",
       "zip": "34432",
       "min_bid": 3468.2,
@@ -4641,7 +4603,7 @@
       "estado": "FL",
       "sale_date": "2026-05-13",
       "parcel_id": "8011-1365-06",
-      "address": "NO SITUS",
+      "address": null,
       "city": "OCALA",
       "zip": "34473",
       "min_bid": 3469.71,
@@ -4663,7 +4625,7 @@
       "estado": "FL",
       "sale_date": "2026-05-13",
       "parcel_id": "8011-1367-01",
-      "address": "NO SITUS",
+      "address": null,
       "city": "OCALA",
       "zip": "34473",
       "min_bid": 3487.95,
@@ -4729,7 +4691,7 @@
       "estado": "FL",
       "sale_date": "2026-06-17",
       "parcel_id": "3285-014-005",
-      "address": "NO SITUS",
+      "address": null,
       "city": "SILVER SPRINGS",
       "zip": "34488",
       "min_bid": 3767.81,
@@ -4773,7 +4735,7 @@
       "estado": "FL",
       "sale_date": "2026-06-17",
       "parcel_id": "3482-011-013",
-      "address": "NO SITUS",
+      "address": null,
       "city": "DUNNELLON",
       "zip": "34432",
       "min_bid": 3948.53,
@@ -4839,7 +4801,7 @@
       "estado": "FL",
       "sale_date": "2026-05-13",
       "parcel_id": "2004-236-007",
-      "address": "NO SITUS",
+      "address": null,
       "city": "OCALA",
       "zip": "34481",
       "min_bid": 4507.7,
@@ -4927,7 +4889,7 @@
       "estado": "FL",
       "sale_date": "2026-06-17",
       "parcel_id": "04719-029-00",
-      "address": "NO SITUS",
+      "address": null,
       "city": "CITRA",
       "zip": "32113",
       "min_bid": 4865.6,
@@ -5333,13 +5295,11 @@
       "year_built": null,
       "score": 0.0,
       "roi": -0.2509,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -16361.83,
       "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "verdict desconhecido: 'PASSAR — PRE-HUD MH 1971 UNINSURABLE (HUD 1976 CODE) + MH TITLE HSMV 82040/82109 BIFURCATION UNRESOLVED + MAX_SAFE_BID $0 AO OPENING $30,834 + OWNER-OCCUPIED HOMESTEAD (GONZALEZ) REDEMPTION 25-45% + TRIPLE HAZARD SINKHOLE-HIGH/FLOOD-AE/WIND-II + COMPS WEAK (ZERO A/B) + LIQUIDITY LOW. MAX BID $0.'"
+      "fema_risk": null
     },
     {
       "id": 18849,

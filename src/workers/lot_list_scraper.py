@@ -175,12 +175,17 @@ class LotListScraper(BaseWorker):
             "just_value": r"(?:Just|Market)\s*Value\s*[:\-]?\s*\$?\s*([0-9,\.]+)",
             "legal_description": r"Legal\s*Description\s*[:\-]?\s*([^\n\|]{10,200})",
         }
+        # Placeholders fake retornados por sites quando ha terra vaga sem
+        # endereco situs real. Tratar como ausencia de address.
+        ADDR_PLACEHOLDERS = {"0 unknown", "no situs", "unknown", "none", "-", ""}
         for key, pat in patterns.items():
             m = re.search(pat, text, re.I)
             if m:
                 v = m.group(1).strip()
                 if key in ("min_bid", "assessed_value", "just_value"):
                     lot[key] = _to_float(v)
+                elif key == "address" and v.lower() in ADDR_PLACEHOLDERS:
+                    pass  # nao salva placeholder fake
                 else:
                     lot[key] = v
 
@@ -196,7 +201,8 @@ class LotListScraper(BaseWorker):
                     elif "case" in label and not lot.get("case_num"):
                         lot["case_num"] = value
                     elif "address" in label and not lot.get("address"):
-                        lot["address"] = value
+                        if value.lower() not in ("0 unknown", "no situs", "unknown", "none", "-", ""):
+                            lot["address"] = value
                     elif ("opening" in label or "min" in label) and not lot.get("min_bid"):
                         lot["min_bid"] = _to_float(value)
                     elif "assessed" in label and not lot.get("assessed_value"):
