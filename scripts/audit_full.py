@@ -74,6 +74,28 @@ def main():
             WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%' AND (l.assessed_value IS NOT NULL OR l.just_value IS NOT NULL)) as lots_com_value,
           (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
             WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%' AND l.building_sqft IS NOT NULL) as lots_com_sqft,
+          -- Classificacao por tipo:
+          -- VACANT/LAND/LOT = terra vaga (precisa lot_sqft + zoning + flood)
+          -- HOUSE/SINGLE/CONDO/MULTI/MOBILE = improved residencial (precisa building_sqft + year_built)
+          -- COMMERCIAL/INDUSTRIAL/RETAIL/OFFICE = improved comercial (precisa building_sqft + zoning C-*)
+          -- Daniel busca TODOS os tipos — todos sao oportunidades possiveis.
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%'
+              AND l.property_type IS NOT NULL
+              AND (LOWER(l.property_type) LIKE '%vacant%' OR LOWER(l.property_type) LIKE '%land%' OR LOWER(l.property_type) LIKE '%lot%')) as lots_vacant,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%'
+              AND l.property_type IS NOT NULL
+              AND (LOWER(l.property_type) LIKE '%single%' OR LOWER(l.property_type) LIKE '%house%' OR LOWER(l.property_type) LIKE '%condo%'
+                   OR LOWER(l.property_type) LIKE '%multi%' OR LOWER(l.property_type) LIKE '%mobile%' OR LOWER(l.property_type) LIKE '%residential improved%')) as lots_residencial,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%'
+              AND l.property_type IS NOT NULL
+              AND (LOWER(l.property_type) LIKE '%commercial%' OR LOWER(l.property_type) LIKE '%retail%'
+                   OR LOWER(l.property_type) LIKE '%office%' OR LOWER(l.property_type) LIKE '%industrial%')) as lots_comercial,
+          (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
+            WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id NOT LIKE 'AID_%'
+              AND l.property_type IS NULL) as lots_tipo_desconhecido,
           (SELECT COUNT(*) FROM lots l JOIN sales s ON s.id = l.sale_id
             WHERE s.county_id = cs.id AND DATE(s.sale_date) >= DATE('now') AND l.parcel_id LIKE 'AID_%') as lots_aid,
           (SELECT MAX(l.scraped_at) FROM lots l JOIN sales s ON s.id = l.sale_id WHERE s.county_id = cs.id) as ultimo_scrape
@@ -125,6 +147,11 @@ def main():
         lots_addr = row['lots_com_addr'] or 0
         lots_value = row['lots_com_value'] or 0
         lots_sqft = row['lots_com_sqft'] or 0
+        lots_vacant = row['lots_vacant'] or 0
+        lots_residencial = row['lots_residencial'] or 0
+        lots_comercial = row['lots_comercial'] or 0
+        lots_tipo_unk = row['lots_tipo_desconhecido'] or 0
+        lots_improved = lots_residencial + lots_comercial  # precisam sqft
         lots_aid = row['lots_aid'] or 0
 
         # Plausibilidade de datas — leiloes diarios = suspeito
@@ -145,7 +172,12 @@ def main():
         # Quality score 0-100
         addr_pct = (lots_addr / lots_v) if lots_v else 0
         value_pct = (lots_value / lots_v) if lots_v else 0
-        sqft_pct = (lots_sqft / lots_v) if lots_v else 0
+        # sqft_pct considera SO improved (terras vagas legitimamente sem sqft).
+        # Se condado nao tem improved, sqft nao pesa (full score).
+        if lots_improved > 0:
+            sqft_pct = lots_improved_sqft / lots_improved
+        else:
+            sqft_pct = 1.0  # sem improved = sqft N/A = nao penaliza
         date_score = 0 if dates_suspeitas else 1
         # Pra LOTES: contar lotes do condado com verdict real
         cond_lots_in_data = sum(decisoes_por_cond[cod].values()) if cod in decisoes_por_cond else 0
@@ -260,13 +292,13 @@ def main():
                     "msg": f"Worker {w['worker']} com status {w['status']} ({w['items']} items, {w['errors']} erros) — {w['log'][:150] or 'sem log'}",
                 })
 
-    # PA enricher cronico
-    pa = next((w for w in workers_recent if w["worker"] == "property_appraiser"), None)
-    if pa and pa["items"] < 20:
+    # PA SPA Playwright (substitui PA legacy regex). So alarma se nao processou.
+    pa_sp = next((w for w in workers_recent if w["worker"] == "pa_playwright_spa"), None)
+    if pa_sp and pa_sp["items"] < 5:
         saude["problemas"].append({
-            "severidade": "CRITICA",
+            "severidade": "ALTA",
             "categoria": "enrichment",
-            "msg": f"PA enricher processa so {pa['items']} lots/run (parser regex generico falhando) — building_sqft/year_built/property_type ausentes — bug epico, requer migracao Playwright",
+            "msg": f"PA Playwright SPA processou so {pa_sp['items']} lots/run — patterns nao casam pra maioria dos condados",
         })
 
     # Regrid quebrado
@@ -287,16 +319,19 @@ def main():
             "msg": f"FEMA checker {fc['errors']} erros — depende de address (cascata do PA enricher)",
         })
 
-    # Por condado: agrupados (nao gera issue duplicado por condado)
-    condados_sqft_zero = [c["codigo"] for c in saude["condados"]
-                          if c["lots_validos"] > 0 and c["cobertura"]["sqft_pct"] == 0]
-    if condados_sqft_zero and len(condados_sqft_zero) > 3:
-        # Issue agregado em vez de 1 por condado
+    # Por condado: agrupados (nao gera issue duplicado por condado).
+    # SQFT zero so' eh problema em condados COM lots improved (casas/condos).
+    # Terras vagas (vacant) sem sqft eh esperado.
+    condados_sqft_problema = []
+    for c in saude["condados"]:
+        if c["lots_validos"] > 0 and c.get("lots_improved", 0) > 0 and c["cobertura"]["sqft_pct"] < 30:
+            condados_sqft_problema.append(c["codigo"])
+    if condados_sqft_problema and len(condados_sqft_problema) > 2:
         saude["problemas"].append({
             "severidade": "ALTA",
             "categoria": "enrichment",
-            "msg": f"PA enricher: {len(condados_sqft_zero)} condados com 0% building_sqft "
-                   f"({', '.join(condados_sqft_zero[:6])}{'...' if len(condados_sqft_zero) > 6 else ''}) — bug agregado, ja listado em Worker PA",
+            "msg": f"PA enricher: {len(condados_sqft_problema)} condados COM lots improved (casas/condos) sem building_sqft "
+                   f"({', '.join(condados_sqft_problema[:6])}) — patterns regex Playwright nao casaram",
         })
 
     for c_info in saude["condados"]:
