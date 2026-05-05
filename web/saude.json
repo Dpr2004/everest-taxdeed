@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-05T00:54:09.737785+00:00",
+  "gerado_em": "2026-05-05T02:50:43.673318+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 10,
@@ -8,7 +8,7 @@
     "condados_vazios": 0,
     "condados_sem_atividade": 4,
     "total_lots_validos": 246,
-    "lots_com_verdict_lotes": 13,
+    "lots_com_verdict_lotes": 14,
     "problemas_criticos": 4,
     "saude_geral_pct": 66
   },
@@ -47,8 +47,8 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "REVISAR": 1,
-        "PASSA": 25
+        "PASSA": 25,
+        "REVISAR": 1
       },
       "quality_score": 71,
       "status": "verde",
@@ -148,8 +148,8 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "REVISAR": 2,
-        "PASSA": 32
+        "PASSA": 30,
+        "REVISAR": 4
       },
       "quality_score": 82,
       "status": "verde",
@@ -170,8 +170,8 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 29,
-        "REVISAR": 6,
+        "LANCE": 27,
+        "REVISAR": 8,
         "PASSA": 27
       },
       "quality_score": 82,
@@ -319,8 +319,8 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 3,
-        "PASSA": 9
+        "REVISAR": 4,
+        "PASSA": 8
       },
       "quality_score": 85,
       "status": "verde",
@@ -406,9 +406,9 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 5,
-        "REVISAR": 1,
-        "PASSA": 26
+        "REVISAR": 3,
+        "PASSA": 28,
+        "LANCE": 1
       },
       "quality_score": 84,
       "status": "verde",
