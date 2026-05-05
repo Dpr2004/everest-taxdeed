@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-05-05T12:31:48.717730+00:00",
+  "gerado_em": "2026-05-05T15:27:50.312044+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 10,
+    "condados_verdes": 12,
     "condados_amarelos": 0,
-    "condados_vermelhos": 5,
+    "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 4,
-    "total_lots_validos": 246,
+    "total_lots_validos": 260,
     "lots_com_verdict_lotes": 23,
-    "problemas_criticos": 2,
-    "saude_geral_pct": 66
+    "problemas_criticos": 4,
+    "saude_geral_pct": 80
   },
   "condados": [
     {
@@ -40,21 +40,19 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-05-14",
       "ultima_sale": "2026-07-16",
-      "lots_validos": 26,
+      "lots_validos": 27,
       "cobertura": {
-        "address_pct": 34.6,
-        "value_pct": 100.0,
+        "address_pct": 100.0,
+        "value_pct": 96.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 15,
+        "PASSA": 16,
         "REVISAR": 11
       },
-      "quality_score": 86,
+      "quality_score": 99,
       "status": "verde",
-      "issues": [
-        "address missing em 17/26 (65%) — scraper de lot incompleto"
-      ]
+      "issues": []
     },
     {
       "codigo": "CITRUS",
@@ -102,17 +100,17 @@
       "sales_futuras": 1,
       "proxima_sale": "2026-05-12",
       "ultima_sale": "2026-05-12",
-      "lots_validos": 0,
+      "lots_validos": 1,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "PASSA": 1
       },
-      "quality_score": 0,
-      "status": "vermelho",
+      "quality_score": 100,
+      "status": "verde",
       "issues": []
     },
     {
@@ -164,18 +162,18 @@
       "sales_futuras": 10,
       "proxima_sale": "2026-05-07",
       "ultima_sale": "2026-07-23",
-      "lots_validos": 62,
+      "lots_validos": 64,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 80.6,
+        "value_pct": 92.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 27,
-        "REVISAR": 14,
-        "PASSA": 22
+        "REVISAR": 18,
+        "PASSA": 19
       },
-      "quality_score": 97,
+      "quality_score": 98,
       "status": "verde",
       "issues": []
     },
@@ -251,7 +249,7 @@
       "ultima_sale": "2026-06-17",
       "lots_validos": 20,
       "cobertura": {
-        "address_pct": 50.0,
+        "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
@@ -259,7 +257,7 @@
         "PASSA": 16,
         "REVISAR": 4
       },
-      "quality_score": 90,
+      "quality_score": 100,
       "status": "verde",
       "issues": []
     },
@@ -294,17 +292,17 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-05-19",
       "ultima_sale": "2026-05-31",
-      "lots_validos": 0,
+      "lots_validos": 10,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "PASSA": 10
       },
-      "quality_score": 0,
-      "status": "vermelho",
+      "quality_score": 100,
+      "status": "verde",
       "issues": []
     },
     {
@@ -312,9 +310,9 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 7,
+      "sales_futuras": 8,
       "proxima_sale": "2026-05-05",
-      "ultima_sale": "2026-06-22",
+      "ultima_sale": "2026-07-27",
       "lots_validos": 12,
       "cobertura": {
         "address_pct": 100.0,
@@ -322,8 +320,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 6,
-        "PASSA": 18
+        "REVISAR": 3,
+        "PASSA": 9
       },
       "quality_score": 100,
       "status": "verde",
@@ -409,8 +407,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 13,
-        "PASSA": 53,
+        "REVISAR": 3,
+        "PASSA": 28,
         "LANCE": 1
       },
       "quality_score": 99,
@@ -424,63 +422,71 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-05 12:13:32",
+      "ran_at": "2026-05-05 15:27:48",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 246,
+      "items": 260,
       "errors": 0,
-      "ran_at": "2026-05-05 12:13:32",
+      "ran_at": "2026-05-05 15:27:48",
       "log": ""
     },
     {
       "worker": "fema_checker",
       "status": "degraded",
       "items": 0,
-      "errors": 50,
-      "ran_at": "2026-05-05 12:13:31",
-      "log": "DEGRADED: 50 candidatos retornados pela query mas 0 processados (50 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
+      "errors": 260,
+      "ran_at": "2026-05-05 15:27:47",
+      "log": "DEGRADED: 260 candidatos retornados pela query mas 0 processados (260 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "property_appraiser",
+      "status": "degraded",
+      "items": 17,
+      "errors": 98,
+      "ran_at": "2026-05-05 15:18:20",
+      "log": "DEGRADED: so 17/200 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+    },
+    {
+      "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 27,
-      "errors": 110,
-      "ran_at": "2026-05-05 12:03:13",
+      "items": 10,
+      "errors": 0,
+      "ran_at": "2026-05-05 15:01:09",
       "log": ""
     },
     {
       "worker": "regrid_enricher",
-      "status": "success",
+      "status": "degraded",
       "items": 0,
-      "errors": 0,
-      "ran_at": "2026-05-04 15:27:03",
-      "log": ""
+      "errors": 1,
+      "ran_at": "2026-05-05 15:01:08",
+      "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "lot_list_scraper",
       "status": "success",
-      "items": 936,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-04 15:25:22",
+      "ran_at": "2026-05-05 14:55:52",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 280,
+      "items": 288,
       "errors": 0,
-      "ran_at": "2026-05-04 15:13:10",
+      "ran_at": "2026-05-05 14:43:40",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 86,
+      "items": 87,
       "errors": 0,
-      "ran_at": "2026-05-04 15:12:48",
+      "ran_at": "2026-05-05 14:42:36",
       "log": ""
     }
   ],
@@ -488,7 +494,17 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker fema_checker com status degraded (0 items, 50 erros) — DEGRADED: 50 candidatos retornados pela query mas 0 processados (50 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Inve"
+      "msg": "Worker fema_checker com status degraded (0 items, 260 erros) — DEGRADED: 260 candidatos retornados pela query mas 0 processados (260 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. In"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker property_appraiser com status degraded (17 items, 98 erros) — DEGRADED: so 17/200 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
     },
     {
       "severidade": "ALTA",
@@ -497,9 +513,8 @@
     },
     {
       "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "BREVARD",
-      "msg": "BREVARD: address missing em 17/26 (65%) — scraper de lot incompleto"
+      "categoria": "enrichment",
+      "msg": "FEMA checker 260 erros — depende de address (cascata do PA enricher)"
     },
     {
       "severidade": "MEDIA",
