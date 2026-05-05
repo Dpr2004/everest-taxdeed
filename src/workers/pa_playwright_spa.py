@@ -202,20 +202,28 @@ class PAPlaywrightSPA(BaseWorker):
             return None
 
         data = {}
+        # Brevard BCPAO usa labels especificos. Patterns expandidos:
         patterns = {
-            "assessed_value": r"Total\s*Assessed[:\s]*\$?([\d,]+)",
-            "just_value": r"(?:Just|Market)[:\s]*\$?([\d,]+)",
-            "building_sqft": r"(?:Living|Heated|Total\s*Area)[:\s]*([\d,]+)",
-            "year_built": r"Year\s*Built[:\s]*(\d{4})",
-            "lot_sqft": r"(?:Land\s*Area|Lot\s*Size)[:\s]*([\d,]+)\s*(?:sf|sqft)",
-            "zoning": r"Zoning[:\s]*([A-Z0-9\-]+)",
-            "property_type": r"(?:Property\s*Use|Use\s*Code)[:\s]*([A-Z0-9\-\s]+)",
+            # Valores: BCPAO mostra "Assessed Value" ou "Total Tax Value"
+            "assessed_value": r"(?:Assessed|Total\s*Assessed|Tax(?:able)?)\s*(?:Value)?[:\s]+\$?([\d,]+)",
+            "just_value": r"(?:Market|Just|Total\s*Market)\s*(?:Value)?[:\s]+\$?([\d,]+)",
+            # SqFt: BCPAO mostra "Total Living" ou "Heated SqFt"
+            "building_sqft": r"(?:Total\s*Living|Heated\s*Sq|Living\s*Area|Total\s*Area|Bldg)[:\s]+([\d,]+)",
+            "year_built": r"Year\s*Built[:\s]+(\d{4})",
+            # Lot: pode aparecer como "Land Sq Ft" ou "Acreage"
+            "lot_sqft": r"(?:Land\s*Sq|Lot\s*Sq|Total\s*Land)[:\s]+([\d,]+)",
+            # Zoning: aceita formato letra-numero
+            "zoning": r"Zoning[:\s]+([A-Z][A-Z0-9\-\/]{0,15})",
+            # Use code BCPAO formato "0010 - VACANT RESIDENTIAL"
+            "property_type": r"(?:Property\s*Use|Use\s*Code|DOR\s*Use)[:\s]*([0-9A-Z][\w\s\-]{2,40})",
+            # Address — BCPAO mostra como "Site Address" ou "Property Location"
+            "address": r"(?:Site|Property|Situs)\s*Address[:\s]*([^\n]{8,80})",
         }
         for field, pat in patterns.items():
             m = re.search(pat, text, re.I)
             if m:
                 v = m.group(1).replace(",", "").strip()
-                if field in ("zoning", "property_type"):
+                if field in ("zoning", "property_type", "address"):
                     data[field] = v[:30]
                 else:
                     data[field] = _to_float(v)
