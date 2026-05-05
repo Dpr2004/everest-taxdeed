@@ -170,7 +170,7 @@ class LotListScraper(BaseWorker):
             "parcel_id": r"Parcel(?:\s*ID|\s*Number|\s*#)?\s*[:\-]?\s*([A-Z0-9\-\.]+)",
             "case_num": r"Case(?:\s*Number|\s*#)?\s*[:\-]?\s*([A-Z0-9\-]+)",
             "min_bid": r"(?:Opening|Min(?:imum)?)\s*Bid\s*[:\-]?\s*\$?\s*([0-9,\.]+)",
-            "address": r"(?:Property|Situs)\s*Address\s*[:\-]?\s*([^\n\|]+?)(?:\s{2}|$)",
+            "address": r"(?:Property|Situs|Site|Physical)\s*(?:Address|Location)\s*[:\-]?\s*([^\n\|]+?)(?:\s{2}|$)",
             "assessed_value": r"Assessed\s*Value\s*[:\-]?\s*\$?\s*([0-9,\.]+)",
             "just_value": r"(?:Just|Market)\s*Value\s*[:\-]?\s*\$?\s*([0-9,\.]+)",
             "legal_description": r"Legal\s*Description\s*[:\-]?\s*([^\n\|]{10,200})",
