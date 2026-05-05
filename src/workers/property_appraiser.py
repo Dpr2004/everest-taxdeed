@@ -376,31 +376,119 @@ class PropertyAppraiser(BaseWorker):
             return None
 
     def _parse_generic_pa(self, html):
-        """Parser generico por regex pra sites de PA."""
+        """Parser generico melhorado: regex em texto + parsing de tabelas HTML.
+
+        Cobre layouts:
+        - Texto narrativo "Year Built: 1985"
+        - Tabela HTML <th>Year Built</th><td>1985</td>
+        - Variacoes de label: "Bldg SF", "Total Living", "Lot Acres", etc.
+        """
         soup = BeautifulSoup(html, "lxml")
         text = soup.get_text(" ", strip=True)
         data = {}
+
+        # Patterns expandidos pra cobrir mais variacoes de label
         patterns = {
-            "year_built": r"Year\s*Built\s*[:\-]?\s*(\d{4})",
-            "building_sqft": r"(?:Living|Heated|Total)\s*Area\s*[:\-]?\s*([\d,]+)",
-            "lot_sqft": r"Lot\s*Size\s*[:\-]?\s*([\d,]+)",
-            "bedrooms": r"Bedrooms?\s*[:\-]?\s*(\d+)",
-            "bathrooms": r"Bathrooms?\s*[:\-]?\s*([\d.]+)",
-            "zoning": r"Zoning\s*[:\-]?\s*([A-Z0-9\-]+)",
-            "just_value": r"(?:Just|Market)\s*Value\s*[:\-]?\s*\$?\s*([\d,]+)",
-            "assessed_value": r"Assessed\s*Value\s*[:\-]?\s*\$?\s*([\d,]+)",
+            "year_built": [
+                r"Year\s*Built\s*[:\-]?\s*(\d{4})",
+                r"Yr\s*Built\s*[:\-]?\s*(\d{4})",
+                r"Construction\s*Year\s*[:\-]?\s*(\d{4})",
+                r"Built\s*[:\-]?\s*(\d{4})",
+            ],
+            "building_sqft": [
+                r"(?:Living|Heated|Total|Adjusted)\s*Area\s*[:\-]?\s*([\d,]+)",
+                r"(?:Total\s*Living|Heated\s*Living)\s*(?:SF|SqFt|Sq\s*Ft)\s*[:\-]?\s*([\d,]+)",
+                r"Bldg\s*(?:SF|SqFt|Sq\s*Ft)\s*[:\-]?\s*([\d,]+)",
+                r"Building\s*(?:SF|SqFt|Sq\s*Ft|Square\s*Feet)\s*[:\-]?\s*([\d,]+)",
+                r"Gross\s*Living\s*Area\s*[:\-]?\s*([\d,]+)",
+            ],
+            "lot_sqft": [
+                r"Lot\s*Size\s*[:\-]?\s*([\d,]+)",
+                r"Land\s*(?:SF|SqFt|Sq\s*Ft|Area)\s*[:\-]?\s*([\d,]+)",
+                r"Lot\s*(?:SF|SqFt|Sq\s*Ft)\s*[:\-]?\s*([\d,]+)",
+            ],
+            "bedrooms": [
+                r"Bedrooms?\s*[:\-]?\s*(\d+)",
+                r"Beds?\s*[:\-]?\s*(\d+)",
+                r"BR\s*[:\-]?\s*(\d+)",
+            ],
+            "bathrooms": [
+                r"Bathrooms?\s*[:\-]?\s*([\d.]+)",
+                r"Baths?\s*[:\-]?\s*([\d.]+)",
+                r"BA\s*[:\-]?\s*([\d.]+)",
+            ],
+            "zoning": [
+                r"Zoning\s*(?:Code)?\s*[:\-]?\s*([A-Z0-9\-]{1,15})",
+                r"Use\s*Code\s*[:\-]?\s*([A-Z0-9\-]{1,15})",
+            ],
+            "just_value": [
+                r"(?:Just|Market)\s*Value\s*[:\-]?\s*\$?\s*([\d,]+)",
+                r"Total\s*(?:Just|Market)\s*[:\-]?\s*\$?\s*([\d,]+)",
+            ],
+            "assessed_value": [
+                r"Assessed\s*Value\s*[:\-]?\s*\$?\s*([\d,]+)",
+                r"Total\s*Assessed\s*[:\-]?\s*\$?\s*([\d,]+)",
+                r"Assessment\s*[:\-]?\s*\$?\s*([\d,]+)",
+            ],
+            "property_type": [
+                r"Property\s*(?:Type|Use|Class)\s*[:\-]?\s*([A-Z][A-Za-z\s]{2,40})",
+                r"Use\s*Description\s*[:\-]?\s*([A-Z][A-Za-z\s]{2,40})",
+                r"DOR\s*Code\s*[:\-]?\s*([A-Z0-9\-]{1,20})",
+            ],
         }
-        for field, pat in patterns.items():
-            m = re.search(pat, text, re.I)
-            if m:
-                v = m.group(1).replace(",", "").strip()
-                if field in ("zoning",):
-                    data[field] = v[:20]
-                else:
-                    try:
-                        data[field] = float(v) if "." in v else int(v)
-                    except ValueError:
-                        pass
+
+        def coerce(field, raw):
+            v = (raw or "").strip()
+            if field in ("zoning", "property_type"):
+                return v[:30]
+            v = v.replace(",", "")
+            try:
+                return float(v) if "." in v else int(v)
+            except ValueError:
+                return None
+
+        # 1. Pass de regex no texto (multi-pattern)
+        for field, pats in patterns.items():
+            if field in data:
+                continue
+            for pat in pats:
+                m = re.search(pat, text, re.I)
+                if m:
+                    val = coerce(field, m.group(1))
+                    if val is not None:
+                        data[field] = val
+                        break
+
+        # 2. Pass de tabela HTML (<th>label</th><td>val</td> ou 2 <td>s)
+        label_to_field = {
+            "year built": "year_built", "yr built": "year_built",
+            "living area": "building_sqft", "heated area": "building_sqft",
+            "total area": "building_sqft", "bldg sf": "building_sqft",
+            "building sf": "building_sqft", "building sqft": "building_sqft",
+            "gross living area": "building_sqft",
+            "lot size": "lot_sqft", "land sf": "lot_sqft", "lot sf": "lot_sqft",
+            "land area": "lot_sqft",
+            "bedrooms": "bedrooms", "beds": "bedrooms",
+            "bathrooms": "bathrooms", "baths": "bathrooms",
+            "zoning": "zoning", "zoning code": "zoning",
+            "just value": "just_value", "market value": "just_value",
+            "assessed value": "assessed_value", "total assessed": "assessed_value",
+            "property type": "property_type", "property use": "property_type",
+            "use description": "property_type", "dor code": "property_type",
+        }
+        for table in soup.find_all("table"):
+            for tr in table.find_all("tr"):
+                cells = tr.find_all(["th", "td"])
+                if len(cells) < 2:
+                    continue
+                label = cells[0].get_text(" ", strip=True).lower().strip(":")
+                value = cells[1].get_text(" ", strip=True)
+                field = label_to_field.get(label)
+                if field and field not in data and value:
+                    val = coerce(field, value)
+                    if val is not None:
+                        data[field] = val
+
         return data if data else None
 
 
