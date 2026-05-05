@@ -305,16 +305,26 @@ class PAPlaywrightSPA(BaseWorker):
     def _enrich_polk(self, page, lot):
         parcel = lot["parcel_id"]
         # Polk usa CamaDisplay com OutputMode=Display
-        url = f"https://www.polkpa.org/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Search={parcel}"
-        try:
-            page.goto(url, wait_until="domcontentloaded", timeout=20000)
-        except Exception:
+        # Tenta com hifens primeiro, fallback sem hifens (Polk aceita ambos)
+        for variation in [parcel, parcel.replace("-", "")]:
+            url = f"https://www.polkpa.org/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Search={variation}"
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            except Exception:
+                continue
+            try:
+                page.wait_for_load_state("networkidle", timeout=15000)
+            except Exception:
+                pass
+            page.wait_for_timeout(4000)  # Polk e' lento — wait maior
+            try:
+                test = page.evaluate("() => document.body.innerText")
+                if test and len(test) > 200 and "no records" not in test.lower() and "results found" not in test.lower():
+                    break  # achou — sai do loop
+            except Exception:
+                continue
+        else:
             return None
-        try:
-            page.wait_for_load_state("networkidle", timeout=12000)
-        except Exception:
-            pass
-        page.wait_for_timeout(2000)
 
         try:
             text = page.evaluate("() => document.body.innerText")

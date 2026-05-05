@@ -108,10 +108,13 @@ jobs:
         run: python -m src.main --pa-spa --limit 200
         continue-on-error: true
 
-      - name: 4) Property Appraiser (fallback/complemento)
-        timeout-minutes: 20
-        run: python -m src.main --property-appraiser
-        continue-on-error: true
+      # 4) PA legacy (regex puro) DESATIVADO — PA Playwright cobre 19/19 condados
+      # com qualidade muito superior. Antes: 8% sucesso (regex falhava em SPA),
+      # gerava 99 erros silenciosos por run. Mantido comentado pra debug futuro.
+      # - name: 4) Property Appraiser (fallback/complemento)
+      #   timeout-minutes: 20
+      #   run: python -m src.main --property-appraiser
+      #   continue-on-error: true
 
       - name: 5) FEMA Flood Zones (FL prioridade — mandatorio)
         timeout-minutes: 14
