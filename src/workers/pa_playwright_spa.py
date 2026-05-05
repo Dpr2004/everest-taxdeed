@@ -26,7 +26,10 @@ except ImportError:
 
 # Condados com PA SPA confirmado — tier 1 worker `property_appraiser.py`
 # tem esses no _SPA_COUNTIES blocklist. Aqui nos cuidamos deles.
-SPA_COUNTIES = {"HILLSBOROUGH", "BREVARD", "ORANGE"}
+# Inclui POLK e MARION mesmo nao sendo SPA — Playwright pode renderizar
+# campos lazy-loaded que regex puro perde. Volume justifica: Polk 50 lots,
+# Marion 200 lots, todos com 0% sqft hoje.
+SPA_COUNTIES = {"HILLSBOROUGH", "BREVARD", "ORANGE", "POLK", "MARION"}
 
 
 def _to_float(s):
@@ -244,6 +247,100 @@ class PAPlaywrightSPA(BaseWorker):
             "year_built": r"Year\s*Built[:\s]*(\d{4})",
             "lot_sqft": r"(?:Land\s*Sq\s*Ft|Lot\s*Size)[:\s]*([\d,]+)",
             "zoning": r"Zoning[:\s]*([A-Z0-9\-]+)",
+        }
+        for field, pat in patterns.items():
+            m = re.search(pat, text, re.I)
+            if m:
+                v = m.group(1).replace(",", "").strip()
+                if field in ("zoning", "property_type"):
+                    data[field] = v[:30]
+                else:
+                    data[field] = _to_float(v)
+        return data if data else None
+
+
+    # ============================================================
+    # POLK — polkpa.org (server-rendered mas com regras de display)
+    # ============================================================
+    def _enrich_polk(self, page, lot):
+        parcel = lot["parcel_id"]
+        # Polk usa CamaDisplay com OutputMode=Display
+        url = f"https://www.polkpa.org/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Search={parcel}"
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=20000)
+        except Exception:
+            return None
+        try:
+            page.wait_for_load_state("networkidle", timeout=12000)
+        except Exception:
+            pass
+        page.wait_for_timeout(2000)
+
+        try:
+            text = page.evaluate("() => document.body.innerText")
+        except Exception:
+            return None
+
+        # Polk costuma retornar pagina de search se parcel nao bate exato
+        if "results found" in text.lower() or "no records" in text.lower():
+            return None
+
+        data = {}
+        patterns = {
+            "assessed_value": r"(?:Total\s*)?Assessed\s*Value[:\s]*\$?([\d,]+)",
+            "just_value": r"(?:Just|Market)\s*Value[:\s]*\$?([\d,]+)",
+            "building_sqft": r"(?:Heated|Living|Total\s*Living)\s*Area[:\s]*([\d,]+)",
+            "year_built": r"Year\s*Built[:\s]*(\d{4})",
+            "lot_sqft": r"(?:Land\s*Area|Lot\s*Size)[:\s]*([\d,]+)",
+            "zoning": r"Zoning[:\s]*([A-Z0-9\-]+)",
+            "property_type": r"(?:DOR\s*Code|Property\s*Use|Use\s*Code)[:\s]*([A-Z0-9\-\s]{2,30})",
+            "bedrooms": r"Bedrooms?[:\s]*(\d+)",
+            "bathrooms": r"Bathrooms?[:\s]*([\d.]+)",
+        }
+        for field, pat in patterns.items():
+            m = re.search(pat, text, re.I)
+            if m:
+                v = m.group(1).replace(",", "").strip()
+                if field in ("zoning", "property_type"):
+                    data[field] = v[:30]
+                else:
+                    data[field] = _to_float(v)
+        return data if data else None
+
+    # ============================================================
+    # MARION — pa.marion.fl.us
+    # ============================================================
+    def _enrich_marion(self, page, lot):
+        parcel = lot["parcel_id"]
+        # Marion aceita PIN ou Parcel
+        url = f"https://www.pa.marion.fl.us/PropertySearch.aspx?Parcel={parcel}"
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=20000)
+        except Exception:
+            return None
+        try:
+            page.wait_for_load_state("networkidle", timeout=12000)
+        except Exception:
+            pass
+        page.wait_for_timeout(2000)
+
+        try:
+            text = page.evaluate("() => document.body.innerText")
+        except Exception:
+            return None
+
+        if "no records" in text.lower() or "search returned" in text.lower():
+            return None
+
+        data = {}
+        patterns = {
+            "assessed_value": r"Assessed\s*Value[:\s]*\$?([\d,]+)",
+            "just_value": r"(?:Just|Market)\s*Value[:\s]*\$?([\d,]+)",
+            "building_sqft": r"(?:Heated|Living|Total\s*Living)\s*Area[:\s]*([\d,]+)",
+            "year_built": r"Year\s*Built[:\s]*(\d{4})",
+            "lot_sqft": r"(?:Land|Lot)\s*(?:Size|Area)[:\s]*([\d,]+)",
+            "zoning": r"Zoning[:\s]*([A-Z0-9\-]+)",
+            "property_type": r"(?:Property\s*Use|DOR\s*Use|Use\s*Code)[:\s]*([A-Z0-9\-\s]{2,30})",
         }
         for field, pat in patterns.items():
             m = re.search(pat, text, re.I)
