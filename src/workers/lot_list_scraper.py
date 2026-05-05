@@ -151,7 +151,7 @@ class LotListScraper(BaseWorker):
                 d_url = base + working_endpoint.format(id=aid)
                 d_resp = fetch(d_url, timeout=15)
                 lot = self._parse_auction_detail(d_resp.text, aid)
-                if lot.get("parcel_id"):
+                if lot and lot.get("parcel_id"):
                     lots.append(lot)
             except Exception as e:
                 self.logger.warning(f"Falha lot {aid}: {e}")
@@ -207,8 +207,11 @@ class LotListScraper(BaseWorker):
                         lot["legal_description"] = value
 
         if not lot.get("parcel_id"):
-            # Fallback: usar auction_id como parcel
-            lot["parcel_id"] = f"AID_{auction_id}"
+            # SKIP entrada lixo: placeholder AID_* polui DB (75% dos lots viraram
+            # AID_ por regex parcel_id nao casar). Marcado como None pra caller
+            # filtrar — sem parcel_id real, o lot eh inutil pra enrichment,
+            # scoring, ou analise. Re-scrape proximo cron com regex melhor.
+            return None
 
         return lot
 
