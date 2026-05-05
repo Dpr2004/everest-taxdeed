@@ -335,6 +335,42 @@ def main():
         except Exception:
             pass
 
+    # 6. TODO epicos — backlog visivel de melhorias estruturais que requerem
+    # trabalho substancial (1+ dia cada). Mostra na UI pra Daniel saber o que
+    # falta sem precisar perguntar.
+    saude["todos_epicos"] = [
+        {
+            "titulo": "PA enricher → Playwright migration",
+            "impacto": "Desbloqueia building_sqft/year_built/property_type pra 14 condados nao-SPA",
+            "esforco": "1-2 dias",
+            "afeta": "Resolve 10 issues criticos (1 raiz + 9 cascatas) + libera scoring real",
+        },
+        {
+            "titulo": "Regrid token — verificar config",
+            "impacto": "Desbloqueia just_value/lot_sqft em Lake/Polk/Putnam",
+            "esforco": "5min (Daniel) — rodar scripts/test_regrid.py",
+            "afeta": "Resolve 4 issues medios (Regrid items=0 + 3 condados sem assessed)",
+        },
+        {
+            "titulo": "GIS REST publico (ArcGIS) por condado — fallback Regrid",
+            "impacto": "Cobertura redundante quando Regrid falha 404",
+            "esforco": "1 dia (1 condado piloto Marion ou Polk) + replicar",
+            "afeta": "Eleva quality_score em vermelhos sem custo recurring",
+        },
+        {
+            "titulo": "Calendar scraper — investigar root cause das datas duplicadas",
+            "impacto": "Hoje dedup_sales remove 33+ sales fakes/run, mas sintoma — fix no scraper",
+            "esforco": "0.5 dia",
+            "afeta": "Reduz overhead + aumenta confianca",
+        },
+        {
+            "titulo": "Auto-restart server LOTES (PM2 ou Windows Service)",
+            "impacto": "24/7 uptime garantido — hoje server pode cair sem ninguem perceber",
+            "esforco": "2-3h",
+            "afeta": "Mandato Daniel: nunca parar",
+        },
+    ]
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(saude, indent=2, ensure_ascii=False), encoding='utf-8')
     print(f"[saude] Gravado: {OUT}")

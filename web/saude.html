@@ -220,6 +220,23 @@ footer { background: rgba(10,9,39,0.6); border-top: 1px solid var(--border); pad
   </div>
 </section>
 
+<section x-show="dados.todos_epicos?.length">
+  <h2 class="section-title">📋 Backlog Estrutural</h2>
+  <p class="section-sub">Melhorias que requerem trabalho substancial (>=0.5 dia). Não são bugs imediatos, mas ficar visível pra priorizar.</p>
+  <div class="problemas-list">
+    <template x-for="t in dados.todos_epicos" :key="t.titulo">
+      <div class="problema MEDIA" style="flex-direction:column;align-items:start;gap:6px;">
+        <div style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+          <span style="font-weight:800;font-size:14px;color:var(--gold-300);" x-text="t.titulo"></span>
+          <span style="font-size:11px;color:var(--white-40);" x-text="'⏱ ' + t.esforco"></span>
+        </div>
+        <div style="font-size:12px;color:var(--white-60);" x-text="'Impacto: ' + t.impacto"></div>
+        <div style="font-size:11px;color:var(--gold-300);font-style:italic;" x-text="t.afeta"></div>
+      </div>
+    </template>
+  </div>
+</section>
+
 <section x-show="dados.fila_status?.candidatos">
   <h2 class="section-title">📋 Fila LOTES</h2>
   <div class="kpi" style="max-width:400px;">
