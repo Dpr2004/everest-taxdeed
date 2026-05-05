@@ -148,8 +148,20 @@ class ScoringEngine(BaseWorker):
         )
         dados_insuficientes = not (lot["building_sqft"] and lot["property_type"])
 
+        # MINIMUM LOT SIZE check — terra vaga abaixo de 5000 sqft em geral
+        # nao eh construtivel sem variance/replat (regras LDC por condado).
+        # Marca como REVISAR (LOTES decide via agente 08 county-quirks).
+        # Threshold conservador 5000 sqft cobre maioria dos R-3/R-4 minimums FL.
+        ptype = (lot["property_type"] or "").lower()
+        is_vacant = any(k in ptype for k in ("vacant", "land", "lot"))
+        lot_sqft = lot["lot_sqft"] or 0
+        lot_too_small = is_vacant and lot_sqft > 0 and lot_sqft < 5000
+
         if roi >= ROI_MIN and profit >= META_LUCRO * 0.7:
             decision = "LANCE"
+            if lot_too_small:
+                # Mesmo se ROI bom, lote pequeno demais merece review humano
+                decision = "REVISAR"
         elif roi >= ROI_MIN * 0.7:
             decision = "REVISAR"
         elif ratio_jvbid >= 4.0 and dados_insuficientes:
