@@ -36,6 +36,11 @@ W_DATES = 25     # leiloes plausiveis (nao diarios)
 W_LOTES = 15     # % lots com analise LOTES (verdict real)
 W_RECENCY = 10   # ultima atualizacao do scraper recente
 
+# Condados confirmados SEM atividade Q2 2026 (verificado 2026-05-04 via
+# browser direto). Nao sao bug — sao legitimos sem leiloes programados.
+# Suprime do count de "vermelho" e nao gera issue critico.
+SEM_ATIVIDADE_LEGITIMA = {"HERNANDO", "LEE", "LEVY", "ST_LUCIE"}
+
 
 def main():
     if not DB.exists():
@@ -154,8 +159,9 @@ def main():
             )
 
         # Status visual
+        sem_atividade = cod in SEM_ATIVIDADE_LEGITIMA
         if sales_fut == 0:
-            status = "vazio"
+            status = "sem_atividade" if sem_atividade else "vazio"
         elif quality >= 70:
             status = "verde"
         elif quality >= 40:
@@ -165,7 +171,7 @@ def main():
 
         # Issues do condado
         issues = []
-        if sales_fut == 0:
+        if sales_fut == 0 and not sem_atividade:
             issues.append("Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)")
         if dates_suspeitas:
             issues.append(date_warning)
@@ -174,8 +180,7 @@ def main():
             issues.append(f"address missing em {lots_v - lots_addr}/{lots_v} ({(1-addr_pct)*100:.0f}%) — scraper de lot incompleto")
         if lots_v > 0 and value_pct < 0.5:
             issues.append(f"assessed/just_value missing em {lots_v - lots_value}/{lots_v} — Regrid/PA falhou")
-        if lots_v > 0 and sqft_pct == 0:
-            issues.append("0% lots com building_sqft — PA enricher quebrado pra este condado")
+        # 0% sqft eh agregado num issue global — nao polui issue por condado
         if lots_aid > 0:
             issues.append(f"{lots_aid} placeholders AID_* (lot_scraper sem parcel_id real)")
 
@@ -268,10 +273,21 @@ def main():
             "msg": f"FEMA checker {fc['errors']} erros — depende de address (cascata do PA enricher)",
         })
 
-    # Por condado: criticos
+    # Por condado: agrupados (nao gera issue duplicado por condado)
+    condados_sqft_zero = [c["codigo"] for c in saude["condados"]
+                          if c["lots_validos"] > 0 and c["cobertura"]["sqft_pct"] == 0]
+    if condados_sqft_zero and len(condados_sqft_zero) > 3:
+        # Issue agregado em vez de 1 por condado
+        saude["problemas"].append({
+            "severidade": "ALTA",
+            "categoria": "enrichment",
+            "msg": f"PA enricher: {len(condados_sqft_zero)} condados com 0% building_sqft "
+                   f"({', '.join(condados_sqft_zero[:6])}{'...' if len(condados_sqft_zero) > 6 else ''}) — bug agregado, ja listado em Worker PA",
+        })
+
     for c_info in saude["condados"]:
         for issue in c_info["issues"]:
-            sev = "CRITICA" if "duplicacao" in issue or "0% lots" in issue else "MEDIA"
+            sev = "CRITICA" if "duplicacao" in issue else "MEDIA"
             saude["problemas"].append({
                 "severidade": sev,
                 "categoria": "condado",
@@ -288,17 +304,21 @@ def main():
     n_amarelo = sum(1 for c in saude["condados"] if c["status"] == "amarelo")
     n_vermelho = sum(1 for c in saude["condados"] if c["status"] == "vermelho")
     n_vazio = sum(1 for c in saude["condados"] if c["status"] == "vazio")
+    n_sem_atividade = sum(1 for c in saude["condados"] if c["status"] == "sem_atividade")
 
+    # Saude geral exclui sem_atividade (legitimo) do denominador
+    n_ativos = len(saude["condados"]) - n_vazio - n_sem_atividade
     saude["resumo"] = {
         "total_condados": len(saude["condados"]),
         "condados_verdes": n_verde,
         "condados_amarelos": n_amarelo,
         "condados_vermelhos": n_vermelho,
         "condados_vazios": n_vazio,
+        "condados_sem_atividade": n_sem_atividade,
         "total_lots_validos": total_lots_valid,
         "lots_com_verdict_lotes": len(parcels_com_verdict),
         "problemas_criticos": sum(1 for p in saude["problemas"] if p["severidade"] in ("CRITICA", "ALTA")),
-        "saude_geral_pct": int(100 * n_verde / max(len(saude["condados"]) - n_vazio, 1)),
+        "saude_geral_pct": int(100 * n_verde / max(n_ativos, 1)),
     }
 
     # 5. Fila status

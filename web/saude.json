@@ -1,14 +1,15 @@
 {
-  "gerado_em": "2026-05-05T00:37:58.183313+00:00",
+  "gerado_em": "2026-05-05T00:45:03.272464+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 10,
     "condados_amarelos": 0,
     "condados_vermelhos": 5,
-    "condados_vazios": 4,
+    "condados_vazios": 0,
+    "condados_sem_atividade": 4,
     "total_lots_validos": 246,
     "lots_com_verdict_lotes": 13,
-    "problemas_criticos": 13,
+    "problemas_criticos": 4,
     "saude_geral_pct": 66
   },
   "condados": [
@@ -51,9 +52,7 @@
       },
       "quality_score": 85,
       "status": "verde",
-      "issues": [
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
-      ]
+      "issues": []
     },
     {
       "codigo": "CITRUS",
@@ -128,10 +127,8 @@
       },
       "decisoes": {},
       "quality_score": 0,
-      "status": "vazio",
-      "issues": [
-        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
-      ]
+      "status": "sem_atividade",
+      "issues": []
     },
     {
       "codigo": "HIGHLANDS",
@@ -154,9 +151,7 @@
       },
       "quality_score": 82,
       "status": "verde",
-      "issues": [
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
-      ]
+      "issues": []
     },
     {
       "codigo": "HILLSBOROUGH",
@@ -179,9 +174,7 @@
       },
       "quality_score": 82,
       "status": "verde",
-      "issues": [
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
-      ]
+      "issues": []
     },
     {
       "codigo": "LAKE",
@@ -204,8 +197,7 @@
       "quality_score": 70,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 7/7 — Regrid/PA falhou",
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+        "assessed/just_value missing em 7/7 — Regrid/PA falhou"
       ]
     },
     {
@@ -224,10 +216,8 @@
       },
       "decisoes": {},
       "quality_score": 0,
-      "status": "vazio",
-      "issues": [
-        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
-      ]
+      "status": "sem_atividade",
+      "issues": []
     },
     {
       "codigo": "LEVY",
@@ -245,10 +235,8 @@
       },
       "decisoes": {},
       "quality_score": 0,
-      "status": "vazio",
-      "issues": [
-        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
-      ]
+      "status": "sem_atividade",
+      "issues": []
     },
     {
       "codigo": "MARION",
@@ -270,9 +258,7 @@
       },
       "quality_score": 85,
       "status": "verde",
-      "issues": [
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
-      ]
+      "issues": []
     },
     {
       "codigo": "ORANGE",
@@ -295,9 +281,7 @@
       },
       "quality_score": 85,
       "status": "verde",
-      "issues": [
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
-      ]
+      "issues": []
     },
     {
       "codigo": "OSCEOLA",
@@ -338,9 +322,7 @@
       },
       "quality_score": 85,
       "status": "verde",
-      "issues": [
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
-      ]
+      "issues": []
     },
     {
       "codigo": "POLK",
@@ -362,8 +344,7 @@
       "quality_score": 77,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 11/21 — Regrid/PA falhou",
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+        "assessed/just_value missing em 11/21 — Regrid/PA falhou"
       ]
     },
     {
@@ -386,8 +367,7 @@
       "quality_score": 70,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 10/10 — Regrid/PA falhou",
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
+        "assessed/just_value missing em 10/10 — Regrid/PA falhou"
       ]
     },
     {
@@ -406,10 +386,8 @@
       },
       "decisoes": {},
       "quality_score": 0,
-      "status": "vazio",
-      "issues": [
-        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
-      ]
+      "status": "sem_atividade",
+      "issues": []
     },
     {
       "codigo": "VOLUSIA",
@@ -432,9 +410,7 @@
       },
       "quality_score": 84,
       "status": "verde",
-      "issues": [
-        "0% lots com building_sqft — PA enricher quebrado pra este condado"
-      ]
+      "issues": []
     }
   ],
   "workers": [
@@ -510,66 +486,6 @@
       "msg": "PA enricher processa so 1 lots/run (parser regex generico falhando) — building_sqft/year_built/property_type ausentes — bug epico, requer migracao Playwright"
     },
     {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "BREVARD",
-      "msg": "BREVARD: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "HIGHLANDS",
-      "msg": "HIGHLANDS: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "HILLSBOROUGH",
-      "msg": "HILLSBOROUGH: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "LAKE",
-      "msg": "LAKE: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "MARION",
-      "msg": "MARION: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "ORANGE",
-      "msg": "ORANGE: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "PASCO",
-      "msg": "PASCO: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "POLK",
-      "msg": "POLK: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "PUTNAM",
-      "msg": "PUTNAM: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
-      "severidade": "CRITICA",
-      "categoria": "condado",
-      "condado": "VOLUSIA",
-      "msg": "VOLUSIA: 0% lots com building_sqft — PA enricher quebrado pra este condado"
-    },
-    {
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker fema_checker com status degraded (0 items, 295 erros) — sem log"
@@ -580,6 +496,11 @@
       "msg": "Regrid enricher items=0 (verificar REGRID_API_KEY no GitHub Secrets)"
     },
     {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
+      "msg": "PA enricher: 10 condados com 0% building_sqft (BREVARD, HIGHLANDS, HILLSBOROUGH, LAKE, MARION, ORANGE...) — bug agregado, ja listado em Worker PA"
+    },
+    {
       "severidade": "MEDIA",
       "categoria": "enrichment",
       "msg": "FEMA checker 295 erros — depende de address (cascata do PA enricher)"
@@ -587,26 +508,8 @@
     {
       "severidade": "MEDIA",
       "categoria": "condado",
-      "condado": "HERNANDO",
-      "msg": "HERNANDO: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
       "condado": "LAKE",
       "msg": "LAKE: assessed/just_value missing em 7/7 — Regrid/PA falhou"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "LEE",
-      "msg": "LEE: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "LEVY",
-      "msg": "LEVY: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
     },
     {
       "severidade": "MEDIA",
@@ -619,12 +522,6 @@
       "categoria": "condado",
       "condado": "PUTNAM",
       "msg": "PUTNAM: assessed/just_value missing em 10/10 — Regrid/PA falhou"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "ST_LUCIE",
-      "msg": "ST_LUCIE: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
     }
   ],
   "fila_status": {

@@ -71,6 +71,7 @@ h1 { font-size: 32px; font-weight: 800; margin-top: 8px; }
 .condado-card.amarelo { border-left: 4px solid var(--yellow); }
 .condado-card.vermelho { border-left: 4px solid var(--red); }
 .condado-card.vazio { border-left: 4px solid var(--gray); opacity: 0.6; }
+.condado-card.sem_atividade { border-left: 4px solid #6366f1; opacity: 0.7; }
 .condado-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
 .condado-cod { font-size: 14px; font-weight: 800; letter-spacing: 0.05em; }
 .score-badge { font-size: 18px; font-weight: 800; padding: 2px 10px; border-radius: 6px; font-variant-numeric: tabular-nums; }
@@ -78,6 +79,7 @@ h1 { font-size: 32px; font-weight: 800; margin-top: 8px; }
 .score-badge.amarelo { background: rgba(251,191,36,0.18); color: var(--yellow); }
 .score-badge.vermelho { background: rgba(248,113,113,0.18); color: var(--red); }
 .score-badge.vazio { background: rgba(107,114,128,0.18); color: var(--gray); }
+.score-badge.sem_atividade { background: rgba(99,102,241,0.18); color: #818cf8; }
 .condado-meta { font-size: 11px; color: var(--white-60); margin-bottom: 8px; }
 .cob-row { display: flex; gap: 6px; margin: 8px 0; }
 .cob-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; position: relative; }
@@ -173,7 +175,7 @@ footer { background: rgba(10,9,39,0.6); border-top: 1px solid var(--border); pad
       <a :href="'index.html?c=' + c.codigo" class="condado-card" :class="c.status" style="text-decoration:none;color:inherit;">
         <div class="condado-head">
           <span class="condado-cod" x-text="c.codigo"></span>
-          <span class="score-badge" :class="c.status" x-text="c.status === 'vazio' ? '—' : c.quality_score"></span>
+          <span class="score-badge" :class="c.status" x-text="c.status === 'vazio' ? '—' : (c.status === 'sem_atividade' ? '⏸' : c.quality_score)"></span>
         </div>
         <div class="condado-meta">
           <span x-text="c.nome || c.codigo"></span> · <span x-text="c.sales_futuras + ' leilões'"></span> · <span x-text="c.lots_validos + ' lots'"></span>
