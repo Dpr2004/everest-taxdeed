@@ -220,6 +220,26 @@ footer { background: rgba(10,9,39,0.6); border-top: 1px solid var(--border); pad
   </div>
 </section>
 
+<section x-show="dados.analises_lotes?.length">
+  <h2 class="section-title">🤖 Análises LOTES Recentes</h2>
+  <p class="section-sub">Veredictos do comitê de 12 agentes. Click no parcel pra ver relatório completo.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;">
+    <template x-for="a in dados.analises_lotes" :key="a.parcel">
+      <a :href="'lot.html?p=' + a.parcel" style="text-decoration:none;color:inherit;background:var(--bg-elev);border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:block;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:11px;font-weight:700;color:#a5b4fc;font-family:monospace;" x-text="a.parcel"></span>
+          <span :style="'font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px;background:' + (a.verdict==='BUY'||a.verdict==='LANCE'?'rgba(52,211,153,0.2);color:#34d399':a.verdict==='PASS'?'rgba(248,113,113,0.2);color:#f87171':'rgba(251,191,36,0.2);color:#fbbf24')" x-text="a.verdict"></span>
+        </div>
+        <div style="margin-top:4px;font-size:10px;color:var(--white-60);display:flex;justify-content:space-between;">
+          <span x-show="a.score !== null && a.score !== undefined" x-text="'Score ' + a.score + '/100'"></span>
+          <span x-show="a.red_flags_count" x-text="a.red_flags_count + ' red flags'" style="color:#f87171;"></span>
+        </div>
+        <div style="margin-top:4px;font-size:10px;color:var(--white-40);" x-text="a.completed_at?.slice(0,16).replace('T',' ') || ''"></div>
+      </a>
+    </template>
+  </div>
+</section>
+
 <section x-show="dados.todos_epicos?.length">
   <h2 class="section-title">📋 Backlog Estrutural</h2>
   <p class="section-sub">Melhorias que requerem trabalho substancial (>=0.5 dia). Não são bugs imediatos, mas ficar visível pra priorizar.</p>

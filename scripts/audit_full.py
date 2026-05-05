@@ -90,16 +90,30 @@ def main():
         for l in data_json.get('lots', []):
             decisoes_por_cond[l.get('condado')][l.get('decisao')] += 1
 
-    # Reports webhook (verdict real)
+    # Reports webhook (verdict real) + lista detalhada pra UI
     parcels_com_verdict = set()
+    analises_recentes = []
     if REPORTS.exists():
         for f in REPORTS.glob('*.json'):
             try:
                 d = json.loads(f.read_text(encoding='utf-8'))
-                if d.get('verdict') or d.get('final_verdict'):
-                    parcels_com_verdict.add(d.get('parcel_id') or f.stem)
+                v = d.get('verdict') or d.get('final_verdict')
+                if v:
+                    parcel = d.get('parcel_id') or f.stem
+                    parcels_com_verdict.add(parcel)
+                    analises_recentes.append({
+                        "parcel": parcel,
+                        "verdict": v,
+                        "score": d.get('final_score') or d.get('score'),
+                        "completed_at": d.get('completed_at'),
+                        "max_bid": (d.get('recommendation') or {}).get('max_bid') or d.get('max_bid_recommended'),
+                        "red_flags_count": len(d.get('red_flags', []) or []),
+                    })
             except Exception:
                 pass
+    # Ordena por completed_at DESC (mais recente primeiro)
+    analises_recentes.sort(key=lambda x: x.get('completed_at') or '', reverse=True)
+    saude["analises_lotes"] = analises_recentes[:30]
 
     total_lots_valid = 0
     total_problems_critical = 0
