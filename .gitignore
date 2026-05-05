@@ -11,6 +11,12 @@ __pycache__/
 .venv/
 venv/
 
+# Secrets — NUNCA commitar tokens
+.env
+.env.local
+*.env
+secrets/
+
 # OS
 .DS_Store
 Thumbs.db
