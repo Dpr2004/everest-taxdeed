@@ -30,7 +30,9 @@ except ImportError:
 # campos lazy-loaded que regex puro perde. Volume justifica: Polk 50 lots,
 # Marion 200 lots, todos com 0% sqft hoje.
 SPA_COUNTIES = {"HILLSBOROUGH", "BREVARD", "ORANGE", "POLK", "MARION",
-                "HIGHLANDS", "VOLUSIA", "PUTNAM", "LAKE", "PASCO"}
+                "HIGHLANDS", "VOLUSIA", "PUTNAM", "LAKE", "PASCO",
+                "CITRUS", "OSCEOLA", "ALACHUA", "DUVAL", "FLAGLER",
+                "HERNANDO", "LEE", "LEVY", "ST_LUCIE"}
 
 
 def _to_float(s):
@@ -440,6 +442,87 @@ class PAPlaywrightSPA(BaseWorker):
     def _enrich_pasco(self, page, lot):
         parcel = lot["parcel_id"].replace("-", "")
         url = f"https://search.pascopa.com/Search/?ParcelID={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # CITRUS — pa.citrus.fl.us
+    # ============================================================
+    def _enrich_citrus(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://www.pa.citrus.fl.us/PropertyDetail.aspx?ParcelNumber={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # OSCEOLA — ira.property-appraiser.org
+    # ============================================================
+    def _enrich_osceola(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://ira.property-appraiser.org/PropertyDetail.aspx?ParcelID={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # ALACHUA — acpafl.org
+    # ============================================================
+    def _enrich_alachua(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://www.acpafl.org/property-search?parcel={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # DUVAL — paopropertysearch.coj.net
+    # ============================================================
+    def _enrich_duval(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://paopropertysearch.coj.net/Basic/Detail.aspx?RE={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # FLAGLER — flaglerpa.com
+    # ============================================================
+    def _enrich_flagler(self, page, lot):
+        parcel = lot["parcel_id"].replace("-", "")
+        url = f"https://www.flaglerpa.com/PropertyDetail.aspx?ParcelID={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # HERNANDO — hernandocountypa.com
+    # ============================================================
+    def _enrich_hernando(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://www.hernandocountypa.com/PropertyDetail.aspx?ParcelID={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # LEE — leepa.org
+    # ============================================================
+    def _enrich_lee(self, page, lot):
+        parcel = lot["parcel_id"].replace("-", "")
+        url = f"https://www.leepa.org/Display/DisplayParcel.aspx?FolioID={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # LEVY — levypa.com
+    # ============================================================
+    def _enrich_levy(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://www.levypa.com/PropertyDetail.aspx?ParcelID={parcel}"
+        text = self._generic_load(page, url)
+        return self._generic_extract(text, self.PATTERNS_GENERIC)
+
+    # ============================================================
+    # ST_LUCIE — paslc.gov
+    # ============================================================
+    def _enrich_st_lucie(self, page, lot):
+        parcel = lot["parcel_id"]
+        url = f"https://www.paslc.gov/searchPropertyDetail.cfm?parcel={parcel}"
         text = self._generic_load(page, url)
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
