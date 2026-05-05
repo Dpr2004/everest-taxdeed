@@ -33,10 +33,14 @@ def main(dry_run=False):
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
 
-    # Lista todas as sales futuras + count de lots
+    # Lista todas as sales futuras + count de lots + count de lots ja
+    # analizados pelo LOTES (lots que tem score com decision != PASSA).
+    # Sales com analise LOTES sao PROTEGIDAS — nunca deletar.
     c.execute("""
         SELECT s.id, s.county_id, s.sale_date, cs.codigo,
-               (SELECT COUNT(*) FROM lots l WHERE l.sale_id = s.id) as lot_count
+               (SELECT COUNT(*) FROM lots l WHERE l.sale_id = s.id) as lot_count,
+               (SELECT COUNT(*) FROM lots l JOIN scores sc ON sc.lot_id = l.id
+                WHERE l.sale_id = s.id AND sc.final_score IS NOT NULL) as scored_count
         FROM sales s JOIN counties cs ON cs.id = s.county_id
         WHERE DATE(s.sale_date) >= DATE('now')
         ORDER BY cs.codigo, s.sale_date
@@ -60,12 +64,19 @@ def main(dry_run=False):
     for key, lst in grupos.items():
         if len(lst) <= 1:
             continue
-        # Ordena por lot_count DESC, sale_date ASC (mais lots, mais cedo)
-        lst.sort(key=lambda x: (-x["lot_count"], x["sale_date"]))
+        # Ordena: scored_count DESC (analise LOTES e' PROTEGIDA),
+        #         lot_count DESC (mais lots),
+        #         sale_date ASC (mais cedo). Keeper e' o melhor.
+        lst.sort(key=lambda x: (-x["scored_count"], -x["lot_count"], x["sale_date"]))
         keeper = lst[0]
         a_manter.append(keeper)
         for s in lst[1:]:
-            a_remover.append(s)
+            # NUNCA remove sale com lots ja analisados pelo LOTES — pode estar
+            # em uso na fila ou no historico do dashboard. Vai pra "outros mantidos".
+            if s["scored_count"] > 0:
+                a_manter.append(s)
+            else:
+                a_remover.append(s)
 
     if not a_remover:
         print("[dedup] Nenhuma duplicacao encontrada.")
