@@ -92,6 +92,10 @@ jobs:
         run: python scripts/dedup_sales.py
         continue-on-error: true
 
+      - name: 3b-test) Smoke test Regrid (verifica token + endpoint antes de enriquecer)
+        run: python scripts/test_regrid.py
+        continue-on-error: true
+
       - name: 3b) Regrid Enricher (API oficial - dados canonicos de parcela)
         timeout-minutes: 6
         run: python -m src.main --regrid

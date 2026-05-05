@@ -55,36 +55,85 @@ class RegridEnricher(BaseWorker):
     name = "regrid_enricher"
 
     def execute(self):
+        # FAIL LOUD diagnostico: revela exatamente o que esta acontecendo
+        # com o token (sem expor o valor — so length + prefix).
         if not TOKEN:
-            # FAIL LOUD: secret faltando e' bug de config, nao "tudo bem"
-            self.logger.error("REGRID_API_KEY nao configurado - pulando")
-            self.candidates_count = 1  # forca status DEGRADED no base.run()
+            self.logger.error("REGRID_API_KEY VAZIO no env. Setar em GitHub Settings > Secrets and variables > Actions > New repository secret > REGRID_API_KEY")
+            self.candidates_count = 1
+            self.errors_count = 1
+            return
+
+        self.logger.info(f"REGRID_API_KEY presente (len={len(TOKEN)}, prefix={TOKEN[:6]}...)")
+
+        # SMOKE TEST: faz 1 request conhecido pra verificar token + endpoint
+        # ANTES de iterar. Se token invalido/endpoint mudou, falha rapido com
+        # log claro em vez de "items=0 errs=0" enganoso.
+        try:
+            test_resp = requests.get(
+                f"{REGRID_BASE}/parcelnumb",
+                params={"parcelnumb": "test", "path": "/us/fl/polk", "token": TOKEN},
+                timeout=15,
+            )
+            self.logger.info(f"Smoke test Regrid: HTTP {test_resp.status_code}")
+            if test_resp.status_code == 401:
+                self.logger.error("Regrid retornou 401 UNAUTHORIZED — token INVALIDO ou EXPIRADO. Verificar/renovar em app.regrid.com")
+                self.candidates_count = 1
+                self.errors_count = 1
+                return
+            if test_resp.status_code in (403, 402):
+                self.logger.error(f"Regrid {test_resp.status_code} — provavel quota excedida ou plano expirado: {test_resp.text[:300]}")
+                self.candidates_count = 1
+                self.errors_count = 1
+                return
+            if test_resp.status_code >= 500:
+                self.logger.error(f"Regrid 5xx — API com problema. Tentando mesmo assim: {test_resp.text[:200]}")
+        except Exception as e:
+            self.logger.error(f"Smoke test Regrid falhou: {type(e).__name__}: {e}. Pode ser firewall/DNS/SSL.")
+            self.candidates_count = 1
             self.errors_count = 1
             return
 
         lotes = self._buscar_lotes_incompletos()
         if not lotes:
-            self.logger.info("Nenhum lote precisa enriquecimento Regrid")
+            self.logger.warning("Query retornou 0 lotes pra enriquecer — todos ja tem just_value+address? (suspeito)")
             return
 
         self.candidates_count = len(lotes)
-        self.logger.info(f"Enriquecendo {len(lotes)} lotes via Regrid API")
+        self.logger.info(f"Enriquecendo {len(lotes)} lotes via Regrid API (slug map cobre {len(CONDADO_SLUG)} condados)")
 
         delay = 1.0 / max(REQ_PER_SEC, 1)
         enriquecidos = 0
+        from collections import Counter
+        sucesso_por_cond = Counter()
+        falha_por_cond = Counter()
+        sem_slug = Counter()
         for lot in lotes:
+            cod = lot["codigo"]
             try:
-                props = self._buscar_parcel(lot["parcel_id"], lot["codigo"])
+                if cod not in CONDADO_SLUG:
+                    sem_slug[cod] += 1
+                    continue
+                props = self._buscar_parcel(lot["parcel_id"], cod)
                 if props:
                     self._atualizar_lote(lot["id"], props)
                     enriquecidos += 1
                     self.items_processed += 1
+                    sucesso_por_cond[cod] += 1
+                else:
+                    falha_por_cond[cod] += 1
                 time.sleep(delay)
             except Exception as e:
                 self.errors_count += 1
+                falha_por_cond[cod] += 1
                 self.logger.warning(f"Lote {lot['id']} ({lot['parcel_id']}): {e}")
 
         self.logger.info(f"Enriquecidos: {enriquecidos}/{len(lotes)}")
+        if sucesso_por_cond:
+            self.logger.info(f"Regrid SUCCESS por condado: {dict(sucesso_por_cond.most_common())}")
+        if falha_por_cond:
+            self.logger.warning(f"Regrid FAIL por condado (404 ou sem dados): {dict(falha_por_cond.most_common())}")
+        if sem_slug:
+            self.logger.warning(f"Regrid SEM SLUG mapeado: {dict(sem_slug.most_common())}")
 
     def _buscar_lotes_incompletos(self):
         """Busca lotes de sales futuros que precisam enriquecimento.
