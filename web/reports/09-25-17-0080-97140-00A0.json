@@ -1,7 +1,49 @@
 {
-  "completed_at": "2026-05-04T17:53:27.729Z",
+  "completed_at": "2026-05-05T04:23:59.044Z",
   "parcel_id": "09-25-17-0080-97140-00A0",
-  "red_flags": [],
-  "report_markdown": "# Análise — Parcel 09-25-17-0080-97140-00A0\n\n**Condado:** Pasco, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $46,051  \n**Data do leilão:** 2026-05-13  \n**Asset type:** _(não classificado)_  \n**Gerado em:** 2026-05-04 17:53 UTC  \n\n> ⚠️ **ANÁLISE PARCIAL** — apenas 0 de 11 agentes completaram (timeout ou erro). Veredicto pode estar incompleto.\n\n---\n\n## 🎯 Veredicto Final\n\n**INCONCLUSIVO** — Score 0/100 — Confiança: low\n\n---\n\n## 📊 Metodologia\n\nPipeline: PARCIAL (0 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | — |\n| 01-auction-rules | — |\n| 08-county-quirks | — |\n| 02-official-data-property | — |\n| 09-drive-by-photo-verification | — |\n| 11-environmental-hazards | — |\n| 03-title-liens-legal | — |\n| 04-physical-viability | — |\n| 05-market-exit-financial | — |\n| 06-qa-investment-committee | — |\n| 12-verification-engine | — |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
-  "top_3_reasons": []
+  "red_flags": [
+    {
+      "text": "Opening bid $46.050,65 excede do_not_exceed conservador $42K e max_safe $30K — viola mandato Everest 50% VMF, PASS automático antes de qualquer outro fator",
+      "type": "RED"
+    },
+    {
+      "text": "Probate aberto + heirs absentee TN + homestead order 12/2024 = 3 vetores simultâneos de set-aside action pós tax deed (FL 197.522 + Art X §4(b))",
+      "type": "RED"
+    },
+    {
+      "text": "Master HOA Baywood Meadows (137-unit, 1983, pre-SB4D): reserve study + insurance renewability + special assessment status UNRESOLVED — vetor $20-100K/unit que mata exit retail",
+      "type": "RED"
+    },
+    {
+      "text": "ZERO verificação visual em 4 agentes (09/04/07/11) — building físico exato do parcel não amarrado, drive-by mandatório não executado, bidder cego sobre estado real",
+      "type": "RED"
+    },
+    {
+      "text": "Mold presumido HIGH + 1983 systems (polybutylene/Federal Pacific/asbesto popcorn) + 18m vacant = repair HEAVY $30-40K obrigatório, não cosmetic",
+      "type": "RED"
+    },
+    {
+      "text": "Code enforcement em unit absentee 18m NÃO verificado — fines $5-50K sobreviventes ao tax deed em padrão histórico FL para condo abandonada",
+      "type": "RED"
+    },
+    {
+      "text": "Mortgage 1st/2nd existência + satisfação + servicer notice compliance UNKNOWN — set-aside vector adicional",
+      "type": "RED"
+    },
+    {
+      "text": "Comp grade A ausente — único comp grade B é 2023, valuation depende de inferência, confidence LOW",
+      "type": "RED"
+    },
+    {
+      "text": "Pasco Clerk exige cashier check físico em Dade City + wire deadline 4PM mesmo dia — execução remota arriscada (perda do depósito se falhar)",
+      "type": "YELLOW"
+    },
+    {
+      "text": "RealAuction listing 2026-05-13 não confirmada online (403) — buyer premium não validado oficialmente",
+      "type": "YELLOW"
+    }
+  ],
+  "report_markdown": "# Análise — Parcel 09-25-17-0080-97140-00A0\n\n**Condado:** Pasco, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $46,051  \n**Data do leilão:** 2026-05-13  \n**Asset type:** condo_townhouse  \n**Gerado em:** 2026-05-05 04:23 UTC  \n\n---\n\n## 🎯 Veredicto Final\n\n**PASS** — Score 0/100 — Confiança: high\n\n## 🚩 Red Flags\n\n- Opening bid $46.050,65 excede do_not_exceed conservador $42K e max_safe $30K — viola mandato Everest 50% VMF, PASS automático antes de qualquer outro fator\n- Probate aberto + heirs absentee TN + homestead order 12/2024 = 3 vetores simultâneos de set-aside action pós tax deed (FL 197.522 + Art X §4(b))\n- Master HOA Baywood Meadows (137-unit, 1983, pre-SB4D): reserve study + insurance renewability + special assessment status UNRESOLVED — vetor $20-100K/unit que mata exit retail\n- ZERO verificação visual em 4 agentes (09/04/07/11) — building físico exato do parcel não amarrado, drive-by mandatório não executado, bidder cego sobre estado real\n- Mold presumido HIGH + 1983 systems (polybutylene/Federal Pacific/asbesto popcorn) + 18m vacant = repair HEAVY $30-40K obrigatório, não cosmetic\n- Code enforcement em unit absentee 18m NÃO verificado — fines $5-50K sobreviventes ao tax deed em padrão histórico FL para condo abandonada\n- Mortgage 1st/2nd existência + satisfação + servicer notice compliance UNKNOWN — set-aside vector adicional\n- Comp grade A ausente — único comp grade B é 2023, valuation depende de inferência, confidence LOW\n- Pasco Clerk exige cashier check físico em Dade City + wire deadline 4PM mesmo dia — execução remota arriscada (perda do depósito se falhar)\n- RealAuction listing 2026-05-13 não confirmada online (403) — buyer premium não validado oficialmente\n\n## ❓ Items Não Resolvidos (Critical)\n\n- Listing oficial 2026-05-13 + buyer premium RealAuction Pasco (Agente 01)\n- CDD Wesley Chapel/LOL ativo + saldo (Agente 08)\n- Bedroom count oficial + HOA delinquency exata + special assessment vigente (Agente 02)\n- Endereço físico exato da unidade + drive-by foto recente (Agente 09)\n- Pasco PA sinkhole layer + FGS Sinkhole Database + DEA clandestine lab registry (Agente 11)\n- Owner name + probate case + status + mortgage existência/satisfação + IRS federal tax lien (Agente 03)\n- Pasco Utilities status + USPS vacancy indicator (Agente 07)\n- Master HOA reserve study + roof status + special assessment + carrier renewability + sinkhole carve-out (Agente 04/10)\n- Comp grade A ≤6 meses mesmo prédio + condição interior real (Agente 05)\n- Code enforcement balance unit (Agente 03)\n\n## 🏛️ Regras do Leilão & County Quirks\n\n**Auction rules:**\n- Plataforma confirmada: RealAuction (pasco.realtaxdeed.com)\n- Depósito 5% high bid ou $200 mínimo, por propriedade\n- Wire deadline 4:00 PM ET no DIA do sale (13/05/2026) — janela apertada\n- Cashier check exige drop-off físico em Dade City até 10:00 AM ET próximo dia útil\n- Documentary stamps FL ~$322 sobre bid $46.050,65 (estimativa)\n- Sale 'AS IS' — disclaimer Clerk explícito transferindo responsabilidade ao bidder\n\n**Quirks do condado:**\n- Pasco split West (coast/Wesley Chapel suburban) vs East (rural/Dade City) — township 25/range 17 indica East Pasco, zona CDD/karst\n- CDD MASSIVO em Wesley Chapel (Bexley, Wiregrass, Epperson) — special assessments $2K-$4K/ano podem sobreviver tax deed (governmental)\n- Karst sinkhole zone — todo Pasco em risco; verificar Florida Geological Survey por sinkhole proximity\n- Land O Lakes / Wesley Chapel wetlands — flood zone AE comum\n- Clerk Pasco em Dade City (38053 Live Oak Ave) — entrega física de cashier check inviável remotamente, prefer ACH/wire pre-funded via RealAuction\n- Para condo_townhouse: FL Stat. 718 aplica — HOA estoppel mandatório antes do bid, special assessments do master association podem sobreviver\n\n## 💰 Dívidas Investigadas (Title & Liens)\n\n\n### Achados críticos (title)\n\n- Probate ABERTO em 12/2024 (Order Determining Homestead) com heirs absentee em TN — vetor MAIOR de title cloud + set-aside action sob FL 197.522 + heir homestead claim sob FL Const Art X §4(b)\n- Quiet title estimado $5K-$10K + 9-12 meses se probate complexity confirmada (probate+quiet title combo)\n- Geografia corrigida: Baywood Meadows fica em NEW PORT RICHEY (West Pasco, off Moon Lake Rd, ZIP 34654), NÃO em Wesley Chapel/Land O Lakes como agentes 09/11 assumiram — perfil CDD/SIRS/sinkhole muda significativamente\n- FL 718.116 cap de '12 meses ou 1%' aplica APENAS ao first mortgagee em foreclosure — NÃO ao tax deed buyer (correção à interpretação do agente 02). HOA past-due de tax deed buyer é largely extinguished mas FL case law disputado; orçar $5K-$8K conservador\n- Bidder remoto fica em desvantagem estrutural: 12 de 14 itens críticos só resolvíveis presencialmente (Pasco Clerk Dade City) ou via login CivicPlus que retornou bloqueado em todas tentativas web\n\n### ⚠️ Items pendentes (UNVERIFIED — investigar manualmente)\n\n- Owner name + probate case number + probate status (closed/pending) — bloqueia PACER, Clerk OR e Florida Courts case search por nome\n- Mortgage status: 1st/2nd existência + satisfação + servicer notice compliance\n- IRS federal tax lien (sobrevive 120 dias com redemption right)\n- Code enforcement open cases / fines / demolition orders — Accela portal não searchable via WebFetch\n- HOA exact delinquency em USD + lien recordado (sim/não) — contato Management & Associates (813) 433-2000\n- Special assessment vigente Baywood Meadows (milestone inspection / structural reserves / roof) — mesmo contato HOA\n- Bankruptcy stay status owner OU estate (PACER) — bloqueia se ativo\n- Civil judgments ativos contra owner últimos 10 anos\n\n## 🏗️ Viabilidade Física\n\n- Asset confirmado em West Pasco INLAND (NPR 34654, Moon Lake area) - não East Pasco como agentes 08/11 assumiram. CDD não aplica para Moon Lake area (correção ao agente 08).\n- Tipologia community = 2BR/1BA 1.008 sqft (não 3BR) - provável que subject siga padrão.\n- Building 1983 = stack de hidden risks (polybutylene + FPE + popcorn + termite era) cumulativo $14-37K mesmo em cosmetic refresh.\n- Master HOA reserve study + special assessment status = vetor de risco financeiro mais crítico que repair do unit. Ligação Management & Associates obrigatória.\n- Drive-by físico OU WeGoLook MANDATÓRIO antes do bid 2026-05-13 - bidder cego atualmente.\n\n## 🌿 Riscos Ambientais\n\n- **Sinkhole risk:** high\n- **Wetlands:** none\n- **Contamination:** low\n\n**Hazards identificados:**\n- **?** (high): \n- **?** (high): \n- **?** (medium): \n- **?** (low): \n- **?** (low): \n\n---\n\n## 📊 Metodologia\n\nPipeline: COMPLETO (13 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | ✓ |\n| 01-auction-rules | ✓ |\n| 08-county-quirks | ✓ |\n| 02-official-data-property | ✓ |\n| 09-drive-by-photo-verification | ✓ |\n| 11-environmental-hazards | ✓ |\n| 03-title-liens-legal | ✓ |\n| 07-occupancy-investigation | ✓ |\n| 04-physical-viability | ✓ |\n| 10-insurance-feasibility | ✓ |\n| 05-market-exit-financial | ✓ |\n| 06-qa-investment-committee | ✓ |\n| 12-verification-engine | ✓ |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
+  "top_3_reasons": [],
+  "verdict": "PASS"
 }
