@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-05-05T04:44:44.641609+00:00",
+  "gerado_em": "2026-05-05T11:04:21.232587+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 10,
+    "condados_verdes": 12,
     "condados_amarelos": 0,
-    "condados_vermelhos": 5,
+    "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 4,
-    "total_lots_validos": 246,
-    "lots_com_verdict_lotes": 16,
-    "problemas_criticos": 2,
-    "saude_geral_pct": 66
+    "total_lots_validos": 305,
+    "lots_com_verdict_lotes": 23,
+    "problemas_criticos": 5,
+    "saude_geral_pct": 80
   },
   "condados": [
     {
@@ -42,19 +42,17 @@
       "ultima_sale": "2026-07-16",
       "lots_validos": 26,
       "cobertura": {
-        "address_pct": 34.6,
+        "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 25,
-        "REVISAR": 1
+        "PASSA": 15,
+        "REVISAR": 11
       },
-      "quality_score": 86,
+      "quality_score": 100,
       "status": "verde",
-      "issues": [
-        "address missing em 17/26 (65%) — scraper de lot incompleto"
-      ]
+      "issues": []
     },
     {
       "codigo": "CITRUS",
@@ -102,15 +100,17 @@
       "sales_futuras": 1,
       "proxima_sale": "2026-05-12",
       "ultima_sale": "2026-05-12",
-      "lots_validos": 0,
+      "lots_validos": 1,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
-      "decisoes": {},
-      "quality_score": 0,
-      "status": "vermelho",
+      "decisoes": {
+        "PASSA": 1
+      },
+      "quality_score": 100,
+      "status": "verde",
       "issues": []
     },
     {
@@ -147,9 +147,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 1,
-        "PASSA": 30,
-        "REVISAR": 4
+        "REVISAR": 7,
+        "PASSA": 28
       },
       "quality_score": 97,
       "status": "verde",
@@ -163,16 +162,16 @@
       "sales_futuras": 10,
       "proxima_sale": "2026-05-07",
       "ultima_sale": "2026-07-23",
-      "lots_validos": 62,
+      "lots_validos": 63,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 80.6,
+        "value_pct": 81.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 27,
-        "REVISAR": 8,
-        "PASSA": 27
+        "REVISAR": 14,
+        "PASSA": 22
       },
       "quality_score": 97,
       "status": "verde",
@@ -250,15 +249,15 @@
       "ultima_sale": "2026-06-17",
       "lots_validos": 20,
       "cobertura": {
-        "address_pct": 50.0,
+        "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 1,
-        "PASSA": 19
+        "PASSA": 16,
+        "REVISAR": 4
       },
-      "quality_score": 90,
+      "quality_score": 100,
       "status": "verde",
       "issues": []
     },
@@ -278,8 +277,8 @@
       },
       "decisoes": {
         "LANCE": 9,
-        "REVISAR": 1,
-        "PASSA": 11
+        "REVISAR": 2,
+        "PASSA": 10
       },
       "quality_score": 100,
       "status": "verde",
@@ -293,15 +292,17 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-05-19",
       "ultima_sale": "2026-05-31",
-      "lots_validos": 0,
+      "lots_validos": 10,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
-      "decisoes": {},
-      "quality_score": 0,
-      "status": "vermelho",
+      "decisoes": {
+        "PASSA": 10
+      },
+      "quality_score": 100,
+      "status": "verde",
       "issues": []
     },
     {
@@ -309,18 +310,18 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 7,
+      "sales_futuras": 18,
       "proxima_sale": "2026-05-05",
-      "ultima_sale": "2026-06-22",
-      "lots_validos": 12,
+      "ultima_sale": "2026-07-27",
+      "lots_validos": 24,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 4,
-        "PASSA": 8
+        "REVISAR": 6,
+        "PASSA": 18
       },
       "quality_score": 100,
       "status": "verde",
@@ -396,23 +397,25 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 7,
-      "proxima_sale": "2026-05-07",
+      "sales_futuras": 25,
+      "proxima_sale": "2026-05-06",
       "ultima_sale": "2026-06-18",
-      "lots_validos": 32,
+      "lots_validos": 67,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 96.9,
+        "value_pct": 98.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 3,
-        "PASSA": 28,
+        "REVISAR": 13,
+        "PASSA": 53,
         "LANCE": 1
       },
-      "quality_score": 99,
+      "quality_score": 74,
       "status": "verde",
-      "issues": []
+      "issues": [
+        "25 leiloes em 43 dias (densidade 0.58/dia — provavel duplicacao)"
+      ]
     }
   ],
   "workers": [
@@ -421,71 +424,95 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-04 15:32:45",
+      "ran_at": "2026-05-05 11:04:20",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 294,
+      "items": 305,
       "errors": 0,
-      "ran_at": "2026-05-04 15:32:44",
+      "ran_at": "2026-05-05 11:04:19",
       "log": ""
     },
     {
       "worker": "fema_checker",
       "status": "degraded",
       "items": 0,
-      "errors": 295,
-      "ran_at": "2026-05-04 15:32:44",
-      "log": ""
+      "errors": 300,
+      "ran_at": "2026-05-05 11:04:18",
+      "log": "DEGRADED: 300 candidatos retornados pela query mas 0 processados (300 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "property_appraiser",
+      "status": "degraded",
+      "items": 17,
+      "errors": 99,
+      "ran_at": "2026-05-05 10:55:03",
+      "log": "DEGRADED: so 17/200 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+    },
+    {
+      "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 1,
+      "items": 10,
       "errors": 0,
-      "ran_at": "2026-05-04 15:29:34",
+      "ran_at": "2026-05-05 10:43:26",
       "log": ""
     },
     {
       "worker": "regrid_enricher",
-      "status": "success",
+      "status": "degraded",
       "items": 0,
-      "errors": 0,
-      "ran_at": "2026-05-04 15:27:03",
-      "log": ""
+      "errors": 1,
+      "ran_at": "2026-05-05 10:43:26",
+      "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "lot_list_scraper",
       "status": "success",
-      "items": 936,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-04 15:25:22",
+      "ran_at": "2026-05-05 10:40:42",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 280,
+      "items": 290,
       "errors": 0,
-      "ran_at": "2026-05-04 15:13:10",
+      "ran_at": "2026-05-05 10:28:29",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 86,
+      "items": 87,
       "errors": 0,
-      "ran_at": "2026-05-04 15:12:48",
+      "ran_at": "2026-05-05 10:27:57",
       "log": ""
     }
   ],
   "problemas": [
     {
+      "severidade": "CRITICA",
+      "categoria": "condado",
+      "condado": "VOLUSIA",
+      "msg": "VOLUSIA: 25 leiloes em 43 dias (densidade 0.58/dia — provavel duplicacao)"
+    },
+    {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker fema_checker com status degraded (0 items, 295 erros) — sem log"
+      "msg": "Worker fema_checker com status degraded (0 items, 300 erros) — DEGRADED: 300 candidatos retornados pela query mas 0 processados (300 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. In"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker property_appraiser com status degraded (17 items, 99 erros) — DEGRADED: so 17/200 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
     },
     {
       "severidade": "ALTA",
@@ -495,13 +522,7 @@
     {
       "severidade": "MEDIA",
       "categoria": "enrichment",
-      "msg": "FEMA checker 295 erros — depende de address (cascata do PA enricher)"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "BREVARD",
-      "msg": "BREVARD: address missing em 17/26 (65%) — scraper de lot incompleto"
+      "msg": "FEMA checker 300 erros — depende de address (cascata do PA enricher)"
     },
     {
       "severidade": "MEDIA",
@@ -523,12 +544,68 @@
     }
   ],
   "fila_status": {
-    "candidatos": 21,
-    "ratio_minimo": 2.0,
+    "candidatos": 30,
+    "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-05-04"
+    "gerado_em": "2026-05-05"
   },
   "analises_lotes": [
+    {
+      "parcel": "5068-222-000",
+      "verdict": "PASS",
+      "score": null,
+      "completed_at": "2026-05-05T09:56:33.228Z",
+      "max_bid": null,
+      "red_flags_count": 12
+    },
+    {
+      "parcel": "3739-002-004",
+      "verdict": "PASS",
+      "score": null,
+      "completed_at": "2026-05-05T09:13:52.359Z",
+      "max_bid": null,
+      "red_flags_count": 12
+    },
+    {
+      "parcel": "C-01-33-28-080-0800-0130",
+      "verdict": "INVESTIGATE_MORE",
+      "score": null,
+      "completed_at": "2026-05-05T08:31:18.115Z",
+      "max_bid": null,
+      "red_flags_count": 10
+    },
+    {
+      "parcel": "C-01-33-28-010-0000-6713",
+      "verdict": "PASS",
+      "score": null,
+      "completed_at": "2026-05-05T07:49:46.712Z",
+      "max_bid": null,
+      "red_flags_count": 8
+    },
+    {
+      "parcel": "C-08-37-30-070-0000-0190",
+      "verdict": "PASS",
+      "score": null,
+      "completed_at": "2026-05-05T07:04:11.359Z",
+      "max_bid": null,
+      "red_flags_count": 13
+    },
+    {
+      "parcel": "A-23-33-28-130-0010-0010",
+      "verdict": "PASS",
+      "score": null,
+      "completed_at": "2026-05-05T06:08:56.230Z",
+      "max_bid": null,
+      "red_flags_count": 12
+    },
+    {
+      "parcel": "C-01-33-28-010-0000-8999",
+      "verdict": "INVESTIGATE_MORE",
+      "score": null,
+      "completed_at": "2026-05-05T05:21:11.003Z",
+      "max_bid": null,
+      "red_flags_count": 10
+    },
     {
       "parcel": "09-25-17-0080-97140-00A0",
       "verdict": "PASS",
