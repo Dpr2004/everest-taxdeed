@@ -1,0 +1,57 @@
+{
+  "completed_at": "2026-05-05T06:08:56.230Z",
+  "parcel_id": "A-23-33-28-130-0010-0010",
+  "red_flags": [
+    {
+      "text": "Repair envelope HIGH ($135k) excede ARV conservador ($130k) — margem retail flip negativa antes mesmo de qualquer custo adicional",
+      "type": "RED"
+    },
+    {
+      "text": "City limits Avon Park CONFIRMED — utility/code/demolition liens municipais SOBREVIVEM ao tax deed (FS 197.552), até $62k unresolved",
+      "type": "RED"
+    },
+    {
+      "text": "Pré-rehab UNINSURABLE — bloqueia mortgage retail exit até full rehab (9-12 meses capital travado sem cobertura sinistro)",
+      "type": "RED"
+    },
+    {
+      "text": "5 agentes (02, 03, 04, 05, 09) marcaram UNRESOLVED CRITICAL com blocker:true — regra inviolável bloqueia BUY",
+      "type": "RED"
+    },
+    {
+      "text": "Photo age 65 meses + 5 anos abandono + sistemas faltando desde 2020 = repair confidence LOW + worst case copper theft / interior gut / squatter / structural failure",
+      "type": "RED"
+    },
+    {
+      "text": "Corporate flipper 2021 desistiu de revender → tax delinquent 4 anos → padrão de deal rejeitado por mercado profissional Highlands",
+      "type": "RED"
+    },
+    {
+      "text": "Discrepância sqft PA 1.222 vs MLS 1.056 (~14%) + baths PA 3 vs MLS 1.5 = addition sem permit provável → legalização $5-25k OU demolição parcial",
+      "type": "RED"
+    },
+    {
+      "text": "Year built 1974 = lead paint + asbestos + plumbing/electrical era pré-1980 = $8-23k extra compliance + $30-90k hidden cost stack plausível",
+      "type": "RED"
+    },
+    {
+      "text": "Plataforma RealAuction nova (jan/2026) — risco operacional learning curve",
+      "type": "YELLOW"
+    },
+    {
+      "text": "Highlands County karst territory + Avon Park sinkhole event 2008 — sinkhole rider permanente $1-3k/yr",
+      "type": "YELLOW"
+    },
+    {
+      "text": "Comp retail anchor (601 Fairview $178k) teve financing fell through Dec/2024 — não confirma valor sustentável",
+      "type": "YELLOW"
+    },
+    {
+      "text": "Quiet title pós-sale virtualmente obrigatório ($2-5k + 60-90 dias) atrasa qualquer exit financiado",
+      "type": "YELLOW"
+    }
+  ],
+  "report_markdown": "# Análise — Parcel A-23-33-28-130-0010-0010\n\n**Condado:** Highlands, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $5,819  \n**Data do leilão:** 2026-05-13  \n**Asset type:** single_family  \n**Gerado em:** 2026-05-05 06:08 UTC  \n\n---\n\n## 🎯 Veredicto Final\n\n**PASS** — Score 0/100 — Confiança: high\n\n## 🚩 Red Flags\n\n- Repair envelope HIGH ($135k) excede ARV conservador ($130k) — margem retail flip negativa antes mesmo de qualquer custo adicional\n- City limits Avon Park CONFIRMED — utility/code/demolition liens municipais SOBREVIVEM ao tax deed (FS 197.552), até $62k unresolved\n- Pré-rehab UNINSURABLE — bloqueia mortgage retail exit até full rehab (9-12 meses capital travado sem cobertura sinistro)\n- 5 agentes (02, 03, 04, 05, 09) marcaram UNRESOLVED CRITICAL com blocker:true — regra inviolável bloqueia BUY\n- Photo age 65 meses + 5 anos abandono + sistemas faltando desde 2020 = repair confidence LOW + worst case copper theft / interior gut / squatter / structural failure\n- Corporate flipper 2021 desistiu de revender → tax delinquent 4 anos → padrão de deal rejeitado por mercado profissional Highlands\n- Discrepância sqft PA 1.222 vs MLS 1.056 (~14%) + baths PA 3 vs MLS 1.5 = addition sem permit provável → legalização $5-25k OU demolição parcial\n- Year built 1974 = lead paint + asbestos + plumbing/electrical era pré-1980 = $8-23k extra compliance + $30-90k hidden cost stack plausível\n- Plataforma RealAuction nova (jan/2026) — risco operacional learning curve\n- Highlands County karst territory + Avon Park sinkhole event 2008 — sinkhole rider permanente $1-3k/yr\n- Comp retail anchor (601 Fairview $178k) teve financing fell through Dec/2024 — não confirma valor sustentável\n- Quiet title pós-sale virtualmente obrigatório ($2-5k + 60-90 dias) atrasa qualquer exit financiado\n\n## ❓ Items Não Resolvidos (Critical)\n\n- Code enforcement Avon Park (cases ativos + recorded fines + demolition orders) — surviving lien até $55k\n- Utility liens Avon Park (water/sewer outstanding 5 anos)\n- Special assessments / MSBU / SAD / drainage / fire district\n- Drive-by físico atual May/2026 — roof, HVAC footprint, windows, vegetação, foundation cracks circulares (sinkhole), squatters, fire damage\n- FEMA flood zone confirmado (Zone X vs A/AE/VE)\n- Permit history Avon Park Building Dept (sqft + baths discrepancy)\n- Confirmação listing ativo no RealAuction (case status, opening bid, deposit requirements)\n\n## 🏛️ Regras do Leilão & County Quirks\n\n**Auction rules:**\n- Wire transfer deadline 14:00 next business day — execution discipline required\n- Personal checks rejected — must have cashier's check or wire pre-arranged\n- Sale is final, no refunds post-payment — diligence MUST be complete pre-bid\n- Platform changed Jan 2026 (RealAuction) — possible operational quirks; test before bid\n\n**Quirks do condado:**\n- {\"topic\":\"Plataforma de leilão\",\"detail\":\"Highlands usa RealAuction (highlands.realtaxdeed.com). Plataforma online — bid à distância permitido, mas precisa cadastro prévio + ACH/wire setup. Clerk Highlands tel 863-402-6597.\",\"fonte\":\"highlands.realtaxdeed.com (HTTP 200 confirmado em 2026-05-05)\"}\n- {\"topic\":\"Deposit no leilão\",\"detail\":\"Regra padrão FL Stat. 197.542: $200 OR 5% do bid final (o maior) deve ser depositado em até 1h após arrematação. Não-cumprimento = perde o direito + reabertura do leilão.\",\"fonte\":\"FL Stat. Ch 197 + RealAuction terms\"}\n- {\"topic\":\"Saldo (balance)\",\"detail\":\"24h em dias úteis via wire transfer obrigatório. Highlands NÃO aceita cheque pessoal ou ACH para o saldo. Wire deve sair do banco do arrematante (não terceiros).\",\"fonte\":\"Highlands Clerk tax deed FAQ (canônico FL)\"}\n- {\"topic\":\"Documentary stamps + recording\",\"detail\":\"Doc stamps 0.70% sobre valor do tax deed. Recording ~$10 first page + $8.50 each additional. Para opening bid $5.819,26 → doc stamps ≈ $40,73. Total fechamento: $75-150 dependendo bid final.\",\"fonte\":\"FL Stat. 201.02 + Highlands Clerk fee schedule\"}\n- {\"topic\":\"Tax deed issuance\",\"detail\":\"Highlands emite tax deed em ~7-30 dias após sale. Não há redemption pós-sale (FL Stat. 197.582 — owner perde direito no momento do leilão).\",\"fonte\":\"FL Stat. 197.582\"}\n- {\"topic\":\"Section 23, Township 33S, Range 28E — área Avon Park\",\"detail\":\"Cross-ref com subdivisões HCPAO mostra códigos 1036.00/1037.00/1038.00 todos em 'Avon Park Sec 23'. Alta probabilidade do parcel estar em Avon Park (cidade ou unincorporated adjacente). Confirmação final do bairro/endereço é tarefa do Agente 2.\",\"fonte\":\"HCPAO subdivision dropdown + section/township/range structure\"}\n\n## 💰 Dívidas Investigadas (Title & Liens)\n\n\n### Categorias de Dívidas/Liens\n\n| Tipo | Status | Confiança | Notas |\n|------|--------|-----------|-------|\n|  | PROVAVELMENTE EXTINTO | high |  |\n|  | PROVAVELMENTE EXTINTO | low |  |\n|  | POSSIVELMENTE SOBREVIVENTE (120 dias) | low |  |\n|  | PROVAVELMENTE SOBREVIVENTE | high |  |\n|  | PROVAVELMENTE SOBREVIVENTE | high |  |\n|  | PROVAVELMENTE SOBREVIVENTE | high |  |\n|  | NÃO FOI POSSÍVEL DETERMINAR | low |  |\n|  | PROVAVELMENTE EXTINTO ou INEXISTENTE | medium |  |\n|  | BLOQUEIA SALE se ativo | low |  |\n|  | PROVAVELMENTE SOBREVIVENTE | high |  |\n\n### Achados críticos (title)\n\n- {\"finding\":\"Avon Park city limits confirmado (Agente 02) — todos os liens municipais (code enforcement, utility, demolition) sobrevivem ao tax deed sob FS 197.552\",\"source\":\"FL Statutes 197.552 + Agente 02 millage 10\",\"type\":\"fact_confirmed\"}\n- {\"finding\":\"Utility liens (water/sewer) municipais Avon Park têm mesma prioridade que tax liens (FS 159.17) — sobrevivem ao tax deed\",\"source\":\"FL Statutes 159.17\",\"type\":\"fact_confirmed\"}\n- {\"finding\":\"Code enforcement fine cap ao market value real da propriedade (FL 162.09(2)(d)) — exposição teórica $30-50k em casa Avon Park abandonada 5 anos\",\"source\":\"FL Statutes 162.09(2)(d) + padrão Avon Park\",\"type\":\"inference\"}\n- {\"finding\":\"Quiet title action obrigatório pós-tax deed para exit via MLS/financiamento — LLC corporate owner sem heirs = caso simples ~$2-4k / 90-120 dias\",\"source\":\"Quiet title cost matrix FL + Agente 09 owner = corporate flipper 2021\",\"type\":\"estimate\"}\n- {\"finding\":\"Chain of title pre-2026 não verificável via Acclaim (kendo SPA + reCAPTCHA) — exige acesso manual\",\"source\":\"https://acclaim.highlandsclerkfl.gov/AcclaimWeb/ (testado)\",\"type\":\"data_missing\"}\n- {\"finding\":\"Tax deed case file 2026 (com lista de surviving liens) não acessível via RealTDM 403 — exige login ou D-1 manual check\",\"source\":\"https://highlands.realtdm.com/public/cases/list (testado 403)\",\"type\":\"data_missing\"}\n\n### ⚠️ Items pendentes (UNVERIFIED — investigar manualmente)\n\n- Code enforcement cases ativos + recorded fines + demolition orders na cidade de Avon Park\n- Utility lien Avon Park (water/sewer) outstanding balance + status conta\n- Special assessments / MSBU / SAD / drainage / fire district pendentes no parcel\n- Chain of title últimos 20 anos: deeds suspeitos, quit claims, mortgages ativas/satisfeitas, civil judgments, lis pendens, IRS federal liens\n- Bankruptcy ativo do owner (LLC ou individual member) — automatic stay impede tax deed\n- IRS federal lien recorded — gera 120-day right of redemption pós-tax deed (USC 26 §7425)\n- Open building permits (estrutural, addition não-permitada) herdados pelo tax deed buyer\n\n## 🏗️ Viabilidade Física\n\n- Sem inspeção interna possível em casa tax deed abandonada 5 anos — repair estimate confidence LOW mandatório\n- Hidden cost stack FL pré-1980 (lead+asbestos+mold+termite+rewire+replumb+roof) plausível $30-90K acima do $/sqft base\n- HVAC, appliances, water heater confirmados ausentes desde 2020 — cenário copper theft + interior gut plausível\n- Discrepância sqft 14% (PA 1222 vs MLS 1056) sem permit history = addition sem permit OU demolição compulsória $5-25K\n- Discrepância baths 3 vs 1,5 sugere plumbing sem permit — code violation potencial\n- Karst territory + 1974 construction = sinkhole stabilization risk $20-150K worst case se foundation cracks no drive-by\n\n## 🌿 Riscos Ambientais\n\n- **Sinkhole risk:** medium\n- **Wetlands:** none\n- **Contamination:** medium\n\n**Hazards identificados:**\n- **?** (high): \n- **?** (high): \n- **?** (high): \n- **?** (medium): \n- **?** (low): \n\n---\n\n## 📊 Metodologia\n\nPipeline: COMPLETO (13 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | ✓ |\n| 01-auction-rules | ✓ |\n| 08-county-quirks | ✓ |\n| 02-official-data-property | ✓ |\n| 09-drive-by-photo-verification | ✓ |\n| 11-environmental-hazards | ✓ |\n| 03-title-liens-legal | ✓ |\n| 07-occupancy-investigation | ✓ |\n| 04-physical-viability | ✓ |\n| 10-insurance-feasibility | ✓ |\n| 05-market-exit-financial | ✓ |\n| 06-qa-investment-committee | ✓ |\n| 12-verification-engine | ✓ |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
+  "top_3_reasons": [],
+  "verdict": "PASS"
+}
