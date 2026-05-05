@@ -98,22 +98,40 @@ class PAPlaywrightSPA(BaseWorker):
             )
             page = ctx.new_page()
 
+            from collections import Counter
+            ok_per_county = Counter()
+            fail_per_county = Counter()
+            fields_per_county = Counter()
             for lot in lots:
+                cod = lot['county_code']
                 try:
-                    handler = getattr(self, f"_enrich_{lot['county_code'].lower()}", None)
+                    handler = getattr(self, f"_enrich_{cod.lower()}", None)
                     if not handler:
                         continue
                     data = handler(page, lot)
                     if data:
                         self._save(lot["id"], data)
                         self.items_processed += 1
+                        ok_per_county[cod] += 1
+                        for k in data: fields_per_county[f'{cod}.{k}'] += 1
                         self.logger.info(
-                            f"PA SPA OK {lot['county_code']} {lot['parcel_id']}: "
+                            f"PA SPA OK {cod} {lot['parcel_id']}: "
                             f"{', '.join(f'{k}={v}' for k,v in data.items() if v)[:120]}"
                         )
+                    else:
+                        fail_per_county[cod] += 1
                 except Exception as e:
                     self.errors_count += 1
-                    self.logger.warning(f"PA SPA falha {lot['parcel_id']}: {e}")
+                    fail_per_county[cod] += 1
+                    self.logger.warning(f"PA SPA falha {cod} {lot['parcel_id']}: {e}")
+            # Resumo final por condado — visibility no log CI
+            if ok_per_county or fail_per_county:
+                self.logger.info(f"PA SPA SUCESSO por condado: {dict(ok_per_county.most_common())}")
+                if fail_per_county:
+                    self.logger.warning(f"PA SPA FALHA por condado: {dict(fail_per_county.most_common())}")
+                # Top campos extraidos (revela quais patterns funcionam por condado)
+                top_fields = dict(sorted(fields_per_county.items(), key=lambda x:-x[1])[:20])
+                self.logger.info(f"PA SPA campos top (condado.campo:count): {top_fields}")
 
             browser.close()
 
