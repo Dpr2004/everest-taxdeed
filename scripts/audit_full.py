@@ -389,6 +389,12 @@ def main():
     # falta sem precisar perguntar.
     saude["todos_epicos"] = [
         {
+            "titulo": "Email semanal (domingo) — selecao manual de condados",
+            "impacto": "Daniel recebe email com condados que tem leilao nos proximos 15 dias e escolhe quais rodar pesquisa. Reduz custo + sobrecarga.",
+            "esforco": "0.5 dia (apos sistema 100% confiavel)",
+            "afeta": "Substituir auto-fila por manual-fila controlada. PRIMEIRO precisa sistema funcionando 100%.",
+        },
+        {
             "titulo": "PA enricher → Playwright migration",
             "impacto": "Desbloqueia building_sqft/year_built/property_type pra 14 condados nao-SPA",
             "esforco": "1-2 dias",
