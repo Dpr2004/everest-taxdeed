@@ -396,7 +396,7 @@ class PAPlaywrightSPA(BaseWorker):
     def _generic_extract(self, text, patterns):
         if not text:
             return None
-        if any(s in text.lower() for s in ("no records", "results found", "no parcel", "not found")):
+        if any(s in text.lower() for s in ("no records", "results found", "no parcel", "not found", "no property record")):
             return None
         data = {}
         for field, pat in patterns.items():
@@ -407,6 +407,16 @@ class PAPlaywrightSPA(BaseWorker):
                     data[field] = v[:30]
                 else:
                     data[field] = _to_float(v)
+        # Total Acres -> lot_sqft (1 acre = 43560 sqft) se nao tem lot_sqft direto
+        if "lot_sqft" not in data:
+            m = re.search(r"(?:Total\s*)?Acres[:\s]+([\d.]+)", text, re.I)
+            if m:
+                try:
+                    acres = float(m.group(1))
+                    if 0 < acres < 1000:  # sanidade
+                        data["lot_sqft"] = round(acres * 43560)
+                except ValueError:
+                    pass
         return data if data else None
 
     PATTERNS_GENERIC = {
