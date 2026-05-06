@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-05T15:27:50.312044+00:00",
+  "gerado_em": "2026-05-06T11:27:16.519507+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 4,
-    "total_lots_validos": 260,
+    "total_lots_validos": 263,
     "lots_com_verdict_lotes": 23,
-    "problemas_criticos": 4,
+    "problemas_criticos": 5,
     "saude_geral_pct": 80
   },
   "condados": [
@@ -18,8 +18,8 @@
       "nome": "Alachua County",
       "state": "FL",
       "url_sales": "https://alachua.realtaxdeed.com/",
-      "sales_futuras": 3,
-      "proxima_sale": "2026-05-05",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-06-16",
       "ultima_sale": "2026-06-23",
       "lots_validos": 0,
       "cobertura": {
@@ -47,8 +47,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 16,
-        "REVISAR": 11
+        "PASSA": 15,
+        "REVISAR": 12
       },
       "quality_score": 99,
       "status": "verde",
@@ -247,13 +247,14 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-05-13",
       "ultima_sale": "2026-06-17",
-      "lots_validos": 20,
+      "lots_validos": 21,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
+        "LANCE": 1,
         "PASSA": 16,
         "REVISAR": 4
       },
@@ -310,10 +311,10 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-05-05",
+      "sales_futuras": 9,
+      "proxima_sale": "2026-05-06",
       "ultima_sale": "2026-07-27",
-      "lots_validos": 12,
+      "lots_validos": 13,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -321,7 +322,7 @@
       },
       "decisoes": {
         "REVISAR": 3,
-        "PASSA": 9
+        "PASSA": 10
       },
       "quality_score": 100,
       "status": "verde",
@@ -397,18 +398,18 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 7,
+      "sales_futuras": 8,
       "proxima_sale": "2026-05-07",
-      "ultima_sale": "2026-06-18",
-      "lots_validos": 32,
+      "ultima_sale": "2026-06-23",
+      "lots_validos": 33,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 96.9,
+        "value_pct": 97.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "REVISAR": 3,
-        "PASSA": 28,
+        "PASSA": 29,
         "LANCE": 1
       },
       "quality_score": 99,
@@ -422,24 +423,64 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-05 15:27:48",
+      "ran_at": "2026-05-06 11:27:15",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 260,
+      "items": 263,
       "errors": 0,
-      "ran_at": "2026-05-05 15:27:48",
+      "ran_at": "2026-05-06 11:27:14",
       "log": ""
     },
     {
       "worker": "fema_checker",
       "status": "degraded",
       "items": 0,
-      "errors": 260,
-      "ran_at": "2026-05-05 15:27:47",
-      "log": "DEGRADED: 260 candidatos retornados pela query mas 0 processados (260 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
+      "errors": 263,
+      "ran_at": "2026-05-06 11:27:14",
+      "log": "DEGRADED: 263 candidatos retornados pela query mas 0 processados (263 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
+    },
+    {
+      "worker": "pa_playwright_spa",
+      "status": "success",
+      "items": 0,
+      "errors": 0,
+      "ran_at": "2026-05-06 11:10:17",
+      "log": ""
+    },
+    {
+      "worker": "regrid_enricher",
+      "status": "degraded",
+      "items": 0,
+      "errors": 1,
+      "ran_at": "2026-05-06 11:10:17",
+      "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
+    },
+    {
+      "worker": "lot_list_scraper",
+      "status": "success",
+      "items": 0,
+      "errors": 0,
+      "ran_at": "2026-05-06 11:08:35",
+      "log": ""
+    },
+    {
+      "worker": "lot_scraper_playwright",
+      "status": "success",
+      "items": 289,
+      "errors": 0,
+      "ran_at": "2026-05-06 10:56:22",
+      "log": ""
+    },
+    {
+      "worker": "calendar_scraper",
+      "status": "success",
+      "items": 86,
+      "errors": 0,
+      "ran_at": "2026-05-06 10:56:01",
+      "log": ""
     },
     {
       "worker": "property_appraiser",
@@ -448,53 +489,18 @@
       "errors": 98,
       "ran_at": "2026-05-05 15:18:20",
       "log": "DEGRADED: so 17/200 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
-    },
-    {
-      "worker": "pa_playwright_spa",
-      "status": "success",
-      "items": 10,
-      "errors": 0,
-      "ran_at": "2026-05-05 15:01:09",
-      "log": ""
-    },
-    {
-      "worker": "regrid_enricher",
-      "status": "degraded",
-      "items": 0,
-      "errors": 1,
-      "ran_at": "2026-05-05 15:01:08",
-      "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
-    },
-    {
-      "worker": "lot_list_scraper",
-      "status": "success",
-      "items": 0,
-      "errors": 0,
-      "ran_at": "2026-05-05 14:55:52",
-      "log": ""
-    },
-    {
-      "worker": "lot_scraper_playwright",
-      "status": "success",
-      "items": 288,
-      "errors": 0,
-      "ran_at": "2026-05-05 14:43:40",
-      "log": ""
-    },
-    {
-      "worker": "calendar_scraper",
-      "status": "success",
-      "items": 87,
-      "errors": 0,
-      "ran_at": "2026-05-05 14:42:36",
-      "log": ""
     }
   ],
   "problemas": [
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker fema_checker com status degraded (0 items, 260 erros) — DEGRADED: 260 candidatos retornados pela query mas 0 processados (260 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. In"
+      "msg": "Worker fema_checker com status degraded (0 items, 263 erros) — DEGRADED: 263 candidatos retornados pela query mas 0 processados (263 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. In"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
     },
     {
       "severidade": "ALTA",
@@ -503,8 +509,8 @@
     },
     {
       "severidade": "ALTA",
-      "categoria": "worker",
-      "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+      "categoria": "enrichment",
+      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -514,7 +520,7 @@
     {
       "severidade": "MEDIA",
       "categoria": "enrichment",
-      "msg": "FEMA checker 260 erros — depende de address (cascata do PA enricher)"
+      "msg": "FEMA checker 263 erros — depende de address (cascata do PA enricher)"
     },
     {
       "severidade": "MEDIA",
@@ -539,7 +545,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-05-05"
+    "gerado_em": "2026-05-06"
   },
   "analises_lotes": [
     {
