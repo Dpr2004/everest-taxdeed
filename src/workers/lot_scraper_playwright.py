@@ -168,8 +168,12 @@ class LotScraperPlaywright(BaseWorker):
                 auth_fail = page.evaluate("() => window.__LOTES_AUTH_FAIL || false")
                 if auth_fail:
                     self.logger.warning(
-                        f"{sale['codigo']}: pulando — sem auth nesse subdomain"
+                        f"AUTH_FAIL {sale['codigo']} ({base}): registrar conta "
+                        f"em {parsed.netloc} usando REALAUCTION_USER. "
+                        f"Pulando sale {sale['sale_date']}."
                     )
+                    # Conta como erro pra saude refletir como worker degraded
+                    self.errors_count += 1
                     return
             except Exception:
                 pass
