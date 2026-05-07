@@ -165,8 +165,26 @@ jobs:
           git config user.name "taxdeed-bot"
           git config user.email "bot@everest.com"
           git add data/ web/data.json web/saude.json web/fl-counties.svg web/fila-analise.json || true
-          git diff --staged --quiet || git commit -m "chore: full pipeline $(date -u +%Y-%m-%d_%H%M)"
-          git push || true
+          git diff --staged --quiet && echo "Sem mudancas pra commitar" && exit 0
+          git commit -m "chore: full pipeline $(date -u +%Y-%m-%d_%H%M)"
+          # Retry com rebase se remote avancou durante o run (commits do LOTES
+          # via webhook ou outros pushes manuais). Sem isso o push silencioso
+          # falha (|| true) e saude.json nunca chega no GitHub.
+          for i in 1 2 3; do
+            if git push 2>&1 | tee /tmp/push.log; then
+              echo "Push OK na tentativa $i"
+              exit 0
+            fi
+            if grep -q "rejected.*non-fast-forward\|Updates were rejected" /tmp/push.log; then
+              echo "Push rejected (remote avancou). Tentando rebase $i/3..."
+              git pull --rebase origin main
+            else
+              echo "Push falhou por outro motivo (auth, network) — tentativa $i/3"
+              sleep $((i * 5))
+            fi
+          done
+          echo "ERRO: push falhou apos 3 tentativas — saude.json NAO foi atualizado"
+          exit 1
 
       - uses: actions/upload-artifact@v4
         if: always()
