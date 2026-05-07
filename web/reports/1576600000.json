@@ -1,0 +1,57 @@
+{
+  "completed_at": "2026-05-07T13:55:16.945Z",
+  "parcel_id": "1576600000",
+  "red_flags": [
+    {
+      "severity": "RED",
+      "text": "Max bid 50% VMF impossível — bid recomendado disciplinado é zero/negativo (custos totais $279-292K vs exit conservador $170K)"
+    },
+    {
+      "severity": "RED",
+      "text": "Uninsurable pré-rehab confirmado — casa 1965 sem permits modernos = stack universal de recusa seguradora; exit retail morto"
+    },
+    {
+      "severity": "RED",
+      "text": "Repair confidence LOW + repair stack 41-82% do ARV — dealbreaker explícito da spec por sem inspeção"
+    },
+    {
+      "severity": "RED",
+      "text": "Occupancy unknown + heirs property + 2 óbitos recentes sem probate = eviction pesadelo legal/PR"
+    },
+    {
+      "severity": "RED",
+      "text": "Code enforcement Tampa/Hillsborough não verificável em 14 dias — risco de fines $50K-$500K"
+    },
+    {
+      "severity": "RED",
+      "text": "Heirs property + probate não resolvido = quiet title obrigatório $3-15K + 6-12 meses holding"
+    },
+    {
+      "severity": "RED",
+      "text": "Combinação ambiental Radon Z1 + karst + Phase I ESA recomendado + pré-1978 = stack $15-66K não absorvível"
+    },
+    {
+      "severity": "RED",
+      "text": "Zero imagery confirmada, drive-by não realizado — gatilho UNRESOLVED CRITICAL spec single_family"
+    },
+    {
+      "severity": "RED",
+      "text": "ARV ceiling 2/1 816 sqft micro ($170-210K) contra rehab obrigatório $70-157K + insurance-enabling $25-45K = sem margem"
+    },
+    {
+      "severity": "YELLOW",
+      "text": "DOM East Tampa Dec/2025 = 38 dias vs 12 YoY — mercado esfriando rapidamente, exit window apertando"
+    },
+    {
+      "severity": "YELLOW",
+      "text": "Just-value $176K = 18-44% abaixo da mediana East Tampa, sinal de PA já reconhecendo condição deteriorada"
+    },
+    {
+      "severity": "YELLOW",
+      "text": "Hillsborough RealAuction: deposit 5% nonrefundable + payment 10AM sexta + disclaimer Clerk 'not for the uninformed'"
+    }
+  ],
+  "report_markdown": "# Análise — Parcel 1576600000\n\n**Condado:** Hillsborough, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $13,364  \n**Data do leilão:** 2026-05-21  \n**Asset type:** single_family  \n**Gerado em:** 2026-05-07 13:55 UTC  \n\n---\n\n## 🎯 Veredicto Final\n\n**PASS** — Score 0/100 — Confiança: high\n\n## 🚩 Red Flags\n\n- Max bid 50% VMF impossível — bid recomendado disciplinado é zero/negativo (custos totais $279-292K vs exit conservador $170K)\n- Uninsurable pré-rehab confirmado — casa 1965 sem permits modernos = stack universal de recusa seguradora; exit retail morto\n- Repair confidence LOW + repair stack 41-82% do ARV — dealbreaker explícito da spec por sem inspeção\n- Occupancy unknown + heirs property + 2 óbitos recentes sem probate = eviction pesadelo legal/PR\n- Code enforcement Tampa/Hillsborough não verificável em 14 dias — risco de fines $50K-$500K\n- Heirs property + probate não resolvido = quiet title obrigatório $3-15K + 6-12 meses holding\n- Combinação ambiental Radon Z1 + karst + Phase I ESA recomendado + pré-1978 = stack $15-66K não absorvível\n- Zero imagery confirmada, drive-by não realizado — gatilho UNRESOLVED CRITICAL spec single_family\n- ARV ceiling 2/1 816 sqft micro ($170-210K) contra rehab obrigatório $70-157K + insurance-enabling $25-45K = sem margem\n- DOM East Tampa Dec/2025 = 38 dias vs 12 YoY — mercado esfriando rapidamente, exit window apertando\n- Just-value $176K = 18-44% abaixo da mediana East Tampa, sinal de PA já reconhecendo condição deteriorada\n- Hillsborough RealAuction: deposit 5% nonrefundable + payment 10AM sexta + disclaimer Clerk 'not for the uninformed'\n\n## ❓ Items Não Resolvidos (Critical)\n\n- Code enforcement open cases / fines / demolition orders Tampa CONDUITS + HCFL Accela (Agente 03)\n- Probate filing search Hillsborough Clerk para Matrid J. Shabazz (Nov/2023) e Michelle Hall-Shabazz (Mar/2026) (Agente 07)\n- Drive-by físico ou imagery recente para confirmar ocupação e condição estrutural (Agentes 04+07+09)\n- Year built / sqft / beds-baths confirmação oficial via fontes primárias (Agente 02)\n- FEMA flood zone exato Zone X vs A/AE para parcel 1576600000 (Agente 10)\n- Coordenadas lat/lon exatas para verificação Phase I ESA <0.25mi de Superfund/LUST (Agente 11)\n- Permit history Hillsborough Building Dept — roof age verdadeiro, electrical, plumbing (Agente 10)\n- Chain of title últimos 20 anos Clerk OR (Agente 03)\n- Mortgages ativas/satisfeitas + proper notice to lienholders (Agente 03)\n- Tampa Water utility status (occupancy signal mais forte) (Agente 07)\n\n## 🏛️ Regras do Leilão & County Quirks\n\n**Auction rules:**\n- Payment deadline agressivo: 10:00 AM next business day — wire timing crítico\n- Deposit 5% NÃO-REFUNDÁVEL postado antes do leilão\n- Sem buyer premium — custo procedimental adicional ~$165-$175 sobre bid\n- Clerk explicitamente recusa advisory: 'not for the uninformed'\n- Owner redemption possível até clerk certificar tax deed (FS 197.472)\n\n**Quirks do condado:**\n- Plataforma RealAuction (hillsborough.realtaxdeed.com) — Thursdays 10AM ET\n- Deposit 5% NONREFUNDABLE antes de licitar — capital lock-in se due diligence falhar\n- Balance deadline: 10AM next business day (Friday 10AM se sale quinta) — wire timing apertado\n- Buyer premium NÃO cobrado em Hillsborough (apenas doc stamps 0.70% + recording fees)\n- Documentary stamps: $0.70 per $100 do final bid (FL Stat.)\n- Recording: $10 first page + $8.50 each additional\n\n## 💰 Dívidas Investigadas (Title & Liens)\n\n\n### Achados críticos (title)\n\n- Padrão clássico heirs property (ET AL + mailing=situs + zero homestead) sem probate visível — quiet title + probate combo obrigatório pós-aquisição, custo $3K-$10K worst case $5K-$15K\n- Code enforcement não verificável via web scraping (Tampa CONDUITS pago + 7 dias úteis; HCFL Accela SPA) — pela spec do agente, code enforcement não verificado em casa improved é dealbreaker\n- Janela de 14 dias até sale 2026-05-21 é insuficiente para resolver os 13 unresolved itens críticos via canais oficiais\n- Casa potencialmente deteriorada/abandonada em East Tampa (just-value 18% abaixo zip median; indicadores Agente 09) eleva drasticamente probabilidade de code enforcement fines $5K-$50K+ ou demolition lien\n- FL Stat 197.522 — governmental liens, code enforcement, demolition liens, CDD/SAD SOBREVIVEM tax deed; sem verificação documental, assume worst case\n\n### ⚠️ Items pendentes (UNVERIFIED — investigar manualmente)\n\n- Chain of title últimos 20 anos — Clerk OR é SPA, não scrapável (publicaccess.hillsclerk.com/oripublicaccess/)\n- Code enforcement open cases / recorded fines / demolition orders — Tampa CONDUITS $25/7d e HCFL Accela SPA\n- Mortgages ativas/satisfeitas e proper notice — Clerk OR\n- Civil judgments e lis pendens — Clerk court records\n- IRS federal liens recorded (FL — Clerk OR mantém federal tax liens)\n- Bankruptcy stay status — PACER pacer.uscourts.gov requer login\n- Probate aberto/encerrado para owner(s) ET AL — Hillsborough Probate Division\n- Owner names completos + status de óbito — Agente 02 só capturou ET AL\n\n## 🏗️ Viabilidade Física\n\n- 1965 wood-frame 2/1 816 sqft em RS-50 oversized lot 9,375 sqft Tampa city — buildability forte, ARV ceiling comprimido pelo tamanho\n- Building 100% depreciado na PA curve ($65K building / $65K depreciação acumulada) — teardown candidate técnico\n- Último permit cosmético em 2011 = 14 anos de provável deferred maintenance em sistemas\n- Lead paint + asbestos era pré-1978 = $8-27K mitigation universal\n- Repair estimate range $60K-220K com confidence LOW (sem inspeção interna nem drive-by confirmado)\n\n## 🌿 Riscos Ambientais\n\n- **Sinkhole risk:** high\n- **Wetlands:** unknown\n- **Contamination:** medium\n\n**Hazards identificados:**\n- **?** (medium): \n- **?** (high): \n- **?** (high): \n- **?** (medium): \n- **?** (medium): \n\n---\n\n## 📊 Metodologia\n\nPipeline: COMPLETO (13 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | ✓ |\n| 01-auction-rules | ✓ |\n| 08-county-quirks | ✓ |\n| 02-official-data-property | ✓ |\n| 09-drive-by-photo-verification | ✓ |\n| 11-environmental-hazards | ✓ |\n| 03-title-liens-legal | ✓ |\n| 07-occupancy-investigation | ✓ |\n| 04-physical-viability | ✓ |\n| 10-insurance-feasibility | ✓ |\n| 05-market-exit-financial | ✓ |\n| 06-qa-investment-committee | ✓ |\n| 12-verification-engine | ✓ |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
+  "top_3_reasons": [],
+  "verdict": "PASS"
+}
