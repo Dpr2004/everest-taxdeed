@@ -219,6 +219,17 @@ def main():
         issues = []
         if sales_fut == 0 and not sem_atividade:
             issues.append("Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)")
+        # Sinal forte de AUTH_FAIL: tem sales agendados mas 0 lots scraped.
+        # Causa raiz conhecida: RealAuction exige registro POR SUBDOMAIN —
+        # mesma credencial pode falhar em alachua/citrus/duval mesmo funcionando
+        # em hillsborough/brevard. Veja lot_scraper_playwright.py:289.
+        if sales_fut > 0 and lots_v == 0 and not sem_atividade:
+            subdomain = (row['url_sales'] or "").replace("https://", "").rstrip("/")
+            issues.append(
+                f"AUTH_FAIL provavel — {sales_fut} sale(s) detectado(s) mas 0 lots scrapeados. "
+                f"Acao: registrar conta em {subdomain} usando mesma credencial REALAUCTION_USER"
+            )
+            total_problems_critical += 1
         if dates_suspeitas:
             issues.append(date_warning)
             total_problems_critical += 1
@@ -336,7 +347,13 @@ def main():
 
     for c_info in saude["condados"]:
         for issue in c_info["issues"]:
-            sev = "CRITICA" if "duplicacao" in issue else "MEDIA"
+            if "duplicacao" in issue:
+                sev = "CRITICA"
+            elif "AUTH_FAIL" in issue:
+                # Requer acao do Daniel (registrar conta) — escalar
+                sev = "ALTA"
+            else:
+                sev = "MEDIA"
             saude["problemas"].append({
                 "severidade": sev,
                 "categoria": "condado",

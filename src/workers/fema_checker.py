@@ -67,7 +67,8 @@ class FemaChecker(BaseWorker):
             if self.limit:
                 q += f" LIMIT {int(self.limit)}"
             cur.execute(q)
-            lots = cur.fetchall()
+            # Converte sqlite3.Row -> dict porque _geocode usa .get() (Row nao tem)
+            lots = [dict(r) for r in cur.fetchall()]
 
         self.candidates_count = len(lots)
         self.logger.info(f"FEMA: {len(lots)} lots para verificar")
