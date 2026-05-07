@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-05-06",
+  "gerado_em": "2026-05-07",
   "total_candidatos": 30,
   "total_leiloes": 16,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "C-03-33-29-020-00A0-0170",
-      "county": "Highlands",
-      "state": "FL",
-      "address": "3302 N HORSESHOE DR",
-      "city": "AVON PARK",
-      "bid": 4662.84,
-      "just_value": 26073.0,
-      "ratio": 5.59,
-      "sale_date": "2026-05-13",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 6.15,
-      "status": "pending"
-    },
     {
       "parcel": "0211940000",
       "county": "Hillsborough",
@@ -212,6 +196,22 @@
       "workers_score": 76.9,
       "workers_decision": "REVISAR",
       "ranking_score": 8.3,
+      "status": "pending"
+    },
+    {
+      "parcel": "18-24-17-0020-00000-0470",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "16806 HARLEY STREET",
+      "city": "HUDSON, 34667",
+      "bid": 9173.23,
+      "just_value": 109068.0,
+      "ratio": 11.89,
+      "sale_date": "2026-06-02",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 12.48,
       "status": "pending"
     },
     {

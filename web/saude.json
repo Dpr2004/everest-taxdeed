@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-06T16:04:58.685020+00:00",
+  "gerado_em": "2026-05-07T11:35:12.437842+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,8 +7,8 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 4,
-    "total_lots_validos": 267,
-    "lots_com_verdict_lotes": 26,
+    "total_lots_validos": 277,
+    "lots_com_verdict_lotes": 27,
     "problemas_criticos": 3,
     "saude_geral_pct": 80
   },
@@ -148,8 +148,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 7,
-        "PASSA": 29
+        "REVISAR": 6,
+        "PASSA": 30
       },
       "quality_score": 97,
       "status": "verde",
@@ -290,19 +290,20 @@
       "nome": "Osceola County",
       "state": "FL",
       "url_sales": "https://osceola.realtaxdeed.com/",
-      "sales_futuras": 2,
+      "sales_futuras": 3,
       "proxima_sale": "2026-05-19",
-      "ultima_sale": "2026-05-31",
-      "lots_validos": 10,
+      "ultima_sale": "2026-06-16",
+      "lots_validos": 20,
       "cobertura": {
-        "address_pct": 100.0,
-        "value_pct": 100.0,
+        "address_pct": 50.0,
+        "value_pct": 50.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 10
+        "LANCE": 1,
+        "PASSA": 19
       },
-      "quality_score": 100,
+      "quality_score": 82,
       "status": "verde",
       "issues": []
     },
@@ -312,7 +313,7 @@
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
       "sales_futuras": 9,
-      "proxima_sale": "2026-05-06",
+      "proxima_sale": "2026-05-07",
       "ultima_sale": "2026-07-27",
       "lots_validos": 15,
       "cobertura": {
@@ -322,8 +323,8 @@
       },
       "decisoes": {
         "REVISAR": 3,
-        "LANCE": 2,
-        "PASSA": 10
+        "LANCE": 3,
+        "PASSA": 9
       },
       "quality_score": 100,
       "status": "verde",
@@ -424,31 +425,31 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-06 16:04:57",
+      "ran_at": "2026-05-07 11:35:10",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 267,
+      "items": 277,
       "errors": 0,
-      "ran_at": "2026-05-06 16:04:56",
+      "ran_at": "2026-05-07 11:35:09",
       "log": ""
     },
     {
       "worker": "fema_checker",
       "status": "degraded",
       "items": 0,
-      "errors": 267,
-      "ran_at": "2026-05-06 16:04:56",
-      "log": "DEGRADED: 267 candidatos retornados pela query mas 0 processados (267 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
+      "errors": 277,
+      "ran_at": "2026-05-07 11:35:09",
+      "log": "DEGRADED: 277 candidatos retornados pela query mas 0 processados (277 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
       "items": 10,
       "errors": 0,
-      "ran_at": "2026-05-06 15:45:03",
+      "ran_at": "2026-05-07 11:17:38",
       "log": ""
     },
     {
@@ -456,7 +457,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-05-06 15:45:03",
+      "ran_at": "2026-05-07 11:17:37",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -464,15 +465,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-06 15:42:11",
+      "ran_at": "2026-05-07 11:13:25",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 290,
+      "items": 298,
       "errors": 0,
-      "ran_at": "2026-05-06 15:30:01",
+      "ran_at": "2026-05-07 11:01:12",
       "log": ""
     },
     {
@@ -480,7 +481,7 @@
       "status": "success",
       "items": 86,
       "errors": 0,
-      "ran_at": "2026-05-06 15:29:26",
+      "ran_at": "2026-05-07 11:00:23",
       "log": ""
     },
     {
@@ -496,7 +497,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker fema_checker com status degraded (0 items, 267 erros) — DEGRADED: 267 candidatos retornados pela query mas 0 processados (267 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. In"
+      "msg": "Worker fema_checker com status degraded (0 items, 277 erros) — DEGRADED: 277 candidatos retornados pela query mas 0 processados (277 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. In"
     },
     {
       "severidade": "ALTA",
@@ -511,7 +512,7 @@
     {
       "severidade": "MEDIA",
       "categoria": "enrichment",
-      "msg": "FEMA checker 267 erros — depende de address (cascata do PA enricher)"
+      "msg": "FEMA checker 277 erros — depende de address (cascata do PA enricher)"
     },
     {
       "severidade": "MEDIA",
@@ -536,16 +537,24 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-05-06"
+    "gerado_em": "2026-05-07"
   },
   "analises_lotes": [
     {
       "parcel": "C-22-37-30-050-0270-0060",
       "verdict": "PASS",
       "score": null,
-      "completed_at": "2026-05-06T15:24:55.635Z",
+      "completed_at": "2026-05-06T18:51:13.391Z",
       "max_bid": null,
       "red_flags_count": 10
+    },
+    {
+      "parcel": "C-03-33-29-020-00A0-0170",
+      "verdict": "PASS",
+      "score": null,
+      "completed_at": "2026-05-06T16:50:47.994Z",
+      "max_bid": null,
+      "red_flags_count": 7
     },
     {
       "parcel": "2934586",
