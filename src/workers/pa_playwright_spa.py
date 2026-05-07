@@ -404,6 +404,40 @@ class PAPlaywrightSPA(BaseWorker):
 
 
     # ============================================================
+    # Helper qpublic.schneidercorp.com: load + clica disclaimer "I Accept"
+    # ============================================================
+    def _generic_load_qpublic(self, page, url, timeout_ms=25000, wait_ms=3000):
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+        except Exception:
+            return None
+        try:
+            page.wait_for_load_state("networkidle", timeout=12000)
+        except Exception:
+            pass
+        # Schneider sempre tem overlay "I Accept" (Terms of Use) — clica
+        for sel in [
+            'button:has-text("I Accept")',
+            'a:has-text("I Accept")',
+            'input[type="submit"][value*="Accept" i]',
+            'input[id*="Accept" i]',
+            'button:has-text("Agree")',
+        ]:
+            try:
+                el = page.query_selector(sel)
+                if el:
+                    el.click()
+                    page.wait_for_timeout(2000)
+                    break
+            except Exception:
+                continue
+        page.wait_for_timeout(wait_ms)
+        try:
+            return page.evaluate("() => document.body.innerText")
+        except Exception:
+            return None
+
+    # ============================================================
     # Helper generico: load URL + wait + extract via patterns
     # ============================================================
     def _generic_load(self, page, url, timeout_ms=20000, wait_ms=2500):
@@ -481,21 +515,105 @@ class PAPlaywrightSPA(BaseWorker):
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================
-    # PUTNAM — pa.putnam-fl.com
+    # PUTNAM — pa.putnam-fl.com (URL antiga D_SearchResults.asp = 404)
+    # Site mudou pra /search com form fill via JS
     # ============================================================
     def _enrich_putnam(self, page, lot):
         parcel = lot["parcel_id"]
-        url = f"http://pa.putnam-fl.com/GIS/D_SearchResults.asp?txtFiltro={parcel}"
-        text = self._generic_load(page, url)
+        try:
+            page.goto("https://pa.putnam-fl.com/search", wait_until="domcontentloaded", timeout=20000)
+            try:
+                page.wait_for_load_state("networkidle", timeout=12000)
+            except Exception:
+                pass
+            page.wait_for_timeout(2000)
+            # Procura input de parcel/alt key e submete
+            for sel in [
+                'input[name*="parcel" i]', 'input[id*="parcel" i]',
+                'input[name*="alt" i]', 'input[name*="search" i]',
+                'input[type="search"]', 'input[type="text"]',
+            ]:
+                try:
+                    el = page.query_selector(sel)
+                    if el:
+                        el.fill(parcel)
+                        el.press("Enter")
+                        page.wait_for_timeout(3500)
+                        try:
+                            page.wait_for_load_state("networkidle", timeout=8000)
+                        except Exception:
+                            pass
+                        break
+                except Exception:
+                    continue
+            text = page.evaluate("() => document.body.innerText")
+        except Exception:
+            return None
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================
-    # LAKE — lakecopropappr.com
+    # LAKE — lakecopropappr.com (AltKey interno != parcel_id)
+    # Estrategia 2-step: search-by-parcel -> redirect com AltKey real
     # ============================================================
     def _enrich_lake(self, page, lot):
         parcel = lot["parcel_id"]
-        url = f"https://www.lakecopropappr.com/property-details.aspx?AltKey={parcel}"
-        text = self._generic_load(page, url)
+        try:
+            page.goto(
+                "https://www.lakecopropappr.com/property-search.aspx",
+                wait_until="domcontentloaded", timeout=20000,
+            )
+            try:
+                page.wait_for_load_state("networkidle", timeout=12000)
+            except Exception:
+                pass
+            page.wait_for_timeout(1500)
+            # Aceita Terms-of-Use overlay se aparecer
+            for sel in [
+                'input[type="submit"][value*="Accept" i]',
+                'input[id*="Accept" i]',
+                'a:has-text("I Accept")', 'a:has-text("Accept")',
+                'button:has-text("Accept")',
+            ]:
+                try:
+                    el = page.query_selector(sel)
+                    if el:
+                        el.click()
+                        page.wait_for_timeout(1500)
+                        break
+                except Exception:
+                    continue
+            # Encontra campo parcel + submit
+            filled = False
+            for sel in [
+                'input[name*="Parcel" i]', 'input[id*="Parcel" i]',
+                'input[name*="Alt" i]', 'input[id*="Alt" i]',
+                'input[type="text"]',
+            ]:
+                try:
+                    el = page.query_selector(sel)
+                    if el:
+                        el.fill(parcel)
+                        filled = True
+                        break
+                except Exception:
+                    continue
+            if filled:
+                # Submete (botao Search ou Enter)
+                try:
+                    page.click('input[type="submit"][value*="Search" i], button:has-text("Search")', timeout=3000)
+                except Exception:
+                    try:
+                        page.keyboard.press("Enter")
+                    except Exception:
+                        pass
+                page.wait_for_timeout(3500)
+                try:
+                    page.wait_for_load_state("networkidle", timeout=10000)
+                except Exception:
+                    pass
+            text = page.evaluate("() => document.body.innerText")
+        except Exception:
+            return None
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================
@@ -508,12 +626,13 @@ class PAPlaywrightSPA(BaseWorker):
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================
-    # CITRUS — pa.citrus.fl.us
+    # CITRUS — citruspa.org (iasWorld iCare datalet)
+    # Migrou de pa.citrus.fl.us (cert TLS invalido) pra citruspa.org
     # ============================================================
     def _enrich_citrus(self, page, lot):
         parcel = lot["parcel_id"]
-        url = f"https://www.pa.citrus.fl.us/PropertyDetail.aspx?ParcelNumber={parcel}"
-        text = self._generic_load(page, url)
+        url = f"https://www.citruspa.org/_web/datalets/datalet.aspx?mode=parceldetail&pin={parcel}"
+        text = self._generic_load(page, url, wait_ms=3500)
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================
@@ -526,21 +645,27 @@ class PAPlaywrightSPA(BaseWorker):
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================
-    # ALACHUA — acpafl.org
+    # ALACHUA — qpublic.schneidercorp.com (Schneider AppID=1081)
+    # acpafl.org redireciona pra qpublic — fallback pro qpublic direto
     # ============================================================
     def _enrich_alachua(self, page, lot):
         parcel = lot["parcel_id"]
-        url = f"https://www.acpafl.org/property-search?parcel={parcel}"
-        text = self._generic_load(page, url)
+        # PageTypeID=4 PageID=10770 = property record card
+        url = (
+            "https://qpublic.schneidercorp.com/Application.aspx"
+            f"?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&KeyValue={parcel}"
+        )
+        text = self._generic_load_qpublic(page, url, wait_ms=4000)
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================
-    # DUVAL — paopropertysearch.coj.net
+    # DUVAL — paopropertysearch.coj.net (RE# sem hifens)
     # ============================================================
     def _enrich_duval(self, page, lot):
-        parcel = lot["parcel_id"]
+        # Duval RE# e' SEM hifens (10 digitos): "077006-0000" -> "0770060000"
+        parcel = lot["parcel_id"].replace("-", "").replace(".", "")
         url = f"https://paopropertysearch.coj.net/Basic/Detail.aspx?RE={parcel}"
-        text = self._generic_load(page, url)
+        text = self._generic_load(page, url, wait_ms=3000)
         return self._generic_extract(text, self.PATTERNS_GENERIC)
 
     # ============================================================

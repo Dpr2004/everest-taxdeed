@@ -10,10 +10,18 @@ Fluxo:
 """
 import re
 import time
+import requests
 from urllib.parse import quote
 from src.db.connection import cursor
 from src.workers.base import BaseWorker
 from src.utils.http import fetch
+
+# Nominatim Usage Policy exige User-Agent identificavel (nao browser fake).
+# https://operations.osmfoundation.org/policies/nominatim/
+NOMINATIM_UA = (
+    "EverestTaxDeed/1.0 (taxdeed pipeline; "
+    "contact: dpr2004@gmail.com)"
+)
 
 # Classificacao de risco FEMA
 RISCO_POR_ZONA = {
@@ -104,13 +112,19 @@ class FemaChecker(BaseWorker):
         for q in candidates:
             url = f"https://nominatim.openstreetmap.org/search?q={quote(q)}&format=json&limit=1"
             try:
-                resp = fetch(url, timeout=15)
+                # Nominatim exige UA descritivo — usar requests direto (nao fetch que tem UA browser)
+                resp = requests.get(
+                    url,
+                    headers={"User-Agent": NOMINATIM_UA, "Accept": "application/json"},
+                    timeout=15,
+                )
+                resp.raise_for_status()
                 data = resp.json()
                 if data:
                     return float(data[0]["lat"]), float(data[0]["lon"])
             except Exception as e:
                 self.logger.debug(f"geocode '{q}' falhou: {e}")
-            time.sleep(1.1)  # rate limit Nominatim
+            time.sleep(1.1)  # rate limit Nominatim (1 req/s)
         return None
 
     def _query_fema(self, lat, lng):
