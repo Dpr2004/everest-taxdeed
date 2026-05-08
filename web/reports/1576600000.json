@@ -1,79 +1,49 @@
 {
-  "completed_at": "2026-05-07T18:50:42.579Z",
+  "completed_at": "2026-05-08T02:00:39.941Z",
   "parcel_id": "1576600000",
   "red_flags": [
     {
-      "severity": "CRITICAL",
-      "text": "9+ unresolved_critical_items entre agentes — Regra Inviolável bloqueia BUY automaticamente",
-      "type": "PROCEDIMENTAL"
+      "text": "Tampa code/demolition lien não-quantificado, range $0-$500K — dealbreaker absoluto",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Probate Case 21-CP-000947 cloud — Houston Bradley pode reter vested interest",
-      "type": "LEGAL"
+      "text": "Probate dupla recente (Matrid 11/2023 + Michelle 03/2026 a 67 dias do leilão) — bankruptcy stay risk + quiet title obrigatória contestada",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Tampa City code enforcement liens não verificados — improved house sem clearance bloqueia BUY",
-      "type": "LEGAL"
+      "text": "Heir pool grande (5+ adultos via et Al) — eviction heir-contested $5-15K e 240 dias hold",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Substantial Damage rule (FEMA NFIP §60.3) potencialmente aplicável pós Helene/Milton 2024",
-      "type": "ESTRUTURAL"
+      "text": "Casa 1965 sem drive-by, sem interior, sem HCPA oficial — todos os dados são proxy/inferência",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Pre-rehab UNINSURABLE — roof age presumida >20 anos bloqueia bind",
-      "type": "INSURANCE"
+      "text": "Exit constraint: 2BR/1BA 816 sqft em mercado 33610 declinando = ARV ceiling $200-220K teto absoluto",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Probabilidade alta de open Helene/Milton claim — bind bloqueado",
-      "type": "INSURANCE"
+      "text": "Insurance feasibility: roof age unknown + Federal Pacific panel risk = uninsurable pre-rehab provável",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Sem drive-by físico, zero fotos com data — viola mandato operacional",
-      "type": "OPERACIONAL"
+      "text": "Hazmat pre-1978: lead paint federal disclosure + asbestos popcorn/vinyl tile $10-25K mitigation",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Confidence LOW — zero comps grade A subdivision-level",
-      "type": "VALUATION"
+      "text": "Janela pagamento <24h + deposit forfeit + cancelamento de TODOS os bids do bidder se falhar",
+      "type": "RED"
     },
     {
-      "severity": "CRITICAL",
-      "text": "Bid capacity $0-$98K com worst case deductions $149K-$418K",
-      "type": "FINANCIAL"
+      "text": "Comp thinness: apenas 1 grade-A direto para config nicho 2BR/1BA",
+      "type": "RED"
     },
     {
-      "severity": "HIGH",
-      "text": "Permit gap 14 anos (2011→2026) em casa 1965 = systems EOL probable",
-      "type": "DOCUMENTAL"
-    },
-    {
-      "severity": "HIGH",
-      "text": "Casa 1965 wood frame + AE + 2 furacões major 2024 = damage não-permitted probable",
-      "type": "HISTORICO"
-    },
-    {
-      "severity": "HIGH",
-      "text": "EPA Radon Zone 1 — mitigation $1.5-3K mandatória post-rehab",
-      "type": "ENVIRONMENTAL"
-    },
-    {
-      "severity": "HIGH",
-      "text": "Wire deadline 10AM ET dia útil seguinte (~24h) — falha = depósito 5%/$200 perdido",
-      "type": "PROCEDIMENTAL"
-    },
-    {
-      "severity": "HIGH",
-      "text": "9 state liens unspecified — IRS federal / DOR tax warrant / child support não descartados",
-      "type": "LEGAL"
+      "text": "Mercado 33610: -1.23% YoY sold prices, inventory +480%, volume -46%, DOM 60-120d (buyers market severo)",
+      "type": "RED"
     }
   ],
-  "report_markdown": "# Análise — Parcel 1576600000\n\n**Condado:** Hillsborough, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $13,364  \n**Data do leilão:** 2026-05-21  \n**Asset type:** single_family  \n**Gerado em:** 2026-05-07 18:50 UTC  \n\n---\n\n## 🎯 Veredicto Final\n\n**PASS** — Score 0/100 — Confiança: high\n\n## 🚩 Red Flags\n\n- 9+ unresolved_critical_items entre agentes — Regra Inviolável bloqueia BUY automaticamente\n- Probate Case 21-CP-000947 cloud — Houston Bradley pode reter vested interest\n- Tampa City code enforcement liens não verificados — improved house sem clearance bloqueia BUY\n- Substantial Damage rule (FEMA NFIP §60.3) potencialmente aplicável pós Helene/Milton 2024\n- Pre-rehab UNINSURABLE — roof age presumida >20 anos bloqueia bind\n- Probabilidade alta de open Helene/Milton claim — bind bloqueado\n- Sem drive-by físico, zero fotos com data — viola mandato operacional\n- Confidence LOW — zero comps grade A subdivision-level\n- Bid capacity $0-$98K com worst case deductions $149K-$418K\n- Permit gap 14 anos (2011→2026) em casa 1965 = systems EOL probable\n- Casa 1965 wood frame + AE + 2 furacões major 2024 = damage não-permitted probable\n- EPA Radon Zone 1 — mitigation $1.5-3K mandatória post-rehab\n- Wire deadline 10AM ET dia útil seguinte (~24h) — falha = depósito 5%/$200 perdido\n- 9 state liens unspecified — IRS federal / DOR tax warrant / child support não descartados\n\n## ❓ Items Não Resolvidos (Critical)\n\n- Endereço físico, building sqft, lot size, zoning code, jurisdição city/unincorporated do parcel 1576600000 — Agente 02 FAILED (HCPA SSL bloqueio)\n- Status de ocupação real do parcel — Agente 07 FAILED\n- Tampa City code enforcement liens balance + demolition orders — paywall $25 Net Assets Conduit não executado\n- Probate Case 21-CP-000947 details — decedente, beneficiários, transferência interest via Shabazz deed 2020\n- Natureza específica dos 9 state liens — case-level Official Records lookup pendente\n- Drive-by físico com foto set completo — não contratado, mandatório antes 2026-05-19\n- Roof age real — depende drive-by\n- Open insurance claims pós Helene/Milton 2024 — CLUE report inacessível pré-arremate\n- Substantial Damage Determination Tampa Floodplain Mgmt — não solicitada (813) 274-3100\n- FEMA Repetitive Loss Property / Severe Repetitive Loss status — depende endereço\n\n## 🏛️ Regras do Leilão & County Quirks\n\n**Auction rules:**\n- Depósito 5% NÃO REEMBOLSÁVEL — perda automática se buyer não fechar pagamento até sexta 10AM ET\n- Governmental liens sobrevivem ao tax deed (FS 197.552) — Hillsborough/Tampa tem alto risco de code enforcement liens; quantificação obrigatória no Agente 03 antes de qualquer BUY\n- Pagamento integral em ~24h exige wire pré-aprovado same-day\n\n**Quirks do condado:**\n- Plataforma RealAuction Hillsborough — Thursdays 10AM ET (sale 2026-05-21 confirma cronograma)\n- Deposit 5%/$200 NONREFUNDABLE pré-bid — falha = perda total\n- Saldo 10AM next business day (sexta 2026-05-22, 10AM ET) — wire deve estar pronto antes\n- Clerk's Registry fee escalonado: 3% primeiros $500 + 1.5% cada $100 acima\n- Doc stamps FL standard $0.70/$100 (0.70%)\n- App fee $60 + recording $10 first page\n\n## 💰 Dívidas Investigadas (Title & Liens)\n\n\n### Achados críticos (title)\n\n- {\"type\":\"PROBATE_CLOUD\",\"severity\":\"CRITICAL\",\"description\":\"Probate Case 21-CP-000947 (Letters of Admin Inst 2022434932 + Order of Discharge Inst 2024097544) — O&E literal: 'Houston Bradley appears to still have a vested interest'. Deed Shabazz (Inst 2020394601) é de 2020, preceded probate 2021. Chain quebrada entre Bradleys (OR 2432/416, ~1973) e Shabazzes — gap 47 anos + cloud heir. Quiet title mandatório pós-arremate.\",\"estimated_cost\":\"$3000-$15000\",\"extinguished_by_tax_deed\":false,\"classification\":\"PROVAVELMENTE_SOBREVIVENTE\"}\n- {\"type\":\"CODE_ENFORCEMENT_UNVERIFIED\",\"severity\":\"CRITICAL\",\"description\":\"Tampa City code enforcement liens NÃO verificados — gated por Net Assets ($25, 7 business days) e Accela SPA não scrapável. Casa 1965 wood frame em 33610 East Tampa + permit gap 2011-2026 = alta probabilidade de fines acumuladas. Survives tax deed.\",\"estimated_cost\":\"$0-$50000+\",\"extinguished_by_tax_deed\":false,\"classification\":\"NAO_FOI_POSSIVEL_DETERMINAR\"}\n- {\"type\":\"STATE_FL_CLERK_LIENS\",\"severity\":\"MEDIUM\",\"description\":\"9 entries 'State of Florida / Clerk of Courts' (OR 15903/1678, 19277/1496, 19489/82, 20978/1225, 22434/1242, 24692/169, 26485/939, Inst 2022372810, 2023396140) — natureza não detalhada no O&E. Provável: court cost judgments / civil cost orders. Risco residual: se algum for IRS federal lien (sobrevive 120 dias) ou child support, mudança de cenário.\",\"estimated_cost\":\"$0-$20000\",\"extinguished_by_tax_deed\":\"likely_true_se_civil_cost_orders\",\"classification\":\"POSSIVELMENTE_SOBREVIVENTE\"}\n\n### ⚠️ Items pendentes (UNVERIFIED — investigar manualmente)\n\n- Tampa City code enforcement liens (open cases + recorded fines + demolition orders) — solicitar HOJE 2026-05-07 via https://conduits.netassets.net/conduits/fl/tampa ($25, 7 business days) + ligar (813) 274-5545. SEM ESTE DADO, BUY BLOQUEADO pelo mandate.\n- Probate Case 21-CP-000947 — identificar decedente (Houston vs Melenese Bradley), beneficiários, se Shabazz deed 2020 transferiu interest completo. Acionar via Hillsborough Probate (813) 276-8100 ext 4365 ou HOVER hover.hillsclerk.com\n- Natureza específica dos 9 'State of Florida / Clerk of Courts' liens — verificar cada OR/Instrument em publicaccess.hillsclerk.com Official Records search por book/page para descartar IRS federal lien (sobrevive 120d), DOR tax warrant, child support\n- Tampa Water/Utilities lien check — ligar Tampa Water (813) 274-8121 para recorded utility liens em 2005 E Chelsea St\n- Quiet title attorney quote — orçamento real de ação para resolver probate cloud Bradley ($3-5K base, $5-15K se contestado)\n\n## 🏗️ Viabilidade Física\n\n- Casa wood frame 1965 (61 anos) zona flood AE + permit gap 14 anos + Helene/Milton 2024 → Substantial Damage rule (FEMA) potencialmente aplicável; impacto $30-80K elevation OR forçar demolição\n- Sem inspeção interna + sem drive-by físico + sem fotos com data — repair confidence LOW por mandato; range $80-250K com 30% buffer adicionado\n- Systems EOL probable (roof, HVAC, electrical panel) por permit gap 14 anos em casa 61 anos\n- Hazmat probable (asbestos popcorn pré-1980, lead paint pré-1978, radon Zone 1 mandatory mitigation)\n- Wood rot/termite/mold probable em wood frame 60 anos zona AE pós-furacões 2024\n\n## 🌿 Riscos Ambientais\n\n- **Sinkhole risk:** high\n- **Wetlands:** unknown\n- **Contamination:** medium\n\n**Hazards identificados:**\n- **RADON** (HIGH): \n- **SINKHOLE** (MEDIUM-HIGH): \n- **FLOOD/HURRICANE** (HIGH): \n- **ASBESTOS** (MEDIUM-HIGH): \n- **LEAD_PAINT** (MEDIUM): \n\n---\n\n## 📊 Metodologia\n\nPipeline: COMPLETO (11 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | ✓ |\n| 01-auction-rules | ✓ |\n| 08-county-quirks | ✓ |\n| 02-official-data-property | — |\n| 09-drive-by-photo-verification | ✓ |\n| 11-environmental-hazards | ✓ |\n| 03-title-liens-legal | ✓ |\n| 07-occupancy-investigation | — |\n| 04-physical-viability | ✓ |\n| 10-insurance-feasibility | ✓ |\n| 05-market-exit-financial | ✓ |\n| 06-qa-investment-committee | ✓ |\n| 12-verification-engine | ✓ |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
+  "report_markdown": "# Análise — Parcel 1576600000\n\n**Condado:** Hillsborough, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $13,364  \n**Data do leilão:** 2026-05-21  \n**Asset type:** single_family  \n**Gerado em:** 2026-05-08 02:00 UTC  \n\n---\n\n## 🎯 Veredicto Final\n\n**PASS** — Score 0/100 — Confiança: low\n\n## 🚩 Red Flags\n\n- Tampa code/demolition lien não-quantificado, range $0-$500K — dealbreaker absoluto\n- Probate dupla recente (Matrid 11/2023 + Michelle 03/2026 a 67 dias do leilão) — bankruptcy stay risk + quiet title obrigatória contestada\n- Heir pool grande (5+ adultos via et Al) — eviction heir-contested $5-15K e 240 dias hold\n- Casa 1965 sem drive-by, sem interior, sem HCPA oficial — todos os dados são proxy/inferência\n- Exit constraint: 2BR/1BA 816 sqft em mercado 33610 declinando = ARV ceiling $200-220K teto absoluto\n- Insurance feasibility: roof age unknown + Federal Pacific panel risk = uninsurable pre-rehab provável\n- Hazmat pre-1978: lead paint federal disclosure + asbestos popcorn/vinyl tile $10-25K mitigation\n- Janela pagamento <24h + deposit forfeit + cancelamento de TODOS os bids do bidder se falhar\n- Comp thinness: apenas 1 grade-A direto para config nicho 2BR/1BA\n- Mercado 33610: -1.23% YoY sold prices, inventory +480%, volume -46%, DOM 60-120d (buyers market severo)\n\n## ❓ Items Não Resolvidos (Critical)\n\n- Confirmação parcel ainda listado D-1 (Agente 12)\n- Year_built oficial HCPA (Agente 02 FAILED)\n- Drive-by / status físico / boarded / condenada (Agente 09 FAILED)\n- Tampa code enforcement + demolition liens quantificação ($0-$500K) — Conduits $25 + Accela\n- Probate Matrid Shabazz status (HOVER Hillsborough Clerk)\n- Probate / bankruptcy Michelle Hall-Shabazz (PACER + HOVER)\n- Occupancy status confirmado (vacant / heir / tenant / squatter)\n- Identificação de quem mora hoje (utility + voter reg + neighbor)\n- Tampa vacant building registration / unsafe structure order (Accela)\n- Roof age via permit history Hillsborough Building\n\n## 💰 Market Exit & Financial\n\n- **As-is value:** $115,000\n- **ARV (after repair):** $200,000\n- **VMF conservador:** $95,000\n- **VMF selecionado:** $115,000\n- **VMF otimista:** $135,000\n- **Max safe bid:** $18,000\n- **Do not exceed:** $28,000\n- **Repair cost (base):** $102,000 (range $51,000 - $180,000)\n\n## 🏛️ Regras do Leilão & County Quirks\n\n**Auction rules:**\n- Payment deadline <24h after win — wire must be pre-arranged\n- Deposit non-refundable (5% = $668.21 at risk if fail to pay balance)\n- Surviving liens disclaimer is generic — municipal/code enforcement liens may survive (FL jurisprudence unsettled)\n- Calendar shows only 6/13 TDs remaining for 2026-05-21 — 54% pre-cancellation rate; verify parcel still listed in D-1\n\n**Quirks do condado:**\n- Saldo deve estar quitado até 10AM do próximo dia útil — falha cancela TODOS os bids do bidder e bidder paga custos de re-advertise (FACT: hillsclerk.com/taxdeeds)\n- Tax Deed Sale Application Fee de $60 normalmente já incluso no opening bid\n- RealAuction Hillsborough exige registration + login para ver detalhes do listing e baixar Bidder Letter — auditoria automatizada bloqueada\n- Tampa City code enforcement notoriamente agressivo: code/demolition liens municipais em zona cinzenta jurisprudencial pós-Palm Bay v Wells Fargo — verificar se parcel está dentro Tampa city limits\n- CDD/special assessment districts pesados em New Tampa, Riverview, Apollo Beach, Sun City Center — podem adicionar $1-4K/ano em assessments que sobrevivem ao tax deed\n- Coastal Construction Control Line (CCCL) em barrier islands (Apollo Beach, Davis Islands, South Tampa) — restrições federais adicionais à edificação\n\n## 💰 Dívidas Investigadas (Title & Liens)\n\n\n### Categorias de Dívidas/Liens\n\n| Tipo | Status | Confiança | Notas |\n|------|--------|-----------|-------|\n|  | POSSIVELMENTE_SOBREVIVENTE | low |  |\n|  | NAO_FOI_POSSIVEL_DETERMINAR | low |  |\n|  | PROVAVELMENTE_EXTINTO | medium |  |\n|  | NAO_FOI_POSSIVEL_DETERMINAR | low |  |\n|  | PROVAVELMENTE_EXTINTO | medium |  |\n|  | NAO_FOI_POSSIVEL_DETERMINAR | low |  |\n|  | NAO_FOI_POSSIVEL_DETERMINAR | low |  |\n|  | PROVAVELMENTE_SOBREVIVENTE | medium |  |\n|  | POSSIVELMENTE_SOBREVIVENTE | low |  |\n|  | PROVAVELMENTE_AUSENTE | high |  |\n\n### Achados críticos (title)\n\n- Owner 'Robert Shabazz Jr / et Al' confirma multi-ownership — 'et al' provavelmente Matrid J. Shabazz (mae, falecida 22/11/2023) cuja morte cria cloud sobre o titulo nao clareado\n- Esposa Michelle Hall-Shabazz falecida 15/03/2026 (67 dias antes do leilao 21/05/2026) — probate provavelmente em fase inicial; risco de bankruptcy stay ou contestacao de heirs\n- Confirmado parcel dentro de Tampa city limits (TAXDIST=TA / MUNI=A) — Tampa code enforcement liens podem SOBREVIVER ao tax deed (zona cinzenta jurisprudencial pos-Palm Bay v Wells Fargo)\n- Casa 1965 / 816 sqft / 0.22 ac em zip 33610 East Tampa — perfil estatistico de propriedade com possivel acumulo de code citations nao verificadas\n- Ultima sale registrada $4.000 em 1972 — chain of title pos-1972 NAO verificada (Hillsborough Clerk Liferay SPA bloqueou acesso programatico)\n- Sem CDD/MSBU confirmado (SD1=null, SD2=null) — elimina um dos riscos de assessment survival\n- Sem homestead exemption apesar de mailing=situs — anomalia que reforca hipotese de heirship pendente / casa herdada sem clareamento\n\n### ⚠️ Items pendentes (UNVERIFIED — investigar manualmente)\n\n- Tampa Code Enforcement liens / fines / demolition orders / open building permits para 2005 E Chelsea St (folio 1576600000)\n- Status do probate de Matrid J. Shabazz (falecida 22/11/2023) — caso aberto/fechado, herdeiros conhecidos, contestacao\n- Status do probate / interesse de Michelle Hall-Shabazz (falecida 15/03/2026, 67 dias antes do leilao)\n- Verificar mortgage chain, civil judgments, lis pendens, IRS federal liens recorded contra 'SHABAZZ' / parcel 1576600000 nos ultimos 20 anos\n- Confirmar status fisico do imovel (ocupado por familiares vs vacant vs estrutura demolida) e possiveis tenants\n\n## 🏗️ Viabilidade Física\n\n- Casa 1965 (61 anos) = lead paint federal + asbestos provavel = hazmat catchup $10-25K quase certo\n- 816 sqft 2BR/1BA limita ARV exit a teto ~$200-250K em East Tampa, comprimindo ROI severamente\n- Sem drive-by + sem inspecao interna = condition score UNRESOLVED = repair estimate LOW confidence (regra inviolavel)\n- Mechanicals provavelmente todos fim-de-vida ou ausentes (copper theft historico em tax deed pos-obito East Tampa)\n- Tampa permit catchup + code enforcement rigoroso = $3-10K adicional ao repair scope\n\n## 🌿 Riscos Ambientais\n\n- **Sinkhole risk:** low\n- **Wetlands:** none\n- **Contamination:** medium\n\n**Hazards identificados:**\n- **lead_paint_likely** (medium): \n- **asbestos_possible** (medium): \n- **urban_contamination_proximity** (medium): \n- **wind_zone_140mph** (low): \n- **hurricane_history_2022_2024** (low): \n\n---\n\n## 📊 Metodologia\n\nPipeline: COMPLETO (11 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | ✓ |\n| 01-auction-rules | ✓ |\n| 08-county-quirks | ✓ |\n| 02-official-data-property | — |\n| 09-drive-by-photo-verification | — |\n| 11-environmental-hazards | ✓ |\n| 03-title-liens-legal | ✓ |\n| 07-occupancy-investigation | ✓ |\n| 04-physical-viability | ✓ |\n| 10-insurance-feasibility | ✓ |\n| 05-market-exit-financial | ✓ |\n| 06-qa-investment-committee | ✓ |\n| 12-verification-engine | ✓ |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
   "top_3_reasons": [],
   "verdict": "PASS"
 }
