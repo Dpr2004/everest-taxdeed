@@ -1,10 +1,10 @@
 {
-  "gerado_em": "08/May/2026 11:01",
+  "gerado_em": "08/May/2026 15:39",
   "resumo": {
     "total_condados": 19,
     "total_sales": 47,
-    "total_lots": 286,
-    "lances": 49,
+    "total_lots": 290,
+    "lances": 50,
     "estados": [
       "FL"
     ]
@@ -1174,6 +1174,28 @@
       "fema_risk": null,
       "decisao_origem": "lotes_parcial",
       "decisao_motivo": "parcial 0/11 agentes"
+    },
+    {
+      "id": 27863,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-06-15",
+      "parcel_id": "34-24-17-0070-00I00-0060",
+      "address": "13651 MEADOW GREEN LANE",
+      "city": "HUDSON, 34669",
+      "zip": null,
+      "min_bid": 14973.27,
+      "assessed_value": null,
+      "just_value": 265786.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 2.5568,
+      "decisao": "LANCE",
+      "max_bid": 97191.03,
+      "profit": 162401.38,
+      "fema_zone": null,
+      "fema_risk": null
     },
     {
       "id": 22877,
@@ -3014,6 +3036,28 @@
       "fema_risk": null,
       "decisao_origem": "comite_lotes",
       "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
+    },
+    {
+      "id": 27701,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-05-14",
+      "parcel_id": "2004096",
+      "address": "0 UNKNOWN",
+      "city": null,
+      "zip": null,
+      "min_bid": 1176.81,
+      "assessed_value": 3000.0,
+      "just_value": 3000.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9199,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -29300.81,
+      "fema_zone": null,
+      "fema_risk": null
     },
     {
       "id": 18857,
@@ -6582,6 +6626,28 @@
       "fema_risk": null
     },
     {
+      "id": 27664,
+      "condado": "VOLUSIA",
+      "estado": "FL",
+      "sale_date": "2026-05-08",
+      "parcel_id": "530401090120",
+      "address": "121 S GRANDVIEW AVE",
+      "city": "DAYTONA BEACH",
+      "zip": "32118",
+      "min_bid": 249846.98,
+      "assessed_value": 251219.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.282,
+      "decisao": "PASSA",
+      "max_bid": 88276.03,
+      "profit": -83863.72,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 22729,
       "condado": "VOLUSIA",
       "estado": "FL",
@@ -6956,6 +7022,28 @@
       "fema_risk": null
     },
     {
+      "id": 27958,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-07-27",
+      "parcel_id": "06-24-18-0040-00002-3140",
+      "address": "16321 FISCUS DRIVE",
+      "city": "SPRING HILL, 34610",
+      "zip": null,
+      "min_bid": 495823.12,
+      "assessed_value": null,
+      "just_value": 148060.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7654,
+      "decisao": "PASSA",
+      "max_bid": 25142.72,
+      "profit": -410510.2,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 22598,
       "condado": "PASCO",
       "estado": "FL",
@@ -7053,7 +7141,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 27
+      "total_lots": 28
     },
     {
       "codigo": "CITRUS",
@@ -7261,7 +7349,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 8,
-      "total_lots": 18
+      "total_lots": 20
     },
     {
       "codigo": "POLK",
@@ -7325,7 +7413,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 8,
-      "total_lots": 33
+      "total_lots": 34
     }
   ]
 }
