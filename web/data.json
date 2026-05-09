@@ -1,10 +1,10 @@
 {
-  "gerado_em": "08/May/2026 15:39",
+  "gerado_em": "09/May/2026 10:47",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 47,
-    "total_lots": 290,
-    "lances": 50,
+    "total_sales": 46,
+    "total_lots": 296,
+    "lances": 51,
     "estados": [
       "FL"
     ]
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "04/May a 10/May/2026",
-      "sales": [
-        {
-          "id": 1421,
-          "data_fmt": "08/May/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "11/May a 17/May/2026",
@@ -1918,6 +1904,28 @@
       "fema_risk": null
     },
     {
+      "id": 28154,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-06-18",
+      "parcel_id": "152232233601680",
+      "address": "1920 10TH ST",
+      "city": "ORLANDO",
+      "zip": "32820",
+      "min_bid": 8981.33,
+      "assessed_value": 92213.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 88.3,
+      "roi": 0.7143,
+      "decisao": "LANCE",
+      "max_bid": 0.0,
+      "profit": 32659.24,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 27008,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -3612,6 +3620,28 @@
       "fema_risk": null
     },
     {
+      "id": 28212,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-07-23",
+      "parcel_id": "0032080175",
+      "address": "TAMPA33625",
+      "city": null,
+      "zip": null,
+      "min_bid": 1392.25,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.8532,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -27507.29,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 27362,
       "condado": "HILLSBOROUGH",
       "estado": "FL",
@@ -3630,6 +3660,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -27962.58,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 28213,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-07-23",
+      "parcel_id": "0032080125",
+      "address": "TAMPA33625",
+      "city": null,
+      "zip": null,
+      "min_bid": 1399.29,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.8525,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -27492.31,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -4522,6 +4574,28 @@
       "fema_risk": null
     },
     {
+      "id": 28193,
+      "condado": "FLAGLER",
+      "estado": "FL",
+      "sale_date": "2026-07-14",
+      "parcel_id": "1312281800003100030",
+      "address": "5557MAHOGANY BLVD",
+      "city": "BUNNELL",
+      "zip": "32110",
+      "min_bid": 1738.43,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.8191,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -26770.62,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 2888,
       "condado": "HIGHLANDS",
       "estado": "FL",
@@ -4562,6 +4636,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -26670.22,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 28045,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-05-27",
+      "parcel_id": "C-01-33-28-010-0001-3422",
+      "address": "1546 W BATAVIA RD",
+      "city": "AVON PARK",
+      "zip": "33825",
+      "min_bid": 1799.19,
+      "assessed_value": 13287.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.6595,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": -21878.76,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -5338,6 +5434,28 @@
       "fema_risk": null
     },
     {
+      "id": 28214,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-07-23",
+      "parcel_id": "0809700100",
+      "address": "4819 MILEY RD",
+      "city": null,
+      "zip": null,
+      "min_bid": 2698.47,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7294,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -24727.66,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 26728,
       "condado": "MARION",
       "estado": "FL",
@@ -5610,18 +5728,18 @@
       "sale_date": "2026-06-11",
       "parcel_id": "1557770000",
       "address": "2615 E CHELSEA ST",
-      "city": "TAMPA",
-      "zip": "33610",
+      "city": null,
+      "zip": null,
       "min_bid": 3814.74,
-      "assessed_value": 36962.0,
+      "assessed_value": null,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.1462,
-      "decisao": "REVISAR",
+      "roi": -0.6328,
+      "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -5380.46,
+      "profit": -22352.23,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6206,6 +6324,28 @@
       "fema_risk": null
     },
     {
+      "id": 28215,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-07-23",
+      "parcel_id": "0850684500",
+      "address": "3420 S FORBES RD",
+      "city": null,
+      "zip": null,
+      "min_bid": 11635.24,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.1261,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -5710.21,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 18719,
       "condado": "HILLSBOROUGH",
       "estado": "FL",
@@ -6622,28 +6762,6 @@
       "decisao": "PASSA",
       "max_bid": 87444.32,
       "profit": -81181.26,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 27664,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-05-08",
-      "parcel_id": "530401090120",
-      "address": "121 S GRANDVIEW AVE",
-      "city": "DAYTONA BEACH",
-      "zip": "32118",
-      "min_bid": 249846.98,
-      "assessed_value": 251219.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.282,
-      "decisao": "PASSA",
-      "max_bid": 88276.03,
-      "profit": -83863.72,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7188,8 +7306,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 1,
-      "total_lots": 1
+      "total_sales": 2,
+      "total_lots": 2
     },
     {
       "codigo": "HERNANDO",
@@ -7221,7 +7339,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 4,
-      "total_lots": 47
+      "total_lots": 48
     },
     {
       "codigo": "HILLSBOROUGH",
@@ -7237,7 +7355,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 9,
-      "total_lots": 74
+      "total_lots": 78
     },
     {
       "codigo": "LAKE",
@@ -7317,7 +7435,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 24
+      "total_lots": 25
     },
     {
       "codigo": "OSCEOLA",
@@ -7412,7 +7530,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
+      "total_sales": 7,
       "total_lots": 34
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-08",
+  "gerado_em": "2026-05-09",
   "total_candidatos": 30,
   "total_leiloes": 18,
   "ratio_minimo": 4.0,
@@ -52,6 +52,22 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 8.2,
+      "status": "pending"
+    },
+    {
+      "parcel": "C-01-33-28-010-0001-3422",
+      "county": "Highlands",
+      "state": "FL",
+      "address": "1546 W BATAVIA RD",
+      "city": "AVON PARK",
+      "bid": 1799.19,
+      "just_value": 13287.0,
+      "ratio": 7.38,
+      "sale_date": "2026-05-27",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 8.12,
       "status": "pending"
     },
     {
@@ -452,22 +468,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 9.11,
-      "status": "pending"
-    },
-    {
-      "parcel": "1557770000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "2615 E CHELSEA ST",
-      "city": "TAMPA",
-      "bid": 3814.74,
-      "just_value": 36962.0,
-      "ratio": 9.69,
-      "sale_date": "2026-06-11",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 8.24,
       "status": "pending"
     },
     {
