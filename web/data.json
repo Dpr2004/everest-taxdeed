@@ -1,10 +1,10 @@
 {
-  "gerado_em": "12/May/2026 11:59",
+  "gerado_em": "12/May/2026 16:29",
   "resumo": {
     "total_condados": 19,
     "total_sales": 48,
-    "total_lots": 320,
-    "lances": 54,
+    "total_lots": 323,
+    "lances": 53,
     "estados": [
       "FL"
     ]
@@ -1344,11 +1344,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 5.8308,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 453509.67,
       "profit": 615282.45,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 14989,
@@ -5909,6 +5911,28 @@
       "fema_risk": null
     },
     {
+      "id": 29962,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-07-16",
+      "parcel_id": "2428121",
+      "address": "0 UNKNOWN",
+      "city": null,
+      "zip": null,
+      "min_bid": 2714.91,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7279,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -24692.67,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 26728,
       "condado": "MARION",
       "estado": "FL",
@@ -7659,6 +7683,28 @@
       "fema_risk": null
     },
     {
+      "id": 29668,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-05-13",
+      "parcel_id": "34-24-17-0120-00000-0220",
+      "address": "13439 MARBLE SANDS CT",
+      "city": "HUDSON, 34669",
+      "zip": null,
+      "min_bid": 417114.43,
+      "assessed_value": null,
+      "just_value": 229900.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.5781,
+      "decisao": "PASSA",
+      "max_bid": 75228.8,
+      "profit": -267802.63,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 22739,
       "condado": "PASCO",
       "estado": "FL",
@@ -7789,6 +7835,28 @@
       "profit": -215188.0,
       "fema_zone": null,
       "fema_risk": null
+    },
+    {
+      "id": 29975,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-07-22",
+      "parcel_id": "35-25-20-0010-01700-0060",
+      "address": "32516 SUMMERGLADE DR",
+      "city": "WESLEY CHAPEL, 33545",
+      "zip": null,
+      "min_bid": 608608.72,
+      "assessed_value": null,
+      "just_value": 432010.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.4507,
+      "decisao": "PASSA",
+      "max_bid": 198920.12,
+      "profit": -301246.9,
+      "fema_zone": null,
+      "fema_risk": null
     }
   ],
   "condados": [
@@ -7822,7 +7890,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 29
+      "total_lots": 30
     },
     {
       "codigo": "CITRUS",
@@ -8029,8 +8097,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 9,
-      "total_lots": 22
+      "total_sales": 10,
+      "total_lots": 24
     },
     {
       "codigo": "POLK",
