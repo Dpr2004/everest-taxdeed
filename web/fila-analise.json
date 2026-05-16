@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-15",
+  "gerado_em": "2026-05-16",
   "total_candidatos": 30,
   "total_leiloes": 19,
   "ratio_minimo": 4.0,
@@ -116,6 +116,38 @@
       "workers_score": 79.1,
       "workers_decision": "REVISAR",
       "ranking_score": 9.8,
+      "status": "pending"
+    },
+    {
+      "parcel": "1407590000",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "10602 N 26TH ST",
+      "city": "TAMPA",
+      "bid": 11964.6,
+      "just_value": 135343.0,
+      "ratio": 11.31,
+      "sale_date": "2026-06-04",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 9.62,
+      "status": "pending"
+    },
+    {
+      "parcel": "1879050000",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "2609 E 23RD AVE",
+      "city": "TAMPA",
+      "bid": 9385.99,
+      "just_value": 102593.0,
+      "ratio": 10.93,
+      "sale_date": "2026-06-04",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 9.29,
       "status": "pending"
     },
     {
@@ -452,38 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 23.57,
-      "status": "pending"
-    },
-    {
-      "parcel": "202527330300012920",
-      "county": "Osceola",
-      "state": "FL",
-      "address": "SIOUX TRL",
-      "city": "KISSIMMEE",
-      "bid": 4974.3,
-      "just_value": 96580.0,
-      "ratio": 19.42,
-      "sale_date": "2026-06-16",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 19.42,
-      "status": "pending"
-    },
-    {
-      "parcel": "072530269901160330",
-      "county": "Osceola",
-      "state": "FL",
-      "address": "337 GAIT CT",
-      "city": "KISSIMMEE",
-      "bid": 9395.05,
-      "just_value": 172504.0,
-      "ratio": 18.36,
-      "sale_date": "2026-06-16",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 18.36,
       "status": "pending"
     }
   ]

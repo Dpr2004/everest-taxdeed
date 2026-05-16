@@ -1,10 +1,10 @@
 {
-  "gerado_em": "15/May/2026 16:04",
+  "gerado_em": "16/May/2026 10:44",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 39,
-    "total_lots": 289,
-    "lances": 54,
+    "total_sales": 38,
+    "total_lots": 294,
+    "lances": 56,
     "estados": [
       "FL"
     ]
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "11/May a 17/May/2026",
-      "sales": [
-        {
-          "id": 2844,
-          "data_fmt": "15/May/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "18/May a 24/May/2026",
@@ -872,6 +858,28 @@
       "fema_risk": null
     },
     {
+      "id": 31891,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-06-04",
+      "parcel_id": "1879050000",
+      "address": "2609 E 23RD AVE",
+      "city": "TAMPA",
+      "zip": "33605",
+      "min_bid": 9385.99,
+      "assessed_value": 102593.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 0.862,
+      "decisao": "LANCE",
+      "max_bid": 0.0,
+      "profit": 40371.74,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 27004,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -1046,6 +1054,28 @@
       "decisao": "LANCE",
       "max_bid": 17266.89,
       "profit": 63614.12,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 31890,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-06-04",
+      "parcel_id": "1407590000",
+      "address": "10602 N 26TH ST",
+      "city": "TAMPA",
+      "zip": "33612",
+      "min_bid": 11964.6,
+      "assessed_value": 135343.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.2279,
+      "decisao": "LANCE",
+      "max_bid": 17359.92,
+      "profit": 63403.63,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6232,6 +6262,28 @@
       "fema_risk": null
     },
     {
+      "id": 31993,
+      "condado": "VOLUSIA",
+      "estado": "FL",
+      "sale_date": "2026-06-30",
+      "parcel_id": "701019000810",
+      "address": "745 E RICH AVE",
+      "city": "DELAND",
+      "zip": "32724",
+      "min_bid": 89748.66,
+      "assessed_value": 133770.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.1207,
+      "decisao": "PASSA",
+      "max_bid": 16397.24,
+      "profit": -15610.52,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 22741,
       "condado": "VOLUSIA",
       "estado": "FL",
@@ -6316,6 +6368,28 @@
       "decisao": "PASSA",
       "max_bid": 42505.16,
       "profit": -42165.88,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 31996,
+      "condado": "VOLUSIA",
+      "estado": "FL",
+      "sale_date": "2026-06-30",
+      "parcel_id": "801001170070",
+      "address": "990 LISKEARD AVE",
+      "city": "ORANGE CITY",
+      "zip": "32763",
+      "min_bid": 162995.09,
+      "assessed_value": 205648.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.1574,
+      "decisao": "PASSA",
+      "max_bid": 60386.58,
+      "profit": -32648.35,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6848,6 +6922,28 @@
       "fema_risk": null
     },
     {
+      "id": 31994,
+      "condado": "VOLUSIA",
+      "estado": "FL",
+      "sale_date": "2026-06-30",
+      "parcel_id": "800400000470",
+      "address": "1775 W FRENCH AVE",
+      "city": "ORANGE CITY",
+      "zip": "32763",
+      "min_bid": 482152.63,
+      "assessed_value": 497859.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.2256,
+      "decisao": "PASSA",
+      "max_bid": 239219.71,
+      "profit": -123296.89,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 27958,
       "condado": "PASCO",
       "estado": "FL",
@@ -7107,7 +7203,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 8,
-      "total_lots": 80
+      "total_lots": 82
     },
     {
       "codigo": "LAKE",
@@ -7282,8 +7378,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 9,
-      "total_lots": 43
+      "total_sales": 8,
+      "total_lots": 46
     }
   ]
 }
