@@ -1,8 +1,8 @@
 {
-  "gerado_em": "17/May/2026 15:07",
+  "gerado_em": "18/May/2026 13:01",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 38,
+    "total_sales": 41,
     "total_lots": 294,
     "lances": 56,
     "estados": [
@@ -10,10 +10,6 @@
     ]
   },
   "semanas": [
-    {
-      "label": "11/May a 17/May/2026",
-      "sales": []
-    },
     {
       "label": "18/May a 24/May/2026",
       "sales": [
@@ -540,6 +536,50 @@
           "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
           "status": "CONFIRMADO",
           "total_lots": 0
+        }
+      ]
+    },
+    {
+      "label": "06/Jul a 12/Jul/2026",
+      "sales": [
+        {
+          "id": 2873,
+          "data_fmt": "06/Jul/2026",
+          "dia_semana": "Seg",
+          "condado": "VOLUSIA",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://volusia.realforeclose.com/",
+          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 2327,
+          "data_fmt": "07/Jul/2026",
+          "dia_semana": "Ter",
+          "condado": "PASCO",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://pasco.realforeclose.com/",
+          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 455,
+          "data_fmt": "09/Jul/2026",
+          "dia_semana": "Qui",
+          "condado": "HILLSBOROUGH",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://hillsborough.realtaxdeed.com/",
+          "url_clerk": "https://www.hillsclerk.com/Additional-Services/Foreclosures-and-Tax-Deeds",
+          "status": "CONFIRMADO",
+          "total_lots": 23
         }
       ]
     }
