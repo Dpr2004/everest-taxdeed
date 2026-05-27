@@ -1,10 +1,10 @@
 {
-  "gerado_em": "27/May/2026 12:58",
+  "gerado_em": "27/May/2026 17:27",
   "resumo": {
     "total_condados": 19,
     "total_sales": 46,
-    "total_lots": 312,
-    "lances": 52,
+    "total_lots": 314,
+    "lances": 50,
     "estados": [
       "FL"
     ]
@@ -695,6 +695,28 @@
       "fema_risk": null
     },
     {
+      "id": 37303,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-08-13",
+      "parcel_id": "0948610000",
+      "address": "10910 MARJORY AVE",
+      "city": "TAMPA",
+      "zip": "33612",
+      "min_bid": 2101.78,
+      "assessed_value": 138505.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.8037,
+      "decisao": "LANCE",
+      "max_bid": 19295.06,
+      "profit": 75739.13,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 27006,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -934,11 +956,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.5563,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 134226.21,
       "profit": 216483.1,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18862,
@@ -1070,11 +1094,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 1.0616,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 7923.49,
       "profit": 52489.95,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18874,
@@ -1676,11 +1702,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.3261,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 255534.4,
       "profit": 342780.86,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27538,
@@ -2201,6 +2229,28 @@
       "fema_risk": null
     },
     {
+      "id": 37707,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-06-18",
+      "parcel_id": "322233131607010",
+      "address": "464 S FORT CHRISTMAS RD",
+      "city": "CHRISTMAS",
+      "zip": "32709",
+      "min_bid": 7842.52,
+      "assessed_value": 77704.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 81.0,
+      "roi": 0.515,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 22452.01,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 18781,
       "condado": "HILLSBOROUGH",
       "estado": "FL",
@@ -2358,7 +2408,9 @@
       "max_bid": 0.0,
       "profit": 13065.76,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 14996,
@@ -2451,6 +2503,28 @@
       "fema_risk": null
     },
     {
+      "id": 37304,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-08-13",
+      "parcel_id": "0744870090",
+      "address": "927 ESTELLE AVE",
+      "city": "BRANDON",
+      "zip": "33511",
+      "min_bid": 5205.3,
+      "assessed_value": 57441.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 58.3,
+      "roi": 0.2335,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 9243.56,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 18848,
       "condado": "HILLSBOROUGH",
       "estado": "FL",
@@ -2469,6 +2543,28 @@
       "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 7545.17,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 37302,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-08-13",
+      "parcel_id": "0213820274",
+      "address": "12407 OAK CEDAR PL 102",
+      "city": "TAMPA",
+      "zip": "33612",
+      "min_bid": 5643.26,
+      "assessed_value": 55692.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 47.6,
+      "roi": 0.1864,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 7437.88,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -3211,7 +3307,7 @@
       "address": "0 UNKNOWN",
       "city": null,
       "zip": null,
-      "min_bid": 1264.73,
+      "min_bid": 1271.07,
       "assessed_value": 200.0,
       "just_value": null,
       "building_sqft": null,
@@ -3220,7 +3316,7 @@
       "roi": -0.9946,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -31578.33,
+      "profit": -31584.67,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -3706,7 +3802,9 @@
       "max_bid": 0.0,
       "profit": -23700.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27010,
@@ -3815,6 +3913,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -27377.29,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 37821,
+      "condado": "POLK",
+      "estado": "FL",
+      "sale_date": "2026-07-16",
+      "parcel_id": "303030000000031050",
+      "address": "LAKE WALES, FL- 33898",
+      "city": null,
+      "zip": null,
+      "min_bid": 1453.34,
+      "assessed_value": 691.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9816,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -31382.98,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -3948,7 +4068,9 @@
       "max_bid": 0.0,
       "profit": -23743.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 2926,
@@ -3970,7 +4092,9 @@
       "max_bid": 0.0,
       "profit": -23743.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 2928,
@@ -3992,7 +4116,9 @@
       "max_bid": 0.0,
       "profit": -23743.73,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 37027,
@@ -4812,7 +4938,9 @@
       "max_bid": 0.0,
       "profit": -23948.44,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18870,
@@ -4945,28 +5073,6 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -30276.72,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 37303,
-      "condado": "HILLSBOROUGH",
-      "estado": "FL",
-      "sale_date": "2026-08-13",
-      "parcel_id": "0948610000",
-      "address": "10910 MARJORY AVE",
-      "city": null,
-      "zip": null,
-      "min_bid": 2101.78,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.7844,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -25997.41,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -5544,7 +5650,9 @@
       "max_bid": 0.0,
       "profit": -8758.48,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 37264,
@@ -6093,50 +6201,6 @@
       "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -15311.05,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 37304,
-      "condado": "HILLSBOROUGH",
-      "estado": "FL",
-      "sale_date": "2026-08-13",
-      "parcel_id": "0744870090",
-      "address": "927 ESTELLE AVE",
-      "city": null,
-      "zip": null,
-      "min_bid": 5205.3,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.5229,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -19393.12,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 37302,
-      "condado": "HILLSBOROUGH",
-      "estado": "FL",
-      "sale_date": "2026-08-13",
-      "parcel_id": "0213820274",
-      "address": "12407 OAK CEDAR PL 102",
-      "city": null,
-      "zip": null,
-      "min_bid": 5643.26,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4904,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -18461.14,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7784,7 +7848,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 30
+      "total_lots": 31
     },
     {
       "codigo": "OSCEOLA",
@@ -7832,7 +7896,7 @@
       "horario_et": "09:30",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 2,
-      "total_lots": 33
+      "total_lots": 34
     },
     {
       "codigo": "PUTNAM",
