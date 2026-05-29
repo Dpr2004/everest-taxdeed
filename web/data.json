@@ -1,10 +1,10 @@
 {
-  "gerado_em": "29/May/2026 12:49",
+  "gerado_em": "29/May/2026 17:29",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 44,
+    "total_sales": 45,
     "total_lots": 304,
-    "lances": 51,
+    "lances": 44,
     "estados": [
       "FL"
     ]
@@ -178,6 +178,19 @@
           "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
           "status": "CONFIRMADO",
           "total_lots": 6
+        },
+        {
+          "id": 5693,
+          "data_fmt": "10/Jun/2026",
+          "dia_semana": "Qua",
+          "condado": "PUTNAM",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://putnam.realtaxdeed.com/",
+          "url_clerk": "https://putnamclerk.com/tax-deed-sales/",
+          "status": "CONFIRMADO",
+          "total_lots": 0
         },
         {
           "id": 685,
@@ -706,11 +719,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 4.3505,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 156686.0,
       "profit": 250882.06,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27012,
@@ -728,11 +743,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.954,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 40081.26,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 31499,
@@ -772,11 +789,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.8652,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 36864.52,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 14995,
@@ -952,11 +971,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 1.8419,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 40102.45,
       "profit": 95033.08,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27009,
@@ -974,11 +995,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.0101,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 51666.8,
       "profit": 108642.65,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18807,
@@ -1108,11 +1131,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.054,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 63193.21,
       "profit": 120186.04,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 18852,
@@ -1200,11 +1225,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.3046,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 148791.2,
       "profit": 228452.72,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27863,
@@ -3019,6 +3046,28 @@
       "fema_risk": null
     },
     {
+      "id": 35541,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-06-03",
+      "parcel_id": "C-22-37-30-090-0770-0150",
+      "address": "223 BLUE HORIZON DR",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 1132.76,
+      "assessed_value": 1000.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9732,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30820.76,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 31448,
       "condado": "ORANGE",
       "estado": "FL",
@@ -3147,28 +3196,6 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -31584.67,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 35541,
-      "condado": "HIGHLANDS",
-      "estado": "FL",
-      "sale_date": "2026-06-03",
-      "parcel_id": "C-22-37-30-090-0770-0150",
-      "address": "223 BLUE HORIZON DR",
-      "city": "LAKE PLACID",
-      "zip": "33852",
-      "min_bid": 1292.36,
-      "assessed_value": 1000.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.9733,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -30980.36,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -4292,15 +4319,15 @@
       "city": "SEBRING",
       "zip": "33870",
       "min_bid": 1853.41,
-      "assessed_value": null,
+      "assessed_value": 1756.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.808,
+      "roi": -0.954,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -26525.94,
+      "profit": -30950.22,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -4324,7 +4351,9 @@
       "max_bid": 0.0,
       "profit": -22948.58,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 35662,
@@ -4345,6 +4374,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -26442.97,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 35539,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-06-03",
+      "parcel_id": "C-22-37-30-070-0660-0120",
+      "address": "363 CHORALE DR",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 1893.25,
+      "assessed_value": 2197.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9426,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30645.2,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -4503,6 +4554,28 @@
       "fema_risk": null
     },
     {
+      "id": 35537,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-06-03",
+      "parcel_id": "C-22-37-30-090-0740-0090",
+      "address": "387 MARIONETTE AVE",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 2047.99,
+      "assessed_value": 2197.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9428,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30799.94,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 29528,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -4522,29 +4595,9 @@
       "max_bid": 0.0,
       "profit": -23362.66,
       "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 35539,
-      "condado": "HIGHLANDS",
-      "estado": "FL",
-      "sale_date": "2026-06-03",
-      "parcel_id": "C-22-37-30-070-0660-0120",
-      "address": "363 CHORALE DR",
-      "city": "LAKE PLACID",
-      "zip": "33852",
-      "min_bid": 2090.02,
-      "assessed_value": 2197.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.9429,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -30841.97,
-      "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 29548,
@@ -4723,28 +4776,6 @@
       "fema_risk": null
     },
     {
-      "id": 35537,
-      "condado": "HIGHLANDS",
-      "estado": "FL",
-      "sale_date": "2026-06-03",
-      "parcel_id": "C-22-37-30-090-0740-0090",
-      "address": "387 MARIONETTE AVE",
-      "city": "LAKE PLACID",
-      "zip": "33852",
-      "min_bid": 2244.76,
-      "assessed_value": 2197.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.9432,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -30996.71,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 35667,
       "condado": "HIGHLANDS",
       "estado": "FL",
@@ -4791,6 +4822,28 @@
       "decisao_motivo": "parcial 0/11 agentes"
     },
     {
+      "id": 35540,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-06-03",
+      "parcel_id": "C-20-36-30-100-0080-0180",
+      "address": "1438 WISTERIA ST",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 2270.94,
+      "assessed_value": 2928.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9244,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30451.24,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 27011,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -4809,6 +4862,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -28544.77,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 35538,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-06-03",
+      "parcel_id": "C-20-36-30-020-0220-0320",
+      "address": "124 EVERSOLE AVE",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 2310.61,
+      "assessed_value": 2928.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9245,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30490.91,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -4949,28 +5024,6 @@
       "fema_risk": null
     },
     {
-      "id": 35540,
-      "condado": "HIGHLANDS",
-      "estado": "FL",
-      "sale_date": "2026-06-03",
-      "parcel_id": "C-20-36-30-100-0080-0180",
-      "address": "1438 WISTERIA ST",
-      "city": "LAKE PLACID",
-      "zip": "33852",
-      "min_bid": 2439.91,
-      "assessed_value": 2928.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.9248,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -30620.21,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 35464,
       "condado": "LAKE",
       "estado": "FL",
@@ -5033,28 +5086,6 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -25215.35,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 35538,
-      "condado": "HIGHLANDS",
-      "estado": "FL",
-      "sale_date": "2026-06-03",
-      "parcel_id": "C-20-36-30-020-0220-0320",
-      "address": "124 EVERSOLE AVE",
-      "city": "LAKE PLACID",
-      "zip": "33852",
-      "min_bid": 2479.58,
-      "assessed_value": 2928.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.9249,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -30659.88,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7653,7 +7684,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 0,
+      "total_sales": 1,
       "total_lots": 10
     },
     {
