@@ -1,0 +1,7 @@
+{
+  "completed_at": "2026-05-29T12:52:44.912Z",
+  "parcel_id": "202527330300012920",
+  "red_flags": [],
+  "report_markdown": "# Análise — Parcel 202527330300012920\n\n**Condado:** Osceola, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $4,974  \n**Data do leilão:** 2026-06-16  \n**Asset type:** _(não classificado)_  \n**Gerado em:** 2026-05-29 12:52 UTC  \n\n> ⚠️ **ANÁLISE PARCIAL** — apenas 0 de 11 agentes completaram (timeout ou erro). Veredicto pode estar incompleto.\n\n---\n\n## 🎯 Veredicto Final\n\n**INCONCLUSIVO** — Score 0/100 — Confiança: low\n\n---\n\n## 📊 Metodologia\n\nPipeline: PARCIAL (0 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | — |\n| 01-auction-rules | — |\n| 08-county-quirks | — |\n| 02-official-data-property | — |\n| 09-drive-by-photo-verification | — |\n| 11-environmental-hazards | — |\n| 03-title-liens-legal | — |\n| 04-physical-viability | — |\n| 05-market-exit-financial | — |\n| 06-qa-investment-committee | — |\n| 12-verification-engine | — |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
+  "top_3_reasons": []
+}
