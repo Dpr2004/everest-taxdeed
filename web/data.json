@@ -1,9 +1,9 @@
 {
-  "gerado_em": "29/May/2026 17:29",
+  "gerado_em": "30/May/2026 11:26",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 45,
-    "total_lots": 304,
+    "total_sales": 44,
+    "total_lots": 301,
     "lances": 44,
     "estados": [
       "FL"
@@ -13,19 +13,6 @@
     {
       "label": "25/May a 31/May/2026",
       "sales": [
-        {
-          "id": 5324,
-          "data_fmt": "29/May/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        },
         {
           "id": 441,
           "data_fmt": "31/May/2026",
@@ -2222,30 +2209,6 @@
       "profit": 30678.48,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 37853,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-05-29",
-      "parcel_id": "531631004200",
-      "address": "1909 S ATLANTIC AVE 420",
-      "city": "DAYTONA BEACH SHORES",
-      "zip": "32118",
-      "min_bid": 57472.02,
-      "assessed_value": 146640.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 78.7,
-      "roi": 0.273,
-      "decisao": "REVISAR",
-      "max_bid": 24273.68,
-      "profit": 26730.46,
-      "fema_zone": null,
-      "fema_risk": null,
-      "decisao_origem": "lotes_parcial",
-      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 38046,
@@ -6622,28 +6585,6 @@
       "fema_risk": null
     },
     {
-      "id": 37854,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-05-29",
-      "parcel_id": "523902020070",
-      "address": "214 LOCKHART ST",
-      "city": "DAYTONA BEACH",
-      "zip": "32114",
-      "min_bid": 118658.73,
-      "assessed_value": 110723.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.3992,
-      "decisao": "PASSA",
-      "max_bid": 2292.48,
-      "profit": -62543.34,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 22741,
       "condado": "VOLUSIA",
       "estado": "FL",
@@ -6706,28 +6647,6 @@
       "decisao": "PASSA",
       "max_bid": 50320.4,
       "profit": -34298.36,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 37852,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-05-29",
-      "parcel_id": "620603040250",
-      "address": "49 GENERAL DOOLITTLE RD",
-      "city": "DAYTONA BEACH",
-      "zip": "32124",
-      "min_bid": 162867.61,
-      "assessed_value": 195039.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.1976,
-      "decisao": "PASSA",
-      "max_bid": 53893.87,
-      "profit": -40817.11,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7716,7 +7635,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
+      "total_sales": 7,
       "total_lots": 55
     }
   ]
