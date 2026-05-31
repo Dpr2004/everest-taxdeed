@@ -1,27 +1,11 @@
 {
   "gerado_em": "2026-05-31",
   "total_candidatos": 30,
-  "total_leiloes": 13,
+  "total_leiloes": 12,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "302531281800010030",
-      "county": "Osceola",
-      "state": "FL",
-      "address": "4868 CHISHOLM PARK TRL",
-      "city": "SAINT CLOUD",
-      "bid": 23882.11,
-      "just_value": 465900.0,
-      "ratio": 19.51,
-      "sale_date": "2026-06-16",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 19.51,
-      "status": "pending"
-    },
     {
       "parcel": "04719-029-00",
       "county": "Marion",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 78.45,
+      "status": "pending"
+    },
+    {
+      "parcel": "0795080100",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "2211 ROOSEVELT ST",
+      "city": "WIMAUMA",
+      "bid": 1431.12,
+      "just_value": 82419.0,
+      "ratio": 57.59,
+      "sale_date": "2026-07-09",
+      "flood_zone": "",
+      "workers_score": 88.3,
+      "workers_decision": "LANCE",
+      "ranking_score": 48.95,
       "status": "pending"
     }
   ]

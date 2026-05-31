@@ -1,10 +1,10 @@
 {
-  "gerado_em": "31/May/2026 11:32",
+  "gerado_em": "31/May/2026 15:32",
   "resumo": {
     "total_condados": 19,
     "total_sales": 44,
     "total_lots": 301,
-    "lances": 44,
+    "lances": 43,
     "estados": [
       "FL"
     ]
@@ -1530,11 +1530,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.603,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 219660.8,
       "profit": 309981.69,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27233,
