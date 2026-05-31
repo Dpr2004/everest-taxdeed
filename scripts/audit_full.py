@@ -152,6 +152,7 @@ def main():
         lots_comercial = row['lots_comercial'] or 0
         lots_tipo_unk = row['lots_tipo_desconhecido'] or 0
         lots_improved = lots_residencial + lots_comercial  # precisam sqft
+        lots_improved_sqft = min(lots_sqft, lots_improved)  # sqft em improved (proxy conservador)
         lots_aid = row['lots_aid'] or 0
 
         # Plausibilidade de datas — leiloes diarios = suspeito

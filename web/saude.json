@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-05-08T00:24:32.295932+00:00",
+  "gerado_em": "2026-05-31T07:30:54.697263+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 12,
+    "condados_verdes": 13,
     "condados_amarelos": 0,
     "condados_vermelhos": 3,
     "condados_vazios": 0,
-    "condados_sem_atividade": 4,
-    "total_lots_validos": 284,
-    "lots_com_verdict_lotes": 30,
+    "condados_sem_atividade": 3,
+    "total_lots_validos": 301,
+    "lots_com_verdict_lotes": 29,
     "problemas_criticos": 6,
-    "saude_geral_pct": 80
+    "saude_geral_pct": 81
   },
   "condados": [
     {
@@ -18,9 +18,9 @@
       "nome": "Alachua County",
       "state": "FL",
       "url_sales": "https://alachua.realtaxdeed.com/",
-      "sales_futuras": 2,
+      "sales_futuras": 3,
       "proxima_sale": "2026-06-16",
-      "ultima_sale": "2026-06-23",
+      "ultima_sale": "2026-07-21",
       "lots_validos": 0,
       "cobertura": {
         "address_pct": 0,
@@ -31,7 +31,7 @@
       "quality_score": 0,
       "status": "vermelho",
       "issues": [
-        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "AUTH_FAIL provavel — 3 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -39,10 +39,10 @@
       "nome": "Brevard County",
       "state": "FL",
       "url_sales": "https://brevard.realforeclose.com/",
-      "sales_futuras": 3,
-      "proxima_sale": "2026-05-14",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-06-11",
       "ultima_sale": "2026-07-16",
-      "lots_validos": 27,
+      "lots_validos": 20,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -50,7 +50,7 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 14,
+        "PASSA": 7,
         "REVISAR": 12
       },
       "quality_score": 100,
@@ -62,8 +62,8 @@
       "nome": "Citrus County",
       "state": "FL",
       "url_sales": "https://citrus.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-05-13",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-06-10",
       "ultima_sale": "2026-06-10",
       "lots_validos": 0,
       "cobertura": {
@@ -75,7 +75,7 @@
       "quality_score": 0,
       "status": "vermelho",
       "issues": [
-        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -84,20 +84,21 @@
       "state": "FL",
       "url_sales": "https://duval.realtaxdeed.com/",
       "sales_futuras": 2,
-      "proxima_sale": "2026-05-13",
-      "ultima_sale": "2026-06-10",
-      "lots_validos": 0,
+      "proxima_sale": "2026-06-10",
+      "ultima_sale": "2026-08-12",
+      "lots_validos": 2,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
-        "sqft_pct": 100.0
+        "address_pct": 100.0,
+        "value_pct": 100.0,
+        "sqft_pct": 0.0
       },
-      "decisoes": {},
-      "quality_score": 0,
-      "status": "vermelho",
-      "issues": [
-        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
-      ]
+      "decisoes": {
+        "REVISAR": 1,
+        "PASSA": 1
+      },
+      "quality_score": 75,
+      "status": "verde",
+      "issues": []
     },
     {
       "codigo": "FLAGLER",
@@ -105,8 +106,8 @@
       "state": "FL",
       "url_sales": "https://flagler.realtaxdeed.com/",
       "sales_futuras": 1,
-      "proxima_sale": "2026-05-12",
-      "ultima_sale": "2026-05-12",
+      "proxima_sale": "2026-07-14",
+      "ultima_sale": "2026-07-14",
       "lots_validos": 1,
       "cobertura": {
         "address_pct": 100.0,
@@ -114,7 +115,7 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 1
+        "REVISAR": 1
       },
       "quality_score": 100,
       "status": "verde",
@@ -144,20 +145,19 @@
       "nome": "Highlands County",
       "state": "FL",
       "url_sales": "https://highlands.realtaxdeed.com/",
-      "sales_futuras": 4,
-      "proxima_sale": "2026-05-13",
-      "ultima_sale": "2026-06-10",
-      "lots_validos": 36,
+      "sales_futuras": 6,
+      "proxima_sale": "2026-06-03",
+      "ultima_sale": "2026-08-12",
+      "lots_validos": 31,
       "cobertura": {
-        "address_pct": 97.2,
-        "value_pct": 88.9,
+        "address_pct": 100.0,
+        "value_pct": 64.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 6,
-        "PASSA": 30
+        "PASSA": 31
       },
-      "quality_score": 97,
+      "quality_score": 94,
       "status": "verde",
       "issues": []
     },
@@ -166,21 +166,21 @@
       "nome": "Hillsborough County",
       "state": "FL",
       "url_sales": "https://hillsborough.realtaxdeed.com/",
-      "sales_futuras": 9,
-      "proxima_sale": "2026-05-14",
-      "ultima_sale": "2026-07-23",
-      "lots_validos": 74,
+      "sales_futuras": 7,
+      "proxima_sale": "2026-06-04",
+      "ultima_sale": "2026-08-13",
+      "lots_validos": 77,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 86.5,
+        "value_pct": 79.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 30,
-        "REVISAR": 21,
-        "PASSA": 23
+        "LANCE": 20,
+        "REVISAR": 35,
+        "PASSA": 22
       },
-      "quality_score": 97,
+      "quality_score": 96,
       "status": "verde",
       "issues": []
     },
@@ -189,10 +189,10 @@
       "nome": "Lake County",
       "state": "FL",
       "url_sales": "https://lake.realtaxdeed.com/",
-      "sales_futuras": 2,
+      "sales_futuras": 3,
       "proxima_sale": "2026-06-02",
       "ultima_sale": "2026-07-21",
-      "lots_validos": 7,
+      "lots_validos": 8,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
@@ -200,12 +200,12 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 6
+        "PASSA": 7
       },
       "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 7/7 — Regrid/PA falhou"
+        "assessed/just_value missing em 8/8 — Regrid/PA falhou"
       ]
     },
     {
@@ -213,19 +213,23 @@
       "nome": "Lee County",
       "state": "FL",
       "url_sales": "https://lee.realtaxdeed.com/",
-      "sales_futuras": 0,
-      "proxima_sale": null,
-      "ultima_sale": null,
-      "lots_validos": 0,
+      "sales_futuras": 2,
+      "proxima_sale": "2026-07-14",
+      "ultima_sale": "2026-07-28",
+      "lots_validos": 10,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 0.0,
         "sqft_pct": 100.0
       },
-      "decisoes": {},
-      "quality_score": 0,
-      "status": "sem_atividade",
-      "issues": []
+      "decisoes": {
+        "PASSA": 10
+      },
+      "quality_score": 85,
+      "status": "verde",
+      "issues": [
+        "assessed/just_value missing em 10/10 — Regrid/PA falhou"
+      ]
     },
     {
       "codigo": "LEVY",
@@ -252,17 +256,17 @@
       "state": "FL",
       "url_sales": "https://marion.realtaxdeed.com/",
       "sales_futuras": 2,
-      "proxima_sale": "2026-05-13",
-      "ultima_sale": "2026-06-17",
-      "lots_validos": 22,
+      "proxima_sale": "2026-06-17",
+      "ultima_sale": "2026-07-15",
+      "lots_validos": 23,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 18,
-        "REVISAR": 4
+        "REVISAR": 6,
+        "PASSA": 17
       },
       "quality_score": 100,
       "status": "verde",
@@ -276,16 +280,16 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-06-04",
       "ultima_sale": "2026-06-25",
-      "lots_validos": 24,
+      "lots_validos": 32,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 11,
-        "REVISAR": 3,
-        "PASSA": 10
+        "LANCE": 13,
+        "REVISAR": 7,
+        "PASSA": 12
       },
       "quality_score": 100,
       "status": "verde",
@@ -297,19 +301,20 @@
       "state": "FL",
       "url_sales": "https://osceola.realtaxdeed.com/",
       "sales_futuras": 3,
-      "proxima_sale": "2026-05-19",
-      "ultima_sale": "2026-06-16",
-      "lots_validos": 20,
+      "proxima_sale": "2026-05-31",
+      "ultima_sale": "2026-07-07",
+      "lots_validos": 24,
       "cobertura": {
-        "address_pct": 50.0,
-        "value_pct": 50.0,
+        "address_pct": 54.2,
+        "value_pct": 54.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 1,
-        "PASSA": 19
+        "REVISAR": 10,
+        "LANCE": 5,
+        "PASSA": 9
       },
-      "quality_score": 82,
+      "quality_score": 83,
       "status": "verde",
       "issues": []
     },
@@ -318,19 +323,18 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-05-13",
-      "ultima_sale": "2026-07-27",
-      "lots_validos": 15,
+      "sales_futuras": 11,
+      "proxima_sale": "2026-06-02",
+      "ultima_sale": "2026-08-18",
+      "lots_validos": 21,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 3,
-        "LANCE": 3,
-        "PASSA": 9
+        "REVISAR": 4,
+        "PASSA": 17
       },
       "quality_score": 100,
       "status": "verde",
@@ -341,45 +345,41 @@
       "nome": "Polk County",
       "state": "FL",
       "url_sales": "https://polk.realtaxdeed.com/",
-      "sales_futuras": 3,
-      "proxima_sale": "2026-05-21",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-06-18",
       "ultima_sale": "2026-07-16",
-      "lots_validos": 21,
+      "lots_validos": 23,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 47.6,
+        "value_pct": 56.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 21
+        "PASSA": 23
       },
-      "quality_score": 92,
+      "quality_score": 93,
       "status": "verde",
-      "issues": [
-        "assessed/just_value missing em 11/21 — Regrid/PA falhou"
-      ]
+      "issues": []
     },
     {
       "codigo": "PUTNAM",
       "nome": "Putnam County",
       "state": "FL",
       "url_sales": "https://putnam.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-05-13",
-      "ultima_sale": "2026-05-27",
-      "lots_validos": 10,
+      "sales_futuras": 1,
+      "proxima_sale": "2026-06-10",
+      "ultima_sale": "2026-06-10",
+      "lots_validos": 0,
       "cobertura": {
-        "address_pct": 100.0,
-        "value_pct": 0.0,
+        "address_pct": 0,
+        "value_pct": 0,
         "sqft_pct": 100.0
       },
-      "decisoes": {
-        "PASSA": 10
-      },
-      "quality_score": 85,
-      "status": "verde",
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vermelho",
       "issues": [
-        "assessed/just_value missing em 10/10 — Regrid/PA falhou"
+        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em putnam.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -407,20 +407,20 @@
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
       "sales_futuras": 7,
-      "proxima_sale": "2026-05-14",
-      "ultima_sale": "2026-06-23",
-      "lots_validos": 27,
+      "proxima_sale": "2026-06-05",
+      "ultima_sale": "2026-07-14",
+      "lots_validos": 29,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 96.3,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
+        "LANCE": 4,
         "REVISAR": 3,
-        "LANCE": 1,
-        "PASSA": 23
+        "PASSA": 22
       },
-      "quality_score": 99,
+      "quality_score": 100,
       "status": "verde",
       "issues": []
     }
@@ -431,15 +431,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-08 00:24:30",
+      "ran_at": "2026-05-30 15:24:34",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 284,
+      "items": 301,
       "errors": 0,
-      "ran_at": "2026-05-08 00:24:29",
+      "ran_at": "2026-05-30 15:24:33",
       "log": ""
     },
     {
@@ -447,15 +447,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-08 00:10:17",
+      "ran_at": "2026-05-30 15:10:20",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 0,
+      "items": 2,
       "errors": 0,
-      "ran_at": "2026-05-07 23:52:23",
+      "ran_at": "2026-05-30 14:54:34",
       "log": ""
     },
     {
@@ -463,7 +463,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-05-07 23:52:22",
+      "ran_at": "2026-05-30 14:54:33",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -471,23 +471,31 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-07 23:47:27",
+      "ran_at": "2026-05-30 14:52:54",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 285,
+      "items": 215,
       "errors": 0,
-      "ran_at": "2026-05-07 23:35:14",
+      "ran_at": "2026-05-30 14:43:20",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 88,
+      "items": 38,
       "errors": 0,
-      "ran_at": "2026-05-07 23:34:20",
+      "ran_at": "2026-05-30 14:42:46",
+      "log": ""
+    },
+    {
+      "worker": "property_appraiser",
+      "status": "success",
+      "items": 31,
+      "errors": 131,
+      "ran_at": "2026-05-30 12:05:00",
       "log": ""
     }
   ],
@@ -500,7 +508,7 @@
     {
       "severidade": "ALTA",
       "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
+      "msg": "PA Playwright SPA processou so 2 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -511,67 +519,61 @@
       "severidade": "ALTA",
       "categoria": "condado",
       "condado": "ALACHUA",
-      "msg": "ALACHUA: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "msg": "ALACHUA: AUTH_FAIL provavel — 3 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "ALTA",
       "categoria": "condado",
       "condado": "CITRUS",
-      "msg": "CITRUS: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "msg": "CITRUS: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "ALTA",
       "categoria": "condado",
-      "condado": "DUVAL",
-      "msg": "DUVAL: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "condado": "PUTNAM",
+      "msg": "PUTNAM: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em putnam.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LAKE",
-      "msg": "LAKE: assessed/just_value missing em 7/7 — Regrid/PA falhou"
+      "msg": "LAKE: assessed/just_value missing em 8/8 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
-      "condado": "POLK",
-      "msg": "POLK: assessed/just_value missing em 11/21 — Regrid/PA falhou"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "PUTNAM",
-      "msg": "PUTNAM: assessed/just_value missing em 10/10 — Regrid/PA falhou"
+      "condado": "LEE",
+      "msg": "LEE: assessed/just_value missing em 10/10 — Regrid/PA falhou"
     }
   ],
   "fila_status": {
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-05-08"
+    "gerado_em": "2026-05-30"
   },
   "analises_lotes": [
     {
-      "parcel": "1554260000",
-      "verdict": "PASS",
+      "parcel": "15-25-16-019D-00000-4930",
+      "verdict": "INVESTIGATE_MORE",
       "score": null,
-      "completed_at": "2026-05-07T19:41:18.488Z",
+      "completed_at": "2026-05-11T16:56:23.469Z",
       "max_bid": null,
-      "red_flags_count": 13
+      "red_flags_count": 12
     },
     {
-      "parcel": "1576600000",
-      "verdict": "PASS",
+      "parcel": "15-26-19-0120-00100-0350",
+      "verdict": "INVESTIGATE_MORE",
       "score": null,
-      "completed_at": "2026-05-07T18:50:42.579Z",
+      "completed_at": "2026-05-11T16:07:23.114Z",
       "max_bid": null,
-      "red_flags_count": 14
+      "red_flags_count": 10
     },
     {
-      "parcel": "0211940000",
+      "parcel": "A-23-33-28-130-0010-0010",
       "verdict": "PASS",
       "score": null,
-      "completed_at": "2026-05-07T17:54:47.382Z",
+      "completed_at": "2026-05-09T11:41:23.092Z",
       "max_bid": null,
       "red_flags_count": 11
     },
@@ -646,14 +648,6 @@
       "completed_at": "2026-05-05T07:04:11.359Z",
       "max_bid": null,
       "red_flags_count": 13
-    },
-    {
-      "parcel": "A-23-33-28-130-0010-0010",
-      "verdict": "PASS",
-      "score": null,
-      "completed_at": "2026-05-05T06:08:56.230Z",
-      "max_bid": null,
-      "red_flags_count": 12
     },
     {
       "parcel": "C-01-33-28-010-0000-8999",
