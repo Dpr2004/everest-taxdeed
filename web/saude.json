@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-31T15:32:34.072156+00:00",
+  "gerado_em": "2026-06-01T15:31:40.799292+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 301,
+    "total_lots_validos": 305,
     "lots_com_verdict_lotes": 29,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -258,7 +258,7 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-06-17",
       "ultima_sale": "2026-07-15",
-      "lots_validos": 23,
+      "lots_validos": 24,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -266,7 +266,7 @@
       },
       "decisoes": {
         "REVISAR": 6,
-        "PASSA": 17
+        "PASSA": 18
       },
       "quality_score": 100,
       "status": "verde",
@@ -300,8 +300,8 @@
       "nome": "Osceola County",
       "state": "FL",
       "url_sales": "https://osceola.realtaxdeed.com/",
-      "sales_futuras": 3,
-      "proxima_sale": "2026-05-31",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-06-16",
       "ultima_sale": "2026-07-07",
       "lots_validos": 24,
       "cobertura": {
@@ -326,7 +326,7 @@
       "sales_futuras": 11,
       "proxima_sale": "2026-06-02",
       "ultima_sale": "2026-08-18",
-      "lots_validos": 21,
+      "lots_validos": 23,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -334,7 +334,7 @@
       },
       "decisoes": {
         "REVISAR": 4,
-        "PASSA": 17
+        "PASSA": 19
       },
       "quality_score": 100,
       "status": "verde",
@@ -348,16 +348,16 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-06-18",
       "ultima_sale": "2026-07-16",
-      "lots_validos": 23,
+      "lots_validos": 24,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 56.5,
+        "value_pct": 95.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 23
+        "PASSA": 24
       },
-      "quality_score": 93,
+      "quality_score": 99,
       "status": "verde",
       "issues": []
     },
@@ -431,15 +431,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-31 15:32:32",
+      "ran_at": "2026-06-01 15:31:39",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 301,
+      "items": 305,
       "errors": 0,
-      "ran_at": "2026-05-31 15:32:32",
+      "ran_at": "2026-06-01 15:31:38",
       "log": ""
     },
     {
@@ -447,7 +447,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-31 15:18:19",
+      "ran_at": "2026-06-01 15:17:26",
       "log": ""
     },
     {
@@ -455,7 +455,7 @@
       "status": "success",
       "items": 2,
       "errors": 0,
-      "ran_at": "2026-05-31 15:02:02",
+      "ran_at": "2026-06-01 15:01:23",
       "log": ""
     },
     {
@@ -463,7 +463,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-05-31 15:02:01",
+      "ran_at": "2026-06-01 15:01:22",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -471,31 +471,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-05-31 14:59:56",
+      "ran_at": "2026-06-01 15:00:14",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 215,
+      "items": 234,
       "errors": 0,
-      "ran_at": "2026-05-31 14:50:16",
+      "ran_at": "2026-06-01 14:49:41",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 38,
+      "items": 59,
       "errors": 0,
-      "ran_at": "2026-05-31 14:49:33",
-      "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "success",
-      "items": 31,
-      "errors": 131,
-      "ran_at": "2026-05-31 12:12:00",
+      "ran_at": "2026-06-01 14:49:20",
       "log": ""
     }
   ],
@@ -550,7 +542,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-05-31"
+    "gerado_em": "2026-06-01"
   },
   "analises_lotes": [
     {
