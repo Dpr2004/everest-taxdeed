@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-01T19:24:08.792408+00:00",
+  "gerado_em": "2026-06-02T13:16:45.030352+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 309,
+    "total_lots_validos": 314,
     "lots_com_verdict_lotes": 29,
     "problemas_criticos": 5,
     "saude_geral_pct": 81
@@ -169,15 +169,15 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-06-04",
       "ultima_sale": "2026-08-13",
-      "lots_validos": 81,
+      "lots_validos": 83,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 75.3,
+        "value_pct": 73.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 21,
-        "REVISAR": 35,
+        "LANCE": 22,
+        "REVISAR": 36,
         "PASSA": 25
       },
       "quality_score": 96,
@@ -255,9 +255,9 @@
       "nome": "Marion County",
       "state": "FL",
       "url_sales": "https://marion.realtaxdeed.com/",
-      "sales_futuras": 2,
+      "sales_futuras": 3,
       "proxima_sale": "2026-06-17",
-      "ultima_sale": "2026-07-15",
+      "ultima_sale": "2026-07-22",
       "lots_validos": 24,
       "cobertura": {
         "address_pct": 100.0,
@@ -303,18 +303,18 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-06-16",
       "ultima_sale": "2026-07-07",
-      "lots_validos": 24,
+      "lots_validos": 26,
       "cobertura": {
-        "address_pct": 54.2,
-        "value_pct": 54.2,
+        "address_pct": 57.7,
+        "value_pct": 57.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "REVISAR": 11,
         "LANCE": 4,
-        "PASSA": 9
+        "PASSA": 11
       },
-      "quality_score": 83,
+      "quality_score": 85,
       "status": "verde",
       "issues": []
     },
@@ -409,7 +409,7 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-06-05",
       "ultima_sale": "2026-07-14",
-      "lots_validos": 29,
+      "lots_validos": 30,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -418,7 +418,7 @@
       "decisoes": {
         "LANCE": 4,
         "REVISAR": 3,
-        "PASSA": 22
+        "PASSA": 23
       },
       "quality_score": 100,
       "status": "verde",
@@ -431,15 +431,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-01 19:24:06",
+      "ran_at": "2026-06-02 13:16:43",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 309,
+      "items": 314,
       "errors": 0,
-      "ran_at": "2026-06-01 19:24:06",
+      "ran_at": "2026-06-02 13:16:43",
       "log": ""
     },
     {
@@ -447,15 +447,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-01 19:09:53",
+      "ran_at": "2026-06-02 13:02:30",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 12,
+      "items": 8,
       "errors": 0,
-      "ran_at": "2026-06-01 18:56:38",
+      "ran_at": "2026-06-02 12:47:56",
       "log": ""
     },
     {
@@ -463,7 +463,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-01 18:56:37",
+      "ran_at": "2026-06-02 12:47:56",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -471,23 +471,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-01 18:53:39",
+      "ran_at": "2026-06-02 12:46:20",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 239,
+      "items": 292,
       "errors": 0,
-      "ran_at": "2026-06-01 18:42:52",
+      "ran_at": "2026-06-02 12:34:07",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 59,
+      "items": 89,
       "errors": 0,
-      "ran_at": "2026-06-01 18:41:55",
+      "ran_at": "2026-06-02 12:33:43",
       "log": ""
     },
     {
@@ -545,7 +545,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-01"
+    "gerado_em": "2026-06-02"
   },
   "analises_lotes": [
     {
