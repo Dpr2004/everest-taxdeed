@@ -1,11 +1,27 @@
 {
-  "gerado_em": "2026-06-02",
+  "gerado_em": "2026-06-03",
   "total_candidatos": 30,
-  "total_leiloes": 12,
+  "total_leiloes": 13,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
+    {
+      "parcel": "04-25-17-006A-00000-0820",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "12519 HOLLYBROOK LANE",
+      "city": "HUDSON, 34669",
+      "bid": 8631.98,
+      "just_value": 164510.0,
+      "ratio": 19.06,
+      "sale_date": "2026-06-04",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 20.01,
+      "status": "pending"
+    },
     {
       "parcel": "252431387200390",
       "county": "Orange",
@@ -468,22 +484,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 7.64,
-      "status": "pending"
-    },
-    {
-      "parcel": "0836730000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "15108 DR MARTIN LUTHER KING JR",
-      "city": "DOVER",
-      "bid": 1379.72,
-      "just_value": 380100.0,
-      "ratio": 275.49,
-      "sale_date": "2026-07-16",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 234.17,
       "status": "pending"
     }
   ]

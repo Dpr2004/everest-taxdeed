@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-06-02T18:15:00.775002+00:00",
+  "gerado_em": "2026-06-03T13:51:33.865024+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 13,
+    "condados_verdes": 14,
     "condados_amarelos": 0,
-    "condados_vermelhos": 3,
+    "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 327,
+    "total_lots_validos": 357,
     "lots_com_verdict_lotes": 29,
-    "problemas_criticos": 6,
-    "saude_geral_pct": 81
+    "problemas_criticos": 4,
+    "saude_geral_pct": 87
   },
   "condados": [
     {
@@ -39,21 +39,21 @@
       "nome": "Brevard County",
       "state": "FL",
       "url_sales": "https://brevard.realforeclose.com/",
-      "sales_futuras": 2,
+      "sales_futuras": 3,
       "proxima_sale": "2026-06-11",
-      "ultima_sale": "2026-07-16",
-      "lots_validos": 20,
+      "ultima_sale": "2026-08-20",
+      "lots_validos": 23,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 100.0,
+        "value_pct": 87.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 1,
-        "PASSA": 7,
+        "LANCE": 2,
+        "PASSA": 9,
         "REVISAR": 12
       },
-      "quality_score": 100,
+      "quality_score": 98,
       "status": "verde",
       "issues": []
     },
@@ -189,10 +189,10 @@
       "nome": "Lake County",
       "state": "FL",
       "url_sales": "https://lake.realtaxdeed.com/",
-      "sales_futuras": 3,
-      "proxima_sale": "2026-06-02",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-07-07",
       "ultima_sale": "2026-07-21",
-      "lots_validos": 8,
+      "lots_validos": 2,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
@@ -200,12 +200,12 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 7
+        "PASSA": 1
       },
       "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 8/8 — Regrid/PA falhou"
+        "assessed/just_value missing em 2/2 — Regrid/PA falhou"
       ]
     },
     {
@@ -324,17 +324,18 @@
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
       "sales_futuras": 11,
-      "proxima_sale": "2026-06-02",
+      "proxima_sale": "2026-06-04",
       "ultima_sale": "2026-08-18",
-      "lots_validos": 23,
+      "lots_validos": 25,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 4,
-        "PASSA": 19
+        "REVISAR": 3,
+        "LANCE": 1,
+        "PASSA": 21
       },
       "quality_score": 100,
       "status": "verde",
@@ -366,20 +367,22 @@
       "nome": "Putnam County",
       "state": "FL",
       "url_sales": "https://putnam.realtaxdeed.com/",
-      "sales_futuras": 1,
+      "sales_futuras": 4,
       "proxima_sale": "2026-06-10",
-      "ultima_sale": "2026-06-10",
-      "lots_validos": 0,
+      "ultima_sale": "2026-07-22",
+      "lots_validos": 30,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 0.0,
         "sqft_pct": 100.0
       },
-      "decisoes": {},
-      "quality_score": 0,
-      "status": "vermelho",
+      "decisoes": {
+        "PASSA": 30
+      },
+      "quality_score": 85,
+      "status": "verde",
       "issues": [
-        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em putnam.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "assessed/just_value missing em 30/30 — Regrid/PA falhou"
       ]
     },
     {
@@ -406,10 +409,10 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 7,
+      "sales_futuras": 8,
       "proxima_sale": "2026-06-05",
-      "ultima_sale": "2026-07-14",
-      "lots_validos": 32,
+      "ultima_sale": "2026-07-21",
+      "lots_validos": 33,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -418,7 +421,7 @@
       "decisoes": {
         "LANCE": 4,
         "REVISAR": 3,
-        "PASSA": 25
+        "PASSA": 26
       },
       "quality_score": 100,
       "status": "verde",
@@ -431,15 +434,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-02 18:14:59",
+      "ran_at": "2026-06-03 13:51:32",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 327,
+      "items": 357,
       "errors": 0,
-      "ran_at": "2026-06-02 18:14:58",
+      "ran_at": "2026-06-03 13:51:31",
       "log": ""
     },
     {
@@ -447,15 +450,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-02 18:00:45",
+      "ran_at": "2026-06-03 13:37:19",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 2,
+      "items": 12,
       "errors": 0,
-      "ran_at": "2026-06-02 17:44:09",
+      "ran_at": "2026-06-03 13:23:25",
       "log": ""
     },
     {
@@ -463,7 +466,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-02 17:44:09",
+      "ran_at": "2026-06-03 13:23:25",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -471,23 +474,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-02 17:40:18",
+      "ran_at": "2026-06-03 13:18:20",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 296,
+      "items": 328,
       "errors": 0,
-      "ran_at": "2026-06-02 17:28:06",
+      "ran_at": "2026-06-03 13:06:07",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 89,
+      "items": 92,
       "errors": 0,
-      "ran_at": "2026-06-02 17:27:10",
+      "ran_at": "2026-06-03 13:05:08",
       "log": ""
     },
     {
@@ -508,11 +511,6 @@
     {
       "severidade": "ALTA",
       "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 2 lots/run — patterns nao casam pra maioria dos condados"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "enrichment",
       "msg": "Regrid enricher items=0 (verificar REGRID_API_KEY no GitHub Secrets)"
     },
     {
@@ -528,29 +526,29 @@
       "msg": "CITRUS: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
-      "severidade": "ALTA",
-      "categoria": "condado",
-      "condado": "PUTNAM",
-      "msg": "PUTNAM: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em putnam.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
-    },
-    {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LAKE",
-      "msg": "LAKE: assessed/just_value missing em 8/8 — Regrid/PA falhou"
+      "msg": "LAKE: assessed/just_value missing em 2/2 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
       "msg": "LEE: assessed/just_value missing em 10/10 — Regrid/PA falhou"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
+      "condado": "PUTNAM",
+      "msg": "PUTNAM: assessed/just_value missing em 30/30 — Regrid/PA falhou"
     }
   ],
   "fila_status": {
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-02"
+    "gerado_em": "2026-06-03"
   },
   "analises_lotes": [
     {
