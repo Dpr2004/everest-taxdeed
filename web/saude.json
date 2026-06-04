@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-03T18:46:57.880158+00:00",
+  "gerado_em": "2026-06-04T12:29:37.787311+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 362,
+    "total_lots_validos": 357,
     "lots_com_verdict_lotes": 29,
-    "problemas_criticos": 6,
+    "problemas_criticos": 5,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -145,19 +145,19 @@
       "nome": "Highlands County",
       "state": "FL",
       "url_sales": "https://highlands.realtaxdeed.com/",
-      "sales_futuras": 6,
-      "proxima_sale": "2026-06-03",
+      "sales_futuras": 5,
+      "proxima_sale": "2026-06-10",
       "ultima_sale": "2026-08-12",
-      "lots_validos": 31,
+      "lots_validos": 26,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 64.5,
+        "value_pct": 76.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 31
+        "PASSA": 26
       },
-      "quality_score": 94,
+      "quality_score": 96,
       "status": "verde",
       "issues": []
     },
@@ -300,7 +300,7 @@
       "nome": "Osceola County",
       "state": "FL",
       "url_sales": "https://osceola.realtaxdeed.com/",
-      "sales_futuras": 2,
+      "sales_futuras": 3,
       "proxima_sale": "2026-06-16",
       "ultima_sale": "2026-07-07",
       "lots_validos": 26,
@@ -433,15 +433,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-03 18:46:56",
+      "ran_at": "2026-06-04 12:29:36",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 362,
+      "items": 357,
       "errors": 0,
-      "ran_at": "2026-06-03 18:46:56",
+      "ran_at": "2026-06-04 12:29:35",
       "log": ""
     },
     {
@@ -449,15 +449,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-03 18:32:43",
+      "ran_at": "2026-06-04 12:15:23",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 2,
+      "items": 12,
       "errors": 0,
-      "ran_at": "2026-06-03 18:17:56",
+      "ran_at": "2026-06-04 11:58:47",
       "log": ""
     },
     {
@@ -465,7 +465,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-03 18:17:55",
+      "ran_at": "2026-06-04 11:58:47",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -473,23 +473,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-03 18:14:56",
+      "ran_at": "2026-06-04 11:56:39",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 331,
+      "items": 324,
       "errors": 0,
-      "ran_at": "2026-06-03 18:02:43",
+      "ran_at": "2026-06-04 11:44:27",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 94,
+      "items": 93,
       "errors": 0,
-      "ran_at": "2026-06-03 18:02:05",
+      "ran_at": "2026-06-04 11:44:03",
       "log": ""
     },
     {
@@ -511,11 +511,6 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker property_appraiser com status degraded (32 items, 149 erros) — DEGRADED: so 32/357 (9%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 2 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -557,7 +552,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-03"
+    "gerado_em": "2026-06-04"
   },
   "analises_lotes": [
     {
