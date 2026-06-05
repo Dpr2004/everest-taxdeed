@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-04T17:08:25.704577+00:00",
+  "gerado_em": "2026-06-05T12:42:55.119381+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 359,
+    "total_lots_validos": 329,
     "lots_com_verdict_lotes": 29,
-    "problemas_criticos": 5,
+    "problemas_criticos": 7,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -166,21 +166,21 @@
       "nome": "Hillsborough County",
       "state": "FL",
       "url_sales": "https://hillsborough.realtaxdeed.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-06-04",
+      "sales_futuras": 7,
+      "proxima_sale": "2026-06-11",
       "ultima_sale": "2026-08-20",
-      "lots_validos": 85,
+      "lots_validos": 71,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 77.6,
+        "value_pct": 84.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 24,
-        "REVISAR": 38,
-        "PASSA": 23
+        "LANCE": 22,
+        "REVISAR": 32,
+        "PASSA": 17
       },
-      "quality_score": 96,
+      "quality_score": 97,
       "status": "verde",
       "issues": []
     },
@@ -277,19 +277,19 @@
       "nome": "Orange County",
       "state": "FL",
       "url_sales": "https://orange.realtaxdeed.com/",
-      "sales_futuras": 3,
-      "proxima_sale": "2026-06-04",
+      "sales_futuras": 2,
+      "proxima_sale": "2026-06-18",
       "ultima_sale": "2026-06-25",
-      "lots_validos": 32,
+      "lots_validos": 21,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 18,
+        "REVISAR": 17,
         "LANCE": 2,
-        "PASSA": 12
+        "PASSA": 2
       },
       "quality_score": 100,
       "status": "verde",
@@ -323,19 +323,19 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 12,
-      "proxima_sale": "2026-06-04",
+      "sales_futuras": 11,
+      "proxima_sale": "2026-06-10",
       "ultima_sale": "2026-08-18",
-      "lots_validos": 27,
+      "lots_validos": 22,
       "cobertura": {
-        "address_pct": 96.3,
-        "value_pct": 96.3,
+        "address_pct": 95.5,
+        "value_pct": 95.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 4,
+        "REVISAR": 3,
         "LANCE": 1,
-        "PASSA": 22
+        "PASSA": 18
       },
       "quality_score": 98,
       "status": "verde",
@@ -434,15 +434,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-04 17:08:24",
+      "ran_at": "2026-06-05 12:42:54",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 359,
+      "items": 329,
       "errors": 0,
-      "ran_at": "2026-06-04 17:08:23",
+      "ran_at": "2026-06-05 12:42:53",
       "log": ""
     },
     {
@@ -450,15 +450,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-04 16:54:10",
+      "ran_at": "2026-06-05 12:28:41",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 12,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-04 16:40:18",
+      "ran_at": "2026-06-05 12:14:29",
       "log": ""
     },
     {
@@ -466,31 +466,31 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-04 16:40:17",
+      "ran_at": "2026-06-05 12:14:28",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "lot_list_scraper",
-      "status": "success",
+      "status": "degraded",
       "items": 0,
-      "errors": 0,
-      "ran_at": "2026-06-04 16:35:02",
+      "errors": 60,
+      "ran_at": "2026-06-05 12:09:17",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 319,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-04 16:22:49",
+      "ran_at": "2026-06-05 11:57:04",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 96,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-04 16:21:46",
+      "ran_at": "2026-06-05 11:55:26",
       "log": ""
     },
     {
@@ -511,7 +511,17 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
+      "msg": "Worker lot_list_scraper com status degraded (0 items, 60 erros) — sem log"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
       "msg": "Worker property_appraiser com status degraded (35 items, 157 erros) — DEGRADED: so 35/357 (10%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
+      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -553,7 +563,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-04"
+    "gerado_em": "2026-06-05"
   },
   "analises_lotes": [
     {
