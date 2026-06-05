@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-05T12:42:55.119381+00:00",
+  "gerado_em": "2026-06-05T16:47:34.534181+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 329,
+    "total_lots_validos": 353,
     "lots_com_verdict_lotes": 29,
-    "problemas_criticos": 7,
+    "problemas_criticos": 5,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -105,21 +105,24 @@
       "nome": "Flagler County",
       "state": "FL",
       "url_sales": "https://flagler.realtaxdeed.com/",
-      "sales_futuras": 1,
+      "sales_futuras": 2,
       "proxima_sale": "2026-07-14",
-      "ultima_sale": "2026-07-14",
-      "lots_validos": 1,
+      "ultima_sale": "2026-08-11",
+      "lots_validos": 4,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 100.0,
+        "value_pct": 25.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 1
+        "REVISAR": 2,
+        "PASSA": 2
       },
-      "quality_score": 100,
+      "quality_score": 88,
       "status": "verde",
-      "issues": []
+      "issues": [
+        "assessed/just_value missing em 3/4 — Regrid/PA falhou"
+      ]
     },
     {
       "codigo": "HERNANDO",
@@ -145,19 +148,19 @@
       "nome": "Highlands County",
       "state": "FL",
       "url_sales": "https://highlands.realtaxdeed.com/",
-      "sales_futuras": 5,
+      "sales_futuras": 6,
       "proxima_sale": "2026-06-10",
       "ultima_sale": "2026-08-12",
-      "lots_validos": 26,
+      "lots_validos": 36,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 96.2,
+        "value_pct": 69.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 26
+        "PASSA": 36
       },
-      "quality_score": 99,
+      "quality_score": 95,
       "status": "verde",
       "issues": []
     },
@@ -172,15 +175,15 @@
       "lots_validos": 71,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 84.5,
+        "value_pct": 88.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 22,
-        "REVISAR": 32,
-        "PASSA": 17
+        "LANCE": 19,
+        "REVISAR": 34,
+        "PASSA": 18
       },
-      "quality_score": 97,
+      "quality_score": 98,
       "status": "verde",
       "issues": []
     },
@@ -192,7 +195,7 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-07-07",
       "ultima_sale": "2026-07-21",
-      "lots_validos": 2,
+      "lots_validos": 11,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
@@ -200,12 +203,12 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 1
+        "PASSA": 10
       },
       "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 2/2 — Regrid/PA falhou"
+        "assessed/just_value missing em 11/11 — Regrid/PA falhou"
       ]
     },
     {
@@ -287,8 +290,7 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 17,
-        "LANCE": 2,
+        "REVISAR": 19,
         "PASSA": 2
       },
       "quality_score": 100,
@@ -326,16 +328,16 @@
       "sales_futuras": 11,
       "proxima_sale": "2026-06-10",
       "ultima_sale": "2026-08-18",
-      "lots_validos": 22,
+      "lots_validos": 24,
       "cobertura": {
-        "address_pct": 95.5,
-        "value_pct": 95.5,
+        "address_pct": 95.8,
+        "value_pct": 95.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "REVISAR": 3,
         "LANCE": 1,
-        "PASSA": 18
+        "PASSA": 20
       },
       "quality_score": 98,
       "status": "verde",
@@ -434,15 +436,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-05 12:42:54",
+      "ran_at": "2026-06-05 16:47:33",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 329,
+      "items": 353,
       "errors": 0,
-      "ran_at": "2026-06-05 12:42:53",
+      "ran_at": "2026-06-05 16:47:32",
       "log": ""
     },
     {
@@ -450,15 +452,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-05 12:28:41",
+      "ran_at": "2026-06-05 16:33:20",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 0,
+      "items": 3,
       "errors": 0,
-      "ran_at": "2026-06-05 12:14:29",
+      "ran_at": "2026-06-05 16:12:41",
       "log": ""
     },
     {
@@ -466,40 +468,40 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-05 12:14:28",
+      "ran_at": "2026-06-05 16:12:41",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "lot_list_scraper",
-      "status": "degraded",
+      "status": "success",
       "items": 0,
-      "errors": 60,
-      "ran_at": "2026-06-05 12:09:17",
+      "errors": 0,
+      "ran_at": "2026-06-05 16:10:44",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 0,
+      "items": 319,
       "errors": 0,
-      "ran_at": "2026-06-05 11:57:04",
+      "ran_at": "2026-06-05 15:58:35",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 0,
+      "items": 73,
       "errors": 0,
-      "ran_at": "2026-06-05 11:55:26",
+      "ran_at": "2026-06-05 15:58:10",
       "log": ""
     },
     {
       "worker": "property_appraiser",
-      "status": "degraded",
+      "status": "success",
       "items": 35,
-      "errors": 157,
-      "ran_at": "2026-06-04 13:57:48",
-      "log": "DEGRADED: so 35/357 (10%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "errors": 156,
+      "ran_at": "2026-06-05 13:52:19",
+      "log": ""
     }
   ],
   "problemas": [
@@ -510,18 +512,8 @@
     },
     {
       "severidade": "ALTA",
-      "categoria": "worker",
-      "msg": "Worker lot_list_scraper com status degraded (0 items, 60 erros) — sem log"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (35 items, 157 erros) — DEGRADED: so 35/357 (10%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
-    },
-    {
-      "severidade": "ALTA",
       "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
+      "msg": "PA Playwright SPA processou so 3 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -543,8 +535,14 @@
     {
       "severidade": "MEDIA",
       "categoria": "condado",
+      "condado": "FLAGLER",
+      "msg": "FLAGLER: assessed/just_value missing em 3/4 — Regrid/PA falhou"
+    },
+    {
+      "severidade": "MEDIA",
+      "categoria": "condado",
       "condado": "LAKE",
-      "msg": "LAKE: assessed/just_value missing em 2/2 — Regrid/PA falhou"
+      "msg": "LAKE: assessed/just_value missing em 11/11 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
