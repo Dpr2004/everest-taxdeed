@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-06T11:33:27.876767+00:00",
+  "gerado_em": "2026-06-06T15:33:16.482999+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -436,7 +436,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-06 11:33:26",
+      "ran_at": "2026-06-06 15:33:15",
       "log": ""
     },
     {
@@ -444,7 +444,7 @@
       "status": "success",
       "items": 357,
       "errors": 0,
-      "ran_at": "2026-06-06 11:33:26",
+      "ran_at": "2026-06-06 15:33:14",
       "log": ""
     },
     {
@@ -452,7 +452,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-06 11:19:13",
+      "ran_at": "2026-06-06 15:19:01",
       "log": ""
     },
     {
@@ -460,7 +460,7 @@
       "status": "success",
       "items": 2,
       "errors": 0,
-      "ran_at": "2026-06-06 11:01:39",
+      "ran_at": "2026-06-06 15:01:09",
       "log": ""
     },
     {
@@ -468,7 +468,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-06 11:01:39",
+      "ran_at": "2026-06-06 15:01:09",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -476,15 +476,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-06 10:59:56",
+      "ran_at": "2026-06-06 14:56:57",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 262,
+      "items": 267,
       "errors": 0,
-      "ran_at": "2026-06-06 10:49:45",
+      "ran_at": "2026-06-06 14:46:29",
       "log": ""
     },
     {
@@ -492,15 +492,15 @@
       "status": "success",
       "items": 43,
       "errors": 0,
-      "ran_at": "2026-06-06 10:49:22",
+      "ran_at": "2026-06-06 14:45:30",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "success",
-      "items": 35,
-      "errors": 156,
-      "ran_at": "2026-06-05 13:52:19",
+      "items": 43,
+      "errors": 155,
+      "ran_at": "2026-06-06 12:05:16",
       "log": ""
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "gerado_em": "06/Jun/2026 11:33",
+  "gerado_em": "06/Jun/2026 15:33",
   "resumo": {
     "total_condados": 19,
     "total_sales": 48,
@@ -2235,7 +2235,9 @@
       "max_bid": 0.0,
       "profit": 23458.34,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 37707,
@@ -2645,7 +2647,9 @@
       "max_bid": 0.0,
       "profit": 5227.77,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 41509,
@@ -7241,7 +7245,9 @@
       "max_bid": 0.0,
       "profit": -6753.04,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 40811,
@@ -7511,7 +7517,9 @@
       "max_bid": 0.0,
       "profit": -1203.34,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 35132,
