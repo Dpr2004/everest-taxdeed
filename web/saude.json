@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-06T15:33:16.482999+00:00",
+  "gerado_em": "2026-06-07T11:48:29.244804+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -436,7 +436,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-06 15:33:15",
+      "ran_at": "2026-06-07 11:48:27",
       "log": ""
     },
     {
@@ -444,7 +444,7 @@
       "status": "success",
       "items": 357,
       "errors": 0,
-      "ran_at": "2026-06-06 15:33:14",
+      "ran_at": "2026-06-07 11:48:26",
       "log": ""
     },
     {
@@ -452,7 +452,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-06 15:19:01",
+      "ran_at": "2026-06-07 11:34:14",
       "log": ""
     },
     {
@@ -460,7 +460,7 @@
       "status": "success",
       "items": 2,
       "errors": 0,
-      "ran_at": "2026-06-06 15:01:09",
+      "ran_at": "2026-06-07 11:16:00",
       "log": ""
     },
     {
@@ -468,7 +468,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-06 15:01:09",
+      "ran_at": "2026-06-07 11:16:00",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -476,15 +476,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-06 14:56:57",
+      "ran_at": "2026-06-07 11:11:52",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 267,
+      "items": 262,
       "errors": 0,
-      "ran_at": "2026-06-06 14:46:29",
+      "ran_at": "2026-06-07 11:01:08",
       "log": ""
     },
     {
@@ -492,7 +492,7 @@
       "status": "success",
       "items": 43,
       "errors": 0,
-      "ran_at": "2026-06-06 14:45:30",
+      "ran_at": "2026-06-07 11:00:09",
       "log": ""
     },
     {
@@ -561,7 +561,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-06"
+    "gerado_em": "2026-06-07"
   },
   "analises_lotes": [
     {
