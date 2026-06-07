@@ -1,10 +1,10 @@
 {
-  "gerado_em": "07/Jun/2026 11:48",
+  "gerado_em": "07/Jun/2026 15:40",
   "resumo": {
     "total_condados": 19,
     "total_sales": 48,
     "total_lots": 357,
-    "lances": 34,
+    "lances": 32,
     "estados": [
       "FL"
     ]
@@ -805,11 +805,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 4.5633,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 191108.55,
       "profit": 292303.53,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27013,
@@ -1939,11 +1941,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.7387,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 383540.94,
       "profit": 456824.65,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 27363,

@@ -1,43 +1,11 @@
 {
   "gerado_em": "2026-06-07",
   "total_candidatos": 30,
-  "total_leiloes": 11,
+  "total_leiloes": 9,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "821601000120",
-      "county": "Volusia",
-      "state": "FL",
-      "address": "172 ASHBY COVE LN",
-      "city": "NEW SMYRNA BEACH",
-      "bid": 86441.55,
-      "just_value": 733678.0,
-      "ratio": 8.49,
-      "sale_date": "2026-06-30",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 8.06,
-      "status": "pending"
-    },
-    {
-      "parcel": "632016001270",
-      "county": "Volusia",
-      "state": "FL",
-      "address": "5945 DORAVILLE DR",
-      "city": "PORT ORANGE",
-      "bid": 5076.84,
-      "just_value": 419246.0,
-      "ratio": 82.58,
-      "sale_date": "2026-07-06",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 78.45,
-      "status": "pending"
-    },
     {
       "parcel": "092529000001300000",
       "county": "Osceola",
@@ -484,6 +452,38 @@
       "workers_score": 3.0,
       "workers_decision": "REVISAR",
       "ranking_score": 6.57,
+      "status": "pending"
+    },
+    {
+      "parcel": "0744870052",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "903 ESTELLE AVE",
+      "city": "BRANDON",
+      "bid": 5687.46,
+      "just_value": 39169.0,
+      "ratio": 6.89,
+      "sale_date": "2026-07-16",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 5.85,
+      "status": "pending"
+    },
+    {
+      "parcel": "2103278",
+      "county": "Brevard",
+      "state": "FL",
+      "address": "0 UNKNOWN",
+      "city": "",
+      "bid": 1675.46,
+      "just_value": 7070.0,
+      "ratio": 4.22,
+      "sale_date": "2026-07-16",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 4.22,
       "status": "pending"
     }
   ]
