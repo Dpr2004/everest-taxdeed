@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-07T15:40:51.524811+00:00",
+  "gerado_em": "2026-06-08T13:43:25.911063+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 357,
+    "total_lots_validos": 364,
     "lots_com_verdict_lotes": 29,
     "problemas_criticos": 5,
     "saude_geral_pct": 87
@@ -108,20 +108,20 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-07-14",
       "ultima_sale": "2026-08-11",
-      "lots_validos": 11,
+      "lots_validos": 18,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 9.1,
+        "value_pct": 5.6,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "REVISAR": 2,
-        "PASSA": 9
+        "PASSA": 16
       },
-      "quality_score": 86,
+      "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 10/11 — Regrid/PA falhou"
+        "assessed/just_value missing em 17/18 — Regrid/PA falhou"
       ]
     },
     {
@@ -436,15 +436,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-07 15:40:50",
+      "ran_at": "2026-06-08 13:43:25",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 357,
+      "items": 364,
       "errors": 0,
-      "ran_at": "2026-06-07 15:40:49",
+      "ran_at": "2026-06-08 13:43:24",
       "log": ""
     },
     {
@@ -452,15 +452,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-07 15:26:36",
+      "ran_at": "2026-06-08 13:29:12",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 0,
+      "items": 2,
       "errors": 0,
-      "ran_at": "2026-06-07 15:08:30",
+      "ran_at": "2026-06-08 13:11:23",
       "log": ""
     },
     {
@@ -468,7 +468,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-07 15:08:30",
+      "ran_at": "2026-06-08 13:11:22",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -476,31 +476,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-07 15:05:58",
+      "ran_at": "2026-06-08 13:09:30",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 267,
+      "items": 356,
       "errors": 0,
-      "ran_at": "2026-06-07 14:55:51",
+      "ran_at": "2026-06-08 12:57:17",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 43,
+      "items": 97,
       "errors": 0,
-      "ran_at": "2026-06-07 14:55:16",
-      "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "success",
-      "items": 43,
-      "errors": 160,
-      "ran_at": "2026-06-07 12:21:24",
+      "ran_at": "2026-06-08 12:56:53",
       "log": ""
     }
   ],
@@ -513,7 +505,7 @@
     {
       "severidade": "ALTA",
       "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
+      "msg": "PA Playwright SPA processou so 2 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -536,7 +528,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "FLAGLER",
-      "msg": "FLAGLER: assessed/just_value missing em 10/11 — Regrid/PA falhou"
+      "msg": "FLAGLER: assessed/just_value missing em 17/18 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -561,7 +553,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-07"
+    "gerado_em": "2026-06-08"
   },
   "analises_lotes": [
     {
