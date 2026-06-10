@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-10T13:04:38.012704+00:00",
+  "gerado_em": "2026-06-10T17:28:12.952338+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 390,
+    "total_lots_validos": 393,
     "lots_com_verdict_lotes": 29,
-    "problemas_criticos": 5,
+    "problemas_criticos": 4,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -50,8 +50,8 @@
       },
       "decisoes": {
         "LANCE": 2,
-        "PASSA": 17,
-        "REVISAR": 14
+        "PASSA": 16,
+        "REVISAR": 15
       },
       "quality_score": 97,
       "status": "verde",
@@ -62,9 +62,9 @@
       "nome": "Citrus County",
       "state": "FL",
       "url_sales": "https://citrus.realtaxdeed.com/",
-      "sales_futuras": 1,
+      "sales_futuras": 2,
       "proxima_sale": "2026-06-10",
-      "ultima_sale": "2026-06-10",
+      "ultima_sale": "2026-07-15",
       "lots_validos": 0,
       "cobertura": {
         "address_pct": 0,
@@ -75,7 +75,7 @@
       "quality_score": 0,
       "status": "vermelho",
       "issues": [
-        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -171,16 +171,16 @@
       "sales_futuras": 8,
       "proxima_sale": "2026-06-11",
       "ultima_sale": "2026-08-27",
-      "lots_validos": 75,
+      "lots_validos": 76,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 89.3,
+        "value_pct": 88.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 21,
-        "REVISAR": 34,
-        "PASSA": 20
+        "LANCE": 17,
+        "REVISAR": 38,
+        "PASSA": 21
       },
       "quality_score": 98,
       "status": "verde",
@@ -261,7 +261,7 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-06-17",
       "ultima_sale": "2026-07-22",
-      "lots_validos": 35,
+      "lots_validos": 37,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -269,7 +269,7 @@
       },
       "decisoes": {
         "REVISAR": 7,
-        "PASSA": 28
+        "PASSA": 30
       },
       "quality_score": 100,
       "status": "verde",
@@ -335,8 +335,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 3,
-        "LANCE": 2,
+        "REVISAR": 4,
+        "LANCE": 1,
         "PASSA": 20
       },
       "quality_score": 98,
@@ -436,15 +436,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-10 13:04:36",
+      "ran_at": "2026-06-10 17:28:11",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 390,
+      "items": 393,
       "errors": 0,
-      "ran_at": "2026-06-10 13:04:35",
+      "ran_at": "2026-06-10 17:28:10",
       "log": ""
     },
     {
@@ -452,15 +452,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-10 12:50:23",
+      "ran_at": "2026-06-10 17:13:58",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 2,
+      "items": 13,
       "errors": 0,
-      "ran_at": "2026-06-10 12:30:38",
+      "ran_at": "2026-06-10 16:55:35",
       "log": ""
     },
     {
@@ -468,7 +468,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-10 12:30:37",
+      "ran_at": "2026-06-10 16:55:34",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -476,31 +476,31 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-10 12:26:31",
+      "ran_at": "2026-06-10 16:51:18",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 362,
+      "items": 355,
       "errors": 0,
-      "ran_at": "2026-06-10 12:14:18",
+      "ran_at": "2026-06-10 16:39:06",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 97,
+      "items": 98,
       "errors": 0,
-      "ran_at": "2026-06-10 12:13:39",
+      "ran_at": "2026-06-10 16:38:11",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "success",
       "items": 41,
-      "errors": 156,
-      "ran_at": "2026-06-09 13:44:42",
+      "errors": 153,
+      "ran_at": "2026-06-10 14:23:09",
       "log": ""
     }
   ],
@@ -509,11 +509,6 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 2 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -530,7 +525,7 @@
       "severidade": "ALTA",
       "categoria": "condado",
       "condado": "CITRUS",
-      "msg": "CITRUS: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "msg": "CITRUS: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "MEDIA",
