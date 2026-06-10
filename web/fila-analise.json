@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-06-09",
+  "gerado_em": "2026-06-10",
   "total_candidatos": 30,
-  "total_leiloes": 13,
+  "total_leiloes": 14,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
@@ -20,6 +20,22 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 11.45,
+      "status": "pending"
+    },
+    {
+      "parcel": "36-26-16-0090-00300-0070",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "9850 TRUMPET VINE LOOP",
+      "city": "TRINITY, 34655",
+      "bid": 12062.31,
+      "just_value": 168870.0,
+      "ratio": 14.0,
+      "sale_date": "2026-06-15",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 14.7,
       "status": "pending"
     },
     {
@@ -468,22 +484,6 @@
       "workers_score": 29.1,
       "workers_decision": "REVISAR",
       "ranking_score": 10.04,
-      "status": "pending"
-    },
-    {
-      "parcel": "0850684500",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "3420 S FORBES RD",
-      "city": "DOVER",
-      "bid": 11635.24,
-      "just_value": 135191.0,
-      "ratio": 11.62,
-      "sale_date": "2026-07-23",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 9.88,
       "status": "pending"
     }
   ]
