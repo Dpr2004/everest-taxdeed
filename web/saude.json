@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-11T13:23:08.360937+00:00",
+  "gerado_em": "2026-06-11T17:41:30.403509+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 385,
-    "lots_com_verdict_lotes": 30,
-    "problemas_criticos": 5,
+    "total_lots_validos": 390,
+    "lots_com_verdict_lotes": 32,
+    "problemas_criticos": 6,
     "saude_geral_pct": 81
   },
   "condados": [
@@ -45,15 +45,15 @@
       "lots_validos": 34,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 85.3,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 2,
-        "PASSA": 17,
-        "REVISAR": 15
+        "LANCE": 3,
+        "PASSA": 13,
+        "REVISAR": 18
       },
-      "quality_score": 97,
+      "quality_score": 100,
       "status": "verde",
       "issues": []
     },
@@ -170,18 +170,18 @@
       "sales_futuras": 8,
       "proxima_sale": "2026-06-11",
       "ultima_sale": "2026-08-27",
-      "lots_validos": 78,
+      "lots_validos": 83,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 85.9,
+        "value_pct": 88.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 17,
-        "REVISAR": 38,
+        "LANCE": 19,
+        "REVISAR": 41,
         "PASSA": 23
       },
-      "quality_score": 97,
+      "quality_score": 98,
       "status": "verde",
       "issues": []
     },
@@ -334,9 +334,9 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "REVISAR": 4,
+        "REVISAR": 3,
         "LANCE": 1,
-        "PASSA": 16
+        "PASSA": 17
       },
       "quality_score": 98,
       "status": "verde",
@@ -435,15 +435,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-11 13:23:07",
+      "ran_at": "2026-06-11 17:41:29",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 385,
+      "items": 390,
       "errors": 0,
-      "ran_at": "2026-06-11 13:23:06",
+      "ran_at": "2026-06-11 17:41:28",
       "log": ""
     },
     {
@@ -451,15 +451,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-11 13:08:54",
+      "ran_at": "2026-06-11 17:27:15",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 6,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-11 12:51:02",
+      "ran_at": "2026-06-11 17:12:16",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-11 12:51:01",
+      "ran_at": "2026-06-11 17:12:16",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -475,15 +475,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-11 12:49:02",
+      "ran_at": "2026-06-11 17:09:57",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 348,
+      "items": 340,
       "errors": 0,
-      "ran_at": "2026-06-11 12:36:49",
+      "ran_at": "2026-06-11 16:57:44",
       "log": ""
     },
     {
@@ -491,15 +491,15 @@
       "status": "success",
       "items": 94,
       "errors": 0,
-      "ran_at": "2026-06-11 12:36:29",
+      "ran_at": "2026-06-11 16:57:21",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "success",
-      "items": 41,
-      "errors": 153,
-      "ran_at": "2026-06-10 14:23:09",
+      "items": 45,
+      "errors": 159,
+      "ran_at": "2026-06-11 14:38:00",
       "log": ""
     }
   ],
@@ -508,6 +508,11 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
+      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
