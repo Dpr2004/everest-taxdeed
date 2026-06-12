@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-12T12:52:13.796566+00:00",
+  "gerado_em": "2026-06-12T17:08:45.824844+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,8 +7,8 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 370,
-    "lots_com_verdict_lotes": 32,
+    "total_lots_validos": 380,
+    "lots_com_verdict_lotes": 33,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
   },
@@ -110,15 +110,15 @@
       "lots_validos": 19,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 63.2,
+        "value_pct": 68.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 9,
-        "REVISAR": 9
+        "PASSA": 8,
+        "REVISAR": 10
       },
-      "quality_score": 94,
+      "quality_score": 95,
       "status": "verde",
       "issues": []
     },
@@ -149,16 +149,16 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-06-17",
       "ultima_sale": "2026-08-12",
-      "lots_validos": 33,
+      "lots_validos": 42,
       "cobertura": {
-        "address_pct": 100.0,
-        "value_pct": 66.7,
+        "address_pct": 97.6,
+        "value_pct": 52.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 33
+        "PASSA": 42
       },
-      "quality_score": 95,
+      "quality_score": 92,
       "status": "verde",
       "issues": []
     },
@@ -170,16 +170,16 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-06-25",
       "ultima_sale": "2026-08-27",
-      "lots_validos": 77,
+      "lots_validos": 78,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 90.9,
+        "value_pct": 91.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 20,
-        "REVISAR": 34,
-        "PASSA": 23
+        "REVISAR": 33,
+        "PASSA": 25
       },
       "quality_score": 98,
       "status": "verde",
@@ -435,15 +435,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 12:52:12",
+      "ran_at": "2026-06-12 17:08:44",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 370,
+      "items": 380,
       "errors": 0,
-      "ran_at": "2026-06-12 12:52:11",
+      "ran_at": "2026-06-12 17:08:43",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 12:37:59",
+      "ran_at": "2026-06-12 16:54:31",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 12:24:10",
+      "ran_at": "2026-06-12 16:40:36",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-12 12:24:09",
+      "ran_at": "2026-06-12 16:40:36",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -475,15 +475,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 12:22:19",
+      "ran_at": "2026-06-12 16:35:44",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 321,
+      "items": 330,
       "errors": 0,
-      "ran_at": "2026-06-12 12:10:59",
+      "ran_at": "2026-06-12 16:23:52",
       "log": ""
     },
     {
@@ -491,15 +491,15 @@
       "status": "success",
       "items": 70,
       "errors": 0,
-      "ran_at": "2026-06-12 12:10:37",
+      "ran_at": "2026-06-12 16:22:55",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "success",
-      "items": 45,
-      "errors": 159,
-      "ran_at": "2026-06-11 14:38:00",
+      "items": 43,
+      "errors": 153,
+      "ran_at": "2026-06-12 14:10:25",
       "log": ""
     }
   ],
