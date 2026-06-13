@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-12T17:08:45.824844+00:00",
+  "gerado_em": "2026-06-13T11:53:50.381254+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 380,
+    "total_lots_validos": 379,
     "lots_com_verdict_lotes": 33,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -304,18 +304,18 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-06-16",
       "ultima_sale": "2026-07-07",
-      "lots_validos": 26,
+      "lots_validos": 27,
       "cobertura": {
-        "address_pct": 88.5,
-        "value_pct": 88.5,
+        "address_pct": 88.9,
+        "value_pct": 88.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "REVISAR": 19,
         "LANCE": 1,
-        "PASSA": 6
+        "PASSA": 7
       },
-      "quality_score": 95,
+      "quality_score": 96,
       "status": "verde",
       "issues": []
     },
@@ -410,10 +410,10 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-06-12",
+      "sales_futuras": 7,
+      "proxima_sale": "2026-06-18",
       "ultima_sale": "2026-07-27",
-      "lots_validos": 28,
+      "lots_validos": 26,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -421,8 +421,8 @@
       },
       "decisoes": {
         "REVISAR": 5,
-        "LANCE": 4,
-        "PASSA": 19
+        "LANCE": 5,
+        "PASSA": 16
       },
       "quality_score": 100,
       "status": "verde",
@@ -435,15 +435,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 17:08:44",
+      "ran_at": "2026-06-13 11:53:49",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 380,
+      "items": 379,
       "errors": 0,
-      "ran_at": "2026-06-12 17:08:43",
+      "ran_at": "2026-06-13 11:53:48",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 16:54:31",
+      "ran_at": "2026-06-13 11:39:36",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 16:40:36",
+      "ran_at": "2026-06-13 11:25:16",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-12 16:40:36",
+      "ran_at": "2026-06-13 11:25:16",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -475,23 +475,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-12 16:35:44",
+      "ran_at": "2026-06-13 11:20:00",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 330,
+      "items": 261,
       "errors": 0,
-      "ran_at": "2026-06-12 16:23:52",
+      "ran_at": "2026-06-13 11:10:02",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 70,
+      "items": 40,
       "errors": 0,
-      "ran_at": "2026-06-12 16:22:55",
+      "ran_at": "2026-06-13 11:08:51",
       "log": ""
     },
     {
@@ -560,7 +560,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-12"
+    "gerado_em": "2026-06-13"
   },
   "analises_lotes": [
     {
