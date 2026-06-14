@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-13T15:49:56.463639+00:00",
+  "gerado_em": "2026-06-14T12:02:46.400148+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -9,7 +9,7 @@
     "condados_sem_atividade": 3,
     "total_lots_validos": 379,
     "lots_com_verdict_lotes": 33,
-    "problemas_criticos": 7,
+    "problemas_criticos": 6,
     "saude_geral_pct": 81
   },
   "condados": [
@@ -435,7 +435,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-13 15:49:55",
+      "ran_at": "2026-06-14 12:02:45",
       "log": ""
     },
     {
@@ -443,7 +443,7 @@
       "status": "success",
       "items": 379,
       "errors": 0,
-      "ran_at": "2026-06-13 15:49:55",
+      "ran_at": "2026-06-14 12:02:45",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-13 15:35:42",
+      "ran_at": "2026-06-14 11:48:32",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-13 15:22:09",
+      "ran_at": "2026-06-14 11:34:30",
       "log": ""
     },
     {
@@ -467,31 +467,31 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-13 15:22:09",
+      "ran_at": "2026-06-14 11:34:29",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "lot_list_scraper",
-      "status": "degraded",
+      "status": "success",
       "items": 0,
-      "errors": 57,
-      "ran_at": "2026-06-13 15:17:18",
+      "errors": 0,
+      "ran_at": "2026-06-14 11:32:28",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 0,
+      "items": 261,
       "errors": 0,
-      "ran_at": "2026-06-13 15:05:05",
+      "ran_at": "2026-06-14 11:23:03",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 0,
+      "items": 40,
       "errors": 0,
-      "ran_at": "2026-06-13 15:03:27",
+      "ran_at": "2026-06-14 11:22:38",
       "log": ""
     },
     {
@@ -508,11 +508,6 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "worker",
-      "msg": "Worker lot_list_scraper com status degraded (0 items, 57 erros) — sem log"
     },
     {
       "severidade": "ALTA",
@@ -565,7 +560,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-13"
+    "gerado_em": "2026-06-14"
   },
   "analises_lotes": [
     {
