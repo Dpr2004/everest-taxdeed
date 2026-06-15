@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-15T15:34:57.848282+00:00",
+  "gerado_em": "2026-06-15T18:44:38.525364+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -45,15 +45,15 @@
       "lots_validos": 20,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 95.0,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 3,
-        "PASSA": 11,
+        "LANCE": 4,
+        "PASSA": 10,
         "REVISAR": 6
       },
-      "quality_score": 99,
+      "quality_score": 100,
       "status": "verde",
       "issues": []
     },
@@ -435,7 +435,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-15 15:34:57",
+      "ran_at": "2026-06-15 18:44:37",
       "log": ""
     },
     {
@@ -443,7 +443,7 @@
       "status": "success",
       "items": 381,
       "errors": 0,
-      "ran_at": "2026-06-15 15:34:56",
+      "ran_at": "2026-06-15 18:44:36",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-15 15:20:43",
+      "ran_at": "2026-06-15 18:30:24",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-15 15:07:24",
+      "ran_at": "2026-06-15 18:16:16",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-15 15:07:24",
+      "ran_at": "2026-06-15 18:16:15",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -475,15 +475,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-15 15:05:32",
+      "ran_at": "2026-06-15 18:11:17",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 279,
+      "items": 282,
       "errors": 0,
-      "ran_at": "2026-06-15 14:54:59",
+      "ran_at": "2026-06-15 18:00:27",
       "log": ""
     },
     {
@@ -491,7 +491,15 @@
       "status": "success",
       "items": 63,
       "errors": 0,
-      "ran_at": "2026-06-15 14:54:38",
+      "ran_at": "2026-06-15 17:59:25",
+      "log": ""
+    },
+    {
+      "worker": "property_appraiser",
+      "status": "success",
+      "items": 41,
+      "errors": 155,
+      "ran_at": "2026-06-15 16:18:03",
       "log": ""
     }
   ],
