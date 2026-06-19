@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-06-18",
+  "gerado_em": "2026-06-19",
   "total_candidatos": 30,
   "total_leiloes": 13,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "911106000820",
-      "county": "Volusia",
-      "state": "FL",
-      "address": "898 AUGUST SKY DR",
-      "city": "DELTONA",
-      "bid": 10534.85,
-      "just_value": 337051.0,
-      "ratio": 31.99,
-      "sale_date": "2026-06-30",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 30.39,
-      "status": "pending"
-    },
     {
       "parcel": "21-45-27-15-00096.0140",
       "county": "Lee",
@@ -452,6 +436,22 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 4.64,
+      "status": "pending"
+    },
+    {
+      "parcel": "631301000130",
+      "county": "Volusia",
+      "state": "FL",
+      "address": "4322 S ATLANTIC AVE",
+      "city": "PONCE INLET",
+      "bid": 95566.16,
+      "just_value": 471330.0,
+      "ratio": 4.93,
+      "sale_date": "2026-08-12",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 4.69,
       "status": "pending"
     },
     {
