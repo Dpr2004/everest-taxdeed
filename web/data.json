@@ -1,9 +1,9 @@
 {
-  "gerado_em": "19/Jun/2026 16:53",
+  "gerado_em": "20/Jun/2026 11:54",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 42,
-    "total_lots": 333,
+    "total_sales": 41,
+    "total_lots": 334,
     "lances": 37,
     "estados": [
       "FL"
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "15/Jun a 21/Jun/2026",
-      "sales": [
-        {
-          "id": 9594,
-          "data_fmt": "19/Jun/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "22/Jun a 28/Jun/2026",
@@ -4335,6 +4321,28 @@
       "fema_risk": null
     },
     {
+      "id": 50024,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-07-01",
+      "parcel_id": "C-21-34-29-060-0000-1440",
+      "address": "4614 MURIEL AVE",
+      "city": "SEBRING",
+      "zip": "33870",
+      "min_bid": 1837.28,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.8096,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -26560.27,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 44939,
       "condado": "BREVARD",
       "estado": "FL",
@@ -8134,7 +8142,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 4,
-      "total_lots": 99
+      "total_lots": 100
     },
     {
       "codigo": "HILLSBOROUGH",
@@ -8325,7 +8333,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 9,
+      "total_sales": 8,
       "total_lots": 76
     }
   ]

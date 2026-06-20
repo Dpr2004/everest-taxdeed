@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-19T16:53:31.321195+00:00",
+  "gerado_em": "2026-06-20T11:54:49.107650+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 333,
+    "total_lots_validos": 334,
     "lots_com_verdict_lotes": 48,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -149,19 +149,19 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-07-01",
       "ultima_sale": "2026-08-12",
-      "lots_validos": 30,
+      "lots_validos": 31,
       "cobertura": {
-        "address_pct": 96.7,
-        "value_pct": 33.3,
+        "address_pct": 96.8,
+        "value_pct": 32.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 30
+        "PASSA": 31
       },
       "quality_score": 89,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 20/30 — Regrid/PA falhou"
+        "assessed/just_value missing em 21/31 — Regrid/PA falhou"
       ]
     },
     {
@@ -410,8 +410,8 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 9,
-      "proxima_sale": "2026-06-19",
+      "sales_futuras": 8,
+      "proxima_sale": "2026-06-23",
       "ultima_sale": "2026-08-12",
       "lots_validos": 32,
       "cobertura": {
@@ -435,15 +435,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-19 16:53:30",
+      "ran_at": "2026-06-20 11:54:47",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 333,
+      "items": 334,
       "errors": 0,
-      "ran_at": "2026-06-19 16:53:30",
+      "ran_at": "2026-06-20 11:54:47",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-19 16:39:17",
+      "ran_at": "2026-06-20 11:40:34",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-19 16:21:59",
+      "ran_at": "2026-06-20 11:23:26",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-19 16:21:59",
+      "ran_at": "2026-06-20 11:23:25",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -475,23 +475,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-19 16:20:03",
+      "ran_at": "2026-06-20 11:18:13",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 320,
+      "items": 251,
       "errors": 0,
-      "ran_at": "2026-06-19 16:09:17",
+      "ran_at": "2026-06-20 11:08:21",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 67,
+      "items": 37,
       "errors": 0,
-      "ran_at": "2026-06-19 16:08:55",
+      "ran_at": "2026-06-20 11:07:12",
       "log": ""
     },
     {
@@ -541,7 +541,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "HIGHLANDS",
-      "msg": "HIGHLANDS: assessed/just_value missing em 20/30 — Regrid/PA falhou"
+      "msg": "HIGHLANDS: assessed/just_value missing em 21/31 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -566,7 +566,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-19"
+    "gerado_em": "2026-06-20"
   },
   "analises_lotes": [
     {
