@@ -1,5 +1,5 @@
 {
-  "gerado_em": "20/Jun/2026 11:54",
+  "gerado_em": "21/Jun/2026 12:26",
   "resumo": {
     "total_condados": 19,
     "total_sales": 41,
@@ -600,13 +600,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 4.5997,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 167151.2,
       "profit": 265388.48,
       "fema_zone": null,
       "fema_risk": null,
       "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
     },
     {
       "id": 27359,
@@ -624,13 +624,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 3.5619,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 100271.23,
       "profit": 179735.87,
       "fema_zone": null,
       "fema_risk": null,
       "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
     },
     {
       "id": 37303,
@@ -808,13 +808,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 0.8698,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 38650.62,
       "fema_zone": null,
       "fema_risk": null,
       "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
     },
     {
       "id": 18850,
@@ -1178,13 +1178,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 1.525,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 48098.84,
       "profit": 95266.08,
       "fema_zone": null,
       "fema_risk": null,
       "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 37523,

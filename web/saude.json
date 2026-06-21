@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-20T11:54:49.107650+00:00",
+  "gerado_em": "2026-06-21T12:26:34.854818+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -50,8 +50,8 @@
       },
       "decisoes": {
         "LANCE": 3,
-        "REVISAR": 9,
-        "PASSA": 11
+        "PASSA": 12,
+        "REVISAR": 8
       },
       "quality_score": 100,
       "status": "verde",
@@ -179,9 +179,9 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 38,
+        "REVISAR": 38,
         "LANCE": 20,
-        "REVISAR": 35
+        "PASSA": 35
       },
       "quality_score": 97,
       "status": "verde",
@@ -435,7 +435,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-20 11:54:47",
+      "ran_at": "2026-06-21 12:26:33",
       "log": ""
     },
     {
@@ -443,7 +443,7 @@
       "status": "success",
       "items": 334,
       "errors": 0,
-      "ran_at": "2026-06-20 11:54:47",
+      "ran_at": "2026-06-21 12:26:33",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-20 11:40:34",
+      "ran_at": "2026-06-21 12:12:20",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-20 11:23:26",
+      "ran_at": "2026-06-21 11:55:03",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-06-20 11:23:25",
+      "ran_at": "2026-06-21 11:55:03",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -475,7 +475,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-06-20 11:18:13",
+      "ran_at": "2026-06-21 11:49:54",
       "log": ""
     },
     {
@@ -483,7 +483,7 @@
       "status": "success",
       "items": 251,
       "errors": 0,
-      "ran_at": "2026-06-20 11:08:21",
+      "ran_at": "2026-06-21 11:40:04",
       "log": ""
     },
     {
@@ -491,15 +491,7 @@
       "status": "success",
       "items": 37,
       "errors": 0,
-      "ran_at": "2026-06-20 11:07:12",
-      "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "success",
-      "items": 36,
-      "errors": 133,
-      "ran_at": "2026-06-19 14:13:03",
+      "ran_at": "2026-06-21 11:38:55",
       "log": ""
     }
   ],
@@ -566,7 +558,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-06-20"
+    "gerado_em": "2026-06-21"
   },
   "analises_lotes": [
     {
