@@ -1,10 +1,10 @@
 {
-  "gerado_em": "23/Jun/2026 12:39",
+  "gerado_em": "23/Jun/2026 16:40",
   "resumo": {
     "total_condados": 19,
     "total_sales": 49,
-    "total_lots": 347,
-    "lances": 43,
+    "total_lots": 353,
+    "lances": 44,
     "estados": [
       "FL"
     ]
@@ -2080,6 +2080,28 @@
       "fema_risk": null
     },
     {
+      "id": 51772,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-08-25",
+      "parcel_id": "04-45-23-C3-04684.0340",
+      "address": "3822 SW 17TH AVE",
+      "city": "CAPE CORAL",
+      "zip": "33914",
+      "min_bid": 339501.64,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.4968,
+      "decisao": "LANCE",
+      "max_bid": 765630.01,
+      "profit": 691989.49,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 46274,
       "condado": "LEE",
       "estado": "FL",
@@ -2694,6 +2716,28 @@
       "decisao": "PASSA",
       "max_bid": 61896.38,
       "profit": 15525.26,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 51786,
+      "condado": "FLAGLER",
+      "estado": "FL",
+      "sale_date": "2026-09-08",
+      "parcel_id": "0711317023002800260",
+      "address": "19WHITE BIRCH LN",
+      "city": "PALM COAST",
+      "zip": "32164",
+      "min_bid": 111890.93,
+      "assessed_value": 201407.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 35.2,
+      "roi": 0.097,
+      "decisao": "PASSA",
+      "max_bid": 57791.08,
+      "profit": 15139.34,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -3452,6 +3496,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -27825.68,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 51762,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-08-20",
+      "parcel_id": "2917664",
+      "address": "2599 GLENROCK RD SW",
+      "city": "PALM BAY",
+      "zip": "32908",
+      "min_bid": 1244.07,
+      "assessed_value": 10500.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7248,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": -23503.07,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6192,6 +6258,28 @@
       "fema_risk": null
     },
     {
+      "id": 51770,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-08-25",
+      "parcel_id": "11-45-26-06-00065.0230",
+      "address": "3420 43RD ST SW",
+      "city": "LEHIGH ACRES",
+      "zip": "33976",
+      "min_bid": 2759.7,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7239,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -24597.36,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 48652,
       "condado": "LEE",
       "estado": "FL",
@@ -7456,6 +7544,28 @@
       "fema_risk": null
     },
     {
+      "id": 51771,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-08-25",
+      "parcel_id": "36-44-26-13-00120.0010",
+      "address": "2619 14TH ST SW",
+      "city": "LEHIGH ACRES",
+      "zip": "33976",
+      "min_bid": 13770.79,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.0243,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -1165.76,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 37260,
       "condado": "MARION",
       "estado": "FL",
@@ -7496,6 +7606,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -42504.38,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 51725,
+      "condado": "MARION",
+      "estado": "FL",
+      "sale_date": "2026-08-12",
+      "parcel_id": "3582-296-004",
+      "address": "5231 SE 29TH CT",
+      "city": "OCALA",
+      "zip": "34480",
+      "min_bid": 21081.88,
+      "assessed_value": 40631.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.3641,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -19778.44,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -8455,7 +8587,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 2,
-      "total_lots": 59
+      "total_lots": 60
     },
     {
       "codigo": "CITRUS",
@@ -8502,8 +8634,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 2,
-      "total_lots": 20
+      "total_sales": 3,
+      "total_lots": 21
     },
     {
       "codigo": "HERNANDO",
@@ -8582,8 +8714,8 @@
       "status": "SEM_ATIVIDADE_2026Q2",
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 5,
-      "total_lots": 36
+      "total_sales": 6,
+      "total_lots": 39
     },
     {
       "codigo": "LEVY",
@@ -8615,7 +8747,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 73
+      "total_lots": 74
     },
     {
       "codigo": "ORANGE",
