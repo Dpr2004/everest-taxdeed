@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-06-22",
+  "gerado_em": "2026-06-23",
   "total_candidatos": 30,
-  "total_leiloes": 15,
+  "total_leiloes": 14,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "182529227600011025",
-      "county": "Osceola",
-      "state": "FL",
-      "address": "2206 ANTIGUA PL 1025",
-      "city": "KISSIMMEE",
-      "bid": 6967.35,
-      "just_value": 187500.0,
-      "ratio": 26.91,
-      "sale_date": "2026-06-30",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 26.91,
-      "status": "pending"
-    },
     {
       "parcel": "21-45-27-15-00096.0140",
       "county": "Lee",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 56.01,
+      "status": "pending"
+    },
+    {
+      "parcel": "0246990100",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "3457 W KENYON AVE",
+      "city": "TAMPA",
+      "bid": 117384.3,
+      "just_value": 2309000.0,
+      "ratio": 19.67,
+      "sale_date": "2026-08-13",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 16.72,
       "status": "pending"
     }
   ]

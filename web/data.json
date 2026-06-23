@@ -1,10 +1,10 @@
 {
-  "gerado_em": "22/Jun/2026 15:11",
+  "gerado_em": "23/Jun/2026 12:39",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 48,
-    "total_lots": 345,
-    "lances": 44,
+    "total_sales": 49,
+    "total_lots": 347,
+    "lances": 43,
     "estados": [
       "FL"
     ]
@@ -13,19 +13,6 @@
     {
       "label": "22/Jun a 28/Jun/2026",
       "sales": [
-        {
-          "id": 659,
-          "data_fmt": "22/Jun/2026",
-          "dia_semana": "Seg",
-          "condado": "PASCO",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://pasco.realforeclose.com/",
-          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
-          "status": "CONFIRMADO",
-          "total_lots": 2
-        },
         {
           "id": 461,
           "data_fmt": "23/Jun/2026",
@@ -38,6 +25,19 @@
           "url_clerk": "https://www.alachuaclerk.org/court_services/tax_deeds.cfm",
           "status": "CONFIRMADO",
           "total_lots": 2
+        },
+        {
+          "id": 9968,
+          "data_fmt": "23/Jun/2026",
+          "dia_semana": "Ter",
+          "condado": "PASCO",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://pasco.realforeclose.com/",
+          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
         },
         {
           "id": 1035,
@@ -647,6 +647,19 @@
           "total_lots": 0
         },
         {
+          "id": 10040,
+          "data_fmt": "12/Aug/2026",
+          "dia_semana": "Qua",
+          "condado": "MARION",
+          "estado": "FL",
+          "horario": "10:00",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://marion.realtaxdeed.com/",
+          "url_clerk": "https://www.marioncountyclerk.org/departments/records-recording/tax-deeds-and-lands-available-for-taxes/tax-deed-sales/",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
           "id": 9623,
           "data_fmt": "12/Aug/2026",
           "dia_semana": "Qua",
@@ -692,13 +705,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 4.5997,
-      "decisao": "REVISAR",
+      "decisao": "PASSA",
       "max_bid": 167151.2,
       "profit": 265388.48,
       "fema_zone": null,
       "fema_risk": null,
       "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
+      "decisao_motivo": "comite verdict=PASS"
     },
     {
       "id": 27359,
@@ -878,11 +891,13 @@
       "year_built": null,
       "score": 90.0,
       "roi": 2.1756,
-      "decisao": "LANCE",
+      "decisao": "REVISAR",
       "max_bid": 49280.0,
       "profit": 109187.65,
       "fema_zone": null,
-      "fema_risk": null
+      "fema_risk": null,
+      "decisao_origem": "comite_lotes",
+      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
     },
     {
       "id": 47560,
@@ -2944,13 +2959,13 @@
       "year_built": null,
       "score": 3.0,
       "roi": -0.0089,
-      "decisao": "PASSA",
+      "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -352.08,
       "fema_zone": null,
       "fema_risk": null,
       "decisao_origem": "comite_lotes",
-      "decisao_motivo": "comite verdict=PASS"
+      "decisao_motivo": "comite verdict=INVESTIGATE_MORE"
     },
     {
       "id": 45646,
@@ -2971,6 +2986,28 @@
       "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": -355.83,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 51406,
+      "condado": "VOLUSIA",
+      "estado": "FL",
+      "sale_date": "2026-08-17",
+      "parcel_id": "813063280040",
+      "address": "2857 BLUESTONE DR",
+      "city": "DELTONA",
+      "zip": "32738",
+      "min_bid": 0.0,
+      "assessed_value": 117573.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": null,
+      "roi": null,
+      "decisao": null,
+      "max_bid": null,
+      "profit": null,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -5078,7 +5115,7 @@
       "estado": "FL",
       "sale_date": "2026-07-08",
       "parcel_id": "04-10-24-9035-0040-0030",
-      "address": "00 Unassigned Location RE",
+      "address": "00 UNASSIGNED LOCATION RE",
       "city": null,
       "zip": null,
       "min_bid": 2020.46,
@@ -5467,6 +5504,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -31947.32,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 51381,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-08-11",
+      "parcel_id": "01-44-27-L2-11041.0070",
+      "address": "2310 WELLS AVE",
+      "city": "ALVA",
+      "zip": "33920",
+      "min_bid": 2289.99,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7668,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -25596.9,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7507,6 +7566,28 @@
       "fema_risk": null
     },
     {
+      "id": 51112,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-06-23",
+      "parcel_id": "09-25-16-0760-00000-1190",
+      "address": "6510 ELEANOR DRIVE",
+      "city": "PORT RICHEY, 34668",
+      "zip": null,
+      "min_bid": 32753.23,
+      "assessed_value": null,
+      "just_value": 40237.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.4815,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -31757.9,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 41177,
       "condado": "BREVARD",
       "estado": "FL",
@@ -7925,6 +8006,28 @@
       "fema_risk": null
     },
     {
+      "id": 51111,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-06-23",
+      "parcel_id": "25-26-15-006D-00000-8760",
+      "address": "3249 TRASK DR",
+      "city": "HOLIDAY, 34691",
+      "zip": null,
+      "min_bid": 225043.33,
+      "assessed_value": null,
+      "just_value": 191104.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.395,
+      "decisao": "PASSA",
+      "max_bid": 51485.65,
+      "profit": -106070.0,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 30903,
       "condado": "VOLUSIA",
       "estado": "FL",
@@ -7943,28 +8046,6 @@
       "decisao": "PASSA",
       "max_bid": 127796.54,
       "profit": -21934.46,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 22879,
-      "condado": "PASCO",
-      "estado": "FL",
-      "sale_date": "2026-06-22",
-      "parcel_id": "11-25-16-0130-00000-6510",
-      "address": "8747 WOLF DEN TR",
-      "city": "PORT RICHEY, 34668",
-      "zip": null,
-      "min_bid": 246101.78,
-      "assessed_value": null,
-      "just_value": 249860.0,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.2765,
-      "decisao": "PASSA",
-      "max_bid": 87444.32,
-      "profit": -81181.26,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -8031,28 +8112,6 @@
       "decisao": "PASSA",
       "max_bid": 72209.8,
       "profit": -119973.93,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 46041,
-      "condado": "PASCO",
-      "estado": "FL",
-      "sale_date": "2026-06-22",
-      "parcel_id": "02-25-16-0890-00000-0480",
-      "address": "12717 WOODCHUCK WAY",
-      "city": "HUDSON, 34667",
-      "zip": null,
-      "min_bid": 281053.28,
-      "assessed_value": null,
-      "just_value": 198145.0,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4818,
-      "decisao": "PASSA",
-      "max_bid": 55794.74,
-      "profit": -156573.89,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -8524,7 +8583,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 5,
-      "total_lots": 35
+      "total_lots": 36
     },
     {
       "codigo": "LEVY",
@@ -8555,7 +8614,7 @@
       "status": "CONFIRMADO",
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 2,
+      "total_sales": 3,
       "total_lots": 73
     },
     {
@@ -8604,7 +8663,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 9,
-      "total_lots": 64
+      "total_lots": 66
     },
     {
       "codigo": "POLK",
@@ -8667,8 +8726,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
-      "total_lots": 76
+      "total_sales": 9,
+      "total_lots": 77
     }
   ]
 }
