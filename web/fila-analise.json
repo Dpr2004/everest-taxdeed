@@ -231,6 +231,22 @@
       "status": "pending"
     },
     {
+      "parcel": "13-45-26-07-00057.0010",
+      "county": "Lee",
+      "state": "FL",
+      "address": "2519 49TH ST SW",
+      "city": "LEHIGH ACRES",
+      "bid": 2535.62,
+      "just_value": 21803.0,
+      "ratio": 8.6,
+      "sale_date": "2026-07-28",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 7.31,
+      "status": "pending"
+    },
+    {
       "parcel": "01-45-27-12-00064.0090",
       "county": "Lee",
       "state": "FL",
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 14.03,
-      "status": "pending"
-    },
-    {
-      "parcel": "0423260000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "6910 E 29TH AVE",
-      "city": "TAMPA",
-      "bid": 21624.71,
-      "just_value": 315669.0,
-      "ratio": 14.6,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 12.41,
       "status": "pending"
     }
   ]
