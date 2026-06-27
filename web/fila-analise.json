@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-25",
+  "gerado_em": "2026-06-27",
   "total_candidatos": 30,
   "total_leiloes": 15,
   "ratio_minimo": 4.0,
@@ -247,6 +247,38 @@
       "status": "pending"
     },
     {
+      "parcel": "11-45-26-09-00083.0030",
+      "county": "Lee",
+      "state": "FL",
+      "address": "3121 36TH ST SW",
+      "city": "LEHIGH ACRES",
+      "bid": 2621.38,
+      "just_value": 21803.0,
+      "ratio": 8.32,
+      "sale_date": "2026-07-28",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 7.07,
+      "status": "pending"
+    },
+    {
+      "parcel": "28-45-27-06-00024.0020",
+      "county": "Lee",
+      "state": "FL",
+      "address": "528 LADD ST",
+      "city": "LEHIGH ACRES",
+      "bid": 2642.36,
+      "just_value": 20866.0,
+      "ratio": 7.9,
+      "sale_date": "2026-07-28",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 6.71,
+      "status": "pending"
+    },
+    {
       "parcel": "01-45-27-12-00064.0090",
       "county": "Lee",
       "state": "FL",
@@ -452,38 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 56.01,
-      "status": "pending"
-    },
-    {
-      "parcel": "0246990100",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "3457 W KENYON AVE",
-      "city": "TAMPA",
-      "bid": 117384.3,
-      "just_value": 2309000.0,
-      "ratio": 19.67,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 16.72,
-      "status": "pending"
-    },
-    {
-      "parcel": "0148525708",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "17521 MARSH RD",
-      "city": "LUTZ",
-      "bid": 58904.51,
-      "just_value": 972012.0,
-      "ratio": 16.5,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 14.03,
       "status": "pending"
     }
   ]
