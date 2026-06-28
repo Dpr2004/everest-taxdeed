@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-06-28T11:46:22.318Z",
+  "final_score": null,
+  "parcel_id": "8002-0005-03",
+  "recommendation": null,
+  "red_flags": [],
+  "report_markdown": "# Análise — Parcel 8002-0005-03\n\n**Condado:** Marion, FL  \n**Endereço:** _(não obtido)_  \n**Owner:** _(não obtido)_  \n**Opening bid:** $6,940  \n**Data do leilão:** 2026-07-22  \n**Asset type:** _(não classificado)_  \n**Gerado em:** 2026-06-28 11:46 UTC  \n\n> ⚠️ **ANÁLISE PARCIAL** — 0 de 13 agentes completaram (timeout ou erro). Veredicto pode estar incompleto.\n> 🔴 **Agentes CRÍTICOS ausentes:** 02-official-data-property, 03-title-liens-legal, 05-market-exit-financial, 06-qa-investment-committee — NÃO licitar com base neste relatório.\n\n---\n\n## 🎯 Veredicto Final\n\n**INCONCLUSIVO** — Score —/100 — Confiança: low\n\n---\n\n## 📊 Metodologia\n\nPipeline: PARCIAL (0 de 12 agentes completaram)\n\n| Agente | Status |\n|--------|--------|\n| 00-asset-classification | — |\n| 01-auction-rules | — |\n| 02-official-data-property | — |\n| 03-title-liens-legal | — |\n| 04-physical-viability | — |\n| 05-market-exit-financial | — |\n| 06-qa-investment-committee | — |\n| 07-occupancy-investigation | — |\n| 08-county-quirks | — |\n| 09-drive-by-photo-verification | — |\n| 10-insurance-feasibility | — |\n| 11-environmental-hazards | — |\n| 12-verification-engine | — |\n\n_Sistema Everest Tax Deed Intelligence — análise de due diligence multi-agente._",
+  "top_3_reasons": [],
+  "verdict": null,
+  "vmf_final": null
+}
