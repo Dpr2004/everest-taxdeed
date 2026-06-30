@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-29",
+  "gerado_em": "2026-06-30",
   "total_candidatos": 30,
   "total_leiloes": 13,
   "ratio_minimo": 4.0,
@@ -263,6 +263,22 @@
       "status": "pending"
     },
     {
+      "parcel": "02-45-27-L2-03023.0170",
+      "county": "Lee",
+      "state": "FL",
+      "address": "1247 GRANT BLVD",
+      "city": "LEHIGH ACRES",
+      "bid": 2465.07,
+      "just_value": 15343.0,
+      "ratio": 6.22,
+      "sale_date": "2026-07-28",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 5.29,
+      "status": "pending"
+    },
+    {
       "parcel": "0711317035004600030",
       "county": "Flagler",
       "state": "FL",
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 16.72,
-      "status": "pending"
-    },
-    {
-      "parcel": "0148525708",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "17521 MARSH RD",
-      "city": "LUTZ",
-      "bid": 58904.51,
-      "just_value": 972012.0,
-      "ratio": 16.5,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 14.03,
       "status": "pending"
     }
   ]
