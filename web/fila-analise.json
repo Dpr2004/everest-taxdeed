@@ -1,11 +1,27 @@
 {
-  "gerado_em": "2026-06-30",
+  "gerado_em": "2026-07-01",
   "total_candidatos": 30,
-  "total_leiloes": 13,
+  "total_leiloes": 15,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
+    {
+      "parcel": "07-26-16-0440-00000-0090",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "5339 CADES COVE",
+      "city": "NEW PORT RICHEY, 34652",
+      "bid": 7940.75,
+      "just_value": 789909.0,
+      "ratio": 99.48,
+      "sale_date": "2026-07-01",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 104.45,
+      "status": "pending"
+    },
     {
       "parcel": "21-45-27-15-00096.0140",
       "county": "Lee",
@@ -343,6 +359,22 @@
       "status": "pending"
     },
     {
+      "parcel": "0711317058005700050",
+      "county": "Flagler",
+      "state": "FL",
+      "address": "12SEXTON PL",
+      "city": "PALM COAST",
+      "bid": 2481.81,
+      "just_value": 17892.0,
+      "ratio": 7.21,
+      "sale_date": "2026-08-11",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 7.21,
+      "status": "pending"
+    },
+    {
       "parcel": "0711317028001300100",
       "county": "Flagler",
       "state": "FL",
@@ -423,22 +455,6 @@
       "status": "pending"
     },
     {
-      "parcel": "0711317058004400200",
-      "county": "Flagler",
-      "state": "FL",
-      "address": "39SEDGWICK TRL",
-      "city": "PALM COAST",
-      "bid": 2704.91,
-      "just_value": 12555.0,
-      "ratio": 4.64,
-      "sale_date": "2026-08-11",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 4.64,
-      "status": "pending"
-    },
-    {
       "parcel": "631301000130",
       "county": "Volusia",
       "state": "FL",
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 56.01,
-      "status": "pending"
-    },
-    {
-      "parcel": "0246990100",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "3457 W KENYON AVE",
-      "city": "TAMPA",
-      "bid": 117384.3,
-      "just_value": 2309000.0,
-      "ratio": 19.67,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 16.72,
       "status": "pending"
     }
   ]
