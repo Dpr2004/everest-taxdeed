@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-01",
+  "gerado_em": "2026-07-02",
   "total_candidatos": 30,
   "total_leiloes": 15,
   "ratio_minimo": 4.0,
@@ -7,19 +7,19 @@
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
     {
-      "parcel": "07-26-16-0440-00000-0090",
+      "parcel": "08-25-17-0020-00000-2720",
       "county": "Pasco",
       "state": "FL",
-      "address": "5339 CADES COVE",
-      "city": "NEW PORT RICHEY, 34652",
-      "bid": 7940.75,
-      "just_value": 789909.0,
-      "ratio": 99.48,
-      "sale_date": "2026-07-01",
+      "address": "11627 ASPENWOOD DRIVE",
+      "city": "NEW PORT RICHEY, 34654",
+      "bid": 10983.06,
+      "just_value": 206038.0,
+      "ratio": 18.76,
+      "sale_date": "2026-07-02",
       "flood_zone": "",
       "workers_score": 90.0,
       "workers_decision": "LANCE",
-      "ranking_score": 104.45,
+      "ranking_score": 19.7,
       "status": "pending"
     },
     {
