@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-07-02",
+  "gerado_em": "2026-07-03",
   "total_candidatos": 30,
-  "total_leiloes": 15,
+  "total_leiloes": 16,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "08-25-17-0020-00000-2720",
-      "county": "Pasco",
-      "state": "FL",
-      "address": "11627 ASPENWOOD DRIVE",
-      "city": "NEW PORT RICHEY, 34654",
-      "bid": 10983.06,
-      "just_value": 206038.0,
-      "ratio": 18.76,
-      "sale_date": "2026-07-02",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 19.7,
-      "status": "pending"
-    },
     {
       "parcel": "21-45-27-15-00096.0140",
       "county": "Lee",
@@ -36,38 +20,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 9.26,
-      "status": "pending"
-    },
-    {
-      "parcel": "0895230000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "PLANT CITY, FL- 33565",
-      "city": "",
-      "bid": 11573.15,
-      "just_value": 171739.0,
-      "ratio": 14.84,
-      "sale_date": "2026-07-23",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 12.61,
-      "status": "pending"
-    },
-    {
-      "parcel": "2066990000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "1102 E LAURA ST",
-      "city": "PLANT CITY",
-      "bid": 6803.31,
-      "just_value": 88592.0,
-      "ratio": 13.02,
-      "sale_date": "2026-07-23",
-      "flood_zone": "",
-      "workers_score": 87.9,
-      "workers_decision": "LANCE",
-      "ranking_score": 11.07,
       "status": "pending"
     },
     {
@@ -199,6 +151,38 @@
       "status": "pending"
     },
     {
+      "parcel": "0032080175",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "TAMPA, FL- 33625",
+      "city": "",
+      "bid": 1392.25,
+      "just_value": 5951.0,
+      "ratio": 4.27,
+      "sale_date": "2026-07-23",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 3.63,
+      "status": "pending"
+    },
+    {
+      "parcel": "0032080125",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "TAMPA, FL- 33625",
+      "city": "",
+      "bid": 1399.29,
+      "just_value": 5951.0,
+      "ratio": 4.25,
+      "sale_date": "2026-07-23",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 3.61,
+      "status": "pending"
+    },
+    {
       "parcel": "694405000770",
       "county": "Volusia",
       "state": "FL",
@@ -292,6 +276,22 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 5.29,
+      "status": "pending"
+    },
+    {
+      "parcel": "02-44-23-C1-02653.0030",
+      "county": "Lee",
+      "state": "FL",
+      "address": "1313 NELSON RD N",
+      "city": "CAPE CORAL",
+      "bid": 5719.02,
+      "just_value": 34723.0,
+      "ratio": 6.07,
+      "sale_date": "2026-08-04",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 5.16,
       "status": "pending"
     },
     {
@@ -455,6 +455,22 @@
       "status": "pending"
     },
     {
+      "parcel": "06-44-27-10-00276.0020",
+      "county": "Lee",
+      "state": "FL",
+      "address": "671 SABINA CT",
+      "city": "LEHIGH ACRES",
+      "bid": 2063.39,
+      "just_value": 12113.0,
+      "ratio": 5.87,
+      "sale_date": "2026-08-11",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 4.99,
+      "status": "pending"
+    },
+    {
       "parcel": "631301000130",
       "county": "Volusia",
       "state": "FL",
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 4.69,
-      "status": "pending"
-    },
-    {
-      "parcel": "0948610000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "10910 MARJORY AVE",
-      "city": "TAMPA",
-      "bid": 2101.78,
-      "just_value": 138505.0,
-      "ratio": 65.9,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 56.01,
       "status": "pending"
     }
   ]
