@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-07-07T12:22:13.044330+00:00",
+  "gerado_em": "2026-07-08T11:42:29.254737+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 12,
+    "condados_verdes": 11,
     "condados_amarelos": 1,
-    "condados_vermelhos": 3,
+    "condados_vermelhos": 4,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 440,
-    "lots_com_verdict_lotes": 66,
-    "problemas_criticos": 5,
-    "saude_geral_pct": 75
+    "total_lots_validos": 434,
+    "lots_com_verdict_lotes": 67,
+    "problemas_criticos": 7,
+    "saude_geral_pct": 68
   },
   "condados": [
     {
@@ -42,7 +42,7 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-07-16",
       "ultima_sale": "2026-09-17",
-      "lots_validos": 37,
+      "lots_validos": 39,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -50,8 +50,8 @@
       },
       "decisoes": {
         "LANCE": 10,
-        "REVISAR": 11,
-        "PASSA": 16
+        "PASSA": 18,
+        "REVISAR": 11
       },
       "quality_score": 100,
       "status": "verde",
@@ -149,17 +149,17 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-08-19",
-      "lots_validos": 44,
+      "lots_validos": 50,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 63.6,
+        "value_pct": 56.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 43,
+        "PASSA": 49,
         "REVISAR": 1
       },
-      "quality_score": 94,
+      "quality_score": 93,
       "status": "verde",
       "issues": []
     },
@@ -178,8 +178,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 36,
-        "REVISAR": 37,
+        "PASSA": 37,
+        "REVISAR": 36,
         "LANCE": 31
       },
       "quality_score": 97,
@@ -191,10 +191,10 @@
       "nome": "Lake County",
       "state": "FL",
       "url_sales": "https://lake.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-07-07",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-07-21",
       "ultima_sale": "2026-07-21",
-      "lots_validos": 12,
+      "lots_validos": 11,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
@@ -202,12 +202,12 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 11
+        "PASSA": 10
       },
       "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 12/12 — Regrid/PA falhou"
+        "assessed/just_value missing em 11/11 — Regrid/PA falhou"
       ]
     },
     {
@@ -215,24 +215,24 @@
       "nome": "Lee County",
       "state": "FL",
       "url_sales": "https://lee.realtaxdeed.com/",
-      "sales_futuras": 7,
+      "sales_futuras": 8,
       "proxima_sale": "2026-07-14",
-      "ultima_sale": "2026-09-01",
-      "lots_validos": 60,
+      "ultima_sale": "2026-09-15",
+      "lots_validos": 63,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 16.7,
+        "value_pct": 15.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 6,
         "REVISAR": 8,
-        "PASSA": 46
+        "PASSA": 49
       },
       "quality_score": 87,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 50/60 — Regrid/PA falhou"
+        "assessed/just_value missing em 53/63 — Regrid/PA falhou"
       ]
     },
     {
@@ -284,7 +284,7 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-08-20",
-      "lots_validos": 32,
+      "lots_validos": 33,
       "cobertura": {
         "address_pct": 0.0,
         "value_pct": 0.0,
@@ -293,13 +293,13 @@
       "decisoes": {
         "LANCE": 3,
         "REVISAR": 4,
-        "PASSA": 25
+        "PASSA": 26
       },
       "quality_score": 65,
       "status": "amarelo",
       "issues": [
-        "address missing em 32/32 (100%) — scraper de lot incompleto",
-        "assessed/just_value missing em 32/32 — Regrid/PA falhou"
+        "address missing em 33/33 (100%) — scraper de lot incompleto",
+        "assessed/just_value missing em 33/33 — Regrid/PA falhou"
       ]
     },
     {
@@ -307,22 +307,21 @@
       "nome": "Osceola County",
       "state": "FL",
       "url_sales": "https://osceola.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-07-07",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-07-31",
       "ultima_sale": "2026-07-31",
-      "lots_validos": 11,
+      "lots_validos": 0,
       "cobertura": {
-        "address_pct": 81.8,
-        "value_pct": 81.8,
+        "address_pct": 0,
+        "value_pct": 0,
         "sqft_pct": 100.0
       },
-      "decisoes": {
-        "REVISAR": 9,
-        "PASSA": 2
-      },
-      "quality_score": 93,
-      "status": "verde",
-      "issues": []
+      "decisoes": {},
+      "quality_score": 0,
+      "status": "vermelho",
+      "issues": [
+        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em osceola.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      ]
     },
     {
       "codigo": "PASCO",
@@ -330,20 +329,19 @@
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
       "sales_futuras": 8,
-      "proxima_sale": "2026-07-07",
+      "proxima_sale": "2026-07-08",
       "ultima_sale": "2026-08-25",
-      "lots_validos": 19,
+      "lots_validos": 13,
       "cobertura": {
-        "address_pct": 94.7,
-        "value_pct": 94.7,
+        "address_pct": 92.3,
+        "value_pct": 92.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 17,
-        "LANCE": 1,
-        "REVISAR": 1
+        "PASSA": 12,
+        "LANCE": 1
       },
-      "quality_score": 98,
+      "quality_score": 97,
       "status": "verde",
       "issues": []
     },
@@ -428,9 +426,9 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 8,
-        "REVISAR": 2,
-        "PASSA": 20
+        "LANCE": 7,
+        "PASSA": 21,
+        "REVISAR": 2
       },
       "quality_score": 100,
       "status": "verde",
@@ -443,15 +441,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-07 12:22:10",
+      "ran_at": "2026-07-08 11:42:27",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 440,
+      "items": 434,
       "errors": 0,
-      "ran_at": "2026-07-07 12:22:09",
+      "ran_at": "2026-07-08 11:42:27",
       "log": ""
     },
     {
@@ -459,15 +457,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-07 12:07:57",
+      "ran_at": "2026-07-08 11:28:14",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 10,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-07 11:55:03",
+      "ran_at": "2026-07-08 11:10:16",
       "log": ""
     },
     {
@@ -475,7 +473,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-07 11:55:03",
+      "ran_at": "2026-07-08 11:10:16",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -483,7 +481,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-07 11:49:47",
+      "ran_at": "2026-07-08 11:06:17",
       "log": ""
     },
     {
@@ -491,23 +489,23 @@
       "status": "success",
       "items": 379,
       "errors": 0,
-      "ran_at": "2026-07-07 11:37:35",
+      "ran_at": "2026-07-08 10:54:04",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 97,
+      "items": 94,
       "errors": 0,
-      "ran_at": "2026-07-07 11:36:39",
+      "ran_at": "2026-07-08 10:53:29",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "success",
-      "items": 49,
-      "errors": 151,
-      "ran_at": "2026-07-06 14:26:02",
+      "items": 48,
+      "errors": 153,
+      "ran_at": "2026-07-07 13:21:17",
       "log": ""
     }
   ],
@@ -516,6 +514,11 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
+      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -541,28 +544,34 @@
       "msg": "DUVAL: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
+      "severidade": "ALTA",
+      "categoria": "condado",
+      "condado": "OSCEOLA",
+      "msg": "OSCEOLA: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em osceola.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+    },
+    {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LAKE",
-      "msg": "LAKE: assessed/just_value missing em 12/12 — Regrid/PA falhou"
+      "msg": "LAKE: assessed/just_value missing em 11/11 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 50/60 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 53/63 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: address missing em 32/32 (100%) — scraper de lot incompleto"
+      "msg": "ORANGE: address missing em 33/33 (100%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: assessed/just_value missing em 32/32 — Regrid/PA falhou"
+      "msg": "ORANGE: assessed/just_value missing em 33/33 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -581,7 +590,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-07"
+    "gerado_em": "2026-07-08"
   },
   "analises_lotes": [
     {
