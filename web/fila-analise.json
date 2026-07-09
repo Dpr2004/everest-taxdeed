@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-07-08",
+  "gerado_em": "2026-07-09",
   "total_candidatos": 30,
-  "total_leiloes": 17,
+  "total_leiloes": 18,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
@@ -148,6 +148,22 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 5.29,
+      "status": "pending"
+    },
+    {
+      "parcel": "08-26-16-0010-04700-0000",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "5622 MARINE PKWY",
+      "city": "NEW PORT RICHEY, 34652",
+      "bid": 108745.0,
+      "just_value": 669427.0,
+      "ratio": 6.16,
+      "sale_date": "2026-08-04",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 6.46,
       "status": "pending"
     },
     {
@@ -468,22 +484,6 @@
       "workers_score": 47.6,
       "workers_decision": "REVISAR",
       "ranking_score": 8.39,
-      "status": "pending"
-    },
-    {
-      "parcel": "0488367900",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "7410 S 52ND AVE",
-      "city": "TAMPA",
-      "bid": 6112.84,
-      "just_value": 38667.0,
-      "ratio": 6.33,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 5.38,
       "status": "pending"
     }
   ]
