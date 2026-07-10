@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-09",
+  "gerado_em": "2026-07-10",
   "total_candidatos": 30,
   "total_leiloes": 19,
   "ratio_minimo": 4.0,
@@ -375,6 +375,22 @@
       "status": "pending"
     },
     {
+      "parcel": "252228642412010",
+      "county": "Orange",
+      "state": "FL",
+      "address": "109 N HUDSON ST",
+      "city": "ORLANDO",
+      "bid": 1225.43,
+      "just_value": 140916.0,
+      "ratio": 114.99,
+      "sale_date": "2026-08-13",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 103.49,
+      "status": "pending"
+    },
+    {
       "parcel": "0948610000",
       "county": "Hillsborough",
       "state": "FL",
@@ -423,6 +439,22 @@
       "status": "pending"
     },
     {
+      "parcel": "052228605209010",
+      "county": "Orange",
+      "state": "FL",
+      "address": "10572 5TH AVE",
+      "city": "OCOEE",
+      "bid": 8971.62,
+      "just_value": 163895.0,
+      "ratio": 18.27,
+      "sale_date": "2026-08-13",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 16.44,
+      "status": "pending"
+    },
+    {
       "parcel": "162327585204810",
       "county": "Orange",
       "state": "FL",
@@ -452,38 +484,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 15.56,
-      "status": "pending"
-    },
-    {
-      "parcel": "0148525708",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "17521 MARSH RD",
-      "city": "LUTZ",
-      "bid": 58904.51,
-      "just_value": 972012.0,
-      "ratio": 16.5,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 14.03,
-      "status": "pending"
-    },
-    {
-      "parcel": "0423260000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "6910 E 29TH AVE",
-      "city": "TAMPA",
-      "bid": 21624.71,
-      "just_value": 315669.0,
-      "ratio": 14.6,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 12.41,
       "status": "pending"
     }
   ]
