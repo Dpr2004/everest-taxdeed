@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-10T12:30:37.363517+00:00",
+  "gerado_em": "2026-07-11T10:56:08.022977+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 431,
+    "total_lots_validos": 474,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 75
@@ -178,8 +178,8 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 27,
-        "REVISAR": 28,
+        "PASSA": 28,
+        "REVISAR": 27,
         "LANCE": 31
       },
       "quality_score": 98,
@@ -284,22 +284,22 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-08-27",
-      "lots_validos": 43,
+      "lots_validos": 44,
       "cobertura": {
-        "address_pct": 23.3,
-        "value_pct": 23.3,
+        "address_pct": 22.7,
+        "value_pct": 22.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 7,
         "REVISAR": 7,
-        "PASSA": 29
+        "PASSA": 30
       },
-      "quality_score": 73,
+      "quality_score": 72,
       "status": "verde",
       "issues": [
-        "address missing em 33/43 (77%) — scraper de lot incompleto",
-        "assessed/just_value missing em 33/43 — Regrid/PA falhou"
+        "address missing em 34/44 (77%) — scraper de lot incompleto",
+        "assessed/just_value missing em 34/44 — Regrid/PA falhou"
       ]
     },
     {
@@ -335,15 +335,16 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-07-15",
       "ultima_sale": "2026-08-25",
-      "lots_validos": 14,
+      "lots_validos": 16,
       "cobertura": {
-        "address_pct": 92.9,
-        "value_pct": 92.9,
+        "address_pct": 93.8,
+        "value_pct": 93.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "PASSA": 12,
-        "LANCE": 2
+        "LANCE": 3,
+        "REVISAR": 1
       },
       "quality_score": 97,
       "status": "verde",
@@ -378,22 +379,22 @@
       "nome": "Putnam County",
       "state": "FL",
       "url_sales": "https://putnam.realtaxdeed.com/",
-      "sales_futuras": 1,
+      "sales_futuras": 5,
       "proxima_sale": "2026-07-22",
-      "ultima_sale": "2026-07-22",
-      "lots_validos": 10,
+      "ultima_sale": "2026-08-26",
+      "lots_validos": 50,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 10
+        "PASSA": 50
       },
-      "quality_score": 75,
+      "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 10/10 — Regrid/PA falhou"
+        "assessed/just_value missing em 50/50 — Regrid/PA falhou"
       ]
     },
     {
@@ -420,8 +421,8 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 9,
-      "proxima_sale": "2026-07-10",
+      "sales_futuras": 8,
+      "proxima_sale": "2026-07-14",
       "ultima_sale": "2026-08-31",
       "lots_validos": 25,
       "cobertura": {
@@ -445,15 +446,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-10 12:30:36",
+      "ran_at": "2026-07-11 10:56:06",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 431,
+      "items": 474,
       "errors": 0,
-      "ran_at": "2026-07-10 12:30:35",
+      "ran_at": "2026-07-11 10:56:05",
       "log": ""
     },
     {
@@ -461,7 +462,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-10 12:16:22",
+      "ran_at": "2026-07-11 10:41:53",
       "log": ""
     },
     {
@@ -469,7 +470,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-10 11:56:55",
+      "ran_at": "2026-07-11 10:25:01",
       "log": ""
     },
     {
@@ -477,7 +478,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-10 11:56:54",
+      "ran_at": "2026-07-11 10:25:01",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -485,31 +486,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-10 11:54:04",
+      "ran_at": "2026-07-11 10:20:47",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 367,
+      "items": 415,
       "errors": 0,
-      "ran_at": "2026-07-10 11:42:31",
+      "ran_at": "2026-07-11 10:08:47",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 73,
+      "items": 47,
       "errors": 0,
-      "ran_at": "2026-07-10 11:42:06",
-      "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "success",
-      "items": 48,
-      "errors": 148,
-      "ran_at": "2026-07-09 13:50:02",
+      "ran_at": "2026-07-11 10:08:12",
       "log": ""
     }
   ],
@@ -563,13 +556,13 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: address missing em 33/43 (77%) — scraper de lot incompleto"
+      "msg": "ORANGE: address missing em 34/44 (77%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: assessed/just_value missing em 33/43 — Regrid/PA falhou"
+      "msg": "ORANGE: assessed/just_value missing em 34/44 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -593,14 +586,14 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "PUTNAM",
-      "msg": "PUTNAM: assessed/just_value missing em 10/10 — Regrid/PA falhou"
+      "msg": "PUTNAM: assessed/just_value missing em 50/50 — Regrid/PA falhou"
     }
   ],
   "fila_status": {
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-10"
+    "gerado_em": "2026-07-11"
   },
   "analises_lotes": [
     {
