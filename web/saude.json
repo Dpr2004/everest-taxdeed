@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-13T16:32:26.054983+00:00",
+  "gerado_em": "2026-07-14T11:21:34.669923+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 474,
+    "total_lots_validos": 477,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 6,
+    "problemas_criticos": 7,
     "saude_geral_pct": 75
   },
   "condados": [
@@ -83,9 +83,9 @@
       "nome": "Duval County (Jacksonville)",
       "state": "FL",
       "url_sales": "https://duval.realtaxdeed.com/",
-      "sales_futuras": 1,
+      "sales_futuras": 2,
       "proxima_sale": "2026-08-12",
-      "ultima_sale": "2026-08-12",
+      "ultima_sale": "2026-09-16",
       "lots_validos": 0,
       "cobertura": {
         "address_pct": 0,
@@ -96,7 +96,7 @@
       "quality_score": 0,
       "status": "vermelho",
       "issues": [
-        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -284,22 +284,22 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-08-27",
-      "lots_validos": 44,
+      "lots_validos": 45,
       "cobertura": {
-        "address_pct": 22.7,
-        "value_pct": 22.7,
+        "address_pct": 22.2,
+        "value_pct": 22.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 7,
         "REVISAR": 7,
-        "PASSA": 30
+        "PASSA": 31
       },
       "quality_score": 72,
       "status": "verde",
       "issues": [
-        "address missing em 34/44 (77%) — scraper de lot incompleto",
-        "assessed/just_value missing em 34/44 — Regrid/PA falhou"
+        "address missing em 35/45 (78%) — scraper de lot incompleto",
+        "assessed/just_value missing em 35/45 — Regrid/PA falhou"
       ]
     },
     {
@@ -335,18 +335,18 @@
       "sales_futuras": 8,
       "proxima_sale": "2026-07-15",
       "ultima_sale": "2026-08-31",
-      "lots_validos": 16,
+      "lots_validos": 18,
       "cobertura": {
-        "address_pct": 93.8,
-        "value_pct": 93.8,
+        "address_pct": 94.4,
+        "value_pct": 94.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 12,
+        "PASSA": 14,
         "LANCE": 3,
         "REVISAR": 1
       },
-      "quality_score": 97,
+      "quality_score": 98,
       "status": "verde",
       "issues": []
     },
@@ -446,15 +446,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-13 16:32:25",
+      "ran_at": "2026-07-14 11:21:33",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 474,
+      "items": 477,
       "errors": 0,
-      "ran_at": "2026-07-13 16:32:24",
+      "ran_at": "2026-07-14 11:21:32",
       "log": ""
     },
     {
@@ -462,15 +462,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-13 16:18:11",
+      "ran_at": "2026-07-14 11:07:20",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 10,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-13 15:57:49",
+      "ran_at": "2026-07-14 10:47:17",
       "log": ""
     },
     {
@@ -478,7 +478,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-13 15:57:49",
+      "ran_at": "2026-07-14 10:47:17",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -486,23 +486,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-13 15:54:58",
+      "ran_at": "2026-07-14 10:42:01",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 378,
+      "items": 418,
       "errors": 0,
-      "ran_at": "2026-07-13 15:43:46",
+      "ran_at": "2026-07-14 10:29:48",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 71,
+      "items": 101,
       "errors": 0,
-      "ran_at": "2026-07-13 15:43:23",
+      "ran_at": "2026-07-14 10:28:39",
       "log": ""
     },
     {
@@ -528,6 +528,11 @@
     {
       "severidade": "ALTA",
       "categoria": "enrichment",
+      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
       "msg": "Regrid enricher items=0 (verificar REGRID_API_KEY no GitHub Secrets)"
     },
     {
@@ -546,7 +551,7 @@
       "severidade": "ALTA",
       "categoria": "condado",
       "condado": "DUVAL",
-      "msg": "DUVAL: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "msg": "DUVAL: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "MEDIA",
@@ -564,13 +569,13 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: address missing em 34/44 (77%) — scraper de lot incompleto"
+      "msg": "ORANGE: address missing em 35/45 (78%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: assessed/just_value missing em 34/44 — Regrid/PA falhou"
+      "msg": "ORANGE: assessed/just_value missing em 35/45 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -601,7 +606,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-13"
+    "gerado_em": "2026-07-14"
   },
   "analises_lotes": [
     {
