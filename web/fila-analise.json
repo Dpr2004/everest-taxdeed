@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-07-14",
+  "gerado_em": "2026-07-15",
   "total_candidatos": 30,
-  "total_leiloes": 20,
+  "total_leiloes": 19,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "21-45-27-15-00096.0140",
-      "county": "Lee",
-      "state": "FL",
-      "address": "851 HOMESTEAD RD S",
-      "city": "LEHIGH ACRES",
-      "bid": 2871.49,
-      "just_value": 31299.0,
-      "ratio": 10.9,
-      "sale_date": "2026-07-14",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 9.26,
-      "status": "pending"
-    },
     {
       "parcel": "0032080175",
       "county": "Hillsborough",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 15.98,
+      "status": "pending"
+    },
+    {
+      "parcel": "102329372618302",
+      "county": "Orange",
+      "state": "FL",
+      "address": "3979 CRAYRICH CIR UNIT C-2",
+      "city": "ORLANDO",
+      "bid": 1680.24,
+      "just_value": 29051.0,
+      "ratio": 17.29,
+      "sale_date": "2026-08-13",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 15.56,
       "status": "pending"
     }
   ]
