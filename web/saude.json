@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-07-15T15:45:48.451983+00:00",
+  "gerado_em": "2026-07-16T11:37:50.711824+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 12,
+    "condados_verdes": 13,
     "condados_amarelos": 1,
-    "condados_vermelhos": 3,
+    "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 491,
+    "total_lots_validos": 474,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 7,
-    "saude_geral_pct": 75
+    "problemas_criticos": 6,
+    "saude_geral_pct": 81
   },
   "condados": [
     {
@@ -62,8 +62,8 @@
       "nome": "Citrus County",
       "state": "FL",
       "url_sales": "https://citrus.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-07-15",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-08-12",
       "ultima_sale": "2026-08-12",
       "lots_validos": 0,
       "cobertura": {
@@ -75,7 +75,7 @@
       "quality_score": 0,
       "status": "vermelho",
       "issues": [
-        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -86,18 +86,20 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-08-12",
       "ultima_sale": "2026-09-16",
-      "lots_validos": 0,
+      "lots_validos": 10,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 100.0,
         "sqft_pct": 100.0
       },
-      "decisoes": {},
-      "quality_score": 0,
-      "status": "vermelho",
-      "issues": [
-        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
-      ]
+      "decisoes": {
+        "LANCE": 3,
+        "REVISAR": 2,
+        "PASSA": 5
+      },
+      "quality_score": 100,
+      "status": "verde",
+      "issues": []
     },
     {
       "codigo": "FLAGLER",
@@ -168,21 +170,21 @@
       "nome": "Hillsborough County",
       "state": "FL",
       "url_sales": "https://hillsborough.realtaxdeed.com/",
-      "sales_futuras": 7,
+      "sales_futuras": 8,
       "proxima_sale": "2026-07-16",
-      "ultima_sale": "2026-09-17",
-      "lots_validos": 86,
+      "ultima_sale": "2026-09-24",
+      "lots_validos": 87,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 87.2,
+        "value_pct": 85.1,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "PASSA": 28,
         "REVISAR": 27,
-        "LANCE": 31
+        "LANCE": 32
       },
-      "quality_score": 98,
+      "quality_score": 97,
       "status": "verde",
       "issues": []
     },
@@ -259,18 +261,17 @@
       "nome": "Marion County",
       "state": "FL",
       "url_sales": "https://marion.realtaxdeed.com/",
-      "sales_futuras": 4,
-      "proxima_sale": "2026-07-15",
+      "sales_futuras": 3,
+      "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-08-19",
-      "lots_validos": 49,
+      "lots_validos": 21,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 48,
-        "REVISAR": 1
+        "PASSA": 21
       },
       "quality_score": 100,
       "status": "verde",
@@ -284,22 +285,22 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-08-27",
-      "lots_validos": 45,
+      "lots_validos": 47,
       "cobertura": {
-        "address_pct": 22.2,
-        "value_pct": 22.2,
+        "address_pct": 21.3,
+        "value_pct": 21.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 7,
-        "REVISAR": 7,
-        "PASSA": 31
+        "REVISAR": 8,
+        "PASSA": 32
       },
       "quality_score": 72,
       "status": "verde",
       "issues": [
-        "address missing em 35/45 (78%) — scraper de lot incompleto",
-        "assessed/just_value missing em 35/45 — Regrid/PA falhou"
+        "address missing em 37/47 (79%) — scraper de lot incompleto",
+        "assessed/just_value missing em 37/47 — Regrid/PA falhou"
       ]
     },
     {
@@ -332,21 +333,20 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 9,
-      "proxima_sale": "2026-07-15",
+      "sales_futuras": 8,
+      "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-09-29",
-      "lots_validos": 18,
+      "lots_validos": 16,
       "cobertura": {
-        "address_pct": 94.4,
-        "value_pct": 94.4,
+        "address_pct": 93.8,
+        "value_pct": 93.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 14,
-        "LANCE": 3,
-        "REVISAR": 1
+        "PASSA": 13,
+        "LANCE": 3
       },
-      "quality_score": 98,
+      "quality_score": 97,
       "status": "verde",
       "issues": []
     },
@@ -446,15 +446,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-15 15:45:46",
+      "ran_at": "2026-07-16 11:37:49",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 491,
+      "items": 474,
       "errors": 0,
-      "ran_at": "2026-07-15 15:45:46",
+      "ran_at": "2026-07-16 11:37:49",
       "log": ""
     },
     {
@@ -462,7 +462,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-15 15:31:33",
+      "ran_at": "2026-07-16 11:23:36",
       "log": ""
     },
     {
@@ -470,7 +470,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-15 15:14:30",
+      "ran_at": "2026-07-16 11:04:04",
       "log": ""
     },
     {
@@ -478,7 +478,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-15 15:14:29",
+      "ran_at": "2026-07-16 11:04:03",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -486,23 +486,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-15 15:09:13",
+      "ran_at": "2026-07-16 11:00:41",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 416,
+      "items": 412,
       "errors": 0,
-      "ran_at": "2026-07-15 14:57:00",
+      "ran_at": "2026-07-16 10:49:02",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 99,
+      "items": 75,
       "errors": 0,
-      "ran_at": "2026-07-15 14:55:52",
+      "ran_at": "2026-07-16 10:48:39",
       "log": ""
     },
     {
@@ -545,13 +545,7 @@
       "severidade": "ALTA",
       "categoria": "condado",
       "condado": "CITRUS",
-      "msg": "CITRUS: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "condado",
-      "condado": "DUVAL",
-      "msg": "DUVAL: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em duval.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "msg": "CITRUS: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "MEDIA",
@@ -569,13 +563,13 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: address missing em 35/45 (78%) — scraper de lot incompleto"
+      "msg": "ORANGE: address missing em 37/47 (79%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: assessed/just_value missing em 35/45 — Regrid/PA falhou"
+      "msg": "ORANGE: assessed/just_value missing em 37/47 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -606,7 +600,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-15"
+    "gerado_em": "2026-07-16"
   },
   "analises_lotes": [
     {
