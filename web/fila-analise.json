@@ -1,7 +1,7 @@
 {
   "gerado_em": "2026-07-17",
   "total_candidatos": 30,
-  "total_leiloes": 23,
+  "total_leiloes": 24,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
@@ -263,6 +263,22 @@
       "status": "pending"
     },
     {
+      "parcel": "2051190000",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "PLANT CITY, FL- 33563",
+      "city": "",
+      "bid": 114.57,
+      "just_value": 990.0,
+      "ratio": 8.64,
+      "sale_date": "2026-08-06",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 7.34,
+      "status": "pending"
+    },
+    {
       "parcel": "26-24-16-0020-00000-0410",
       "county": "Pasco",
       "state": "FL",
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 4.69,
-      "status": "pending"
-    },
-    {
-      "parcel": "252228642412010",
-      "county": "Orange",
-      "state": "FL",
-      "address": "109 N HUDSON ST",
-      "city": "ORLANDO",
-      "bid": 1225.43,
-      "just_value": 140916.0,
-      "ratio": 114.99,
-      "sale_date": "2026-08-13",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 103.49,
       "status": "pending"
     }
   ]
