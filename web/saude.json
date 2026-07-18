@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-17T15:32:07.326459+00:00",
+  "gerado_em": "2026-07-18T10:52:24.687832+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 486,
+    "total_lots_validos": 510,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -151,17 +151,17 @@
       "sales_futuras": 6,
       "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-08-26",
-      "lots_validos": 60,
+      "lots_validos": 63,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 66.7,
+        "value_pct": 63.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 59,
+        "PASSA": 62,
         "REVISAR": 1
       },
-      "quality_score": 95,
+      "quality_score": 94,
       "status": "verde",
       "issues": []
     },
@@ -170,21 +170,21 @@
       "nome": "Hillsborough County",
       "state": "FL",
       "url_sales": "https://hillsborough.realtaxdeed.com/",
-      "sales_futuras": 8,
+      "sales_futuras": 9,
       "proxima_sale": "2026-07-23",
-      "ultima_sale": "2026-09-24",
-      "lots_validos": 76,
+      "ultima_sale": "2026-10-01",
+      "lots_validos": 91,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 84.2,
+        "value_pct": 70.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 32,
-        "PASSA": 21,
+        "LANCE": 35,
+        "PASSA": 33,
         "REVISAR": 23
       },
-      "quality_score": 97,
+      "quality_score": 95,
       "status": "verde",
       "issues": []
     },
@@ -220,21 +220,21 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-07-28",
       "ultima_sale": "2026-09-15",
-      "lots_validos": 74,
+      "lots_validos": 79,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 12.2,
+        "value_pct": 11.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 7,
+        "LANCE": 8,
         "REVISAR": 9,
-        "PASSA": 58
+        "PASSA": 62
       },
       "quality_score": 86,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 65/74 — Regrid/PA falhou"
+        "assessed/just_value missing em 70/79 — Regrid/PA falhou"
       ]
     },
     {
@@ -285,22 +285,22 @@
       "sales_futuras": 6,
       "proxima_sale": "2026-07-30",
       "ultima_sale": "2026-09-03",
-      "lots_validos": 64,
+      "lots_validos": 66,
       "cobertura": {
-        "address_pct": 34.4,
-        "value_pct": 34.4,
+        "address_pct": 36.4,
+        "value_pct": 36.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 13,
-        "REVISAR": 9,
-        "PASSA": 42
+        "REVISAR": 10,
+        "PASSA": 43
       },
       "quality_score": 77,
       "status": "verde",
       "issues": [
-        "address missing em 42/64 (66%) — scraper de lot incompleto",
-        "assessed/just_value missing em 42/64 — Regrid/PA falhou"
+        "address missing em 42/66 (64%) — scraper de lot incompleto",
+        "assessed/just_value missing em 42/66 — Regrid/PA falhou"
       ]
     },
     {
@@ -336,14 +336,14 @@
       "sales_futuras": 8,
       "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-09-29",
-      "lots_validos": 19,
+      "lots_validos": 21,
       "cobertura": {
-        "address_pct": 94.7,
-        "value_pct": 94.7,
+        "address_pct": 95.2,
+        "value_pct": 95.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 16,
+        "PASSA": 11,
         "LANCE": 3
       },
       "quality_score": 98,
@@ -421,19 +421,19 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 10,
-      "proxima_sale": "2026-07-17",
+      "sales_futuras": 9,
+      "proxima_sale": "2026-07-21",
       "ultima_sale": "2026-09-16",
-      "lots_validos": 30,
+      "lots_validos": 27,
       "cobertura": {
-        "address_pct": 96.7,
-        "value_pct": 96.7,
+        "address_pct": 96.3,
+        "value_pct": 96.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 9,
         "REVISAR": 2,
-        "PASSA": 19
+        "PASSA": 13
       },
       "quality_score": 98,
       "status": "verde",
@@ -446,15 +446,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-17 15:32:06",
+      "ran_at": "2026-07-18 10:52:23",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 486,
+      "items": 510,
       "errors": 0,
-      "ran_at": "2026-07-17 15:32:05",
+      "ran_at": "2026-07-18 10:52:22",
       "log": ""
     },
     {
@@ -462,7 +462,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-17 15:17:53",
+      "ran_at": "2026-07-18 10:38:10",
       "log": ""
     },
     {
@@ -470,7 +470,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-17 15:01:28",
+      "ran_at": "2026-07-18 10:21:57",
       "log": ""
     },
     {
@@ -478,7 +478,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-17 15:01:27",
+      "ran_at": "2026-07-18 10:21:57",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -486,23 +486,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-17 14:58:03",
+      "ran_at": "2026-07-18 10:18:58",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 431,
+      "items": 390,
       "errors": 0,
-      "ran_at": "2026-07-17 14:46:35",
+      "ran_at": "2026-07-18 10:08:56",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 76,
+      "items": 47,
       "errors": 0,
-      "ran_at": "2026-07-17 14:46:10",
+      "ran_at": "2026-07-18 10:08:33",
       "log": ""
     },
     {
@@ -557,19 +557,19 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 65/74 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 70/79 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: address missing em 42/64 (66%) — scraper de lot incompleto"
+      "msg": "ORANGE: address missing em 42/66 (64%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "ORANGE",
-      "msg": "ORANGE: assessed/just_value missing em 42/64 — Regrid/PA falhou"
+      "msg": "ORANGE: assessed/just_value missing em 42/66 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -600,7 +600,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-17"
+    "gerado_em": "2026-07-18"
   },
   "analises_lotes": [
     {
