@@ -1,8 +1,8 @@
 {
-  "gerado_em": "19/Jul/2026 15:07",
+  "gerado_em": "20/Jul/2026 16:02",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 55,
+    "total_sales": 58,
     "total_lots": 500,
     "lances": 85,
     "estados": [
@@ -10,10 +10,6 @@
     ]
   },
   "semanas": [
-    {
-      "label": "13/Jul a 19/Jul/2026",
-      "sales": []
-    },
     {
       "label": "20/Jul a 26/Jul/2026",
       "sales": [
@@ -759,6 +755,50 @@
           "plataforma": "RealTaxDeed",
           "url_sales": "https://orange.realtaxdeed.com/",
           "url_clerk": "https://www.occompt.com/191/Tax-Deed-Sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        }
+      ]
+    },
+    {
+      "label": "07/Sep a 13/Sep/2026",
+      "sales": [
+        {
+          "id": 10210,
+          "data_fmt": "08/Sep/2026",
+          "dia_semana": "Ter",
+          "condado": "FLAGLER",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://flagler.realtaxdeed.com/",
+          "url_clerk": "https://www.flaglerclerk.com/recording/tax-deed-sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 13880,
+          "data_fmt": "08/Sep/2026",
+          "dia_semana": "Ter",
+          "condado": "VOLUSIA",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://volusia.realforeclose.com/",
+          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 14885,
+          "data_fmt": "09/Sep/2026",
+          "dia_semana": "Qua",
+          "condado": "PASCO",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://pasco.realforeclose.com/",
+          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
           "status": "CONFIRMADO",
           "total_lots": 0
         }
@@ -9649,6 +9689,28 @@
       "fema_risk": null
     },
     {
+      "id": 66155,
+      "condado": "MARION",
+      "estado": "FL",
+      "sale_date": "2026-07-22",
+      "parcel_id": "8005-0854-23",
+      "address": "NO SITUS",
+      "city": "OCALA",
+      "zip": "34473",
+      "min_bid": 5055.94,
+      "assessed_value": 9945.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7665,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -27748.95,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 64939,
       "condado": "HILLSBOROUGH",
       "estado": "FL",
@@ -11619,6 +11681,28 @@
       "fema_risk": null
     },
     {
+      "id": 66540,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-09-09",
+      "parcel_id": "23-26-16-0070-00000-2380",
+      "address": "3514 FORAY LN",
+      "city": "NEW PORT RICHEY, 34655",
+      "zip": null,
+      "min_bid": 225820.45,
+      "assessed_value": null,
+      "just_value": 218090.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.3163,
+      "decisao": "PASSA",
+      "max_bid": 68001.08,
+      "profit": -85744.07,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 62366,
       "condado": "VOLUSIA",
       "estado": "FL",
@@ -11747,50 +11831,6 @@
       "decisao": "PASSA",
       "max_bid": 77322.45,
       "profit": -178857.16,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 54526,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-08-12",
-      "parcel_id": "421605000270",
-      "address": "145 NATURE TR",
-      "city": "ORMOND BEACH",
-      "zip": "32174",
-      "min_bid": 339680.9,
-      "assessed_value": 252592.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4457,
-      "decisao": "PASSA",
-      "max_bid": 89116.3,
-      "profit": -172623.96,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 57957,
-      "condado": "PASCO",
-      "estado": "FL",
-      "sale_date": "2026-08-11",
-      "parcel_id": "10-25-16-005A-00000-1030",
-      "address": "7403 FOXBLOOM DR",
-      "city": "PORT RICHEY, 34668",
-      "zip": null,
-      "min_bid": 342801.57,
-      "assessed_value": null,
-      "just_value": 263672.0,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4271,
-      "decisao": "PASSA",
-      "max_bid": 95897.26,
-      "profit": -167080.07,
       "fema_zone": null,
       "fema_risk": null
     }
@@ -11986,7 +12026,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 98
+      "total_lots": 99
     },
     {
       "codigo": "ORANGE",
@@ -12033,8 +12073,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
-      "total_lots": 92
+      "total_sales": 9,
+      "total_lots": 94
     },
     {
       "codigo": "POLK",

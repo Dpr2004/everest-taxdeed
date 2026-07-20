@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-19T15:07:50.091765+00:00",
+  "gerado_em": "2026-07-20T16:02:59.225663+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 510,
+    "total_lots_validos": 513,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -264,14 +264,14 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-08-19",
-      "lots_validos": 21,
+      "lots_validos": 22,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 21
+        "PASSA": 22
       },
       "quality_score": 100,
       "status": "verde",
@@ -333,13 +333,13 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 8,
+      "sales_futuras": 9,
       "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-09-29",
-      "lots_validos": 21,
+      "lots_validos": 23,
       "cobertura": {
-        "address_pct": 95.2,
-        "value_pct": 95.2,
+        "address_pct": 95.7,
+        "value_pct": 95.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
@@ -433,7 +433,7 @@
       "decisoes": {
         "LANCE": 9,
         "REVISAR": 2,
-        "PASSA": 13
+        "PASSA": 12
       },
       "quality_score": 98,
       "status": "verde",
@@ -446,15 +446,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-19 15:07:48",
+      "ran_at": "2026-07-20 16:02:57",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 510,
+      "items": 513,
       "errors": 0,
-      "ran_at": "2026-07-19 15:07:47",
+      "ran_at": "2026-07-20 16:02:56",
       "log": ""
     },
     {
@@ -462,7 +462,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-19 14:53:35",
+      "ran_at": "2026-07-20 15:48:44",
       "log": ""
     },
     {
@@ -470,7 +470,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-19 14:37:51",
+      "ran_at": "2026-07-20 15:32:29",
       "log": ""
     },
     {
@@ -478,7 +478,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-19 14:37:51",
+      "ran_at": "2026-07-20 15:32:28",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -486,31 +486,31 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-19 14:34:52",
+      "ran_at": "2026-07-20 15:27:12",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 392,
+      "items": 455,
       "errors": 0,
-      "ran_at": "2026-07-19 14:25:06",
+      "ran_at": "2026-07-20 15:15:00",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 47,
+      "items": 100,
       "errors": 0,
-      "ran_at": "2026-07-19 14:24:42",
+      "ran_at": "2026-07-20 15:13:49",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "degraded",
       "items": 10,
-      "errors": 163,
-      "ran_at": "2026-07-19 11:58:58",
+      "errors": 124,
+      "ran_at": "2026-07-20 13:06:30",
       "log": "DEGRADED: so 10/510 (2%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
@@ -523,7 +523,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (10 items, 163 erros) — DEGRADED: so 10/510 (2%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (10 items, 124 erros) — DEGRADED: so 10/510 (2%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -600,7 +600,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-19"
+    "gerado_em": "2026-07-20"
   },
   "analises_lotes": [
     {
