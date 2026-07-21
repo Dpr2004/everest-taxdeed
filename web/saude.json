@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-20T16:02:59.225663+00:00",
+  "gerado_em": "2026-07-21T11:41:57.457360+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 513,
+    "total_lots_validos": 517,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -176,15 +176,15 @@
       "lots_validos": 91,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 70.3,
+        "value_pct": 75.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 35,
-        "PASSA": 33,
-        "REVISAR": 23
+        "LANCE": 36,
+        "PASSA": 30,
+        "REVISAR": 25
       },
-      "quality_score": 95,
+      "quality_score": 96,
       "status": "verde",
       "issues": []
     },
@@ -261,9 +261,9 @@
       "nome": "Marion County",
       "state": "FL",
       "url_sales": "https://marion.realtaxdeed.com/",
-      "sales_futuras": 3,
+      "sales_futuras": 4,
       "proxima_sale": "2026-07-22",
-      "ultima_sale": "2026-08-19",
+      "ultima_sale": "2026-09-09",
       "lots_validos": 22,
       "cobertura": {
         "address_pct": 100.0,
@@ -285,23 +285,20 @@
       "sales_futuras": 6,
       "proxima_sale": "2026-07-30",
       "ultima_sale": "2026-09-03",
-      "lots_validos": 66,
+      "lots_validos": 67,
       "cobertura": {
-        "address_pct": 36.4,
-        "value_pct": 36.4,
+        "address_pct": 79.1,
+        "value_pct": 79.1,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 13,
-        "REVISAR": 10,
-        "PASSA": 43
+        "LANCE": 17,
+        "REVISAR": 24,
+        "PASSA": 26
       },
-      "quality_score": 77,
+      "quality_score": 92,
       "status": "verde",
-      "issues": [
-        "address missing em 42/66 (64%) — scraper de lot incompleto",
-        "assessed/just_value missing em 42/66 — Regrid/PA falhou"
-      ]
+      "issues": []
     },
     {
       "codigo": "OSCEOLA",
@@ -311,7 +308,7 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-07-31",
       "ultima_sale": "2026-08-18",
-      "lots_validos": 10,
+      "lots_validos": 13,
       "cobertura": {
         "address_pct": 0.0,
         "value_pct": 0.0,
@@ -319,13 +316,13 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 9
+        "PASSA": 12
       },
       "quality_score": 65,
       "status": "amarelo",
       "issues": [
-        "address missing em 10/10 (100%) — scraper de lot incompleto",
-        "assessed/just_value missing em 10/10 — Regrid/PA falhou"
+        "address missing em 13/13 (100%) — scraper de lot incompleto",
+        "assessed/just_value missing em 13/13 — Regrid/PA falhou"
       ]
     },
     {
@@ -343,7 +340,7 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 11,
+        "PASSA": 9,
         "LANCE": 3
       },
       "quality_score": 98,
@@ -433,7 +430,7 @@
       "decisoes": {
         "LANCE": 9,
         "REVISAR": 2,
-        "PASSA": 12
+        "PASSA": 10
       },
       "quality_score": 98,
       "status": "verde",
@@ -446,15 +443,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-20 16:02:57",
+      "ran_at": "2026-07-21 11:41:55",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 513,
+      "items": 517,
       "errors": 0,
-      "ran_at": "2026-07-20 16:02:56",
+      "ran_at": "2026-07-21 11:41:50",
       "log": ""
     },
     {
@@ -462,7 +459,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-20 15:48:44",
+      "ran_at": "2026-07-21 11:27:38",
       "log": ""
     },
     {
@@ -470,7 +467,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-20 15:32:29",
+      "ran_at": "2026-07-21 11:14:40",
       "log": ""
     },
     {
@@ -478,7 +475,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-20 15:32:28",
+      "ran_at": "2026-07-21 11:14:40",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -486,15 +483,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-20 15:27:12",
+      "ran_at": "2026-07-21 11:09:24",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 455,
+      "items": 460,
       "errors": 0,
-      "ran_at": "2026-07-20 15:15:00",
+      "ran_at": "2026-07-21 10:57:12",
       "log": ""
     },
     {
@@ -502,7 +499,7 @@
       "status": "success",
       "items": 100,
       "errors": 0,
-      "ran_at": "2026-07-20 15:13:49",
+      "ran_at": "2026-07-21 10:56:28",
       "log": ""
     },
     {
@@ -562,26 +559,14 @@
     {
       "severidade": "MEDIA",
       "categoria": "condado",
-      "condado": "ORANGE",
-      "msg": "ORANGE: address missing em 42/66 (64%) — scraper de lot incompleto"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "ORANGE",
-      "msg": "ORANGE: assessed/just_value missing em 42/66 — Regrid/PA falhou"
+      "condado": "OSCEOLA",
+      "msg": "OSCEOLA: address missing em 13/13 (100%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "OSCEOLA",
-      "msg": "OSCEOLA: address missing em 10/10 (100%) — scraper de lot incompleto"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "OSCEOLA",
-      "msg": "OSCEOLA: assessed/just_value missing em 10/10 — Regrid/PA falhou"
+      "msg": "OSCEOLA: assessed/just_value missing em 13/13 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -600,7 +585,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-20"
+    "gerado_em": "2026-07-21"
   },
   "analises_lotes": [
     {
