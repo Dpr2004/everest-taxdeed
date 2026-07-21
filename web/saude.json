@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-21T11:41:57.457360+00:00",
+  "gerado_em": "2026-07-21T15:54:20.795391+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 517,
+    "total_lots_validos": 528,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -97,7 +97,7 @@
         "REVISAR": 2,
         "PASSA": 5
       },
-      "quality_score": 100,
+      "quality_score": 90,
       "status": "verde",
       "issues": []
     },
@@ -154,14 +154,14 @@
       "lots_validos": 63,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 63.5,
+        "value_pct": 79.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "PASSA": 62,
         "REVISAR": 1
       },
-      "quality_score": 94,
+      "quality_score": 96,
       "status": "verde",
       "issues": []
     },
@@ -264,14 +264,16 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-09-09",
-      "lots_validos": 22,
+      "lots_validos": 32,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 22
+        "LANCE": 1,
+        "REVISAR": 5,
+        "PASSA": 26
       },
       "quality_score": 100,
       "status": "verde",
@@ -333,14 +335,14 @@
       "sales_futuras": 9,
       "proxima_sale": "2026-07-22",
       "ultima_sale": "2026-09-29",
-      "lots_validos": 23,
+      "lots_validos": 24,
       "cobertura": {
-        "address_pct": 95.7,
-        "value_pct": 95.7,
+        "address_pct": 95.8,
+        "value_pct": 95.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 9,
+        "PASSA": 3,
         "LANCE": 3
       },
       "quality_score": 98,
@@ -430,7 +432,7 @@
       "decisoes": {
         "LANCE": 9,
         "REVISAR": 2,
-        "PASSA": 10
+        "PASSA": 6
       },
       "quality_score": 98,
       "status": "verde",
@@ -443,15 +445,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-21 11:41:55",
+      "ran_at": "2026-07-21 15:54:19",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 517,
+      "items": 528,
       "errors": 0,
-      "ran_at": "2026-07-21 11:41:50",
+      "ran_at": "2026-07-21 15:54:18",
       "log": ""
     },
     {
@@ -459,7 +461,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-21 11:27:38",
+      "ran_at": "2026-07-21 15:40:06",
       "log": ""
     },
     {
@@ -467,7 +469,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-21 11:14:40",
+      "ran_at": "2026-07-21 15:24:44",
       "log": ""
     },
     {
@@ -475,7 +477,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-21 11:14:40",
+      "ran_at": "2026-07-21 15:24:44",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -483,15 +485,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-21 11:09:24",
+      "ran_at": "2026-07-21 15:19:29",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 460,
+      "items": 458,
       "errors": 0,
-      "ran_at": "2026-07-21 10:57:12",
+      "ran_at": "2026-07-21 15:07:17",
       "log": ""
     },
     {
@@ -499,16 +501,16 @@
       "status": "success",
       "items": 100,
       "errors": 0,
-      "ran_at": "2026-07-21 10:56:28",
+      "ran_at": "2026-07-21 15:06:40",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "degraded",
       "items": 10,
-      "errors": 124,
-      "ran_at": "2026-07-20 13:06:30",
-      "log": "DEGRADED: so 10/510 (2%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "errors": 159,
+      "ran_at": "2026-07-21 12:23:35",
+      "log": "DEGRADED: so 10/517 (2%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -520,7 +522,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (10 items, 124 erros) — DEGRADED: so 10/510 (2%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (10 items, 159 erros) — DEGRADED: so 10/517 (2%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
