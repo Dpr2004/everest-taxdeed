@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-23T11:46:33.462143+00:00",
+  "gerado_em": "2026-07-23T16:00:15.470006+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 1,
     "condados_vazios": 2,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 513,
+    "total_lots_validos": 527,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 5,
     "saude_geral_pct": 85
@@ -176,15 +176,15 @@
       "lots_validos": 103,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 67.0,
+        "value_pct": 73.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 40,
-        "PASSA": 38,
+        "LANCE": 44,
+        "PASSA": 34,
         "REVISAR": 25
       },
-      "quality_score": 95,
+      "quality_score": 96,
       "status": "verde",
       "issues": []
     },
@@ -261,7 +261,7 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-08-12",
       "ultima_sale": "2026-09-09",
-      "lots_validos": 21,
+      "lots_validos": 25,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -270,7 +270,7 @@
       "decisoes": {
         "LANCE": 1,
         "REVISAR": 5,
-        "PASSA": 15
+        "PASSA": 19
       },
       "quality_score": 100,
       "status": "verde",
@@ -281,21 +281,21 @@
       "nome": "Orange County",
       "state": "FL",
       "url_sales": "https://orange.realtaxdeed.com/",
-      "sales_futuras": 6,
+      "sales_futuras": 7,
       "proxima_sale": "2026-07-30",
-      "ultima_sale": "2026-09-03",
-      "lots_validos": 68,
+      "ultima_sale": "2026-09-10",
+      "lots_validos": 78,
       "cobertura": {
-        "address_pct": 79.4,
-        "value_pct": 79.4,
+        "address_pct": 69.2,
+        "value_pct": 69.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 17,
+        "LANCE": 18,
         "REVISAR": 24,
-        "PASSA": 27
+        "PASSA": 36
       },
-      "quality_score": 92,
+      "quality_score": 89,
       "status": "verde",
       "issues": []
     },
@@ -329,9 +329,9 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 10,
+      "sales_futuras": 11,
       "proxima_sale": "2026-07-23",
-      "ultima_sale": "2026-09-29",
+      "ultima_sale": "2026-10-05",
       "lots_validos": 25,
       "cobertura": {
         "address_pct": 96.0,
@@ -340,7 +340,7 @@
       },
       "decisoes": {
         "LANCE": 5,
-        "PASSA": 12
+        "PASSA": 4
       },
       "quality_score": 98,
       "status": "verde",
@@ -429,7 +429,7 @@
       "decisoes": {
         "LANCE": 8,
         "REVISAR": 2,
-        "PASSA": 13
+        "PASSA": 7
       },
       "quality_score": 98,
       "status": "verde",
@@ -442,15 +442,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-23 11:46:32",
+      "ran_at": "2026-07-23 16:00:13",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 513,
+      "items": 527,
       "errors": 0,
-      "ran_at": "2026-07-23 11:46:31",
+      "ran_at": "2026-07-23 16:00:12",
       "log": ""
     },
     {
@@ -458,7 +458,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-23 11:32:19",
+      "ran_at": "2026-07-23 15:46:00",
       "log": ""
     },
     {
@@ -466,7 +466,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-23 11:14:31",
+      "ran_at": "2026-07-23 15:31:03",
       "log": ""
     },
     {
@@ -474,7 +474,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-23 11:14:30",
+      "ran_at": "2026-07-23 15:31:02",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -482,23 +482,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-23 11:11:13",
+      "ran_at": "2026-07-23 15:25:47",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 462,
+      "items": 466,
       "errors": 0,
-      "ran_at": "2026-07-23 10:59:01",
+      "ran_at": "2026-07-23 15:13:34",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 100,
+      "items": 104,
       "errors": 0,
-      "ran_at": "2026-07-23 10:58:39",
+      "ran_at": "2026-07-23 15:12:36",
       "log": ""
     },
     {
@@ -506,8 +506,8 @@
       "status": "degraded",
       "items": 20,
       "errors": 154,
-      "ran_at": "2026-07-22 12:25:11",
-      "log": "DEGRADED: so 20/519 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "ran_at": "2026-07-23 12:24:11",
+      "log": "DEGRADED: so 20/513 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -519,7 +519,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (20 items, 154 erros) — DEGRADED: so 20/519 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (20 items, 154 erros) — DEGRADED: so 20/513 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
