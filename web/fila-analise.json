@@ -1,11 +1,27 @@
 {
-  "gerado_em": "2026-07-22",
+  "gerado_em": "2026-07-23",
   "total_candidatos": 30,
-  "total_leiloes": 28,
+  "total_leiloes": 30,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
+    {
+      "parcel": "30-26-21-0040-00800-0060",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "2850 FLOWERING MOSS RUN",
+      "city": "WESLEY CHAPEL, 33543",
+      "bid": 8780.56,
+      "just_value": 269999.0,
+      "ratio": 30.75,
+      "sale_date": "2026-07-23",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 32.29,
+      "status": "pending"
+    },
     {
       "parcel": "0032080175",
       "county": "Hillsborough",
@@ -468,22 +484,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 5.95,
-      "status": "pending"
-    },
-    {
-      "parcel": "0711317025002100050",
-      "county": "Flagler",
-      "state": "FL",
-      "address": "171 PARKVIEW DR",
-      "city": "PALM COAST",
-      "bid": 3338.68,
-      "just_value": 19488.0,
-      "ratio": 5.84,
-      "sale_date": "2026-08-11",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 5.84,
       "status": "pending"
     }
   ]
