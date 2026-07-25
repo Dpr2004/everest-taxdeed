@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-24T15:45:14.590197+00:00",
+  "gerado_em": "2026-07-25T11:06:30.442094+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 1,
     "condados_vazios": 2,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 519,
+    "total_lots_validos": 538,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 5,
     "saude_geral_pct": 85
@@ -86,18 +86,18 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-08-12",
       "ultima_sale": "2026-09-16",
-      "lots_validos": 10,
+      "lots_validos": 20,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 3,
-        "REVISAR": 2,
-        "PASSA": 5
+        "LANCE": 4,
+        "REVISAR": 11,
+        "PASSA": 4
       },
-      "quality_score": 90,
+      "quality_score": 100,
       "status": "verde",
       "issues": []
     },
@@ -173,16 +173,16 @@
       "sales_futuras": 9,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-10-08",
-      "lots_validos": 88,
+      "lots_validos": 98,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 77.3,
+        "value_pct": 75.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 43,
+        "LANCE": 46,
         "REVISAR": 18,
-        "PASSA": 27
+        "PASSA": 33
       },
       "quality_score": 96,
       "status": "verde",
@@ -284,16 +284,16 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-07-30",
       "ultima_sale": "2026-09-10",
-      "lots_validos": 79,
+      "lots_validos": 80,
       "cobertura": {
-        "address_pct": 69.6,
-        "value_pct": 69.6,
+        "address_pct": 68.8,
+        "value_pct": 68.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 18,
         "REVISAR": 24,
-        "PASSA": 37
+        "PASSA": 38
       },
       "quality_score": 89,
       "status": "verde",
@@ -341,7 +341,7 @@
       "decisoes": {
         "LANCE": 4,
         "REVISAR": 1,
-        "PASSA": 12
+        "PASSA": 1
       },
       "quality_score": 98,
       "status": "verde",
@@ -418,19 +418,19 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 10,
-      "proxima_sale": "2026-07-24",
+      "sales_futuras": 9,
+      "proxima_sale": "2026-07-27",
       "ultima_sale": "2026-09-22",
-      "lots_validos": 29,
+      "lots_validos": 27,
       "cobertura": {
-        "address_pct": 96.6,
-        "value_pct": 96.6,
+        "address_pct": 96.3,
+        "value_pct": 96.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 8,
         "REVISAR": 2,
-        "PASSA": 11
+        "PASSA": 3
       },
       "quality_score": 98,
       "status": "verde",
@@ -443,15 +443,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-24 15:45:13",
+      "ran_at": "2026-07-25 11:06:28",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 519,
+      "items": 538,
       "errors": 0,
-      "ran_at": "2026-07-24 15:45:11",
+      "ran_at": "2026-07-25 11:06:27",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-24 15:30:59",
+      "ran_at": "2026-07-25 10:52:15",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-24 15:17:34",
+      "ran_at": "2026-07-25 10:36:52",
       "log": ""
     },
     {
@@ -475,7 +475,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-24 15:17:33",
+      "ran_at": "2026-07-25 10:36:52",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -483,23 +483,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-24 15:12:19",
+      "ran_at": "2026-07-25 10:31:36",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 440,
+      "items": 393,
       "errors": 0,
-      "ran_at": "2026-07-24 15:00:16",
+      "ran_at": "2026-07-25 10:21:27",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 76,
+      "items": 46,
       "errors": 0,
-      "ran_at": "2026-07-24 14:59:29",
+      "ran_at": "2026-07-25 10:20:12",
       "log": ""
     },
     {
@@ -585,7 +585,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-24"
+    "gerado_em": "2026-07-25"
   },
   "analises_lotes": [
     {
