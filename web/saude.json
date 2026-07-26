@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-26T11:13:10.105058+00:00",
+  "gerado_em": "2026-07-26T15:26:06.636733+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -443,7 +443,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 11:13:08",
+      "ran_at": "2026-07-26 15:26:05",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "success",
       "items": 538,
       "errors": 0,
-      "ran_at": "2026-07-26 11:13:07",
+      "ran_at": "2026-07-26 15:26:04",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 10:58:55",
+      "ran_at": "2026-07-26 15:11:51",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 10:45:18",
+      "ran_at": "2026-07-26 14:55:05",
       "log": ""
     },
     {
@@ -475,7 +475,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-26 10:45:18",
+      "ran_at": "2026-07-26 14:55:05",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -483,15 +483,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 10:40:02",
+      "ran_at": "2026-07-26 14:49:49",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 383,
+      "items": 394,
       "errors": 0,
-      "ran_at": "2026-07-26 10:29:38",
+      "ran_at": "2026-07-26 14:40:12",
       "log": ""
     },
     {
@@ -499,16 +499,16 @@
       "status": "success",
       "items": 46,
       "errors": 0,
-      "ran_at": "2026-07-26 10:28:25",
+      "ran_at": "2026-07-26 14:39:14",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "degraded",
-      "items": 24,
-      "errors": 171,
-      "ran_at": "2026-07-25 12:02:53",
-      "log": "DEGRADED: so 24/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "items": 22,
+      "errors": 154,
+      "ran_at": "2026-07-26 12:03:09",
+      "log": "DEGRADED: so 22/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -520,7 +520,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (24 items, 171 erros) — DEGRADED: so 24/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (22 items, 154 erros) — DEGRADED: so 22/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
