@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-07-26T15:26:06.636733+00:00",
+  "gerado_em": "2026-07-27T12:57:54.267172+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 12,
-    "condados_amarelos": 1,
+    "condados_verdes": 13,
+    "condados_amarelos": 0,
     "condados_vermelhos": 1,
     "condados_vazios": 2,
     "condados_sem_atividade": 3,
     "total_lots_validos": 538,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 5,
-    "saude_geral_pct": 85
+    "problemas_criticos": 4,
+    "saude_geral_pct": 92
   },
   "condados": [
     {
@@ -154,14 +154,14 @@
       "lots_validos": 53,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 75.5,
+        "value_pct": 83.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "PASSA": 52,
         "REVISAR": 1
       },
-      "quality_score": 96,
+      "quality_score": 97,
       "status": "verde",
       "issues": []
     },
@@ -220,18 +220,18 @@
       "lots_validos": 91,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 17.6,
+        "value_pct": 20.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 9,
-        "REVISAR": 15,
-        "PASSA": 67
+        "REVISAR": 18,
+        "PASSA": 64
       },
-      "quality_score": 87,
+      "quality_score": 88,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 75/91 — Regrid/PA falhou"
+        "assessed/just_value missing em 72/91 — Regrid/PA falhou"
       ]
     },
     {
@@ -309,19 +309,19 @@
       "ultima_sale": "2026-08-18",
       "lots_validos": 13,
       "cobertura": {
-        "address_pct": 0.0,
-        "value_pct": 0.0,
+        "address_pct": 15.4,
+        "value_pct": 15.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 1,
-        "PASSA": 12
+        "REVISAR": 2,
+        "PASSA": 11
       },
-      "quality_score": 65,
-      "status": "amarelo",
+      "quality_score": 70,
+      "status": "verde",
       "issues": [
-        "address missing em 13/13 (100%) — scraper de lot incompleto",
-        "assessed/just_value missing em 13/13 — Regrid/PA falhou"
+        "address missing em 11/13 (85%) — scraper de lot incompleto",
+        "assessed/just_value missing em 11/13 — Regrid/PA falhou"
       ]
     },
     {
@@ -443,7 +443,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 15:26:05",
+      "ran_at": "2026-07-27 12:57:53",
       "log": ""
     },
     {
@@ -451,7 +451,7 @@
       "status": "success",
       "items": 538,
       "errors": 0,
-      "ran_at": "2026-07-26 15:26:04",
+      "ran_at": "2026-07-27 12:57:52",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 15:11:51",
+      "ran_at": "2026-07-27 12:43:39",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 14:55:05",
+      "ran_at": "2026-07-27 12:28:53",
       "log": ""
     },
     {
@@ -475,7 +475,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-26 14:55:05",
+      "ran_at": "2026-07-27 12:28:52",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -483,32 +483,24 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-26 14:49:49",
+      "ran_at": "2026-07-27 12:23:36",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 394,
+      "items": 473,
       "errors": 0,
-      "ran_at": "2026-07-26 14:40:12",
+      "ran_at": "2026-07-27 12:11:24",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 46,
+      "items": 101,
       "errors": 0,
-      "ran_at": "2026-07-26 14:39:14",
+      "ran_at": "2026-07-27 12:10:11",
       "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "degraded",
-      "items": 22,
-      "errors": 154,
-      "ran_at": "2026-07-26 12:03:09",
-      "log": "DEGRADED: so 22/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -516,11 +508,6 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (22 items, 154 erros) — DEGRADED: so 22/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -554,19 +541,19 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 75/91 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 72/91 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "OSCEOLA",
-      "msg": "OSCEOLA: address missing em 13/13 (100%) — scraper de lot incompleto"
+      "msg": "OSCEOLA: address missing em 11/13 (85%) — scraper de lot incompleto"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "OSCEOLA",
-      "msg": "OSCEOLA: assessed/just_value missing em 13/13 — Regrid/PA falhou"
+      "msg": "OSCEOLA: assessed/just_value missing em 11/13 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -585,7 +572,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-26"
+    "gerado_em": "2026-07-27"
   },
   "analises_lotes": [
     {
