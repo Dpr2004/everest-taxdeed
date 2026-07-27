@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-27T12:57:54.267172+00:00",
+  "gerado_em": "2026-07-27T16:33:06.761228+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 1,
     "condados_vazios": 2,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 538,
+    "total_lots_validos": 558,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 4,
+    "problemas_criticos": 5,
     "saude_geral_pct": 92
   },
   "condados": [
@@ -51,7 +51,7 @@
       "decisoes": {
         "LANCE": 10,
         "REVISAR": 10,
-        "PASSA": 10
+        "PASSA": 8
       },
       "quality_score": 100,
       "status": "verde",
@@ -148,20 +148,20 @@
       "nome": "Highlands County",
       "state": "FL",
       "url_sales": "https://highlands.realtaxdeed.com/",
-      "sales_futuras": 5,
+      "sales_futuras": 6,
       "proxima_sale": "2026-07-29",
-      "ultima_sale": "2026-08-26",
-      "lots_validos": 53,
+      "ultima_sale": "2026-09-02",
+      "lots_validos": 63,
       "cobertura": {
-        "address_pct": 100.0,
-        "value_pct": 83.0,
+        "address_pct": 96.8,
+        "value_pct": 69.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 52,
+        "PASSA": 62,
         "REVISAR": 1
       },
-      "quality_score": 97,
+      "quality_score": 94,
       "status": "verde",
       "issues": []
     },
@@ -173,18 +173,18 @@
       "sales_futuras": 9,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-10-08",
-      "lots_validos": 98,
+      "lots_validos": 105,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 75.5,
+        "value_pct": 70.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 46,
+        "LANCE": 47,
         "REVISAR": 18,
-        "PASSA": 33
+        "PASSA": 35
       },
-      "quality_score": 96,
+      "quality_score": 95,
       "status": "verde",
       "issues": []
     },
@@ -220,18 +220,18 @@
       "lots_validos": 91,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 20.9,
+        "value_pct": 23.1,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 9,
-        "REVISAR": 18,
-        "PASSA": 64
+        "REVISAR": 20,
+        "PASSA": 58
       },
       "quality_score": 88,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 72/91 — Regrid/PA falhou"
+        "assessed/just_value missing em 70/91 — Regrid/PA falhou"
       ]
     },
     {
@@ -261,7 +261,7 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-08-12",
       "ultima_sale": "2026-09-09",
-      "lots_validos": 25,
+      "lots_validos": 26,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -270,7 +270,7 @@
       "decisoes": {
         "LANCE": 1,
         "REVISAR": 5,
-        "PASSA": 19
+        "PASSA": 18
       },
       "quality_score": 100,
       "status": "verde",
@@ -293,7 +293,7 @@
       "decisoes": {
         "LANCE": 18,
         "REVISAR": 24,
-        "PASSA": 38
+        "PASSA": 34
       },
       "quality_score": 89,
       "status": "verde",
@@ -332,10 +332,10 @@
       "sales_futuras": 10,
       "proxima_sale": "2026-07-27",
       "ultima_sale": "2026-10-05",
-      "lots_validos": 28,
+      "lots_validos": 29,
       "cobertura": {
-        "address_pct": 96.4,
-        "value_pct": 96.4,
+        "address_pct": 96.6,
+        "value_pct": 96.6,
         "sqft_pct": 100.0
       },
       "decisoes": {
@@ -363,7 +363,7 @@
       },
       "decisoes": {
         "LANCE": 1,
-        "PASSA": 11
+        "PASSA": 10
       },
       "quality_score": 86,
       "status": "verde",
@@ -421,16 +421,16 @@
       "sales_futuras": 9,
       "proxima_sale": "2026-07-27",
       "ultima_sale": "2026-09-22",
-      "lots_validos": 27,
+      "lots_validos": 28,
       "cobertura": {
-        "address_pct": 96.3,
-        "value_pct": 96.3,
+        "address_pct": 96.4,
+        "value_pct": 96.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 8,
         "REVISAR": 2,
-        "PASSA": 3
+        "PASSA": 2
       },
       "quality_score": 98,
       "status": "verde",
@@ -443,15 +443,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-27 12:57:53",
+      "ran_at": "2026-07-27 16:33:06",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 538,
+      "items": 558,
       "errors": 0,
-      "ran_at": "2026-07-27 12:57:52",
+      "ran_at": "2026-07-27 16:33:05",
       "log": ""
     },
     {
@@ -459,7 +459,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-27 12:43:39",
+      "ran_at": "2026-07-27 16:18:52",
       "log": ""
     },
     {
@@ -467,7 +467,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-27 12:28:53",
+      "ran_at": "2026-07-27 16:01:03",
       "log": ""
     },
     {
@@ -475,7 +475,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-27 12:28:52",
+      "ran_at": "2026-07-27 16:01:03",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -483,24 +483,32 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-27 12:23:36",
+      "ran_at": "2026-07-27 15:57:37",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 473,
+      "items": 504,
       "errors": 0,
-      "ran_at": "2026-07-27 12:11:24",
+      "ran_at": "2026-07-27 15:45:25",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 101,
+      "items": 102,
       "errors": 0,
-      "ran_at": "2026-07-27 12:10:11",
+      "ran_at": "2026-07-27 15:45:02",
       "log": ""
+    },
+    {
+      "worker": "property_appraiser",
+      "status": "degraded",
+      "items": 24,
+      "errors": 168,
+      "ran_at": "2026-07-27 13:39:16",
+      "log": "DEGRADED: so 24/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -508,6 +516,11 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker property_appraiser com status degraded (24 items, 168 erros) — DEGRADED: so 24/538 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -541,7 +554,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 72/91 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 70/91 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
