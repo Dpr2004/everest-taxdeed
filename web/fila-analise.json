@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-07-29",
+  "gerado_em": "2026-07-30",
   "total_candidatos": 30,
-  "total_leiloes": 31,
+  "total_leiloes": 32,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "04-25-18-0040-01300-0220",
-      "county": "Pasco",
-      "state": "FL",
-      "address": "18478 CORTES CREEK BLVD",
-      "city": "SPRING HILL, 34610",
-      "bid": 5563.34,
-      "just_value": 297940.0,
-      "ratio": 53.55,
-      "sale_date": "2026-07-29",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 56.23,
-      "status": "pending"
-    },
     {
       "parcel": "08-26-16-0010-04700-0000",
       "county": "Pasco",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 103.49,
+      "status": "pending"
+    },
+    {
+      "parcel": "0948610000",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "10910 MARJORY AVE",
+      "city": "TAMPA",
+      "bid": 2101.78,
+      "just_value": 138505.0,
+      "ratio": 65.9,
+      "sale_date": "2026-08-13",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 56.01,
       "status": "pending"
     }
   ]
