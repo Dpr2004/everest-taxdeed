@@ -1,5 +1,5 @@
 {
-  "gerado_em": "31/Jul/2026 12:02",
+  "gerado_em": "31/Jul/2026 16:05",
   "resumo": {
     "total_condados": 19,
     "total_sales": 58,
@@ -2213,6 +2213,30 @@
       "profit": 224684.48,
       "fema_zone": null,
       "fema_risk": null
+    },
+    {
+      "id": 75934,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-08-25",
+      "parcel_id": "15-26-19-0120-00100-0280",
+      "address": "25737 CRIPPEN DRIVE",
+      "city": "LAND O LAKES, 34639",
+      "zip": null,
+      "min_bid": 25213.0,
+      "assessed_value": null,
+      "just_value": 161320.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.0573,
+      "decisao": "REVISAR",
+      "max_bid": 33257.84,
+      "profit": 70469.24,
+      "fema_zone": null,
+      "fema_risk": null,
+      "decisao_origem": "lotes_parcial",
+      "decisao_motivo": "parcial 0/11 agentes"
     },
     {
       "id": 63224,
@@ -11785,28 +11809,6 @@
       "profit": -17150.12,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 67922,
-      "condado": "LEE",
-      "estado": "FL",
-      "sale_date": "2026-09-15",
-      "parcel_id": "01-46-23-21-00003.1565",
-      "address": "12171 KELLY SANDS WAY 1565",
-      "city": "FORT MYERS",
-      "zip": "33908",
-      "min_bid": 6303.38,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4432,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -17056.41,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -12048,7 +12050,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 9,
-      "total_lots": 114
+      "total_lots": 115
     },
     {
       "codigo": "POLK",
