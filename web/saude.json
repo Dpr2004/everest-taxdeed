@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-07-31T16:05:52.991698+00:00",
+  "gerado_em": "2026-08-01T11:06:13.263519+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
     "condados_amarelos": 0,
-    "condados_vermelhos": 1,
-    "condados_vazios": 2,
+    "condados_vermelhos": 2,
+    "condados_vazios": 1,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 603,
+    "total_lots_validos": 601,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 5,
-    "saude_geral_pct": 92
+    "problemas_criticos": 6,
+    "saude_geral_pct": 86
   },
   "condados": [
     {
@@ -18,9 +18,9 @@
       "nome": "Alachua County",
       "state": "FL",
       "url_sales": "https://alachua.realtaxdeed.com/",
-      "sales_futuras": 0,
-      "proxima_sale": null,
-      "ultima_sale": null,
+      "sales_futuras": 1,
+      "proxima_sale": "2026-09-15",
+      "ultima_sale": "2026-09-15",
       "lots_validos": 0,
       "cobertura": {
         "address_pct": 0,
@@ -29,9 +29,9 @@
       },
       "decisoes": {},
       "quality_score": 0,
-      "status": "vazio",
+      "status": "vermelho",
       "issues": [
-        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -109,16 +109,16 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-08-11",
       "ultima_sale": "2026-09-08",
-      "lots_validos": 22,
+      "lots_validos": 23,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 90.9,
+        "value_pct": 91.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 2,
         "PASSA": 5,
-        "REVISAR": 15
+        "REVISAR": 16
       },
       "quality_score": 98,
       "status": "verde",
@@ -151,17 +151,17 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-08-05",
       "ultima_sale": "2026-09-02",
-      "lots_validos": 53,
+      "lots_validos": 54,
       "cobertura": {
-        "address_pct": 96.2,
-        "value_pct": 71.7,
+        "address_pct": 96.3,
+        "value_pct": 70.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 52,
+        "PASSA": 53,
         "REVISAR": 1
       },
-      "quality_score": 95,
+      "quality_score": 94,
       "status": "verde",
       "issues": []
     },
@@ -176,15 +176,15 @@
       "lots_validos": 108,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 76.9,
+        "value_pct": 81.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 46,
-        "REVISAR": 24,
-        "PASSA": 22
+        "LANCE": 48,
+        "REVISAR": 27,
+        "PASSA": 18
       },
-      "quality_score": 96,
+      "quality_score": 97,
       "status": "verde",
       "issues": []
     },
@@ -226,7 +226,7 @@
       "decisoes": {
         "LANCE": 10,
         "REVISAR": 18,
-        "PASSA": 42
+        "PASSA": 41
       },
       "quality_score": 88,
       "status": "verde",
@@ -270,7 +270,7 @@
       "decisoes": {
         "LANCE": 1,
         "REVISAR": 6,
-        "PASSA": 22
+        "PASSA": 21
       },
       "quality_score": 100,
       "status": "verde",
@@ -304,8 +304,8 @@
       "nome": "Osceola County",
       "state": "FL",
       "url_sales": "https://osceola.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-07-31",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-08-18",
       "ultima_sale": "2026-08-18",
       "lots_validos": 13,
       "cobertura": {
@@ -419,21 +419,21 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 10,
-      "proxima_sale": "2026-07-31",
+      "sales_futuras": 9,
+      "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-09-29",
-      "lots_validos": 31,
+      "lots_validos": 27,
       "cobertura": {
-        "address_pct": 93.5,
-        "value_pct": 93.5,
+        "address_pct": 96.3,
+        "value_pct": 96.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 7,
+        "LANCE": 6,
         "REVISAR": 2,
         "PASSA": 1
       },
-      "quality_score": 97,
+      "quality_score": 98,
       "status": "verde",
       "issues": []
     }
@@ -444,15 +444,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-31 16:05:51",
+      "ran_at": "2026-08-01 11:06:12",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 603,
+      "items": 601,
       "errors": 0,
-      "ran_at": "2026-07-31 16:05:50",
+      "ran_at": "2026-08-01 11:06:11",
       "log": ""
     },
     {
@@ -460,7 +460,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-31 15:51:38",
+      "ran_at": "2026-08-01 10:51:58",
       "log": ""
     },
     {
@@ -468,7 +468,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-31 15:38:44",
+      "ran_at": "2026-08-01 10:39:23",
       "log": ""
     },
     {
@@ -476,7 +476,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-07-31 15:38:44",
+      "ran_at": "2026-08-01 10:39:23",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -484,23 +484,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-07-31 15:34:41",
+      "ran_at": "2026-08-01 10:35:50",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 475,
+      "items": 416,
       "errors": 0,
-      "ran_at": "2026-07-31 15:23:00",
+      "ran_at": "2026-08-01 10:25:29",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 80,
+      "items": 50,
       "errors": 0,
-      "ran_at": "2026-07-31 15:22:35",
+      "ran_at": "2026-08-01 10:25:05",
       "log": ""
     },
     {
@@ -536,14 +536,14 @@
     {
       "severidade": "ALTA",
       "categoria": "condado",
-      "condado": "CITRUS",
-      "msg": "CITRUS: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "condado": "ALACHUA",
+      "msg": "ALACHUA: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
-      "severidade": "MEDIA",
+      "severidade": "ALTA",
       "categoria": "condado",
-      "condado": "ALACHUA",
-      "msg": "ALACHUA: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+      "condado": "CITRUS",
+      "msg": "CITRUS: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em citrus.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "MEDIA",
@@ -586,7 +586,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-07-31"
+    "gerado_em": "2026-08-01"
   },
   "analises_lotes": [
     {

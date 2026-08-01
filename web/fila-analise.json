@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-31",
+  "gerado_em": "2026-08-01",
   "total_candidatos": 30,
   "total_leiloes": 33,
   "ratio_minimo": 4.0,
@@ -215,6 +215,22 @@
       "status": "pending"
     },
     {
+      "parcel": "0711317028001100160",
+      "county": "Flagler",
+      "state": "FL",
+      "address": "1 PONDEROSA LN",
+      "city": "PALM COAST",
+      "bid": 2706.17,
+      "just_value": 21437.0,
+      "ratio": 7.92,
+      "sale_date": "2026-08-11",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 7.92,
+      "status": "pending"
+    },
+    {
       "parcel": "01-44-27-L2-11041.0070",
       "county": "Lee",
       "state": "FL",
@@ -324,22 +340,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 6.61,
-      "status": "pending"
-    },
-    {
-      "parcel": "0711317028001300100",
-      "county": "Flagler",
-      "state": "FL",
-      "address": "16PONTIAC LN",
-      "city": "PALM COAST",
-      "bid": 2898.91,
-      "just_value": 18831.0,
-      "ratio": 6.5,
-      "sale_date": "2026-08-11",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 6.5,
       "status": "pending"
     },
     {
