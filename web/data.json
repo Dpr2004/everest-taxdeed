@@ -1,8 +1,8 @@
 {
-  "gerado_em": "03/Aug/2026 12:57",
+  "gerado_em": "03/Aug/2026 16:32",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 60,
+    "total_sales": 61,
     "total_lots": 500,
     "lances": 112,
     "estados": [
@@ -789,6 +789,19 @@
     {
       "label": "21/Sep a 27/Sep/2026",
       "sales": [
+        {
+          "id": 18309,
+          "data_fmt": "22/Sep/2026",
+          "dia_semana": "Ter",
+          "condado": "ALACHUA",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://alachua.realtaxdeed.com/",
+          "url_clerk": "https://www.alachuaclerk.org/court_services/tax_deeds.cfm",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
         {
           "id": 15629,
           "data_fmt": "22/Sep/2026",
@@ -1753,6 +1766,28 @@
       "decisao": "LANCE",
       "max_bid": 34176.45,
       "profit": 83612.73,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 51771,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-08-25",
+      "parcel_id": "36-44-26-13-00120.0010",
+      "address": "2619 14TH ST SW",
+      "city": "LEHIGH ACRES",
+      "zip": "33976",
+      "min_bid": 13770.79,
+      "assessed_value": 264246.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 2.6105,
+      "decisao": "LANCE",
+      "max_bid": 96248.55,
+      "profit": 162399.58,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -3013,28 +3048,6 @@
       "fema_risk": null
     },
     {
-      "id": 51772,
-      "condado": "LEE",
-      "estado": "FL",
-      "sale_date": "2026-08-25",
-      "parcel_id": "04-45-23-C3-04684.0340",
-      "address": "3822 SW 17TH AVE",
-      "city": "CAPE CORAL",
-      "zip": "33914",
-      "min_bid": 339501.64,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 90.0,
-      "roi": 1.4968,
-      "decisao": "LANCE",
-      "max_bid": 765630.01,
-      "profit": 691989.49,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 46274,
       "condado": "LEE",
       "estado": "FL",
@@ -3955,6 +3968,28 @@
       "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 17305.27,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 51772,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-08-25",
+      "parcel_id": "04-45-23-C3-04684.0340",
+      "address": "3822 SW 17TH AVE",
+      "city": "CAPE CORAL",
+      "zip": "33914",
+      "min_bid": 339501.64,
+      "assessed_value": 574786.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 68.9,
+      "roi": 0.1944,
+      "decisao": "PASSA",
+      "max_bid": 286299.03,
+      "profit": 79511.01,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11813,28 +11848,6 @@
       "profit": -9085.86,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 57789,
-      "condado": "LEE",
-      "estado": "FL",
-      "sale_date": "2026-09-15",
-      "parcel_id": "12-46-24-09-00012.00C0",
-      "address": "17455 BLUEBERRY HILL DR C",
-      "city": "FORT MYERS",
-      "zip": "33908",
-      "min_bid": 6110.44,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4567,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -17466.98,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11851,7 +11864,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 1,
+      "total_sales": 2,
       "total_lots": 0
     },
     {
