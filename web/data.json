@@ -1,8 +1,8 @@
 {
-  "gerado_em": "02/Aug/2026 15:21",
+  "gerado_em": "03/Aug/2026 12:57",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 57,
+    "total_sales": 60,
     "total_lots": 500,
     "lances": 112,
     "estados": [
@@ -10,10 +10,6 @@
     ]
   },
   "semanas": [
-    {
-      "label": "27/Jul a 02/Aug/2026",
-      "sales": []
-    },
     {
       "label": "03/Aug a 09/Aug/2026",
       "sales": [
@@ -785,6 +781,50 @@
           "plataforma": "RealTaxDeed",
           "url_sales": "https://polk.realtaxdeed.com/",
           "url_clerk": "https://www.polkclerkfl.gov/189/Tax-Deeds",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        }
+      ]
+    },
+    {
+      "label": "21/Sep a 27/Sep/2026",
+      "sales": [
+        {
+          "id": 15629,
+          "data_fmt": "22/Sep/2026",
+          "dia_semana": "Ter",
+          "condado": "LEE",
+          "estado": "FL",
+          "horario": "10:00",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://lee.realtaxdeed.com/",
+          "url_clerk": "https://www.leeclerk.org/departments/courts/property-sales/tax-deed-sales",
+          "status": "SEM_ATIVIDADE_2026Q2",
+          "total_lots": 0
+        },
+        {
+          "id": 16000,
+          "data_fmt": "22/Sep/2026",
+          "dia_semana": "Ter",
+          "condado": "VOLUSIA",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://volusia.realforeclose.com/",
+          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 14123,
+          "data_fmt": "24/Sep/2026",
+          "dia_semana": "Qui",
+          "condado": "HILLSBOROUGH",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://hillsborough.realtaxdeed.com/",
+          "url_clerk": "https://www.hillsclerk.com/Additional-Services/Foreclosures-and-Tax-Deeds",
           "status": "CONFIRMADO",
           "total_lots": 0
         }
@@ -8240,15 +8280,15 @@
       "city": "LAKE PLACID",
       "zip": "33852",
       "min_bid": 2169.62,
-      "assessed_value": null,
+      "assessed_value": 2562.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.778,
+      "roi": -0.9336,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -25853.05,
+      "profit": -30636.14,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -8416,15 +8456,15 @@
       "city": "LAKE PLACID",
       "zip": "33852",
       "min_bid": 2206.58,
-      "assessed_value": null,
+      "assessed_value": 2562.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.7745,
+      "roi": -0.9337,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -25774.4,
+      "profit": -30673.1,
       "fema_zone": null,
       "fema_risk": null
     },
