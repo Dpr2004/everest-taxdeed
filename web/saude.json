@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-04T16:12:06.532436+00:00",
+  "gerado_em": "2026-08-05T11:57:12.403703+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 1,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 611,
+    "total_lots_validos": 612,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 86
@@ -173,16 +173,16 @@
       "sales_futuras": 9,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-10-08",
-      "lots_validos": 109,
+      "lots_validos": 111,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 82.6,
+        "value_pct": 81.1,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 47,
+        "LANCE": 48,
         "REVISAR": 28,
-        "PASSA": 19
+        "PASSA": 20
       },
       "quality_score": 97,
       "status": "verde",
@@ -214,24 +214,24 @@
       "nome": "Lee County",
       "state": "FL",
       "url_sales": "https://lee.realtaxdeed.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-08-04",
+      "sales_futuras": 7,
+      "proxima_sale": "2026-08-11",
       "ultima_sale": "2026-09-29",
-      "lots_validos": 95,
+      "lots_validos": 93,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 23.2,
+        "value_pct": 21.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 10,
-        "REVISAR": 18,
-        "PASSA": 39
+        "REVISAR": 17,
+        "PASSA": 37
       },
       "quality_score": 88,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 73/95 — Regrid/PA falhou"
+        "assessed/just_value missing em 73/93 — Regrid/PA falhou"
       ]
     },
     {
@@ -284,16 +284,16 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-09-17",
-      "lots_validos": 97,
+      "lots_validos": 99,
       "cobertura": {
-        "address_pct": 83.5,
-        "value_pct": 83.5,
+        "address_pct": 83.8,
+        "value_pct": 83.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 25,
-        "REVISAR": 39,
-        "PASSA": 24
+        "REVISAR": 41,
+        "PASSA": 23
       },
       "quality_score": 94,
       "status": "verde",
@@ -331,12 +331,12 @@
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
       "sales_futuras": 9,
-      "proxima_sale": "2026-08-04",
+      "proxima_sale": "2026-08-06",
       "ultima_sale": "2026-10-05",
-      "lots_validos": 25,
+      "lots_validos": 24,
       "cobertura": {
-        "address_pct": 96.0,
-        "value_pct": 96.0,
+        "address_pct": 95.8,
+        "value_pct": 95.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
@@ -444,15 +444,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-08-04 16:12:05",
+      "ran_at": "2026-08-05 11:57:10",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 611,
+      "items": 612,
       "errors": 0,
-      "ran_at": "2026-08-04 16:12:04",
+      "ran_at": "2026-08-05 11:57:06",
       "log": ""
     },
     {
@@ -460,7 +460,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-08-04 15:57:51",
+      "ran_at": "2026-08-05 11:42:54",
       "log": ""
     },
     {
@@ -468,7 +468,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-08-04 15:44:37",
+      "ran_at": "2026-08-05 11:29:30",
       "log": ""
     },
     {
@@ -476,7 +476,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-08-04 15:44:37",
+      "ran_at": "2026-08-05 11:29:30",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -484,7 +484,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-08-04 15:39:21",
+      "ran_at": "2026-08-05 11:24:15",
       "log": ""
     },
     {
@@ -492,15 +492,15 @@
       "status": "success",
       "items": 439,
       "errors": 0,
-      "ran_at": "2026-08-04 15:27:08",
+      "ran_at": "2026-08-05 11:12:05",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 75,
+      "items": 73,
       "errors": 0,
-      "ran_at": "2026-08-04 15:25:56",
+      "ran_at": "2026-08-05 11:11:11",
       "log": ""
     },
     {
@@ -555,7 +555,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 73/95 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 73/93 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -586,7 +586,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-08-04"
+    "gerado_em": "2026-08-05"
   },
   "analises_lotes": [
     {
