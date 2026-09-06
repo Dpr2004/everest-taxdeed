@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-05T16:54:36.624918+00:00",
+  "gerado_em": "2026-09-06T13:11:41.868137+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -49,9 +49,9 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 19,
+        "LANCE": 13,
         "REVISAR": 11,
-        "PASSA": 17
+        "PASSA": 23
       },
       "quality_score": 85,
       "status": "verde",
@@ -441,7 +441,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-05 16:54:34",
+      "ran_at": "2026-09-06 13:11:40",
       "log": ""
     },
     {
@@ -449,7 +449,7 @@
       "status": "success",
       "items": 536,
       "errors": 0,
-      "ran_at": "2026-09-05 16:54:34",
+      "ran_at": "2026-09-06 13:11:39",
       "log": ""
     },
     {
@@ -457,15 +457,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-05 16:40:21",
+      "ran_at": "2026-09-06 12:57:27",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 35,
+      "items": 20,
       "errors": 0,
-      "ran_at": "2026-09-05 16:26:17",
+      "ran_at": "2026-09-06 12:44:09",
       "log": ""
     },
     {
@@ -473,7 +473,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-05 16:26:17",
+      "ran_at": "2026-09-06 12:44:09",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -481,15 +481,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-05 16:21:01",
+      "ran_at": "2026-09-06 12:38:54",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 516,
+      "items": 411,
       "errors": 0,
-      "ran_at": "2026-09-05 16:08:49",
+      "ran_at": "2026-09-06 12:27:32",
       "log": ""
     },
     {
@@ -497,7 +497,7 @@
       "status": "success",
       "items": 53,
       "errors": 0,
-      "ran_at": "2026-09-05 16:08:01",
+      "ran_at": "2026-09-06 12:26:56",
       "log": ""
     },
     {
@@ -572,7 +572,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-09-05"
+    "gerado_em": "2026-09-06"
   },
   "analises_lotes": [
     {
