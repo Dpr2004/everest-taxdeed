@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-09-14",
+  "gerado_em": "2026-09-15",
   "total_candidatos": 30,
   "total_leiloes": 36,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "04-25-18-0040-01300-0220",
-      "county": "Pasco",
-      "state": "FL",
-      "address": "18478 CORTES CREEK BLVD",
-      "city": "SPRING HILL, 34610",
-      "bid": 5563.34,
-      "just_value": 297940.0,
-      "ratio": 53.55,
-      "sale_date": "2026-09-14",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 56.23,
-      "status": "pending"
-    },
     {
       "parcel": "242730000000150000",
       "county": "Osceola",
@@ -100,6 +84,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 14.64,
+      "status": "pending"
+    },
+    {
+      "parcel": "27-43-24-02-00009.0270",
+      "county": "Lee",
+      "state": "FL",
+      "address": "3449 CELESTIAL WAY",
+      "city": "NORTH FORT MYERS",
+      "bid": 4769.43,
+      "just_value": 67943.0,
+      "ratio": 14.25,
+      "sale_date": "2026-09-15",
+      "flood_zone": "",
+      "workers_score": 77.8,
+      "workers_decision": "REVISAR",
+      "ranking_score": 12.11,
       "status": "pending"
     },
     {
@@ -199,6 +199,38 @@
       "status": "pending"
     },
     {
+      "parcel": "10-45-26-05-00070.0090",
+      "county": "Lee",
+      "state": "FL",
+      "address": "3703 40TH ST SW",
+      "city": "LEHIGH ACRES",
+      "bid": 2255.67,
+      "just_value": 24223.0,
+      "ratio": 10.74,
+      "sale_date": "2026-09-15",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 9.13,
+      "status": "pending"
+    },
+    {
+      "parcel": "10-45-26-03-00034.0240",
+      "county": "Lee",
+      "state": "FL",
+      "address": "1263 MEADOW RD",
+      "city": "LEHIGH ACRES",
+      "bid": 2193.87,
+      "just_value": 21803.0,
+      "ratio": 9.94,
+      "sale_date": "2026-09-15",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 8.45,
+      "status": "pending"
+    },
+    {
       "parcel": "20-44-27-01-00002.0220",
       "county": "Lee",
       "state": "FL",
@@ -292,54 +324,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 6.09,
-      "status": "pending"
-    },
-    {
-      "parcel": "25-44-27-08-00032.0220",
-      "county": "Lee",
-      "state": "FL",
-      "address": "619 IRVING AVE",
-      "city": "LEHIGH ACRES",
-      "bid": 2955.3,
-      "just_value": 20995.0,
-      "ratio": 7.1,
-      "sale_date": "2026-09-15",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 6.04,
-      "status": "pending"
-    },
-    {
-      "parcel": "23-45-27-L2-03027.0140",
-      "county": "Lee",
-      "state": "FL",
-      "address": "1011 GLADYS ST",
-      "city": "LEHIGH ACRES",
-      "bid": 2475.18,
-      "just_value": 15343.0,
-      "ratio": 6.2,
-      "sale_date": "2026-09-15",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 5.27,
-      "status": "pending"
-    },
-    {
-      "parcel": "23-45-27-L3-15053.0030",
-      "county": "Lee",
-      "state": "FL",
-      "address": "853 BABBITT AVE",
-      "city": "LEHIGH ACRES",
-      "bid": 2594.1,
-      "just_value": 15343.0,
-      "ratio": 5.91,
-      "sale_date": "2026-09-15",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 5.03,
       "status": "pending"
     },
     {
@@ -484,6 +468,22 @@
       "workers_score": 73.5,
       "workers_decision": "REVISAR",
       "ranking_score": 9.0,
+      "status": "pending"
+    },
+    {
+      "parcel": "122200-0000",
+      "county": "Duval",
+      "state": "FL",
+      "address": "631 ODESSA ST",
+      "city": "JACKSONVILLE",
+      "bid": 2836.57,
+      "just_value": 27979.0,
+      "ratio": 9.86,
+      "sale_date": "2026-09-16",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 8.88,
       "status": "pending"
     }
   ]

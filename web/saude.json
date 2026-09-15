@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-09-14T19:22:09.029620+00:00",
+  "gerado_em": "2026-09-15T14:53:50.945624+00:00",
   "resumo": {
     "total_condados": 19,
-    "condados_verdes": 13,
+    "condados_verdes": 14,
     "condados_amarelos": 0,
     "condados_vermelhos": 2,
-    "condados_vazios": 1,
+    "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 580,
+    "total_lots_validos": 598,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 5,
-    "saude_geral_pct": 86
+    "saude_geral_pct": 87
   },
   "condados": [
     {
@@ -42,16 +42,16 @@
       "sales_futuras": 10,
       "proxima_sale": "2026-09-17",
       "ultima_sale": "2026-12-02",
-      "lots_validos": 88,
+      "lots_validos": 90,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 24,
+        "LANCE": 25,
         "REVISAR": 11,
-        "PASSA": 14
+        "PASSA": 6
       },
       "quality_score": 85,
       "status": "verde",
@@ -179,7 +179,7 @@
       "decisoes": {
         "LANCE": 34,
         "REVISAR": 50,
-        "PASSA": 21
+        "PASSA": 19
       },
       "quality_score": 98,
       "status": "verde",
@@ -190,20 +190,23 @@
       "nome": "Lake County",
       "state": "FL",
       "url_sales": "https://lake.realtaxdeed.com/",
-      "sales_futuras": 0,
-      "proxima_sale": null,
-      "ultima_sale": null,
-      "lots_validos": 0,
+      "sales_futuras": 1,
+      "proxima_sale": "2026-11-03",
+      "ultima_sale": "2026-11-03",
+      "lots_validos": 10,
       "cobertura": {
-        "address_pct": 0,
-        "value_pct": 0,
+        "address_pct": 100.0,
+        "value_pct": 0.0,
         "sqft_pct": 100.0
       },
-      "decisoes": {},
-      "quality_score": 0,
-      "status": "vazio",
+      "decisoes": {
+        "LANCE": 2,
+        "PASSA": 8
+      },
+      "quality_score": 85,
+      "status": "verde",
       "issues": [
-        "Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+        "assessed/just_value missing em 10/10 — Regrid/PA falhou"
       ]
     },
     {
@@ -214,21 +217,21 @@
       "sales_futuras": 8,
       "proxima_sale": "2026-09-15",
       "ultima_sale": "2026-11-17",
-      "lots_validos": 108,
+      "lots_validos": 115,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 41.7,
+        "value_pct": 45.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 15,
-        "REVISAR": 42,
+        "REVISAR": 49,
         "PASSA": 51
       },
       "quality_score": 91,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 63/108 — Regrid/PA falhou"
+        "assessed/just_value missing em 63/115 — Regrid/PA falhou"
       ]
     },
     {
@@ -323,18 +326,18 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-09-14",
+      "sales_futuras": 9,
+      "proxima_sale": "2026-09-17",
       "ultima_sale": "2026-11-30",
-      "lots_validos": 36,
+      "lots_validos": 35,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 4,
-        "PASSA": 5,
+        "LANCE": 3,
+        "PASSA": 1,
         "REVISAR": 3
       },
       "quality_score": 100,
@@ -425,7 +428,7 @@
       "decisoes": {
         "LANCE": 3,
         "REVISAR": 3,
-        "PASSA": 4
+        "PASSA": 1
       },
       "quality_score": 100,
       "status": "verde",
@@ -438,15 +441,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-14 19:22:07",
+      "ran_at": "2026-09-15 14:53:49",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 580,
+      "items": 598,
       "errors": 0,
-      "ran_at": "2026-09-14 19:22:06",
+      "ran_at": "2026-09-15 14:53:48",
       "log": ""
     },
     {
@@ -454,15 +457,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-14 19:07:54",
+      "ran_at": "2026-09-15 14:39:36",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 27,
+      "items": 31,
       "errors": 0,
-      "ran_at": "2026-09-14 18:45:28",
+      "ran_at": "2026-09-15 14:15:13",
       "log": ""
     },
     {
@@ -470,7 +473,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-14 18:45:27",
+      "ran_at": "2026-09-15 14:15:12",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -478,23 +481,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-14 18:40:12",
+      "ran_at": "2026-09-15 14:09:57",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 531,
+      "items": 477,
       "errors": 0,
-      "ran_at": "2026-09-14 18:27:59",
+      "ran_at": "2026-09-15 13:57:45",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 107,
+      "items": 78,
       "errors": 0,
-      "ran_at": "2026-09-14 18:26:59",
+      "ran_at": "2026-09-15 13:57:01",
       "log": ""
     },
     {
@@ -538,13 +541,13 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LAKE",
-      "msg": "LAKE: Sem leiloes futuros (provavel: scraper falhou OU condado sem atividade Q2)"
+      "msg": "LAKE: assessed/just_value missing em 10/10 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 63/108 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 63/115 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -563,7 +566,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-09-14"
+    "gerado_em": "2026-09-15"
   },
   "analises_lotes": [
     {
