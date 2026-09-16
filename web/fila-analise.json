@@ -1,7 +1,7 @@
 {
   "gerado_em": "2026-09-16",
   "total_candidatos": 30,
-  "total_leiloes": 34,
+  "total_leiloes": 35,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
@@ -215,6 +215,22 @@
       "status": "pending"
     },
     {
+      "parcel": "2111705",
+      "county": "Brevard",
+      "state": "FL",
+      "address": "4304 LONDON TOWN RD UNIT D122 ",
+      "city": "",
+      "bid": 1513.37,
+      "just_value": 121560.0,
+      "ratio": 80.32,
+      "sale_date": "2026-09-17",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 80.32,
+      "status": "pending"
+    },
+    {
       "parcel": "2957366",
       "county": "Brevard",
       "state": "FL",
@@ -340,22 +356,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 21.13,
-      "status": "pending"
-    },
-    {
-      "parcel": "2212794",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "1665 RICE AVE TITUSVILLE FL 32",
-      "city": "TITUSVILLE",
-      "bid": 11448.38,
-      "just_value": 228570.0,
-      "ratio": 19.97,
-      "sale_date": "2026-09-17",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 19.97,
       "status": "pending"
     },
     {
