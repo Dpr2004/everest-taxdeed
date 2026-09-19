@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-18T17:57:40.075243+00:00",
+  "gerado_em": "2026-09-19T13:41:57.505117+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 529,
+    "total_lots_validos": 532,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 6,
+    "problemas_criticos": 5,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -46,14 +46,14 @@
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
-        "sqft_pct": 0.0
+        "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 12,
         "REVISAR": 12,
-        "PASSA": 43
+        "PASSA": 41
       },
-      "quality_score": 85,
+      "quality_score": 100,
       "status": "verde",
       "issues": []
     },
@@ -149,16 +149,16 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-10-07",
       "ultima_sale": "2026-12-09",
-      "lots_validos": 35,
+      "lots_validos": 40,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 68.6,
+        "value_pct": 60.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 35
+        "PASSA": 40
       },
-      "quality_score": 95,
+      "quality_score": 94,
       "status": "verde",
       "issues": []
     },
@@ -305,23 +305,20 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-09-29",
       "ultima_sale": "2026-10-13",
-      "lots_validos": 11,
+      "lots_validos": 12,
       "cobertura": {
-        "address_pct": 45.5,
-        "value_pct": 45.5,
+        "address_pct": 50.0,
+        "value_pct": 50.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 7,
+        "LANCE": 8,
         "REVISAR": 1,
         "PASSA": 3
       },
-      "quality_score": 80,
+      "quality_score": 82,
       "status": "verde",
-      "issues": [
-        "address missing em 6/11 (55%) — scraper de lot incompleto",
-        "assessed/just_value missing em 6/11 — Regrid/PA falhou"
-      ]
+      "issues": []
     },
     {
       "codigo": "PASCO",
@@ -416,19 +413,19 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-09-18",
+      "sales_futuras": 7,
+      "proxima_sale": "2026-09-22",
       "ultima_sale": "2026-11-03",
-      "lots_validos": 28,
+      "lots_validos": 25,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 4,
+        "LANCE": 2,
         "REVISAR": 3,
-        "PASSA": 18
+        "PASSA": 16
       },
       "quality_score": 100,
       "status": "verde",
@@ -441,15 +438,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-18 17:57:38",
+      "ran_at": "2026-09-19 13:41:56",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 529,
+      "items": 532,
       "errors": 0,
-      "ran_at": "2026-09-18 17:57:37",
+      "ran_at": "2026-09-19 13:41:55",
       "log": ""
     },
     {
@@ -457,15 +454,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-18 17:43:24",
+      "ran_at": "2026-09-19 13:27:42",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 0,
+      "items": 9,
       "errors": 0,
-      "ran_at": "2026-09-18 17:18:12",
+      "ran_at": "2026-09-19 13:02:30",
       "log": ""
     },
     {
@@ -473,7 +470,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-18 17:18:11",
+      "ran_at": "2026-09-19 13:02:29",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -481,23 +478,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-18 17:12:56",
+      "ran_at": "2026-09-19 12:57:14",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 457,
+      "items": 395,
       "errors": 0,
-      "ran_at": "2026-09-18 17:00:44",
+      "ran_at": "2026-09-19 12:46:26",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 79,
+      "items": 49,
       "errors": 0,
-      "ran_at": "2026-09-18 16:59:39",
+      "ran_at": "2026-09-19 12:45:26",
       "log": ""
     },
     {
@@ -519,11 +516,6 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker property_appraiser com status degraded (20 items, 152 erros) — DEGRADED: so 20/519 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -557,18 +549,6 @@
     {
       "severidade": "MEDIA",
       "categoria": "condado",
-      "condado": "OSCEOLA",
-      "msg": "OSCEOLA: address missing em 6/11 (55%) — scraper de lot incompleto"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
-      "condado": "OSCEOLA",
-      "msg": "OSCEOLA: assessed/just_value missing em 6/11 — Regrid/PA falhou"
-    },
-    {
-      "severidade": "MEDIA",
-      "categoria": "condado",
       "condado": "PUTNAM",
       "msg": "PUTNAM: assessed/just_value missing em 29/30 — Regrid/PA falhou"
     }
@@ -577,7 +557,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-09-18"
+    "gerado_em": "2026-09-19"
   },
   "analises_lotes": [
     {

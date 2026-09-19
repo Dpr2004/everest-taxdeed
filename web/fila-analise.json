@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-09-18",
+  "gerado_em": "2026-09-19",
   "total_candidatos": 30,
-  "total_leiloes": 33,
+  "total_leiloes": 32,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "534021000370",
-      "county": "Volusia",
-      "state": "FL",
-      "address": "1212 RUTHBERN RD",
-      "city": "DAYTONA BEACH",
-      "bid": 65581.18,
-      "just_value": 301630.0,
-      "ratio": 4.6,
-      "sale_date": "2026-09-18",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 4.37,
-      "status": "pending"
-    },
     {
       "parcel": "24-43-22-C4-05410.0290",
       "county": "Lee",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 12.43,
+      "status": "pending"
+    },
+    {
+      "parcel": "0765360000",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "10008 ECHO MOUNTAIN DR",
+      "city": "RIVERVIEW",
+      "bid": 7861.71,
+      "just_value": 114014.0,
+      "ratio": 14.5,
+      "sale_date": "2026-10-01",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 12.33,
       "status": "pending"
     }
   ]
