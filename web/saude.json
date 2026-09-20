@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-19T17:11:12.699813+00:00",
+  "gerado_em": "2026-09-20T14:13:16.012522+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -9,7 +9,7 @@
     "condados_sem_atividade": 3,
     "total_lots_validos": 532,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 5,
+    "problemas_criticos": 4,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -46,14 +46,14 @@
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
-        "sqft_pct": 100.0
+        "sqft_pct": 0.0
       },
       "decisoes": {
         "LANCE": 12,
         "REVISAR": 12,
         "PASSA": 41
       },
-      "quality_score": 100,
+      "quality_score": 85,
       "status": "verde",
       "issues": []
     },
@@ -438,7 +438,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-19 17:11:11",
+      "ran_at": "2026-09-20 14:13:14",
       "log": ""
     },
     {
@@ -446,7 +446,7 @@
       "status": "success",
       "items": 532,
       "errors": 0,
-      "ran_at": "2026-09-19 17:11:10",
+      "ran_at": "2026-09-20 14:13:13",
       "log": ""
     },
     {
@@ -454,15 +454,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-19 16:56:58",
+      "ran_at": "2026-09-20 13:59:01",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 9,
+      "items": 5,
       "errors": 0,
-      "ran_at": "2026-09-19 16:31:45",
+      "ran_at": "2026-09-20 13:33:55",
       "log": ""
     },
     {
@@ -470,7 +470,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-19 16:31:45",
+      "ran_at": "2026-09-20 13:33:54",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -478,15 +478,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-19 16:29:12",
+      "ran_at": "2026-09-20 13:28:39",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 406,
+      "items": 404,
       "errors": 0,
-      "ran_at": "2026-09-19 16:19:28",
+      "ran_at": "2026-09-20 13:18:00",
       "log": ""
     },
     {
@@ -494,16 +494,8 @@
       "status": "success",
       "items": 50,
       "errors": 0,
-      "ran_at": "2026-09-19 16:19:04",
+      "ran_at": "2026-09-20 13:16:57",
       "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "degraded",
-      "items": 21,
-      "errors": 167,
-      "ran_at": "2026-09-19 14:12:04",
-      "log": "DEGRADED: so 21/532 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -511,11 +503,6 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (21 items, 167 erros) — DEGRADED: so 21/532 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -557,7 +544,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-09-19"
+    "gerado_em": "2026-09-20"
   },
   "analises_lotes": [
     {
