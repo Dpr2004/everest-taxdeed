@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-21T16:16:54.591066+00:00",
+  "gerado_em": "2026-09-21T19:29:32.118136+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 534,
+    "total_lots_validos": 535,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 4,
+    "problemas_criticos": 5,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -46,14 +46,14 @@
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
-        "sqft_pct": 100.0
+        "sqft_pct": 0.0
       },
       "decisoes": {
         "LANCE": 12,
         "REVISAR": 12,
-        "PASSA": 41
+        "PASSA": 40
       },
-      "quality_score": 100,
+      "quality_score": 85,
       "status": "verde",
       "issues": []
     },
@@ -282,7 +282,7 @@
       "sales_futuras": 6,
       "proxima_sale": "2026-09-24",
       "ultima_sale": "2026-11-05",
-      "lots_validos": 60,
+      "lots_validos": 61,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -290,7 +290,7 @@
       },
       "decisoes": {
         "LANCE": 44,
-        "REVISAR": 13,
+        "REVISAR": 14,
         "PASSA": 3
       },
       "quality_score": 100,
@@ -437,15 +437,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-21 16:16:53",
+      "ran_at": "2026-09-21 19:29:30",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 534,
+      "items": 535,
       "errors": 0,
-      "ran_at": "2026-09-21 16:16:52",
+      "ran_at": "2026-09-21 19:29:28",
       "log": ""
     },
     {
@@ -453,15 +453,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-21 16:02:40",
+      "ran_at": "2026-09-21 19:15:16",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 9,
+      "items": 5,
       "errors": 0,
-      "ran_at": "2026-09-21 15:40:05",
+      "ran_at": "2026-09-21 18:50:03",
       "log": ""
     },
     {
@@ -469,7 +469,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-21 15:40:05",
+      "ran_at": "2026-09-21 18:50:03",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -477,15 +477,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-21 15:37:22",
+      "ran_at": "2026-09-21 18:44:47",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 396,
+      "items": 397,
       "errors": 0,
-      "ran_at": "2026-09-21 15:27:17",
+      "ran_at": "2026-09-21 18:34:35",
       "log": ""
     },
     {
@@ -493,8 +493,16 @@
       "status": "success",
       "items": 50,
       "errors": 0,
-      "ran_at": "2026-09-21 15:26:53",
+      "ran_at": "2026-09-21 18:33:36",
       "log": ""
+    },
+    {
+      "worker": "property_appraiser",
+      "status": "degraded",
+      "items": 21,
+      "errors": 168,
+      "ran_at": "2026-09-21 16:48:52",
+      "log": "DEGRADED: so 21/534 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -502,6 +510,11 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker property_appraiser com status degraded (21 items, 168 erros) — DEGRADED: so 21/534 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
