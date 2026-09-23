@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-22T18:33:01.985785+00:00",
+  "gerado_em": "2026-09-23T14:54:56.006855+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 550,
+    "total_lots_validos": 547,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 6,
+    "problemas_criticos": 5,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -18,8 +18,8 @@
       "nome": "Alachua County",
       "state": "FL",
       "url_sales": "https://alachua.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-09-22",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-10-06",
       "ultima_sale": "2026-10-06",
       "lots_validos": 0,
       "cobertura": {
@@ -31,7 +31,7 @@
       "quality_score": 0,
       "status": "vermelho",
       "issues": [
-        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -39,21 +39,21 @@
       "nome": "Brevard County",
       "state": "FL",
       "url_sales": "https://brevard.realforeclose.com/",
-      "sales_futuras": 10,
+      "sales_futuras": 11,
       "proxima_sale": "2026-09-23",
-      "ultima_sale": "2026-12-10",
-      "lots_validos": 86,
+      "ultima_sale": "2026-12-16",
+      "lots_validos": 90,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
-        "sqft_pct": 100.0
+        "sqft_pct": 0.0
       },
       "decisoes": {
         "LANCE": 13,
         "REVISAR": 12,
-        "PASSA": 36
+        "PASSA": 41
       },
-      "quality_score": 100,
+      "quality_score": 85,
       "status": "verde",
       "issues": []
     },
@@ -90,14 +90,14 @@
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
-        "sqft_pct": 100.0
+        "sqft_pct": 0.0
       },
       "decisoes": {
         "LANCE": 3,
-        "REVISAR": 7,
-        "PASSA": 3
+        "REVISAR": 6,
+        "PASSA": 4
       },
-      "quality_score": 100,
+      "quality_score": 85,
       "status": "verde",
       "issues": []
     },
@@ -170,16 +170,16 @@
       "sales_futuras": 9,
       "proxima_sale": "2026-09-24",
       "ultima_sale": "2026-11-19",
-      "lots_validos": 113,
+      "lots_validos": 114,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 92.9,
+        "value_pct": 93.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 38,
         "REVISAR": 54,
-        "PASSA": 21
+        "PASSA": 22
       },
       "quality_score": 98,
       "status": "verde",
@@ -215,23 +215,23 @@
       "state": "FL",
       "url_sales": "https://lee.realtaxdeed.com/",
       "sales_futuras": 7,
-      "proxima_sale": "2026-09-22",
-      "ultima_sale": "2026-11-17",
-      "lots_validos": 92,
+      "proxima_sale": "2026-09-29",
+      "ultima_sale": "2026-12-01",
+      "lots_validos": 77,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 46.7,
+        "value_pct": 36.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 13,
-        "REVISAR": 39,
+        "REVISAR": 24,
         "PASSA": 40
       },
-      "quality_score": 92,
+      "quality_score": 90,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 49/92 — Regrid/PA falhou"
+        "assessed/just_value missing em 49/77 — Regrid/PA falhou"
       ]
     },
     {
@@ -282,14 +282,14 @@
       "sales_futuras": 6,
       "proxima_sale": "2026-09-24",
       "ultima_sale": "2026-11-05",
-      "lots_validos": 61,
+      "lots_validos": 64,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 44,
+        "LANCE": 47,
         "REVISAR": 14,
         "PASSA": 3
       },
@@ -305,14 +305,15 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-09-29",
       "ultima_sale": "2026-10-13",
-      "lots_validos": 12,
+      "lots_validos": 13,
       "cobertura": {
-        "address_pct": 91.7,
-        "value_pct": 91.7,
+        "address_pct": 92.3,
+        "value_pct": 92.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 12
+        "LANCE": 12,
+        "REVISAR": 1
       },
       "quality_score": 97,
       "status": "verde",
@@ -324,18 +325,18 @@
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
       "sales_futuras": 10,
-      "proxima_sale": "2026-09-22",
+      "proxima_sale": "2026-09-23",
       "ultima_sale": "2026-11-30",
-      "lots_validos": 31,
+      "lots_validos": 28,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 2,
-        "PASSA": 11,
-        "REVISAR": 3
+        "LANCE": 3,
+        "REVISAR": 2,
+        "PASSA": 10
       },
       "quality_score": 100,
       "status": "verde",
@@ -349,18 +350,18 @@
       "sales_futuras": 1,
       "proxima_sale": "2026-10-15",
       "ultima_sale": "2026-10-15",
-      "lots_validos": 23,
+      "lots_validos": 24,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 52.2,
+        "value_pct": 54.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 1,
-        "REVISAR": 9,
+        "REVISAR": 10,
         "PASSA": 13
       },
-      "quality_score": 92,
+      "quality_score": 93,
       "status": "verde",
       "issues": []
     },
@@ -412,18 +413,18 @@
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
       "sales_futuras": 7,
-      "proxima_sale": "2026-09-22",
+      "proxima_sale": "2026-09-24",
       "ultima_sale": "2026-11-03",
-      "lots_validos": 25,
+      "lots_validos": 30,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 2,
+        "LANCE": 3,
         "REVISAR": 3,
-        "PASSA": 10
+        "PASSA": 14
       },
       "quality_score": 100,
       "status": "verde",
@@ -436,15 +437,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-22 18:33:00",
+      "ran_at": "2026-09-23 14:54:53",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 550,
+      "items": 547,
       "errors": 0,
-      "ran_at": "2026-09-22 18:33:00",
+      "ran_at": "2026-09-23 14:54:52",
       "log": ""
     },
     {
@@ -452,15 +453,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-22 18:18:47",
+      "ran_at": "2026-09-23 14:40:40",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 9,
+      "items": 5,
       "errors": 0,
-      "ran_at": "2026-09-22 17:53:35",
+      "ran_at": "2026-09-23 14:15:27",
       "log": ""
     },
     {
@@ -468,31 +469,31 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-22 17:53:34",
+      "ran_at": "2026-09-23 14:15:27",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
       "worker": "lot_list_scraper",
-      "status": "degraded",
+      "status": "success",
       "items": 0,
-      "errors": 105,
-      "ran_at": "2026-09-22 17:48:19",
+      "errors": 0,
+      "ran_at": "2026-09-23 14:10:11",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 0,
+      "items": 485,
       "errors": 0,
-      "ran_at": "2026-09-22 17:36:06",
+      "ran_at": "2026-09-23 13:57:59",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 0,
+      "items": 104,
       "errors": 0,
-      "ran_at": "2026-09-22 17:34:24",
+      "ran_at": "2026-09-23 13:57:09",
       "log": ""
     },
     {
@@ -513,11 +514,6 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker lot_list_scraper com status degraded (0 items, 105 erros) — sem log"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "worker",
       "msg": "Worker property_appraiser com status degraded (23 items, 167 erros) — DEGRADED: so 23/550 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
@@ -529,7 +525,7 @@
       "severidade": "ALTA",
       "categoria": "condado",
       "condado": "ALACHUA",
-      "msg": "ALACHUA: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "msg": "ALACHUA: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "ALTA",
@@ -547,7 +543,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 49/92 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 49/77 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -560,7 +556,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-09-22"
+    "gerado_em": "2026-09-23"
   },
   "analises_lotes": [
     {
