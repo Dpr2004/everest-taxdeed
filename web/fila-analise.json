@@ -295,6 +295,22 @@
       "status": "pending"
     },
     {
+      "parcel": "2846001",
+      "county": "Brevard",
+      "state": "FL",
+      "address": "582 SEA CREST AVE SW PALM BAY ",
+      "city": "PALM BAY",
+      "bid": 50233.0,
+      "just_value": 254240.0,
+      "ratio": 5.06,
+      "sale_date": "2026-09-30",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 5.06,
+      "status": "pending"
+    },
+    {
       "parcel": "0785556562",
       "county": "Hillsborough",
       "state": "FL",
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 58.36,
-      "status": "pending"
-    },
-    {
-      "parcel": "15-44-27-09-00034.0210",
-      "county": "Lee",
-      "state": "FL",
-      "address": "1417 GERALD AVE",
-      "city": "LEHIGH ACRES",
-      "bid": 3011.63,
-      "just_value": 24225.0,
-      "ratio": 8.04,
-      "sale_date": "2026-10-06",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 6.84,
       "status": "pending"
     }
   ]
