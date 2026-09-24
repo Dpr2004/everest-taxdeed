@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-24T14:49:55.478794+00:00",
+  "gerado_em": "2026-09-24T18:44:43.906812+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 566,
+    "total_lots_validos": 568,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 5,
     "saude_geral_pct": 87
@@ -42,18 +42,18 @@
       "sales_futuras": 10,
       "proxima_sale": "2026-09-30",
       "ultima_sale": "2026-12-16",
-      "lots_validos": 81,
+      "lots_validos": 83,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 100.0,
+        "value_pct": 97.6,
         "sqft_pct": 0.0
       },
       "decisoes": {
         "LANCE": 13,
         "REVISAR": 12,
-        "PASSA": 24
+        "PASSA": 25
       },
-      "quality_score": 85,
+      "quality_score": 84,
       "status": "verde",
       "issues": []
     },
@@ -220,18 +220,18 @@
       "lots_validos": 80,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 36.2,
+        "value_pct": 37.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 14,
-        "REVISAR": 25,
-        "PASSA": 41
+        "REVISAR": 26,
+        "PASSA": 40
       },
       "quality_score": 90,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 51/80 — Regrid/PA falhou"
+        "assessed/just_value missing em 50/80 — Regrid/PA falhou"
       ]
     },
     {
@@ -307,8 +307,8 @@
       "ultima_sale": "2026-10-13",
       "lots_validos": 14,
       "cobertura": {
-        "address_pct": 85.7,
-        "value_pct": 85.7,
+        "address_pct": 92.9,
+        "value_pct": 92.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
@@ -316,7 +316,7 @@
         "REVISAR": 1,
         "PASSA": 1
       },
-      "quality_score": 95,
+      "quality_score": 97,
       "status": "verde",
       "issues": []
     },
@@ -427,7 +427,7 @@
       "decisoes": {
         "LANCE": 3,
         "REVISAR": 3,
-        "PASSA": 10
+        "PASSA": 9
       },
       "quality_score": 100,
       "status": "verde",
@@ -440,15 +440,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-24 14:49:54",
+      "ran_at": "2026-09-24 18:44:42",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 566,
+      "items": 568,
       "errors": 0,
-      "ran_at": "2026-09-24 14:49:53",
+      "ran_at": "2026-09-24 18:44:41",
       "log": ""
     },
     {
@@ -456,15 +456,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-24 14:35:40",
+      "ran_at": "2026-09-24 18:30:28",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 15,
+      "items": 10,
       "errors": 0,
-      "ran_at": "2026-09-24 14:11:45",
+      "ran_at": "2026-09-24 18:06:31",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-24 14:11:45",
+      "ran_at": "2026-09-24 18:06:31",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,15 +480,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-24 14:06:30",
+      "ran_at": "2026-09-24 18:01:16",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 500,
+      "items": 487,
       "errors": 0,
-      "ran_at": "2026-09-24 13:54:17",
+      "ran_at": "2026-09-24 17:49:03",
       "log": ""
     },
     {
@@ -496,16 +496,16 @@
       "status": "success",
       "items": 107,
       "errors": 0,
-      "ran_at": "2026-09-24 13:53:24",
+      "ran_at": "2026-09-24 17:48:08",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "degraded",
-      "items": 23,
-      "errors": 167,
-      "ran_at": "2026-09-23 15:20:02",
-      "log": "DEGRADED: so 23/547 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "items": 24,
+      "errors": 172,
+      "ran_at": "2026-09-24 15:43:23",
+      "log": "DEGRADED: so 24/566 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -517,7 +517,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (23 items, 167 erros) — DEGRADED: so 23/547 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (24 items, 172 erros) — DEGRADED: so 24/566 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -546,7 +546,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 51/80 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 50/80 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
