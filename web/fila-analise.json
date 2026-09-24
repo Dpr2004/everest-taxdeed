@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-09-23",
+  "gerado_em": "2026-09-24",
   "total_candidatos": 30,
-  "total_leiloes": 32,
+  "total_leiloes": 33,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "18-24-17-0020-00000-1420",
-      "county": "Pasco",
-      "state": "FL",
-      "address": "10335 MARINETTE AVENUE",
-      "city": "HUDSON, 34667",
-      "bid": 8472.4,
-      "just_value": 97101.0,
-      "ratio": 11.46,
-      "sale_date": "2026-09-23",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 12.03,
-      "status": "pending"
-    },
     {
       "parcel": "0777930000",
       "county": "Hillsborough",
@@ -300,7 +284,7 @@
       "state": "FL",
       "address": "582 SEA CREST AVE SW PALM BAY ",
       "city": "PALM BAY",
-      "bid": 50233.0,
+      "bid": 50232.89,
       "just_value": 254240.0,
       "ratio": 5.06,
       "sale_date": "2026-09-30",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 58.36,
+      "status": "pending"
+    },
+    {
+      "parcel": "15-44-27-09-00034.0210",
+      "county": "Lee",
+      "state": "FL",
+      "address": "1417 GERALD AVE",
+      "city": "LEHIGH ACRES",
+      "bid": 3011.63,
+      "just_value": 24225.0,
+      "ratio": 8.04,
+      "sale_date": "2026-10-06",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 6.84,
       "status": "pending"
     }
   ]
