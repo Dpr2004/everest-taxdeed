@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-25T15:15:08.157809+00:00",
+  "gerado_em": "2026-09-25T18:45:44.368412+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 568,
+    "total_lots_validos": 580,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 5,
     "saude_geral_pct": 87
@@ -18,9 +18,9 @@
       "nome": "Alachua County",
       "state": "FL",
       "url_sales": "https://alachua.realtaxdeed.com/",
-      "sales_futuras": 1,
+      "sales_futuras": 2,
       "proxima_sale": "2026-10-06",
-      "ultima_sale": "2026-10-06",
+      "ultima_sale": "2026-12-01",
       "lots_validos": 0,
       "cobertura": {
         "address_pct": 0,
@@ -31,7 +31,7 @@
       "quality_score": 0,
       "status": "vermelho",
       "issues": [
-        "AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+        "AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
       ]
     },
     {
@@ -51,7 +51,7 @@
       "decisoes": {
         "LANCE": 13,
         "REVISAR": 13,
-        "PASSA": 24
+        "PASSA": 18
       },
       "quality_score": 85,
       "status": "verde",
@@ -152,7 +152,7 @@
       "lots_validos": 50,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 54.0,
+        "value_pct": 56.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
@@ -217,21 +217,21 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-09-29",
       "ultima_sale": "2026-12-01",
-      "lots_validos": 81,
+      "lots_validos": 90,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 37.0,
+        "value_pct": 33.3,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 14,
         "REVISAR": 26,
-        "PASSA": 41
+        "PASSA": 50
       },
       "quality_score": 90,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 51/81 — Regrid/PA falhou"
+        "assessed/just_value missing em 60/90 — Regrid/PA falhou"
       ]
     },
     {
@@ -282,15 +282,15 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-10-08",
       "ultima_sale": "2026-11-05",
-      "lots_validos": 64,
+      "lots_validos": 67,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 47,
-        "REVISAR": 14,
+        "LANCE": 49,
+        "REVISAR": 15,
         "PASSA": 3
       },
       "quality_score": 100,
@@ -337,7 +337,7 @@
       "decisoes": {
         "LANCE": 4,
         "REVISAR": 2,
-        "PASSA": 4
+        "PASSA": 2
       },
       "quality_score": 98,
       "status": "verde",
@@ -427,7 +427,7 @@
       "decisoes": {
         "LANCE": 3,
         "REVISAR": 3,
-        "PASSA": 7
+        "PASSA": 3
       },
       "quality_score": 98,
       "status": "verde",
@@ -440,15 +440,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-25 15:15:06",
+      "ran_at": "2026-09-25 18:45:43",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 568,
+      "items": 580,
       "errors": 0,
-      "ran_at": "2026-09-25 15:15:05",
+      "ran_at": "2026-09-25 18:45:42",
       "log": ""
     },
     {
@@ -456,15 +456,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-25 15:00:53",
+      "ran_at": "2026-09-25 18:31:29",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 14,
+      "items": 18,
       "errors": 0,
-      "ran_at": "2026-09-25 14:35:40",
+      "ran_at": "2026-09-25 18:06:17",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-25 14:35:40",
+      "ran_at": "2026-09-25 18:06:16",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,7 +480,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-25 14:30:24",
+      "ran_at": "2026-09-25 18:03:21",
       "log": ""
     },
     {
@@ -488,24 +488,24 @@
       "status": "success",
       "items": 478,
       "errors": 0,
-      "ran_at": "2026-09-25 14:18:11",
+      "ran_at": "2026-09-25 17:51:10",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 79,
+      "items": 81,
       "errors": 0,
-      "ran_at": "2026-09-25 14:16:57",
+      "ran_at": "2026-09-25 17:50:48",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "degraded",
       "items": 24,
-      "errors": 172,
-      "ran_at": "2026-09-24 15:43:23",
-      "log": "DEGRADED: so 24/566 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "errors": 165,
+      "ran_at": "2026-09-25 15:44:29",
+      "log": "DEGRADED: so 24/568 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -517,7 +517,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (24 items, 172 erros) — DEGRADED: so 24/566 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (24 items, 165 erros) — DEGRADED: so 24/568 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -528,7 +528,7 @@
       "severidade": "ALTA",
       "categoria": "condado",
       "condado": "ALACHUA",
-      "msg": "ALACHUA: AUTH_FAIL provavel — 1 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
+      "msg": "ALACHUA: AUTH_FAIL provavel — 2 sale(s) detectado(s) mas 0 lots scrapeados. Acao: registrar conta em alachua.realtaxdeed.com usando mesma credencial REALAUCTION_USER"
     },
     {
       "severidade": "ALTA",
@@ -546,7 +546,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LEE",
-      "msg": "LEE: assessed/just_value missing em 51/81 — Regrid/PA falhou"
+      "msg": "LEE: assessed/just_value missing em 60/90 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
