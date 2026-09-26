@@ -1,10 +1,10 @@
 {
-  "gerado_em": "25/Sep/2026 18:45",
+  "gerado_em": "26/Sep/2026 14:25",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 54,
+    "total_sales": 53,
     "total_lots": 500,
-    "lances": 150,
+    "lances": 151,
     "estados": [
       "FL"
     ]
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "21/Sep a 27/Sep/2026",
-      "sales": [
-        {
-          "id": 25706,
-          "data_fmt": "25/Sep/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "28/Sep a 04/Oct/2026",
@@ -795,6 +781,28 @@
       "decisao": "LANCE",
       "max_bid": 142488.21,
       "profit": 232042.56,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 99160,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-09-30",
+      "parcel_id": "2710371",
+      "address": "582 SEA CREST AVE SW PALM BAY ",
+      "city": "MELBOURNE",
+      "zip": "32935",
+      "min_bid": 4178.7,
+      "assessed_value": 254240.0,
+      "just_value": 254240.0,
+      "building_sqft": null,
+      "year_built": 1992,
+      "score": 90.0,
+      "roi": 3.1609,
+      "decisao": "LANCE",
+      "max_bid": 90124.88,
+      "profit": 164166.98,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -5932,19 +5940,19 @@
       "estado": "FL",
       "sale_date": "2026-09-29",
       "parcel_id": "31273260001213005N",
-      "address": "HOLOPAW GROVES RD",
-      "city": "SAINT CLOUD",
-      "zip": "34771",
+      "address": null,
+      "city": null,
+      "zip": null,
       "min_bid": 622.3,
-      "assessed_value": 700.0,
+      "assessed_value": null,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.9809,
+      "roi": -0.9323,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -30544.9,
+      "profit": -29145.75,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -8061,6 +8069,28 @@
       "fema_risk": null
     },
     {
+      "id": 99312,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-10-21",
+      "parcel_id": "C-24-35-28-101-0050-014D",
+      "address": "1320 HYACINTH AVE",
+      "city": "SEBRING",
+      "zip": "33875",
+      "min_bid": 2307.78,
+      "assessed_value": 1000.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9741,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -31995.78,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 93611,
       "condado": "HIGHLANDS",
       "estado": "FL",
@@ -8255,6 +8285,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -25438.92,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 99313,
+      "condado": "HIGHLANDS",
+      "estado": "FL",
+      "sale_date": "2026-10-21",
+      "parcel_id": "C-22-37-30-050-0680-0140",
+      "address": "384 STARDUST AVE",
+      "city": "LAKE PLACID",
+      "zip": "33852",
+      "min_bid": 2420.69,
+      "assessed_value": 2197.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9435,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -31172.64,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11689,72 +11741,6 @@
       "profit": -78828.25,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 86378,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-11-18",
-      "parcel_id": "2605852",
-      "address": "6795 S TROPICAL TRL",
-      "city": "MERRITT ISLAND",
-      "zip": "32952",
-      "min_bid": 124278.15,
-      "assessed_value": 151700.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.2188,
-      "decisao": "PASSA",
-      "max_bid": 27370.4,
-      "profit": -36118.75,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 81919,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-10-09",
-      "parcel_id": "631506020500",
-      "address": "1105 MILLBROOK AVE",
-      "city": "PORT ORANGE",
-      "zip": "32127",
-      "min_bid": 155025.0,
-      "assessed_value": 168766.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.2717,
-      "decisao": "PASSA",
-      "max_bid": 37814.79,
-      "profit": -53519.99,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 89363,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-10-28",
-      "parcel_id": "28-37-31-FR-222-22",
-      "address": "134 OAKCREST AVE NE",
-      "city": "PALM BAY",
-      "zip": "32907",
-      "min_bid": 159427.05,
-      "assessed_value": 172260.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.2737,
-      "decisao": "PASSA",
-      "max_bid": 39953.12,
-      "profit": -55189.73,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11771,7 +11757,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 2,
+      "total_sales": 3,
       "total_lots": 0
     },
     {
@@ -11788,7 +11774,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 10,
-      "total_lots": 191
+      "total_lots": 192
     },
     {
       "codigo": "CITRUS",
@@ -11868,7 +11854,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 5,
-      "total_lots": 227
+      "total_lots": 229
     },
     {
       "codigo": "HILLSBOROUGH",
@@ -12059,7 +12045,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
+      "total_sales": 7,
       "total_lots": 155
     }
   ]
