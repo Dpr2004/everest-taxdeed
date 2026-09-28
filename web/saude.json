@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-28T18:03:13.596743+00:00",
+  "gerado_em": "2026-09-28T20:58:03.351393+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 592,
+    "total_lots_validos": 594,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 4,
+    "problemas_criticos": 5,
     "saude_geral_pct": 87
   },
   "condados": [
@@ -49,7 +49,7 @@
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 20,
+        "LANCE": 17,
         "REVISAR": 13,
         "PASSA": 14
       },
@@ -170,16 +170,16 @@
       "sales_futuras": 10,
       "proxima_sale": "2026-10-01",
       "ultima_sale": "2026-12-10",
-      "lots_validos": 122,
+      "lots_validos": 123,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 93.4,
+        "value_pct": 93.5,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 49,
-        "REVISAR": 53,
-        "PASSA": 18
+        "REVISAR": 54,
+        "PASSA": 19
       },
       "quality_score": 99,
       "status": "verde",
@@ -282,7 +282,7 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-10-08",
       "ultima_sale": "2026-11-05",
-      "lots_validos": 67,
+      "lots_validos": 68,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -290,7 +290,7 @@
       },
       "decisoes": {
         "LANCE": 49,
-        "REVISAR": 15,
+        "REVISAR": 16,
         "PASSA": 3
       },
       "quality_score": 100,
@@ -440,15 +440,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-28 18:03:12",
+      "ran_at": "2026-09-28 20:58:02",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 592,
+      "items": 594,
       "errors": 0,
-      "ran_at": "2026-09-28 18:03:11",
+      "ran_at": "2026-09-28 20:58:01",
       "log": ""
     },
     {
@@ -456,15 +456,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-28 17:48:59",
+      "ran_at": "2026-09-28 20:43:48",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 21,
+      "items": 17,
       "errors": 0,
-      "ran_at": "2026-09-28 17:26:52",
+      "ran_at": "2026-09-28 20:18:36",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-28 17:26:52",
+      "ran_at": "2026-09-28 20:18:35",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,15 +480,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-28 17:21:37",
+      "ran_at": "2026-09-28 20:15:12",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 513,
+      "items": 512,
       "errors": 0,
-      "ran_at": "2026-09-28 17:09:25",
+      "ran_at": "2026-09-28 20:03:00",
       "log": ""
     },
     {
@@ -496,8 +496,16 @@
       "status": "success",
       "items": 106,
       "errors": 0,
-      "ran_at": "2026-09-28 17:08:42",
+      "ran_at": "2026-09-28 20:02:33",
       "log": ""
+    },
+    {
+      "worker": "property_appraiser",
+      "status": "degraded",
+      "items": 24,
+      "errors": 165,
+      "ran_at": "2026-09-28 18:30:37",
+      "log": "DEGRADED: so 24/592 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -505,6 +513,11 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "worker",
+      "msg": "Worker property_appraiser com status degraded (24 items, 165 erros) — DEGRADED: so 24/592 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
