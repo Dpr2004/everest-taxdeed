@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-29T16:06:50.361797+00:00",
+  "gerado_em": "2026-09-29T19:26:18.394962+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 602,
+    "total_lots_validos": 615,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 5,
     "saude_geral_pct": 87
@@ -51,7 +51,7 @@
       "decisoes": {
         "LANCE": 19,
         "REVISAR": 13,
-        "PASSA": 12
+        "PASSA": 11
       },
       "quality_score": 85,
       "status": "verde",
@@ -95,7 +95,7 @@
       "decisoes": {
         "LANCE": 3,
         "REVISAR": 6,
-        "PASSA": 4
+        "PASSA": 3
       },
       "quality_score": 85,
       "status": "verde",
@@ -179,7 +179,7 @@
       "decisoes": {
         "LANCE": 52,
         "REVISAR": 55,
-        "PASSA": 15
+        "PASSA": 14
       },
       "quality_score": 99,
       "status": "verde",
@@ -201,7 +201,7 @@
       },
       "decisoes": {
         "LANCE": 2,
-        "PASSA": 8
+        "PASSA": 6
       },
       "quality_score": 85,
       "status": "verde",
@@ -226,7 +226,7 @@
       "decisoes": {
         "LANCE": 14,
         "REVISAR": 28,
-        "PASSA": 49
+        "PASSA": 45
       },
       "quality_score": 90,
       "status": "verde",
@@ -261,14 +261,14 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-10-14",
       "ultima_sale": "2026-11-18",
-      "lots_validos": 14,
+      "lots_validos": 24,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 14
+        "PASSA": 21
       },
       "quality_score": 100,
       "status": "verde",
@@ -282,14 +282,14 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-10-08",
       "ultima_sale": "2026-11-05",
-      "lots_validos": 68,
+      "lots_validos": 70,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 49,
+        "LANCE": 51,
         "REVISAR": 16,
         "PASSA": 2
       },
@@ -328,14 +328,14 @@
       "sales_futuras": 11,
       "proxima_sale": "2026-09-29",
       "ultima_sale": "2026-12-17",
-      "lots_validos": 29,
+      "lots_validos": 30,
       "cobertura": {
-        "address_pct": 96.6,
-        "value_pct": 96.6,
+        "address_pct": 96.7,
+        "value_pct": 96.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 4,
+        "LANCE": 5,
         "REVISAR": 2,
         "PASSA": 1
       },
@@ -360,7 +360,7 @@
       "decisoes": {
         "LANCE": 1,
         "REVISAR": 11,
-        "PASSA": 14
+        "PASSA": 13
       },
       "quality_score": 92,
       "status": "verde",
@@ -440,15 +440,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-29 16:06:48",
+      "ran_at": "2026-09-29 19:26:17",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 602,
+      "items": 615,
       "errors": 0,
-      "ran_at": "2026-09-29 16:06:48",
+      "ran_at": "2026-09-29 19:26:15",
       "log": ""
     },
     {
@@ -456,7 +456,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-29 15:52:35",
+      "ran_at": "2026-09-29 19:12:03",
       "log": ""
     },
     {
@@ -464,7 +464,7 @@
       "status": "success",
       "items": 21,
       "errors": 0,
-      "ran_at": "2026-09-29 15:30:37",
+      "ran_at": "2026-09-29 18:49:11",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-09-29 15:30:37",
+      "ran_at": "2026-09-29 18:49:11",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,15 +480,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-09-29 15:25:22",
+      "ran_at": "2026-09-29 18:43:56",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 503,
+      "items": 515,
       "errors": 0,
-      "ran_at": "2026-09-29 15:13:09",
+      "ran_at": "2026-09-29 18:31:43",
       "log": ""
     },
     {
@@ -496,16 +496,16 @@
       "status": "success",
       "items": 107,
       "errors": 0,
-      "ran_at": "2026-09-29 15:12:16",
+      "ran_at": "2026-09-29 18:30:49",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "degraded",
       "items": 24,
-      "errors": 165,
-      "ran_at": "2026-09-28 18:30:37",
-      "log": "DEGRADED: so 24/592 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "errors": 168,
+      "ran_at": "2026-09-29 16:48:52",
+      "log": "DEGRADED: so 24/602 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -517,7 +517,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (24 items, 165 erros) — DEGRADED: so 24/592 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (24 items, 168 erros) — DEGRADED: so 24/602 (4%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
