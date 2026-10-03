@@ -1,8 +1,8 @@
 {
-  "gerado_em": "02/Oct/2026 19:08",
+  "gerado_em": "03/Oct/2026 14:54",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 60,
+    "total_sales": 59,
     "total_lots": 500,
     "lances": 176,
     "estados": [
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "28/Sep a 04/Oct/2026",
-      "sales": [
-        {
-          "id": 27511,
-          "data_fmt": "02/Oct/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "05/Oct a 11/Oct/2026",
@@ -10931,6 +10917,28 @@
       "fema_risk": null
     },
     {
+      "id": 106250,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-11-17",
+      "parcel_id": "36-44-24-P2-00300.3000",
+      "address": "3949 EVANS AVE 300A",
+      "city": "FORT MYERS",
+      "zip": "33901",
+      "min_bid": 4020.61,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.6158,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -21914.14,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 103310,
       "condado": "LEE",
       "estado": "FL",
@@ -11213,6 +11221,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -29952.41,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 106249,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-11-17",
+      "parcel_id": "36-43-24-11-0000C.1130",
+      "address": "513 PINE TREE CT",
+      "city": "NORTH FORT MYERS",
+      "zip": "33917",
+      "min_bid": 5197.01,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.5235,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -19410.76,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11787,50 +11817,6 @@
       "profit": -15634.14,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 104227,
-      "condado": "OSCEOLA",
-      "estado": "FL",
-      "sale_date": "2026-11-10",
-      "parcel_id": "112630060907440040",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": 6971.74,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.3974,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -15634.14,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 103316,
-      "condado": "LEE",
-      "estado": "FL",
-      "sale_date": "2026-12-08",
-      "parcel_id": "10-44-24-14-0000B.0060",
-      "address": "3454 HANCOCK BRIDGE PKWY B6",
-      "city": "NORTH FORT MYERS",
-      "zip": "33903",
-      "min_bid": 7091.89,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.3894,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -15378.46,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11992,7 +11978,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 7,
-      "total_lots": 233
+      "total_lots": 235
     },
     {
       "codigo": "LEVY",
@@ -12135,7 +12121,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
+      "total_sales": 7,
       "total_lots": 162
     }
   ]
