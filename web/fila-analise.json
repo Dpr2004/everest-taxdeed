@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-10-05",
+  "gerado_em": "2026-10-06",
   "total_candidatos": 30,
   "total_leiloes": 34,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "15-26-16-0160-00100-0100",
-      "county": "Pasco",
-      "state": "FL",
-      "address": "4304 STONES RIVER COURT",
-      "city": "NEW PORT RICHEY, 34653",
-      "bid": 5478.52,
-      "just_value": 304487.0,
-      "ratio": 55.58,
-      "sale_date": "2026-10-05",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 58.36,
-      "status": "pending"
-    },
     {
       "parcel": "15-44-27-09-00034.0210",
       "county": "Lee",
@@ -180,6 +164,38 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 5.11,
+      "status": "pending"
+    },
+    {
+      "parcel": "10-26-20-0020-00200-0360",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "31803 LOCH ALINE DRIVE",
+      "city": "WESLEY CHAPEL, 33545",
+      "bid": 6050.13,
+      "just_value": 250230.0,
+      "ratio": 41.36,
+      "sale_date": "2026-10-08",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 43.43,
+      "status": "pending"
+    },
+    {
+      "parcel": "04-25-17-006A-00000-0470",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "12502 FERNDALE LANE",
+      "city": "HUDSON, 34669",
+      "bid": 4785.39,
+      "just_value": 123540.0,
+      "ratio": 25.82,
+      "sale_date": "2026-10-08",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 27.11,
       "status": "pending"
     },
     {
@@ -468,22 +484,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 5.35,
-      "status": "pending"
-    },
-    {
-      "parcel": "1887600000",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "2620 12TH AVE",
-      "city": "TAMPA",
-      "bid": 2602.34,
-      "just_value": 13641.0,
-      "ratio": 5.24,
-      "sale_date": "2026-10-08",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 4.46,
       "status": "pending"
     }
   ]

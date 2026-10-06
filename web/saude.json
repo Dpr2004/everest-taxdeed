@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-05T21:56:48.818927+00:00",
+  "gerado_em": "2026-10-06T16:23:43.712521+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 658,
+    "total_lots_validos": 679,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 4,
     "saude_geral_pct": 87
@@ -152,13 +152,13 @@
       "lots_validos": 64,
       "cobertura": {
         "address_pct": 98.4,
-        "value_pct": 64.1,
+        "value_pct": 71.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "PASSA": 64
       },
-      "quality_score": 94,
+      "quality_score": 95,
       "status": "verde",
       "issues": []
     },
@@ -178,8 +178,8 @@
       },
       "decisoes": {
         "LANCE": 51,
-        "REVISAR": 45,
-        "PASSA": 14
+        "REVISAR": 44,
+        "PASSA": 13
       },
       "quality_score": 98,
       "status": "verde",
@@ -226,8 +226,8 @@
       },
       "decisoes": {
         "LANCE": 21,
-        "REVISAR": 19,
-        "PASSA": 42
+        "REVISAR": 18,
+        "PASSA": 37
       },
       "quality_score": 90,
       "status": "verde",
@@ -269,7 +269,7 @@
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 15
+        "PASSA": 11
       },
       "quality_score": 100,
       "status": "verde",
@@ -291,8 +291,8 @@
       },
       "decisoes": {
         "LANCE": 59,
-        "REVISAR": 18,
-        "PASSA": 6
+        "REVISAR": 17,
+        "PASSA": 4
       },
       "quality_score": 96,
       "status": "verde",
@@ -327,16 +327,16 @@
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
       "sales_futuras": 10,
-      "proxima_sale": "2026-10-05",
+      "proxima_sale": "2026-10-08",
       "ultima_sale": "2026-12-17",
-      "lots_validos": 22,
+      "lots_validos": 23,
       "cobertura": {
-        "address_pct": 95.5,
-        "value_pct": 95.5,
+        "address_pct": 95.7,
+        "value_pct": 95.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 4,
+        "LANCE": 6,
         "REVISAR": 1,
         "PASSA": 1
       },
@@ -360,8 +360,8 @@
       },
       "decisoes": {
         "LANCE": 2,
-        "REVISAR": 19,
-        "PASSA": 10
+        "REVISAR": 15,
+        "PASSA": 8
       },
       "quality_score": 94,
       "status": "verde",
@@ -372,22 +372,22 @@
       "nome": "Putnam County",
       "state": "FL",
       "url_sales": "https://putnam.realtaxdeed.com/",
-      "sales_futuras": 2,
+      "sales_futuras": 4,
       "proxima_sale": "2026-10-07",
-      "ultima_sale": "2026-10-21",
-      "lots_validos": 20,
+      "ultima_sale": "2026-11-18",
+      "lots_validos": 40,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 20
+        "PASSA": 39
       },
       "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 20/20 — Regrid/PA falhou"
+        "assessed/just_value missing em 40/40 — Regrid/PA falhou"
       ]
     },
     {
@@ -439,15 +439,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-05 21:56:47",
+      "ran_at": "2026-10-06 16:23:42",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 658,
+      "items": 679,
       "errors": 0,
-      "ran_at": "2026-10-05 21:56:46",
+      "ran_at": "2026-10-06 16:23:40",
       "log": ""
     },
     {
@@ -455,15 +455,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-05 21:42:34",
+      "ran_at": "2026-10-06 16:09:28",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 23,
+      "items": 22,
       "errors": 0,
-      "ran_at": "2026-10-05 21:25:07",
+      "ran_at": "2026-10-06 15:50:27",
       "log": ""
     },
     {
@@ -471,7 +471,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-10-05 21:25:06",
+      "ran_at": "2026-10-06 15:50:26",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -479,23 +479,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-05 21:19:52",
+      "ran_at": "2026-10-06 15:45:12",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 523,
+      "items": 531,
       "errors": 0,
-      "ran_at": "2026-10-05 21:07:39",
+      "ran_at": "2026-10-06 15:32:59",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 109,
+      "items": 110,
       "errors": 0,
-      "ran_at": "2026-10-05 21:06:54",
+      "ran_at": "2026-10-06 15:32:14",
       "log": ""
     }
   ],
@@ -538,14 +538,14 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "PUTNAM",
-      "msg": "PUTNAM: assessed/just_value missing em 20/20 — Regrid/PA falhou"
+      "msg": "PUTNAM: assessed/just_value missing em 40/40 — Regrid/PA falhou"
     }
   ],
   "fila_status": {
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-10-05"
+    "gerado_em": "2026-10-06"
   },
   "analises_lotes": [
     {
