@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-10-07",
+  "gerado_em": "2026-10-08",
   "total_candidatos": 30,
-  "total_leiloes": 33,
+  "total_leiloes": 34,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "2807734",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "1305 SUNWOOD DR MELBOURNE FL 3",
-      "city": "PALM BAY",
-      "bid": 41308.41,
-      "just_value": 210920.0,
-      "ratio": 5.11,
-      "sale_date": "2026-10-07",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 5.11,
-      "status": "pending"
-    },
     {
       "parcel": "10-26-20-0020-00200-0360",
       "county": "Pasco",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 15.3,
+      "status": "pending"
+    },
+    {
+      "parcel": "232527492900011280",
+      "county": "Osceola",
+      "state": "FL",
+      "address": "7475 MARKER AVE",
+      "city": "KISSIMMEE",
+      "bid": 42271.69,
+      "just_value": 563100.0,
+      "ratio": 13.32,
+      "sale_date": "2026-10-13",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 13.32,
       "status": "pending"
     }
   ]
