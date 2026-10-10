@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-09",
+  "gerado_em": "2026-10-10",
   "total_candidatos": 30,
   "total_leiloes": 32,
   "ratio_minimo": 4.0,
@@ -23,7 +23,7 @@
       "status": "pending"
     },
     {
-      "parcel": "UNSE APLICTIONFEES",
+      "parcel": "222630007700010450",
       "county": "Osceola",
       "state": "FL",
       "address": "2992 ELBIB DR",
@@ -39,19 +39,19 @@
       "status": "pending"
     },
     {
-      "parcel": "222630007700010450",
+      "parcel": "UNSE APLICTIONFEES",
       "county": "Osceola",
       "state": "FL",
       "address": "2992 ELBIB DR",
       "city": "SAINT CLOUD",
-      "bid": 16541.34,
+      "bid": 16360.64,
       "just_value": 343000.0,
-      "ratio": 20.74,
+      "ratio": 20.96,
       "sale_date": "2026-10-13",
       "flood_zone": "",
       "workers_score": 90.0,
       "workers_decision": "LANCE",
-      "ranking_score": 20.74,
+      "ranking_score": 20.96,
       "status": "pending"
     },
     {

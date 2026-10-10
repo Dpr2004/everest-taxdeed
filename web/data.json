@@ -1,8 +1,8 @@
 {
-  "gerado_em": "09/Oct/2026 19:40",
+  "gerado_em": "10/Oct/2026 15:51",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 54,
+    "total_sales": 53,
     "total_lots": 500,
     "lances": 186,
     "estados": [
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "05/Oct a 11/Oct/2026",
-      "sales": [
-        {
-          "id": 20276,
-          "data_fmt": "09/Oct/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "12/Oct a 18/Oct/2026",
@@ -2647,6 +2633,28 @@
       "fema_risk": null
     },
     {
+      "id": 81936,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-10-13",
+      "parcel_id": "222630007700010450",
+      "address": "2992 ELBIB DR",
+      "city": "SAINT CLOUD",
+      "zip": "34772",
+      "min_bid": 16360.64,
+      "assessed_value": 343000.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 3.1558,
+      "decisao": "LANCE",
+      "max_bid": 144446.0,
+      "profit": 221395.36,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 110794,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -2665,28 +2673,6 @@
       "decisao": "LANCE",
       "max_bid": 144446.0,
       "profit": 221395.36,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 81936,
-      "condado": "OSCEOLA",
-      "estado": "FL",
-      "sale_date": "2026-10-13",
-      "parcel_id": "222630007700010450",
-      "address": "2992 ELBIB DR",
-      "city": "SAINT CLOUD",
-      "zip": "34772",
-      "min_bid": 16541.34,
-      "assessed_value": 343000.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 90.0,
-      "roi": 3.1451,
-      "decisao": "LANCE",
-      "max_bid": 144446.0,
-      "profit": 221214.66,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6057,28 +6043,6 @@
       "fema_risk": null
     },
     {
-      "id": 85660,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-10-14",
-      "parcel_id": "2905496",
-      "address": "1051 TORTOISE COVE MELBOURNE F",
-      "city": "PALM BAY",
-      "zip": "32908",
-      "min_bid": 244320.48,
-      "assessed_value": 378030.0,
-      "just_value": 378030.0,
-      "building_sqft": null,
-      "year_built": 1995,
-      "score": 33.7,
-      "roi": 0.0693,
-      "decisao": "PASSA",
-      "max_bid": 165884.36,
-      "profit": 20828.98,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 98657,
       "condado": "BREVARD",
       "estado": "FL",
@@ -6317,28 +6281,6 @@
       "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 3043.36,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 85657,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-10-14",
-      "parcel_id": "2823522",
-      "address": "1051 TORTOISE COVE MELBOURNE F",
-      "city": "MELBOURNE",
-      "zip": "32901",
-      "min_bid": 254127.25,
-      "assessed_value": 378030.0,
-      "just_value": 378030.0,
-      "building_sqft": null,
-      "year_built": 1995,
-      "score": 20.0,
-      "roi": 0.0355,
-      "decisao": "PASSA",
-      "max_bid": 165884.36,
-      "profit": 11022.21,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11755,6 +11697,50 @@
       "profit": -35125.74,
       "fema_zone": null,
       "fema_risk": null
+    },
+    {
+      "id": 105294,
+      "condado": "LAKE",
+      "estado": "FL",
+      "sale_date": "2026-11-17",
+      "parcel_id": "07-21-25-000200002300",
+      "address": "US HIGHWAY 27",
+      "city": "LEESBURG",
+      "zip": "34748",
+      "min_bid": 8361.06,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.3084,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -12677.66,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 82051,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-10-22",
+      "parcel_id": "162128000000069",
+      "address": "1508 CLARCONA RD",
+      "city": "APOPKA",
+      "zip": "32703",
+      "min_bid": 8466.97,
+      "assessed_value": 38990.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.2031,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": -8446.79,
+      "fema_zone": null,
+      "fema_risk": null
     }
   ],
   "condados": [
@@ -12059,7 +12045,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
+      "total_sales": 7,
       "total_lots": 166
     }
   ]
