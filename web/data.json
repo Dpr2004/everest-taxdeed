@@ -1,10 +1,10 @@
 {
-  "gerado_em": "12/Oct/2026 22:34",
+  "gerado_em": "13/Oct/2026 17:31",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 59,
+    "total_sales": 60,
     "total_lots": 500,
-    "lances": 187,
+    "lances": 188,
     "estados": [
       "FL"
     ]
@@ -774,6 +774,19 @@
           "url_sales": "https://lee.realtaxdeed.com/",
           "url_clerk": "https://www.leeclerk.org/departments/courts/property-sales/tax-deed-sales",
           "status": "SEM_ATIVIDADE_2026Q2",
+          "total_lots": 0
+        },
+        {
+          "id": 29842,
+          "data_fmt": "01/Dec/2026",
+          "dia_semana": "Ter",
+          "condado": "VOLUSIA",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://volusia.realforeclose.com/",
+          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
+          "status": "CONFIRMADO",
           "total_lots": 0
         },
         {
@@ -2096,6 +2109,28 @@
       "fema_risk": null
     },
     {
+      "id": 104230,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-11-10",
+      "parcel_id": "192631495000010320",
+      "address": "3135 OLD HICKORY TREE RD",
+      "city": "SAINT CLOUD",
+      "zip": "34772",
+      "min_bid": 12221.88,
+      "assessed_value": 103227.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 0.765,
+      "decisao": "LANCE",
+      "max_bid": 0.0,
+      "profit": 38031.63,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 105185,
       "condado": "ORANGE",
       "estado": "FL",
@@ -3060,6 +3095,28 @@
       "decisao": "LANCE",
       "max_bid": 97934.0,
       "profit": 159327.11,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 104229,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-11-10",
+      "parcel_id": "022528325400012360",
+      "address": "5131 CROWN HAVEN DR",
+      "city": "KISSIMMEE",
+      "zip": "34746",
+      "min_bid": 19074.46,
+      "assessed_value": 315100.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 2.7739,
+      "decisao": "LANCE",
+      "max_bid": 127371.2,
+      "profit": 196863.74,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -4428,28 +4485,6 @@
       "fema_risk": null
     },
     {
-      "id": 109592,
-      "condado": "OSCEOLA",
-      "estado": "FL",
-      "sale_date": "2026-11-10",
-      "parcel_id": "202629288100010090",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": 116132.51,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 90.0,
-      "roi": 1.2159,
-      "decisao": "LANCE",
-      "max_bid": 218822.38,
-      "profit": 216659.98,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 96467,
       "condado": "PASCO",
       "estado": "FL",
@@ -5150,6 +5185,28 @@
       "decisao": "REVISAR",
       "max_bid": 0.0,
       "profit": 20786.12,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 113865,
+      "condado": "POLK",
+      "estado": "FL",
+      "sale_date": "2026-10-15",
+      "parcel_id": "27-30-35-9285-2000-0250",
+      "address": "239 1ST AVE N",
+      "city": "LAKE WALES",
+      "zip": "33859",
+      "min_bid": 7243.58,
+      "assessed_value": 73649.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 79.2,
+      "roi": 0.4653,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 19879.94,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6034,28 +6091,6 @@
       "fema_risk": null
     },
     {
-      "id": 104229,
-      "condado": "OSCEOLA",
-      "estado": "FL",
-      "sale_date": "2026-11-10",
-      "parcel_id": "022528325400012360",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": 19074.46,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 49.2,
-      "roi": 0.1849,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": 10120.45,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 82090,
       "condado": "LEE",
       "estado": "FL",
@@ -6430,28 +6465,6 @@
       "fema_risk": null
     },
     {
-      "id": 113381,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-10-14",
-      "parcel_id": "2938051",
-      "address": "1051 TORTOISE COVE MELBOURNE F",
-      "city": "PALM BAY",
-      "zip": "32909",
-      "min_bid": 251735.97,
-      "assessed_value": 378030.0,
-      "just_value": 378030.0,
-      "building_sqft": null,
-      "year_built": 1995,
-      "score": 23.3,
-      "roi": 0.0436,
-      "decisao": "PASSA",
-      "max_bid": 165884.36,
-      "profit": 13413.49,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 96386,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -6474,28 +6487,6 @@
       "fema_risk": null
     },
     {
-      "id": 85657,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-10-14",
-      "parcel_id": "2823522",
-      "address": "1051 TORTOISE COVE MELBOURNE F",
-      "city": "MELBOURNE",
-      "zip": "32901",
-      "min_bid": 254127.25,
-      "assessed_value": 378030.0,
-      "just_value": 378030.0,
-      "building_sqft": null,
-      "year_built": 1995,
-      "score": 20.0,
-      "roi": 0.0355,
-      "decisao": "PASSA",
-      "max_bid": 165884.36,
-      "profit": 11022.21,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 79621,
       "condado": "DUVAL",
       "estado": "FL",
@@ -6514,6 +6505,28 @@
       "decisao": "PASSA",
       "max_bid": 43033.93,
       "profit": 7090.42,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 109592,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-11-10",
+      "parcel_id": "202629288100010090",
+      "address": "3001 GRASMERE VIEW PKWY",
+      "city": "KISSIMMEE",
+      "zip": "34746",
+      "min_bid": 116132.51,
+      "assessed_value": 195599.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 17.5,
+      "roi": 0.0397,
+      "decisao": "PASSA",
+      "max_bid": 54236.59,
+      "profit": 6355.91,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7517,15 +7530,15 @@
       "city": "LAKE PLACID",
       "zip": "33852",
       "min_bid": 1372.32,
-      "assessed_value": null,
+      "assessed_value": 1000.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.8552,
+      "roi": -0.9734,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -27549.7,
+      "profit": -31060.32,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7975,19 +7988,19 @@
       "estado": "FL",
       "sale_date": "2026-11-10",
       "parcel_id": "122730495000010061",
-      "address": null,
-      "city": null,
-      "zip": null,
+      "address": "CANOE CREEK RD",
+      "city": "SAINT CLOUD",
+      "zip": "34772",
       "min_bid": 1661.64,
-      "assessed_value": null,
+      "assessed_value": 3600.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.8266,
+      "roi": -0.9055,
       "decisao": "PASSA",
       "max_bid": 0.0,
-      "profit": -26934.03,
+      "profit": -29316.44,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11836,7 +11849,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 3,
+      "total_sales": 4,
       "total_lots": 0
     },
     {
@@ -11853,7 +11866,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 8,
-      "total_lots": 222
+      "total_lots": 224
     },
     {
       "codigo": "CITRUS",
@@ -12061,7 +12074,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 9,
-      "total_lots": 191
+      "total_lots": 192
     },
     {
       "codigo": "POLK",
@@ -12077,7 +12090,7 @@
       "horario_et": "09:30",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 106
+      "total_lots": 107
     },
     {
       "codigo": "PUTNAM",
@@ -12124,8 +12137,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 7,
-      "total_lots": 167
+      "total_sales": 8,
+      "total_lots": 168
     }
   ]
 }
