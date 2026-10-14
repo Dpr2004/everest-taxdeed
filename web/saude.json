@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-13T20:44:22.559378+00:00",
+  "gerado_em": "2026-10-14T15:06:03.080978+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 14,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 2,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 665,
+    "total_lots_validos": 671,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 5,
     "saude_geral_pct": 87
@@ -39,17 +39,17 @@
       "nome": "Brevard County",
       "state": "FL",
       "url_sales": "https://brevard.realforeclose.com/",
-      "sales_futuras": 8,
+      "sales_futuras": 9,
       "proxima_sale": "2026-10-14",
-      "ultima_sale": "2026-12-16",
-      "lots_validos": 102,
+      "ultima_sale": "2027-01-06",
+      "lots_validos": 107,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 99.0,
+        "value_pct": 99.1,
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 11,
+        "LANCE": 13,
         "REVISAR": 13,
         "PASSA": 11
       },
@@ -106,8 +106,8 @@
       "nome": "Flagler County",
       "state": "FL",
       "url_sales": "https://flagler.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-10-13",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-11-17",
       "ultima_sale": "2026-11-17",
       "lots_validos": 1,
       "cobertura": {
@@ -170,15 +170,15 @@
       "sales_futuras": 9,
       "proxima_sale": "2026-10-15",
       "ultima_sale": "2026-12-17",
-      "lots_validos": 116,
+      "lots_validos": 117,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 93.1,
+        "value_pct": 93.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 52,
-        "REVISAR": 34,
+        "LANCE": 53,
+        "REVISAR": 36,
         "PASSA": 16
       },
       "quality_score": 98,
@@ -227,7 +227,7 @@
       "decisoes": {
         "LANCE": 23,
         "REVISAR": 19,
-        "PASSA": 32
+        "PASSA": 34
       },
       "quality_score": 90,
       "status": "verde",
@@ -262,14 +262,14 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-10-14",
       "ultima_sale": "2026-11-18",
-      "lots_validos": 24,
+      "lots_validos": 34,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 12
+        "PASSA": 18
       },
       "quality_score": 100,
       "status": "verde",
@@ -303,21 +303,21 @@
       "nome": "Osceola County",
       "state": "FL",
       "url_sales": "https://osceola.realtaxdeed.com/",
-      "sales_futuras": 2,
-      "proxima_sale": "2026-10-13",
+      "sales_futuras": 1,
+      "proxima_sale": "2026-11-10",
       "ultima_sale": "2026-11-10",
-      "lots_validos": 27,
+      "lots_validos": 11,
       "cobertura": {
-        "address_pct": 92.6,
-        "value_pct": 92.6,
+        "address_pct": 90.9,
+        "value_pct": 90.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 20,
-        "REVISAR": 4,
+        "LANCE": 6,
+        "REVISAR": 2,
         "PASSA": 2
       },
-      "quality_score": 97,
+      "quality_score": 96,
       "status": "verde",
       "issues": []
     },
@@ -326,19 +326,18 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 9,
-      "proxima_sale": "2026-10-13",
+      "sales_futuras": 10,
+      "proxima_sale": "2026-10-15",
       "ultima_sale": "2026-12-17",
-      "lots_validos": 23,
+      "lots_validos": 29,
       "cobertura": {
-        "address_pct": 95.7,
-        "value_pct": 95.7,
+        "address_pct": 96.6,
+        "value_pct": 96.6,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 3,
-        "REVISAR": 1,
-        "PASSA": 1
+        "PASSA": 2
       },
       "quality_score": 98,
       "status": "verde",
@@ -360,8 +359,8 @@
       },
       "decisoes": {
         "LANCE": 2,
-        "REVISAR": 22,
-        "PASSA": 9
+        "REVISAR": 24,
+        "PASSA": 10
       },
       "quality_score": 94,
       "status": "verde",
@@ -439,15 +438,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-13 20:44:21",
+      "ran_at": "2026-10-14 15:06:01",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 665,
+      "items": 671,
       "errors": 0,
-      "ran_at": "2026-10-13 20:44:20",
+      "ran_at": "2026-10-14 15:06:00",
       "log": ""
     },
     {
@@ -455,7 +454,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-13 20:30:07",
+      "ran_at": "2026-10-14 14:51:48",
       "log": ""
     },
     {
@@ -463,7 +462,7 @@
       "status": "success",
       "items": 13,
       "errors": 0,
-      "ran_at": "2026-10-13 20:04:55",
+      "ran_at": "2026-10-14 14:27:09",
       "log": ""
     },
     {
@@ -471,7 +470,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-10-13 20:04:54",
+      "ran_at": "2026-10-14 14:27:08",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -479,23 +478,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-13 20:00:42",
+      "ran_at": "2026-10-14 14:21:52",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 510,
+      "items": 511,
       "errors": 0,
-      "ran_at": "2026-10-13 19:48:30",
+      "ran_at": "2026-10-14 14:09:40",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 107,
+      "items": 108,
       "errors": 0,
-      "ran_at": "2026-10-13 19:48:02",
+      "ran_at": "2026-10-14 14:08:42",
       "log": ""
     },
     {
@@ -558,7 +557,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-10-13"
+    "gerado_em": "2026-10-14"
   },
   "analises_lotes": [
     {
