@@ -1,10 +1,10 @@
 {
-  "gerado_em": "15/Oct/2026 14:40",
+  "gerado_em": "15/Oct/2026 18:38",
   "resumo": {
     "total_condados": 19,
     "total_sales": 56,
     "total_lots": 500,
-    "lances": 181,
+    "lances": 183,
     "estados": [
       "FL"
     ]
@@ -1463,6 +1463,28 @@
       "fema_risk": null
     },
     {
+      "id": 116731,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-12-03",
+      "parcel_id": "0426030100",
+      "address": "7609 PENNSYLVANIA DR",
+      "city": "TAMPA",
+      "zip": "33619",
+      "min_bid": 8801.32,
+      "assessed_value": 120682.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.1606,
+      "decisao": "LANCE",
+      "max_bid": 8387.38,
+      "profit": 55102.0,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 98989,
       "condado": "ORANGE",
       "estado": "FL",
@@ -1481,6 +1503,28 @@
       "decisao": "LANCE",
       "max_bid": 213895.76,
       "profit": 317655.0,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 116674,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-11-19",
+      "parcel_id": "332230216001300",
+      "address": "5185 LIDO ST",
+      "city": "ORLANDO",
+      "zip": "32807",
+      "min_bid": 8845.23,
+      "assessed_value": 382210.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 3.9747,
+      "decisao": "LANCE",
+      "max_bid": 168442.52,
+      "profit": 259572.99,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6721,6 +6765,28 @@
       "fema_risk": null
     },
     {
+      "id": 116383,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-10-22",
+      "parcel_id": "2940872",
+      "address": "2268 SANTA MARIA AVE SE",
+      "city": "PALM BAY",
+      "zip": "32909",
+      "min_bid": 3413.81,
+      "assessed_value": 42500.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 1.0,
+      "roi": -0.0176,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": -648.81,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 82100,
       "condado": "HILLSBOROUGH",
       "estado": "FL",
@@ -11715,72 +11781,6 @@
       "profit": -14219.06,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 82096,
-      "condado": "LEE",
-      "estado": "FL",
-      "sale_date": "2026-11-03",
-      "parcel_id": "36-44-24-P4-00600.2204",
-      "address": "2366 E MALL DR 204",
-      "city": "FORT MYERS",
-      "zip": "33901",
-      "min_bid": 7861.52,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.3395,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -13740.69,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 103798,
-      "condado": "POLK",
-      "estado": "FL",
-      "sale_date": "2026-11-19",
-      "parcel_id": "28-32-08-0000-0003-4200",
-      "address": "304 MAXCY DR",
-      "city": "FROSTPROOF",
-      "zip": "33843",
-      "min_bid": 7880.79,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.3383,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -13699.68,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 81972,
-      "condado": "HILLSBOROUGH",
-      "estado": "FL",
-      "sale_date": "2026-10-15",
-      "parcel_id": "0774266250",
-      "address": "12013 ANDERSON DR",
-      "city": null,
-      "zip": null,
-      "min_bid": 7918.29,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.3359,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -13619.88,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11814,7 +11814,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 8,
-      "total_lots": 232
+      "total_lots": 233
     },
     {
       "codigo": "CITRUS",
@@ -11910,7 +11910,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 9,
-      "total_lots": 330
+      "total_lots": 331
     },
     {
       "codigo": "LAKE",
@@ -11990,7 +11990,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 6,
-      "total_lots": 238
+      "total_lots": 239
     },
     {
       "codigo": "OSCEOLA",
