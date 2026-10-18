@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-17",
+  "gerado_em": "2026-10-18",
   "total_candidatos": 30,
   "total_leiloes": 28,
   "ratio_minimo": 4.0,
@@ -215,22 +215,6 @@
       "status": "pending"
     },
     {
-      "parcel": "2936053",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "864 SEVEN GABLES CIR",
-      "city": "PALM BAY",
-      "bid": 2884.56,
-      "just_value": 42500.0,
-      "ratio": 14.73,
-      "sale_date": "2026-10-22",
-      "flood_zone": "",
-      "workers_score": 4.3,
-      "workers_decision": "REVISAR",
-      "ranking_score": 14.73,
-      "status": "pending"
-    },
-    {
       "parcel": "092128844801090",
       "county": "Orange",
       "state": "FL",
@@ -407,22 +391,6 @@
       "status": "pending"
     },
     {
-      "parcel": "2940872",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "2268 SANTA MARIA AVE SE",
-      "city": "PALM BAY",
-      "bid": 3413.81,
-      "just_value": 42500.0,
-      "ratio": 12.45,
-      "sale_date": "2026-10-22",
-      "flood_zone": "",
-      "workers_score": 1.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 12.45,
-      "status": "pending"
-    },
-    {
       "parcel": "0334180400",
       "county": "Hillsborough",
       "state": "FL",
@@ -484,6 +452,38 @@
       "workers_score": 46.9,
       "workers_decision": "REVISAR",
       "ranking_score": 12.0,
+      "status": "pending"
+    },
+    {
+      "parcel": "2823952",
+      "county": "Brevard",
+      "state": "FL",
+      "address": "2511 BRUCE D BUGGS ST",
+      "city": "MELBOURNE",
+      "bid": 5457.31,
+      "just_value": 64380.0,
+      "ratio": 11.8,
+      "sale_date": "2026-10-22",
+      "flood_zone": "",
+      "workers_score": 75.3,
+      "workers_decision": "REVISAR",
+      "ranking_score": 11.8,
+      "status": "pending"
+    },
+    {
+      "parcel": "2400440",
+      "county": "Brevard",
+      "state": "FL",
+      "address": "4824 LAKE SUPERIOR DR",
+      "city": "COCOA",
+      "bid": 5394.38,
+      "just_value": 62910.0,
+      "ratio": 11.66,
+      "sale_date": "2026-10-22",
+      "flood_zone": "",
+      "workers_score": 74.5,
+      "workers_decision": "REVISAR",
+      "ranking_score": 11.66,
       "status": "pending"
     }
   ]
