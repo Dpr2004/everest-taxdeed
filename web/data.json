@@ -1,10 +1,10 @@
 {
-  "gerado_em": "19/Oct/2026 16:52",
+  "gerado_em": "19/Oct/2026 20:03",
   "resumo": {
     "total_condados": 19,
     "total_sales": 59,
     "total_lots": 500,
-    "lances": 177,
+    "lances": 178,
     "estados": [
       "FL"
     ]
@@ -3368,6 +3368,28 @@
       "decisao": "LANCE",
       "max_bid": 150814.47,
       "profit": 220654.3,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 120190,
+      "condado": "ORANGE",
+      "estado": "FL",
+      "sale_date": "2026-11-19",
+      "parcel_id": "312427300007370",
+      "address": "GROVE RESORT AVE UNIT 1737",
+      "city": "WINTER GARDEN",
+      "zip": "34787",
+      "min_bid": 25338.81,
+      "assessed_value": 279620.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 2.1765,
+      "decisao": "LANCE",
+      "max_bid": 105657.44,
+      "profit": 162854.03,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11796,28 +11818,6 @@
       "profit": -3040.8,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 105401,
-      "condado": "LEE",
-      "estado": "FL",
-      "sale_date": "2026-12-08",
-      "parcel_id": "12-45-27-L1-06029.0060",
-      "address": "1146 CATENARY ST E",
-      "city": "LEHIGH ACRES",
-      "zip": "33974",
-      "min_bid": 13497.47,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.0367,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -1747.38,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -12027,7 +12027,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 5,
-      "total_lots": 239
+      "total_lots": 240
     },
     {
       "codigo": "OSCEOLA",
