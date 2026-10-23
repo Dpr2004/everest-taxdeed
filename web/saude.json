@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-23T14:44:42.179139+00:00",
+  "gerado_em": "2026-10-23T18:36:05.733131+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 571,
+    "total_lots_validos": 584,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -42,7 +42,7 @@
       "sales_futuras": 8,
       "proxima_sale": "2026-10-28",
       "ultima_sale": "2027-01-13",
-      "lots_validos": 88,
+      "lots_validos": 90,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
@@ -50,7 +50,7 @@
       },
       "decisoes": {
         "LANCE": 14,
-        "PASSA": 23,
+        "PASSA": 15,
         "REVISAR": 1
       },
       "quality_score": 85,
@@ -188,24 +188,24 @@
       "nome": "Lake County",
       "state": "FL",
       "url_sales": "https://lake.realtaxdeed.com/",
-      "sales_futuras": 3,
+      "sales_futuras": 4,
       "proxima_sale": "2026-11-03",
-      "ultima_sale": "2026-12-01",
-      "lots_validos": 34,
+      "ultima_sale": "2026-12-08",
+      "lots_validos": 44,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 9,
+        "LANCE": 11,
         "REVISAR": 2,
-        "PASSA": 23
+        "PASSA": 31
       },
       "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 34/34 — Regrid/PA falhou"
+        "assessed/just_value missing em 44/44 — Regrid/PA falhou"
       ]
     },
     {
@@ -281,18 +281,18 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-10-29",
       "ultima_sale": "2026-12-10",
-      "lots_validos": 81,
+      "lots_validos": 82,
       "cobertura": {
-        "address_pct": 86.4,
-        "value_pct": 86.4,
+        "address_pct": 85.4,
+        "value_pct": 85.4,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 61,
         "REVISAR": 6,
-        "PASSA": 14
+        "PASSA": 15
       },
-      "quality_score": 95,
+      "quality_score": 94,
       "status": "verde",
       "issues": []
     },
@@ -336,7 +336,7 @@
       "decisoes": {
         "REVISAR": 1,
         "LANCE": 3,
-        "PASSA": 7
+        "PASSA": 5
       },
       "quality_score": 98,
       "status": "verde",
@@ -426,7 +426,7 @@
       "decisoes": {
         "LANCE": 7,
         "REVISAR": 2,
-        "PASSA": 5
+        "PASSA": 4
       },
       "quality_score": 98,
       "status": "verde",
@@ -439,15 +439,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-23 14:44:41",
+      "ran_at": "2026-10-23 18:36:03",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 571,
+      "items": 584,
       "errors": 0,
-      "ran_at": "2026-10-23 14:44:39",
+      "ran_at": "2026-10-23 18:36:02",
       "log": ""
     },
     {
@@ -455,15 +455,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-23 14:30:27",
+      "ran_at": "2026-10-23 18:21:50",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 9,
+      "items": 8,
       "errors": 0,
-      "ran_at": "2026-10-23 14:10:24",
+      "ran_at": "2026-10-23 18:05:43",
       "log": ""
     },
     {
@@ -471,7 +471,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-10-23 14:10:23",
+      "ran_at": "2026-10-23 18:05:42",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -479,32 +479,32 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-23 14:07:40",
+      "ran_at": "2026-10-23 18:00:31",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 465,
+      "items": 458,
       "errors": 0,
-      "ran_at": "2026-10-23 13:55:28",
+      "ran_at": "2026-10-23 17:48:19",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 81,
+      "items": 83,
       "errors": 0,
-      "ran_at": "2026-10-23 13:55:02",
+      "ran_at": "2026-10-23 17:47:30",
       "log": ""
     },
     {
       "worker": "property_appraiser",
       "status": "degraded",
       "items": 48,
-      "errors": 157,
-      "ran_at": "2026-10-22 15:47:48",
-      "log": "DEGRADED: so 48/601 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "errors": 150,
+      "ran_at": "2026-10-23 15:38:47",
+      "log": "DEGRADED: so 48/571 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -516,7 +516,7 @@
     {
       "severidade": "ALTA",
       "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (48 items, 157 erros) — DEGRADED: so 48/601 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
+      "msg": "Worker property_appraiser com status degraded (48 items, 150 erros) — DEGRADED: so 48/571 (8%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -545,7 +545,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LAKE",
-      "msg": "LAKE: assessed/just_value missing em 34/34 — Regrid/PA falhou"
+      "msg": "LAKE: assessed/just_value missing em 44/44 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
