@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-23",
+  "gerado_em": "2026-10-24",
   "total_candidatos": 30,
   "total_leiloes": 25,
   "ratio_minimo": 4.0,
@@ -87,6 +87,22 @@
       "status": "pending"
     },
     {
+      "parcel": "19-44-25-P1-00219.0010",
+      "county": "Lee",
+      "state": "FL",
+      "address": "2101-2107 PALM AVE",
+      "city": "FORT MYERS",
+      "bid": 17056.42,
+      "just_value": 293091.0,
+      "ratio": 17.18,
+      "sale_date": "2026-10-27",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 14.61,
+      "status": "pending"
+    },
+    {
       "parcel": "13-44-24-P2-03400.0301",
       "county": "Lee",
       "state": "FL",
@@ -100,6 +116,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 13.64,
+      "status": "pending"
+    },
+    {
+      "parcel": "25-46-22-T4-01113.0060",
+      "county": "Lee",
+      "state": "FL",
+      "address": "475 PEACHTREE RD",
+      "city": "SANIBEL",
+      "bid": 11207.33,
+      "just_value": 175274.0,
+      "ratio": 15.64,
+      "sale_date": "2026-10-27",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 13.29,
       "status": "pending"
     },
     {
@@ -148,38 +180,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 9.9,
-      "status": "pending"
-    },
-    {
-      "parcel": "29-43-24-C3-02251.0070",
-      "county": "Lee",
-      "state": "FL",
-      "address": "2501 NE 22ND PL",
-      "city": "CAPE CORAL",
-      "bid": 4399.19,
-      "just_value": 38663.0,
-      "ratio": 8.79,
-      "sale_date": "2026-10-27",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 7.47,
-      "status": "pending"
-    },
-    {
-      "parcel": "18-44-23-C3-05325.0350",
-      "county": "Lee",
-      "state": "FL",
-      "address": "3532 CEITUS PKWY",
-      "city": "CAPE CORAL",
-      "bid": 9619.97,
-      "just_value": 80750.0,
-      "ratio": 8.39,
-      "sale_date": "2026-10-27",
-      "flood_zone": "",
-      "workers_score": 81.5,
-      "workers_decision": "REVISAR",
-      "ranking_score": 7.13,
       "status": "pending"
     },
     {
