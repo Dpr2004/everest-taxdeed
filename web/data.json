@@ -1,19 +1,15 @@
 {
-  "gerado_em": "25/Oct/2026 17:50",
+  "gerado_em": "26/Oct/2026 16:25",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 56,
+    "total_sales": 63,
     "total_lots": 500,
-    "lances": 179,
+    "lances": 181,
     "estados": [
       "FL"
     ]
   },
   "semanas": [
-    {
-      "label": "19/Oct a 25/Oct/2026",
-      "sales": []
-    },
     {
       "label": "26/Oct a 01/Nov/2026",
       "sales": [
@@ -776,6 +772,102 @@
           "total_lots": 0
         }
       ]
+    },
+    {
+      "label": "14/Dec a 20/Dec/2026",
+      "sales": [
+        {
+          "id": 27236,
+          "data_fmt": "15/Dec/2026",
+          "dia_semana": "Ter",
+          "condado": "ALACHUA",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://alachua.realtaxdeed.com/",
+          "url_clerk": "https://www.alachuaclerk.org/court_services/tax_deeds.cfm",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 30715,
+          "data_fmt": "15/Dec/2026",
+          "dia_semana": "Ter",
+          "condado": "LEE",
+          "estado": "FL",
+          "horario": "10:00",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://lee.realtaxdeed.com/",
+          "url_clerk": "https://www.leeclerk.org/departments/courts/property-sales/tax-deed-sales",
+          "status": "SEM_ATIVIDADE_2026Q2",
+          "total_lots": 0
+        },
+        {
+          "id": 25065,
+          "data_fmt": "16/Dec/2026",
+          "dia_semana": "Qua",
+          "condado": "BREVARD",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://brevard.realforeclose.com/",
+          "url_clerk": "https://www.brevardclerk.us/tax-deed-sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 32598,
+          "data_fmt": "16/Dec/2026",
+          "dia_semana": "Qua",
+          "condado": "HIGHLANDS",
+          "estado": "FL",
+          "horario": "10:00",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://highlands.realtaxdeed.com/",
+          "url_clerk": "https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/tax_deed_sales.php",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 27177,
+          "data_fmt": "17/Dec/2026",
+          "dia_semana": "Qui",
+          "condado": "HILLSBOROUGH",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://hillsborough.realtaxdeed.com/",
+          "url_clerk": "https://www.hillsclerk.com/Additional-Services/Foreclosures-and-Tax-Deeds",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 25412,
+          "data_fmt": "17/Dec/2026",
+          "dia_semana": "Qui",
+          "condado": "PASCO",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://pasco.realforeclose.com/",
+          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 25349,
+          "data_fmt": "17/Dec/2026",
+          "dia_semana": "Qui",
+          "condado": "POLK",
+          "estado": "FL",
+          "horario": "09:30",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://polk.realtaxdeed.com/",
+          "url_clerk": "https://www.polkclerkfl.gov/189/Tax-Deeds",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        }
+      ]
     }
   ],
   "lots": [
@@ -1086,6 +1178,28 @@
       "decisao": "LANCE",
       "max_bid": 0.0,
       "profit": 42966.09,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 125237,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-12-22",
+      "parcel_id": "14-25-16-0060-00000-2150",
+      "address": "8023 SAN BERNARDINO DRIVE",
+      "city": "PORT RICHEY, 34668",
+      "zip": null,
+      "min_bid": 6998.45,
+      "assessed_value": null,
+      "just_value": 148800.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.6579,
+      "decisao": "LANCE",
+      "max_bid": 25595.6,
+      "profit": 78893.15,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -3616,6 +3730,28 @@
       "decisao": "LANCE",
       "max_bid": 241250.94,
       "profit": 325481.6,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 125241,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2027-01-06",
+      "parcel_id": "2862883",
+      "address": "1045 VENETIAN DR 102",
+      "city": "MELBOURNE",
+      "zip": "32904",
+      "min_bid": 36294.14,
+      "assessed_value": 154110.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 0.6958,
+      "decisao": "LANCE",
+      "max_bid": 28845.32,
+      "profit": 53749.88,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -6179,7 +6315,7 @@
       "estado": "FL",
       "sale_date": "2026-11-18",
       "parcel_id": "03-09-27-7731-0130-0670",
-      "address": "00 Unassigned Location RE",
+      "address": "00 UNASSIGNED LOCATION RE",
       "city": null,
       "zip": null,
       "min_bid": 792.02,
@@ -6223,7 +6359,7 @@
       "estado": "FL",
       "sale_date": "2026-11-18",
       "parcel_id": "01-12-26-2730-0000-0140",
-      "address": "00 Unassigned Location RE",
+      "address": "00 UNASSIGNED LOCATION RE",
       "city": null,
       "zip": null,
       "min_bid": 901.71,
@@ -6245,7 +6381,7 @@
       "estado": "FL",
       "sale_date": "2026-11-18",
       "parcel_id": "06-10-25-4081-0310-0150",
-      "address": "00 Unassigned Location RE",
+      "address": "00 UNASSIGNED LOCATION RE",
       "city": null,
       "zip": null,
       "min_bid": 921.67,
@@ -6289,7 +6425,7 @@
       "estado": "FL",
       "sale_date": "2026-11-18",
       "parcel_id": "06-10-25-4081-0350-0010",
-      "address": "00 Unassigned Location RE",
+      "address": "00 UNASSIGNED LOCATION RE",
       "city": null,
       "zip": null,
       "min_bid": 998.04,
@@ -6465,7 +6601,7 @@
       "estado": "FL",
       "sale_date": "2026-11-18",
       "parcel_id": "05-10-24-9045-0080-0350",
-      "address": "Unassigned Location PP",
+      "address": "UNASSIGNED LOCATION PP",
       "city": null,
       "zip": null,
       "min_bid": 1304.2,
@@ -7547,15 +7683,15 @@
       "city": "LEHIGH ACRES",
       "zip": "33972",
       "min_bid": 1950.49,
-      "assessed_value": null,
+      "assessed_value": 20995.0,
       "just_value": null,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.7987,
-      "decisao": "PASSA",
+      "roi": -0.4728,
+      "decisao": "REVISAR",
       "max_bid": 0.0,
-      "profit": -26319.36,
+      "profit": -16002.4,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -10442,6 +10578,28 @@
       "fema_risk": null
     },
     {
+      "id": 123117,
+      "condado": "LAKE",
+      "estado": "FL",
+      "sale_date": "2026-12-08",
+      "parcel_id": "26-19-26-010000001200",
+      "address": "4167 MELANIE LN",
+      "city": "MOUNT DORA",
+      "zip": "32757",
+      "min_bid": 6563.9,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.4251,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -16502.02,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 103312,
       "condado": "LEE",
       "estado": "FL",
@@ -10460,28 +10618,6 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -16486.53,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 123117,
-      "condado": "LAKE",
-      "estado": "FL",
-      "sale_date": "2026-12-08",
-      "parcel_id": "26-19-26-010000001200",
-      "address": "4167 MELANIE LN",
-      "city": "MOUNT DORA",
-      "zip": "32757",
-      "min_bid": 6603.9,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4224,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -16416.9,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11738,50 +11874,6 @@
       "profit": -13432.83,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 91917,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-12-10",
-      "parcel_id": "2503643",
-      "address": "993 BOUGANVILLEA DR",
-      "city": "ROCKLEDGE",
-      "zip": "32955",
-      "min_bid": 46936.56,
-      "assessed_value": 85970.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.1223,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -10178.02,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 104390,
-      "condado": "HILLSBOROUGH",
-      "estado": "FL",
-      "sale_date": "2026-12-17",
-      "parcel_id": "1594060000",
-      "address": "5216 E 20TH AVE",
-      "city": "TAMPA",
-      "zip": "33619",
-      "min_bid": 47068.72,
-      "assessed_value": 55240.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4224,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -34341.04,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11815,7 +11907,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 8,
-      "total_lots": 248
+      "total_lots": 252
     },
     {
       "codigo": "CITRUS",
@@ -12022,8 +12114,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 9,
-      "total_lots": 212
+      "total_sales": 10,
+      "total_lots": 213
     },
     {
       "codigo": "POLK",
