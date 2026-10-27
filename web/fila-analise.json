@@ -1,11 +1,27 @@
 {
-  "gerado_em": "2026-10-26",
+  "gerado_em": "2026-10-27",
   "total_candidatos": 30,
-  "total_leiloes": 26,
+  "total_leiloes": 28,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
+    {
+      "parcel": "21-25-18-0040-00F00-0140",
+      "county": "Pasco",
+      "state": "FL",
+      "address": "18355 CYPRESS BAY PARKWAY",
+      "city": "LAND O LAKES, 34638",
+      "bid": 9283.09,
+      "just_value": 358238.0,
+      "ratio": 38.59,
+      "sale_date": "2026-10-27",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 40.52,
+      "status": "pending"
+    },
     {
       "parcel": "01-44-27-L1-12046.0160",
       "county": "Lee",
@@ -468,22 +484,6 @@
       "workers_score": 80.3,
       "workers_decision": "REVISAR",
       "ranking_score": 8.74,
-      "status": "pending"
-    },
-    {
-      "parcel": "0810450005",
-      "county": "Hillsborough",
-      "state": "FL",
-      "address": "PLANT CITY, FL- 33565",
-      "city": "",
-      "bid": 2815.27,
-      "just_value": 28318.0,
-      "ratio": 10.06,
-      "sale_date": "2026-10-29",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 8.55,
       "status": "pending"
     }
   ]
