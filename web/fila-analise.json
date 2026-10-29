@@ -1,27 +1,11 @@
 {
-  "gerado_em": "2026-10-28",
+  "gerado_em": "2026-10-29",
   "total_candidatos": 30,
-  "total_leiloes": 25,
+  "total_leiloes": 27,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "3020792",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "755 NORSE ST NW PALM BAY FL 32",
-      "city": "MELBOURNE",
-      "bid": 9404.13,
-      "just_value": 190150.0,
-      "ratio": 20.22,
-      "sale_date": "2026-10-28",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 20.22,
-      "status": "pending"
-    },
     {
       "parcel": "362129557200504",
       "county": "Orange",
@@ -484,6 +468,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 15.19,
+      "status": "pending"
+    },
+    {
+      "parcel": "272129714004030",
+      "county": "Orange",
+      "state": "FL",
+      "address": "8007 MEADOWGLEN DR",
+      "city": "ORLANDO",
+      "bid": 18262.68,
+      "just_value": 299800.0,
+      "ratio": 16.42,
+      "sale_date": "2026-11-05",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 14.77,
       "status": "pending"
     }
   ]
