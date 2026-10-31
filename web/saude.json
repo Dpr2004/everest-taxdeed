@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-30T19:24:06.750030+00:00",
+  "gerado_em": "2026-10-31T15:46:52.547883+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 553,
+    "total_lots_validos": 558,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 81
@@ -50,7 +50,7 @@
       },
       "decisoes": {
         "LANCE": 14,
-        "PASSA": 38,
+        "PASSA": 34,
         "REVISAR": 2
       },
       "quality_score": 85,
@@ -147,19 +147,19 @@
       "sales_futuras": 5,
       "proxima_sale": "2026-11-04",
       "ultima_sale": "2026-12-16",
-      "lots_validos": 54,
+      "lots_validos": 56,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 37.0,
+        "value_pct": 35.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "PASSA": 54
+        "PASSA": 56
       },
       "quality_score": 90,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 34/54 — Regrid/PA falhou"
+        "assessed/just_value missing em 36/56 — Regrid/PA falhou"
       ]
     },
     {
@@ -283,18 +283,18 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-11-05",
       "ultima_sale": "2026-12-10",
-      "lots_validos": 69,
+      "lots_validos": 72,
       "cobertura": {
-        "address_pct": 97.1,
-        "value_pct": 97.1,
+        "address_pct": 97.2,
+        "value_pct": 97.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 52,
+        "LANCE": 54,
         "REVISAR": 5,
-        "PASSA": 12
+        "PASSA": 13
       },
-      "quality_score": 98,
+      "quality_score": 99,
       "status": "verde",
       "issues": []
     },
@@ -415,8 +415,8 @@
       "nome": "Volusia County",
       "state": "FL",
       "url_sales": "https://volusia.realforeclose.com/",
-      "sales_futuras": 8,
-      "proxima_sale": "2026-10-30",
+      "sales_futuras": 7,
+      "proxima_sale": "2026-11-03",
       "ultima_sale": "2026-12-15",
       "lots_validos": 22,
       "cobertura": {
@@ -427,7 +427,7 @@
       "decisoes": {
         "LANCE": 6,
         "REVISAR": 1,
-        "PASSA": 7
+        "PASSA": 6
       },
       "quality_score": 98,
       "status": "verde",
@@ -440,15 +440,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-30 19:24:05",
+      "ran_at": "2026-10-31 15:46:51",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 553,
+      "items": 558,
       "errors": 0,
-      "ran_at": "2026-10-30 19:24:04",
+      "ran_at": "2026-10-31 15:46:50",
       "log": ""
     },
     {
@@ -456,7 +456,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-30 19:09:52",
+      "ran_at": "2026-10-31 15:32:38",
       "log": ""
     },
     {
@@ -464,7 +464,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-30 18:46:25",
+      "ran_at": "2026-10-31 15:11:46",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-10-30 18:46:25",
+      "ran_at": "2026-10-31 15:11:45",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,23 +480,23 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-30 18:41:17",
+      "ran_at": "2026-10-31 15:06:30",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 449,
+      "items": 370,
       "errors": 0,
-      "ran_at": "2026-10-30 18:29:04",
+      "ran_at": "2026-10-31 14:55:03",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 81,
+      "items": 51,
       "errors": 0,
-      "ran_at": "2026-10-30 18:28:13",
+      "ran_at": "2026-10-31 14:53:44",
       "log": ""
     },
     {
@@ -546,7 +546,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "HIGHLANDS",
-      "msg": "HIGHLANDS: assessed/just_value missing em 34/54 — Regrid/PA falhou"
+      "msg": "HIGHLANDS: assessed/just_value missing em 36/56 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
@@ -577,7 +577,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-10-30"
+    "gerado_em": "2026-10-31"
   },
   "analises_lotes": [
     {
