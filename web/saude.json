@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-31T18:24:49.209999+00:00",
+  "gerado_em": "2026-11-01T16:28:32.164328+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -9,7 +9,7 @@
     "condados_sem_atividade": 3,
     "total_lots_validos": 558,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 5,
+    "problemas_criticos": 6,
     "saude_geral_pct": 81
   },
   "condados": [
@@ -440,7 +440,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-31 18:24:48",
+      "ran_at": "2026-11-01 16:28:31",
       "log": ""
     },
     {
@@ -448,7 +448,7 @@
       "status": "success",
       "items": 558,
       "errors": 0,
-      "ran_at": "2026-10-31 18:24:47",
+      "ran_at": "2026-11-01 16:28:30",
       "log": ""
     },
     {
@@ -456,15 +456,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-31 18:10:34",
+      "ran_at": "2026-11-01 16:14:17",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 10,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-31 17:50:45",
+      "ran_at": "2026-11-01 15:51:19",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-10-31 17:50:45",
+      "ran_at": "2026-11-01 15:51:19",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,15 +480,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-10-31 17:45:30",
+      "ran_at": "2026-11-01 15:46:03",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 370,
+      "items": 369,
       "errors": 0,
-      "ran_at": "2026-10-31 17:34:17",
+      "ran_at": "2026-11-01 15:34:22",
       "log": ""
     },
     {
@@ -496,15 +496,7 @@
       "status": "success",
       "items": 51,
       "errors": 0,
-      "ran_at": "2026-10-31 17:33:20",
-      "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "success",
-      "items": 62,
-      "errors": 154,
-      "ran_at": "2026-10-31 15:57:19",
+      "ran_at": "2026-11-01 15:33:06",
       "log": ""
     }
   ],
@@ -513,6 +505,11 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
+      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -572,7 +569,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-10-31"
+    "gerado_em": "2026-11-01"
   },
   "analises_lotes": [
     {
