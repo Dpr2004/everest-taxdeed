@@ -1,10 +1,10 @@
 {
-  "gerado_em": "02/Nov/2026 19:51",
+  "gerado_em": "02/Nov/2026 23:05",
   "resumo": {
     "total_condados": 19,
     "total_sales": 57,
     "total_lots": 500,
-    "lances": 163,
+    "lances": 162,
     "estados": [
       "FL"
     ]
@@ -3878,28 +3878,6 @@
       "decisao_motivo": "parcial 0/11 agentes"
     },
     {
-      "id": 86378,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-11-18",
-      "parcel_id": "2605852",
-      "address": "6795 S TROPICAL TRL MERRITT IS",
-      "city": "MERRITT ISLAND",
-      "zip": "32952",
-      "min_bid": 124278.15,
-      "assessed_value": 155790.0,
-      "just_value": 363330.0,
-      "building_sqft": null,
-      "year_built": 2001,
-      "score": 90.0,
-      "roi": 0.7209,
-      "decisao": "LANCE",
-      "max_bid": 156887.96,
-      "profit": 129375.91,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 117631,
       "condado": "LAKE",
       "estado": "FL",
@@ -5634,28 +5612,6 @@
       "decisao": "PASSA",
       "max_bid": 25057.65,
       "profit": 8264.98,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 101231,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-11-18",
-      "parcel_id": "2108714",
-      "address": "6795 S TROPICAL TRL MERRITT IS",
-      "city": "TITUSVILLE",
-      "zip": "32796",
-      "min_bid": 239496.59,
-      "assessed_value": 155790.0,
-      "just_value": 363330.0,
-      "building_sqft": null,
-      "year_built": 2001,
-      "score": 24.7,
-      "roi": 0.048,
-      "decisao": "PASSA",
-      "max_bid": 156887.96,
-      "profit": 14157.47,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11622,6 +11578,28 @@
       "fema_risk": null
     },
     {
+      "id": 86378,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-11-18",
+      "parcel_id": "2605852",
+      "address": "6795 S TROPICAL TRL",
+      "city": "MERRITT ISLAND",
+      "zip": "32952",
+      "min_bid": 124278.15,
+      "assessed_value": 155790.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": 2001,
+      "score": 0.0,
+      "roi": -0.1991,
+      "decisao": "PASSA",
+      "max_bid": 29873.48,
+      "profit": -32920.37,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 125208,
       "condado": "BREVARD",
       "estado": "FL",
@@ -11794,6 +11772,28 @@
       "decisao": "PASSA",
       "max_bid": 41617.76,
       "profit": -75793.74,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 115823,
+      "condado": "BREVARD",
+      "estado": "FL",
+      "sale_date": "2026-12-16",
+      "parcel_id": "3004466",
+      "address": "701 SILVERTHORN CT",
+      "city": "BAREFOOT BAY",
+      "zip": "32976",
+      "min_bid": 187729.41,
+      "assessed_value": 157210.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.4162,
+      "decisao": "PASSA",
+      "max_bid": 30742.52,
+      "profit": -95261.19,
       "fema_zone": null,
       "fema_risk": null
     }
