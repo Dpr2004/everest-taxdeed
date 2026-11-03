@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-02",
+  "gerado_em": "2026-11-03",
   "total_candidatos": 30,
   "total_leiloes": 26,
   "ratio_minimo": 4.0,
@@ -100,6 +100,22 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 29.67,
+      "status": "pending"
+    },
+    {
+      "parcel": "2416682",
+      "county": "Brevard",
+      "state": "FL",
+      "address": "576 MASON DR TITUSVILLE FL 327",
+      "city": "COCOA",
+      "bid": 39774.71,
+      "just_value": 265980.0,
+      "ratio": 6.69,
+      "sale_date": "2026-11-04",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 6.69,
       "status": "pending"
     },
     {
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 14.56,
-      "status": "pending"
-    },
-    {
-      "parcel": "092529365300010060",
-      "county": "Osceola",
-      "state": "FL",
-      "address": "2620 MARTINA AVE",
-      "city": "KISSIMMEE",
-      "bid": 13457.91,
-      "just_value": 176375.0,
-      "ratio": 13.11,
-      "sale_date": "2026-11-10",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 13.11,
       "status": "pending"
     }
   ]
