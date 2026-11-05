@@ -1,43 +1,11 @@
 {
-  "gerado_em": "2026-11-04",
+  "gerado_em": "2026-11-05",
   "total_candidatos": 30,
   "total_leiloes": 24,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
   "lotes": [
-    {
-      "parcel": "2628400",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "1418 O'CONNER AVE",
-      "city": "MELBOURNE",
-      "bid": 10011.0,
-      "just_value": 297030.0,
-      "ratio": 29.67,
-      "sale_date": "2026-11-04",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 29.67,
-      "status": "pending"
-    },
-    {
-      "parcel": "2416682",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "576 MASON DR TITUSVILLE FL 327",
-      "city": "COCOA",
-      "bid": 39774.71,
-      "just_value": 265980.0,
-      "ratio": 6.69,
-      "sale_date": "2026-11-04",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 6.69,
-      "status": "pending"
-    },
     {
       "parcel": "272230041803161",
       "county": "Orange",
@@ -484,6 +452,38 @@
       "workers_score": 34.1,
       "workers_decision": "REVISAR",
       "ranking_score": 9.55,
+      "status": "pending"
+    },
+    {
+      "parcel": "192631495000010320",
+      "county": "Osceola",
+      "state": "FL",
+      "address": "3135 OLD HICKORY TREE RD",
+      "city": "SAINT CLOUD",
+      "bid": 12221.88,
+      "just_value": 103227.0,
+      "ratio": 8.45,
+      "sale_date": "2026-11-10",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 8.45,
+      "status": "pending"
+    },
+    {
+      "parcel": "0016800300",
+      "county": "Hillsborough",
+      "state": "FL",
+      "address": "17709 PATTERSON RD",
+      "city": "ODESSA",
+      "bid": 29640.04,
+      "just_value": 453352.0,
+      "ratio": 15.3,
+      "sale_date": "2026-11-12",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 13.0,
       "status": "pending"
     }
   ]
