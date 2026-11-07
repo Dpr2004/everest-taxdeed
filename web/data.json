@@ -1,8 +1,8 @@
 {
-  "gerado_em": "06/Nov/2026 20:40",
+  "gerado_em": "07/Nov/2026 16:02",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 51,
+    "total_sales": 50,
     "total_lots": 500,
     "lances": 145,
     "estados": [
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "02/Nov a 08/Nov/2026",
-      "sales": [
-        {
-          "id": 35782,
-          "data_fmt": "06/Nov/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "09/Nov a 15/Nov/2026",
@@ -5494,6 +5480,28 @@
       "fema_risk": null
     },
     {
+      "id": 135445,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-11-10",
+      "parcel_id": "252833000001610000",
+      "address": "KENANSVILLE RD",
+      "city": "KENANSVILLE",
+      "zip": "34739",
+      "min_bid": 867.25,
+      "assessed_value": 600.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9837,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30868.05,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 109199,
       "condado": "PUTNAM",
       "estado": "FL",
@@ -10730,6 +10738,28 @@
       "fema_risk": null
     },
     {
+      "id": 135468,
+      "condado": "LAKE",
+      "estado": "FL",
+      "sale_date": "2026-11-17",
+      "parcel_id": "07-15-27-070000001800",
+      "address": "54801 COUNTY ROAD 445A",
+      "city": "ASTOR",
+      "zip": "32102",
+      "min_bid": 13785.71,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.0236,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -1134.01,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 102761,
       "condado": "MARION",
       "estado": "FL",
@@ -11674,50 +11704,6 @@
       "profit": -75793.74,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 133072,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2027-01-06",
-      "parcel_id": "2205720",
-      "address": "2135 FAIRLANE DR",
-      "city": "TITUSVILLE",
-      "zip": "32780",
-      "min_bid": 184592.55,
-      "assessed_value": 138950.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4739,
-      "decisao": "PASSA",
-      "max_bid": 19567.4,
-      "profit": -106403.65,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 115823,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-12-16",
-      "parcel_id": "3004466",
-      "address": "701 SILVERTHORN CT",
-      "city": "BAREFOOT BAY",
-      "zip": "32976",
-      "min_bid": 187729.41,
-      "assessed_value": 157210.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4162,
-      "decisao": "PASSA",
-      "max_bid": 30742.52,
-      "profit": -95261.19,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11751,7 +11737,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 7,
-      "total_lots": 272
+      "total_lots": 274
     },
     {
       "codigo": "CITRUS",
@@ -11863,7 +11849,7 @@
       "horario_et": "11:15",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 70
+      "total_lots": 71
     },
     {
       "codigo": "LEE",
@@ -11943,7 +11929,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 2,
-      "total_lots": 110
+      "total_lots": 111
     },
     {
       "codigo": "PASCO",
@@ -12022,7 +12008,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 9,
+      "total_sales": 8,
       "total_lots": 195
     }
   ]
