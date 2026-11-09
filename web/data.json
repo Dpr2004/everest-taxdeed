@@ -1,10 +1,10 @@
 {
-  "gerado_em": "09/Nov/2026 20:06",
+  "gerado_em": "09/Nov/2026 23:45",
   "resumo": {
     "total_condados": 19,
     "total_sales": 53,
     "total_lots": 500,
-    "lances": 152,
+    "lances": 153,
     "estados": [
       "FL"
     ]
@@ -3406,6 +3406,28 @@
       "fema_risk": null
     },
     {
+      "id": 137881,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-12-17",
+      "parcel_id": "0733656000",
+      "address": "802 BLOOMINGDALE AVE",
+      "city": "BRANDON",
+      "zip": "33511",
+      "min_bid": 72534.48,
+      "assessed_value": 1060700.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 4.1481,
+      "decisao": "LANCE",
+      "max_bid": 583678.4,
+      "profit": 726462.92,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 137434,
       "condado": "BREVARD",
       "estado": "FL",
@@ -4882,6 +4904,28 @@
       "fema_risk": null
     },
     {
+      "id": 136992,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-11-10",
+      "parcel_id": "032528340700012200",
+      "address": "5367 W IRLO BRONSON MEMORIAL H",
+      "city": "KISSIMMEE",
+      "zip": "34746",
+      "min_bid": 4935.1,
+      "assessed_value": 53900.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 44.3,
+      "roi": 0.1726,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 6744.7,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 128949,
       "condado": "LAKE",
       "estado": "FL",
@@ -5252,28 +5296,6 @@
       "decisao": "PASSA",
       "max_bid": 107882.06,
       "profit": 11835.89,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 136992,
-      "condado": "OSCEOLA",
-      "estado": "FL",
-      "sale_date": "2026-11-10",
-      "parcel_id": "032528340700012200",
-      "address": "5367 W IRLO BRONSON MEMORIAL H",
-      "city": "KISSIMMEE",
-      "zip": "34746",
-      "min_bid": 4935.1,
-      "assessed_value": 49000.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 22.1,
-      "roi": 0.0752,
-      "decisao": "REVISAR",
-      "max_bid": 0.0,
-      "profit": 2912.9,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11722,28 +11744,6 @@
       "profit": -93343.3,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 137427,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2027-01-06",
-      "parcel_id": "28-37-20-75-99-40",
-      "address": "1471 SHEAFE AVE NE 106",
-      "city": "PALM BAY",
-      "zip": "32905",
-      "min_bid": 151754.67,
-      "assessed_value": 134180.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.404,
-      "decisao": "PASSA",
-      "max_bid": 16648.16,
-      "profit": -77295.91,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11873,7 +11873,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 6,
-      "total_lots": 351
+      "total_lots": 352
     },
     {
       "codigo": "LAKE",
