@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-08T19:02:57.122980+00:00",
+  "gerado_em": "2026-11-09T20:06:03.515904+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 2,
     "condados_vazios": 1,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 561,
+    "total_lots_validos": 570,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 6,
+    "problemas_criticos": 5,
     "saude_geral_pct": 86
   },
   "condados": [
@@ -42,15 +42,15 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-11-18",
       "ultima_sale": "2027-01-27",
-      "lots_validos": 86,
+      "lots_validos": 92,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 15,
-        "PASSA": 30,
+        "LANCE": 18,
+        "PASSA": 27,
         "REVISAR": 2
       },
       "quality_score": 85,
@@ -173,13 +173,13 @@
       "lots_validos": 85,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 96.5,
+        "value_pct": 98.8,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 48,
-        "REVISAR": 16,
-        "PASSA": 21
+        "LANCE": 49,
+        "REVISAR": 17,
+        "PASSA": 19
       },
       "quality_score": 99,
       "status": "verde",
@@ -283,14 +283,14 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-11-19",
       "ultima_sale": "2026-12-10",
-      "lots_validos": 58,
+      "lots_validos": 59,
       "cobertura": {
         "address_pct": 96.6,
         "value_pct": 96.6,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 39,
+        "LANCE": 40,
         "REVISAR": 6,
         "PASSA": 13
       },
@@ -306,18 +306,18 @@
       "sales_futuras": 2,
       "proxima_sale": "2026-11-10",
       "ultima_sale": "2026-12-15",
-      "lots_validos": 25,
+      "lots_validos": 26,
       "cobertura": {
-        "address_pct": 56.0,
-        "value_pct": 56.0,
+        "address_pct": 57.7,
+        "value_pct": 57.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 6,
-        "REVISAR": 3,
+        "LANCE": 8,
+        "REVISAR": 2,
         "PASSA": 16
       },
-      "quality_score": 84,
+      "quality_score": 85,
       "status": "verde",
       "issues": []
     },
@@ -326,18 +326,18 @@
       "nome": "Pasco County",
       "state": "FL",
       "url_sales": "https://pasco.realforeclose.com/",
-      "sales_futuras": 8,
+      "sales_futuras": 9,
       "proxima_sale": "2026-11-09",
       "ultima_sale": "2027-01-07",
-      "lots_validos": 24,
+      "lots_validos": 25,
       "cobertura": {
-        "address_pct": 95.8,
-        "value_pct": 95.8,
+        "address_pct": 96.0,
+        "value_pct": 96.0,
         "sqft_pct": 100.0
       },
       "decisoes": {
         "LANCE": 4,
-        "PASSA": 7
+        "PASSA": 6
       },
       "quality_score": 98,
       "status": "verde",
@@ -425,7 +425,7 @@
       "decisoes": {
         "LANCE": 7,
         "REVISAR": 1,
-        "PASSA": 5
+        "PASSA": 4
       },
       "quality_score": 98,
       "status": "verde",
@@ -438,15 +438,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-08 19:02:56",
+      "ran_at": "2026-11-09 20:06:02",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 561,
+      "items": 570,
       "errors": 0,
-      "ran_at": "2026-11-08 19:02:55",
+      "ran_at": "2026-11-09 20:06:01",
       "log": ""
     },
     {
@@ -454,7 +454,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-08 18:48:42",
+      "ran_at": "2026-11-09 19:51:49",
       "log": ""
     },
     {
@@ -462,7 +462,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-08 18:33:30",
+      "ran_at": "2026-11-09 19:36:24",
       "log": ""
     },
     {
@@ -470,7 +470,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-11-08 18:33:30",
+      "ran_at": "2026-11-09 19:36:24",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -478,32 +478,24 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-08 18:28:13",
+      "ran_at": "2026-11-09 19:31:09",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 391,
+      "items": 486,
       "errors": 0,
-      "ran_at": "2026-11-08 18:17:06",
+      "ran_at": "2026-11-09 19:18:56",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 49,
+      "items": 101,
       "errors": 0,
-      "ran_at": "2026-11-08 18:15:51",
+      "ran_at": "2026-11-09 19:18:00",
       "log": ""
-    },
-    {
-      "worker": "property_appraiser",
-      "status": "degraded",
-      "items": 50,
-      "errors": 135,
-      "ran_at": "2026-11-08 16:55:41",
-      "log": "DEGRADED: so 50/561 (9%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -511,11 +503,6 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
-    },
-    {
-      "severidade": "ALTA",
-      "categoria": "worker",
-      "msg": "Worker property_appraiser com status degraded (50 items, 135 erros) — DEGRADED: so 50/561 (9%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
@@ -574,7 +561,7 @@
     "candidatos": 30,
     "ratio_minimo": 4.0,
     "top_per_auction": 10,
-    "gerado_em": "2026-11-08"
+    "gerado_em": "2026-11-09"
   },
   "analises_lotes": [
     {
