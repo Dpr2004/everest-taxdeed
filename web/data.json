@@ -1,5 +1,5 @@
 {
-  "gerado_em": "10/Nov/2026 17:26",
+  "gerado_em": "10/Nov/2026 21:07",
   "resumo": {
     "total_condados": 19,
     "total_sales": 54,
@@ -12062,7 +12062,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 9,
-      "total_lots": 200
+      "total_lots": 201
     }
   ]
 }
