@@ -1,10 +1,10 @@
 {
-  "gerado_em": "09/Nov/2026 23:45",
+  "gerado_em": "10/Nov/2026 17:26",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 53,
+    "total_sales": 54,
     "total_lots": 500,
-    "lances": 153,
+    "lances": 154,
     "estados": [
       "FL"
     ]
@@ -13,32 +13,6 @@
     {
       "label": "09/Nov a 15/Nov/2026",
       "sales": [
-        {
-          "id": 26229,
-          "data_fmt": "09/Nov/2026",
-          "dia_semana": "Seg",
-          "condado": "PASCO",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://pasco.realforeclose.com/",
-          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        },
-        {
-          "id": 25735,
-          "data_fmt": "09/Nov/2026",
-          "dia_semana": "Seg",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        },
         {
           "id": 27152,
           "data_fmt": "10/Nov/2026",
@@ -62,6 +36,32 @@
           "plataforma": "RealTaxDeed",
           "url_sales": "https://hillsborough.realtaxdeed.com/",
           "url_clerk": "https://www.hillsclerk.com/Additional-Services/Foreclosures-and-Tax-Deeds",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 36618,
+          "data_fmt": "12/Nov/2026",
+          "dia_semana": "Qui",
+          "condado": "PASCO",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://pasco.realforeclose.com/",
+          "url_clerk": "https://www.pascoclerk.com/279/Tax-Deed-Sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 36640,
+          "data_fmt": "13/Nov/2026",
+          "dia_semana": "Sex",
+          "condado": "VOLUSIA",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealForeclose",
+          "url_sales": "https://volusia.realforeclose.com/",
+          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
           "status": "CONFIRMADO",
           "total_lots": 0
         }
@@ -594,6 +594,19 @@
           "plataforma": "RealForeclose",
           "url_sales": "https://brevard.realforeclose.com/",
           "url_clerk": "https://www.brevardclerk.us/tax-deed-sales",
+          "status": "CONFIRMADO",
+          "total_lots": 0
+        },
+        {
+          "id": 36610,
+          "data_fmt": "16/Dec/2026",
+          "dia_semana": "Qua",
+          "condado": "CITRUS",
+          "estado": "FL",
+          "horario": "Verificar",
+          "plataforma": "RealTaxDeed",
+          "url_sales": "https://citrus.realtaxdeed.com/",
+          "url_clerk": "https://www.citrusclerk.org/207/Tax-Deeds",
           "status": "CONFIRMADO",
           "total_lots": 0
         },
@@ -1510,6 +1523,28 @@
       "decisao": "LANCE",
       "max_bid": 21360.56,
       "profit": 69835.94,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 138348,
+      "condado": "HILLSBOROUGH",
+      "estado": "FL",
+      "sale_date": "2026-12-17",
+      "parcel_id": "0910030200",
+      "address": "2801 S WIGGINS RD",
+      "city": "PLANT CITY",
+      "zip": "33566",
+      "min_bid": 10674.16,
+      "assessed_value": 126845.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.1663,
+      "decisao": "LANCE",
+      "max_bid": 12159.14,
+      "profit": 58048.63,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -3274,28 +3309,6 @@
       "fema_risk": null
     },
     {
-      "id": 98574,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-11-09",
-      "parcel_id": "MULTIPLE PARCELS",
-      "address": null,
-      "city": null,
-      "zip": null,
-      "min_bid": 56893.64,
-      "assessed_value": null,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 90.0,
-      "roi": 0.881,
-      "decisao": "LANCE",
-      "max_bid": 73805.63,
-      "profit": 90599.67,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 123113,
       "condado": "LAKE",
       "estado": "FL",
@@ -3888,6 +3901,28 @@
       "decisao": "LANCE",
       "max_bid": 0.0,
       "profit": 33732.87,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 137959,
+      "condado": "PASCO",
+      "estado": "FL",
+      "sale_date": "2026-11-12",
+      "parcel_id": "15-26-16-004D-00000-9110",
+      "address": "7828 HARDWICK DR # 911",
+      "city": "NEW PORT RICHEY, 34653",
+      "zip": null,
+      "min_bid": 55587.19,
+      "assessed_value": null,
+      "just_value": 150438.0,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 87.6,
+      "roi": 0.328,
+      "decisao": "LANCE",
+      "max_bid": 26598.06,
+      "profit": 31585.33,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -4904,6 +4939,28 @@
       "fema_risk": null
     },
     {
+      "id": 137957,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-11-10",
+      "parcel_id": "032528340700014216",
+      "address": "5367 W IRLO BRONSON MEMORIAL H",
+      "city": "KISSIMMEE",
+      "zip": "34746",
+      "min_bid": 4921.92,
+      "assessed_value": 53900.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 44.4,
+      "roi": 0.173,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 6757.88,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 136992,
       "condado": "OSCEOLA",
       "estado": "FL",
@@ -4944,6 +5001,50 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": 8861.04,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 137958,
+      "condado": "OSCEOLA",
+      "estado": "FL",
+      "sale_date": "2026-11-10",
+      "parcel_id": "032528340700014223",
+      "address": "5367 W IRLO BRONSON MEMORIAL H",
+      "city": "KISSIMMEE",
+      "zip": "34746",
+      "min_bid": 5008.29,
+      "assessed_value": 53900.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 43.9,
+      "roi": 0.1704,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": 6671.51,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 137963,
+      "condado": "VOLUSIA",
+      "estado": "FL",
+      "sale_date": "2026-11-13",
+      "parcel_id": "423002000260",
+      "address": "327 TULIP TREE LN",
+      "city": "ORMOND BEACH",
+      "zip": "32174",
+      "min_bid": 156392.02,
+      "assessed_value": 268313.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 43.8,
+      "roi": 0.1119,
+      "decisao": "PASSA",
+      "max_bid": 98737.56,
+      "profit": 22958.75,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -8402,6 +8503,28 @@
       "fema_risk": null
     },
     {
+      "id": 138082,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-12-01",
+      "parcel_id": "21-45-27-11-00068.0060",
+      "address": "622 KELLER ST E",
+      "city": "LEHIGH ACRES",
+      "zip": "33974",
+      "min_bid": 2730.08,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7265,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -24660.39,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 99102,
       "condado": "LEE",
       "estado": "FL",
@@ -11526,28 +11649,6 @@
       "fema_risk": null
     },
     {
-      "id": 132210,
-      "condado": "PASCO",
-      "estado": "FL",
-      "sale_date": "2026-11-09",
-      "parcel_id": "08-26-20-0010-00000-3160",
-      "address": "29523 BENJAMIN DR",
-      "city": "WESLEY CHAPEL, 33543",
-      "zip": null,
-      "min_bid": 80265.62,
-      "assessed_value": null,
-      "just_value": 56250.0,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.5826,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -66748.12,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 126165,
       "condado": "VOLUSIA",
       "estado": "FL",
@@ -11592,24 +11693,24 @@
       "fema_risk": null
     },
     {
-      "id": 101206,
+      "id": 137961,
       "condado": "PASCO",
       "estado": "FL",
-      "sale_date": "2026-11-09",
-      "parcel_id": "15-26-21-012A-00000-0020",
-      "address": "4439 AUTUMN PALM DRIVE",
-      "city": "ZEPHYRHILLS, 33542",
+      "sale_date": "2026-11-12",
+      "parcel_id": "30-26-16-0200-00001-0030",
+      "address": "4037 SCARLET MAPLE DRIVE",
+      "city": "HOLIDAY, 34691",
       "zip": null,
-      "min_bid": 90630.45,
+      "min_bid": 87504.9,
       "assessed_value": null,
-      "just_value": 120392.0,
+      "just_value": 43370.0,
       "building_sqft": null,
       "year_built": null,
       "score": 0.0,
-      "roi": -0.2085,
+      "roi": -0.6951,
       "decisao": "PASSA",
-      "max_bid": 8209.9,
-      "profit": -26953.91,
+      "max_bid": 0.0,
+      "profit": -84059.56,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11656,94 +11757,6 @@
       "profit": -58627.93,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 121321,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-12-16",
-      "parcel_id": "2825452",
-      "address": "1204 E UNIVERSITY BLVD",
-      "city": "MELBOURNE",
-      "zip": "32901",
-      "min_bid": 123623.58,
-      "assessed_value": 167370.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.1403,
-      "decisao": "PASSA",
-      "max_bid": 36960.44,
-      "profit": -23210.24,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 86378,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-11-18",
-      "parcel_id": "2605852",
-      "address": "6795 S TROPICAL TRL",
-      "city": "MERRITT ISLAND",
-      "zip": "32952",
-      "min_bid": 124278.15,
-      "assessed_value": 155790.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": 2001,
-      "score": 0.0,
-      "roi": -0.1991,
-      "decisao": "PASSA",
-      "max_bid": 29873.48,
-      "profit": -32920.37,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 125208,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-12-16",
-      "parcel_id": "2105043",
-      "address": "3405 KIRBY DR",
-      "city": "TITUSVILLE",
-      "zip": "32796",
-      "min_bid": 134835.6,
-      "assessed_value": 151060.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.2687,
-      "decisao": "PASSA",
-      "max_bid": 26978.72,
-      "profit": -47176.68,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 101264,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2026-12-02",
-      "parcel_id": "2209077",
-      "address": "2483 COUNTRY CLUB DR C105",
-      "city": "TITUSVILLE",
-      "zip": "32780",
-      "min_bid": 142019.52,
-      "assessed_value": 101210.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.5204,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -93343.3,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11760,7 +11773,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 6,
+      "total_sales": 7,
       "total_lots": 0
     },
     {
@@ -11777,7 +11790,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 7,
-      "total_lots": 280
+      "total_lots": 281
     },
     {
       "codigo": "CITRUS",
@@ -11792,7 +11805,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 0,
+      "total_sales": 1,
       "total_lots": 0
     },
     {
@@ -11873,7 +11886,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 6,
-      "total_lots": 352
+      "total_lots": 353
     },
     {
       "codigo": "LAKE",
@@ -11905,7 +11918,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 5,
-      "total_lots": 277
+      "total_lots": 278
     },
     {
       "codigo": "LEVY",
@@ -11969,7 +11982,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 2,
-      "total_lots": 112
+      "total_lots": 114
     },
     {
       "codigo": "PASCO",
@@ -11985,7 +11998,7 @@
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 9,
-      "total_lots": 224
+      "total_lots": 227
     },
     {
       "codigo": "POLK",
@@ -12048,8 +12061,8 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 8,
-      "total_lots": 195
+      "total_sales": 9,
+      "total_lots": 200
     }
   ]
 }

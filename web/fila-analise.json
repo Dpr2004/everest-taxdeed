@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-09",
+  "gerado_em": "2026-11-10",
   "total_candidatos": 30,
   "total_leiloes": 24,
   "ratio_minimo": 4.0,
@@ -135,6 +135,22 @@
       "status": "pending"
     },
     {
+      "parcel": "032528340700014216",
+      "county": "Osceola",
+      "state": "FL",
+      "address": "5367 W IRLO BRONSON MEMORIAL H",
+      "city": "KISSIMMEE",
+      "bid": 4921.92,
+      "just_value": 53900.0,
+      "ratio": 10.95,
+      "sale_date": "2026-11-10",
+      "flood_zone": "",
+      "workers_score": 44.4,
+      "workers_decision": "REVISAR",
+      "ranking_score": 10.95,
+      "status": "pending"
+    },
+    {
       "parcel": "032528340700012200",
       "county": "Osceola",
       "state": "FL",
@@ -148,22 +164,6 @@
       "workers_score": 44.3,
       "workers_decision": "REVISAR",
       "ranking_score": 10.92,
-      "status": "pending"
-    },
-    {
-      "parcel": "192631495000010320",
-      "county": "Osceola",
-      "state": "FL",
-      "address": "3135 OLD HICKORY TREE RD",
-      "city": "SAINT CLOUD",
-      "bid": 12001.22,
-      "just_value": 103227.0,
-      "ratio": 8.6,
-      "sale_date": "2026-11-10",
-      "flood_zone": "",
-      "workers_score": 90.0,
-      "workers_decision": "LANCE",
-      "ranking_score": 8.6,
       "status": "pending"
     },
     {
