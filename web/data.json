@@ -1,10 +1,10 @@
 {
-  "gerado_em": "12/Nov/2026 17:59",
+  "gerado_em": "12/Nov/2026 21:30",
   "resumo": {
     "total_condados": 19,
     "total_sales": 54,
     "total_lots": 500,
-    "lances": 148,
+    "lances": 149,
     "estados": [
       "FL"
     ]
@@ -3393,6 +3393,28 @@
       "decisao": "LANCE",
       "max_bid": 54836.96,
       "profit": 39728.61,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 140199,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2027-01-12",
+      "parcel_id": "21-43-24-C1-00116.0080",
+      "address": "2417 LAURENTINA LN",
+      "city": "CAPE CORAL",
+      "zip": "33909",
+      "min_bid": 84548.1,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 90.0,
+      "roi": 1.0828,
+      "decisao": "LANCE",
+      "max_bid": 141503.75,
+      "profit": 149448.36,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -9185,6 +9207,28 @@
       "fema_risk": null
     },
     {
+      "id": 140077,
+      "condado": "LAKE",
+      "estado": "FL",
+      "sale_date": "2026-12-15",
+      "parcel_id": "05-24-25-000300003700",
+      "address": "STATE ROAD 33",
+      "city": "CLERMONT",
+      "zip": "34711",
+      "min_bid": 3948.66,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.6217,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -22067.25,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 117635,
       "condado": "LAKE",
       "estado": "FL",
@@ -11713,50 +11757,6 @@
       "profit": -96413.38,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 137427,
-      "condado": "BREVARD",
-      "estado": "FL",
-      "sale_date": "2027-01-06",
-      "parcel_id": "28-37-20-75-99-40",
-      "address": "1471 SHEAFE AVE NE 106",
-      "city": "PALM BAY",
-      "zip": "32905",
-      "min_bid": 151754.67,
-      "assessed_value": 134180.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.404,
-      "decisao": "PASSA",
-      "max_bid": 16648.16,
-      "profit": -77295.91,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
-      "id": 122762,
-      "condado": "PASCO",
-      "estado": "FL",
-      "sale_date": "2027-01-07",
-      "parcel_id": "15-25-16-0380-00000-2990",
-      "address": "10835 STAMFORD DR",
-      "city": "PORT RICHEY, 34668",
-      "zip": null,
-      "min_bid": 153435.69,
-      "assessed_value": null,
-      "just_value": 40970.0,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.8135,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -151867.15,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11902,7 +11902,7 @@
       "horario_et": "11:15",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 4,
-      "total_lots": 72
+      "total_lots": 73
     },
     {
       "codigo": "LEE",
@@ -11918,7 +11918,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 6,
-      "total_lots": 288
+      "total_lots": 289
     },
     {
       "codigo": "LEVY",
