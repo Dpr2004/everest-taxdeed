@@ -1,8 +1,8 @@
 {
-  "gerado_em": "13/Nov/2026 21:17",
+  "gerado_em": "14/Nov/2026 16:12",
   "resumo": {
     "total_condados": 19,
-    "total_sales": 52,
+    "total_sales": 51,
     "total_lots": 500,
     "lances": 144,
     "estados": [
@@ -12,21 +12,7 @@
   "semanas": [
     {
       "label": "09/Nov a 15/Nov/2026",
-      "sales": [
-        {
-          "id": 36640,
-          "data_fmt": "13/Nov/2026",
-          "dia_semana": "Sex",
-          "condado": "VOLUSIA",
-          "estado": "FL",
-          "horario": "Verificar",
-          "plataforma": "RealForeclose",
-          "url_sales": "https://volusia.realforeclose.com/",
-          "url_clerk": "https://www.clerk.org/courts/tax-deed-sales",
-          "status": "CONFIRMADO",
-          "total_lots": 0
-        }
-      ]
+      "sales": []
     },
     {
       "label": "16/Nov a 22/Nov/2026",
@@ -4693,28 +4679,6 @@
       "fema_risk": null
     },
     {
-      "id": 137963,
-      "condado": "VOLUSIA",
-      "estado": "FL",
-      "sale_date": "2026-11-13",
-      "parcel_id": "423002000260",
-      "address": "327 TULIP TREE LN",
-      "city": "ORMOND BEACH",
-      "zip": "32174",
-      "min_bid": 156392.02,
-      "assessed_value": 268313.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 43.8,
-      "roi": 0.1119,
-      "decisao": "PASSA",
-      "max_bid": 98737.56,
-      "profit": 22958.75,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 104255,
       "condado": "LEE",
       "estado": "FL",
@@ -5657,6 +5621,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -28301.5,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 141157,
+      "condado": "POLK",
+      "estado": "FL",
+      "sale_date": "2026-11-19",
+      "parcel_id": "25-25-06-0000-0003-3300",
+      "address": "POLK CITY, FL- 33868",
+      "city": null,
+      "zip": null,
+      "min_bid": 1022.69,
+      "assessed_value": 753.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.9797,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -30903.84,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -7333,6 +7319,28 @@
       "fema_risk": null
     },
     {
+      "id": 141176,
+      "condado": "LEE",
+      "estado": "FL",
+      "sale_date": "2026-12-01",
+      "parcel_id": "22-44-27-05-00017.013A",
+      "address": "1707 E 9TH ST",
+      "city": "LEHIGH ACRES",
+      "zip": "33972",
+      "min_bid": 2086.11,
+      "assessed_value": null,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.7859,
+      "decisao": "PASSA",
+      "max_bid": 0.0,
+      "profit": -26030.76,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
       "id": 114791,
       "condado": "BREVARD",
       "estado": "FL",
@@ -8257,28 +8265,6 @@
       "fema_risk": null
     },
     {
-      "id": 82118,
-      "condado": "FLAGLER",
-      "estado": "FL",
-      "sale_date": "2026-11-17",
-      "parcel_id": "0711317024000700120",
-      "address": "1 PRINCESS LUISE LN",
-      "city": "PALM COAST",
-      "zip": "32164",
-      "min_bid": 2830.7,
-      "assessed_value": 23581.0,
-      "just_value": null,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.4257,
-      "decisao": "REVISAR",
-      "max_bid": 0.0,
-      "profit": -14860.36,
-      "fema_zone": null,
-      "fema_risk": null
-    },
-    {
       "id": 109201,
       "condado": "PUTNAM",
       "estado": "FL",
@@ -8627,6 +8613,28 @@
       "decisao": "PASSA",
       "max_bid": 0.0,
       "profit": -30596.93,
+      "fema_zone": null,
+      "fema_risk": null
+    },
+    {
+      "id": 82118,
+      "condado": "FLAGLER",
+      "estado": "FL",
+      "sale_date": "2026-11-17",
+      "parcel_id": "0711317024000700120",
+      "address": "1PRINCESS LUISE LN",
+      "city": "PALM COAST",
+      "zip": "32164",
+      "min_bid": 3432.87,
+      "assessed_value": 23581.0,
+      "just_value": null,
+      "building_sqft": null,
+      "year_built": null,
+      "score": 0.0,
+      "roi": -0.4355,
+      "decisao": "REVISAR",
+      "max_bid": 0.0,
+      "profit": -15462.53,
       "fema_zone": null,
       "fema_risk": null
     },
@@ -11709,28 +11717,6 @@
       "profit": -77295.91,
       "fema_zone": null,
       "fema_risk": null
-    },
-    {
-      "id": 122762,
-      "condado": "PASCO",
-      "estado": "FL",
-      "sale_date": "2027-01-07",
-      "parcel_id": "15-25-16-0380-00000-2990",
-      "address": "10835 STAMFORD DR",
-      "city": "PORT RICHEY, 34668",
-      "zip": null,
-      "min_bid": 153435.69,
-      "assessed_value": null,
-      "just_value": 40970.0,
-      "building_sqft": null,
-      "year_built": null,
-      "score": 0.0,
-      "roi": -0.8135,
-      "decisao": "PASSA",
-      "max_bid": 0.0,
-      "profit": -151867.15,
-      "fema_zone": null,
-      "fema_risk": null
     }
   ],
   "condados": [
@@ -11892,7 +11878,7 @@
       "horario_et": "10:00",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 6,
-      "total_lots": 290
+      "total_lots": 291
     },
     {
       "codigo": "LEVY",
@@ -11988,7 +11974,7 @@
       "horario_et": "09:30",
       "cadencia_texto": "A verificar no site do clerk",
       "total_sales": 3,
-      "total_lots": 135
+      "total_lots": 136
     },
     {
       "codigo": "PUTNAM",
@@ -12035,7 +12021,7 @@
       "status": "CONFIRMADO",
       "horario_et": "Verificar",
       "cadencia_texto": "A verificar no site do clerk",
-      "total_sales": 9,
+      "total_sales": 8,
       "total_lots": 201
     }
   ]
