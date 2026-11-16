@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T19:49:53.891128+00:00",
+  "gerado_em": "2026-11-16T23:33:30.502977+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,9 +7,9 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 573,
+    "total_lots_validos": 577,
     "lots_com_verdict_lotes": 67,
-    "problemas_criticos": 5,
+    "problemas_criticos": 6,
     "saude_geral_pct": 75
   },
   "condados": [
@@ -42,14 +42,14 @@
       "sales_futuras": 7,
       "proxima_sale": "2026-11-18",
       "ultima_sale": "2027-01-27",
-      "lots_validos": 95,
+      "lots_validos": 98,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 100.0,
         "sqft_pct": 0.0
       },
       "decisoes": {
-        "LANCE": 19,
+        "LANCE": 18,
         "PASSA": 26,
         "REVISAR": 2
       },
@@ -193,7 +193,7 @@
       "sales_futuras": 4,
       "proxima_sale": "2026-11-17",
       "ultima_sale": "2026-12-15",
-      "lots_validos": 50,
+      "lots_validos": 51,
       "cobertura": {
         "address_pct": 100.0,
         "value_pct": 0.0,
@@ -202,12 +202,12 @@
       "decisoes": {
         "LANCE": 11,
         "REVISAR": 2,
-        "PASSA": 37
+        "PASSA": 38
       },
       "quality_score": 85,
       "status": "verde",
       "issues": [
-        "assessed/just_value missing em 50/50 — Regrid/PA falhou"
+        "assessed/just_value missing em 51/51 — Regrid/PA falhou"
       ]
     },
     {
@@ -440,15 +440,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-16 19:49:53",
+      "ran_at": "2026-11-16 23:33:29",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 573,
+      "items": 577,
       "errors": 0,
-      "ran_at": "2026-11-16 19:49:52",
+      "ran_at": "2026-11-16 23:33:27",
       "log": ""
     },
     {
@@ -456,15 +456,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-16 19:35:39",
+      "ran_at": "2026-11-16 23:19:15",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 8,
+      "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-16 19:19:30",
+      "ran_at": "2026-11-16 23:06:26",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-11-16 19:19:29",
+      "ran_at": "2026-11-16 23:06:26",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,15 +480,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-16 19:14:13",
+      "ran_at": "2026-11-16 23:01:10",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 463,
+      "items": 444,
       "errors": 0,
-      "ran_at": "2026-11-16 19:02:01",
+      "ran_at": "2026-11-16 22:48:58",
       "log": ""
     },
     {
@@ -496,7 +496,15 @@
       "status": "success",
       "items": 101,
       "errors": 0,
-      "ran_at": "2026-11-16 19:00:44",
+      "ran_at": "2026-11-16 22:47:55",
+      "log": ""
+    },
+    {
+      "worker": "property_appraiser",
+      "status": "success",
+      "items": 60,
+      "errors": 151,
+      "ran_at": "2026-11-16 20:49:19",
       "log": ""
     }
   ],
@@ -505,6 +513,11 @@
       "severidade": "ALTA",
       "categoria": "worker",
       "msg": "Worker regrid_enricher com status degraded (0 items, 1 erros) — DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Invest"
+    },
+    {
+      "severidade": "ALTA",
+      "categoria": "enrichment",
+      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
     },
     {
       "severidade": "ALTA",
@@ -539,7 +552,7 @@
       "severidade": "MEDIA",
       "categoria": "condado",
       "condado": "LAKE",
-      "msg": "LAKE: assessed/just_value missing em 50/50 — Regrid/PA falhou"
+      "msg": "LAKE: assessed/just_value missing em 51/51 — Regrid/PA falhou"
     },
     {
       "severidade": "MEDIA",
