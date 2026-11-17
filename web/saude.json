@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-17T18:47:49.609324+00:00",
+  "gerado_em": "2026-11-17T22:22:52.741779+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 12,
@@ -7,7 +7,7 @@
     "condados_vermelhos": 3,
     "condados_vazios": 0,
     "condados_sem_atividade": 3,
-    "total_lots_validos": 597,
+    "total_lots_validos": 610,
     "lots_com_verdict_lotes": 67,
     "problemas_criticos": 6,
     "saude_geral_pct": 75
@@ -50,7 +50,7 @@
       },
       "decisoes": {
         "LANCE": 18,
-        "PASSA": 21,
+        "PASSA": 17,
         "REVISAR": 2
       },
       "quality_score": 85,
@@ -167,21 +167,21 @@
       "nome": "Hillsborough County",
       "state": "FL",
       "url_sales": "https://hillsborough.realtaxdeed.com/",
-      "sales_futuras": 6,
+      "sales_futuras": 7,
       "proxima_sale": "2026-11-19",
-      "ultima_sale": "2027-01-28",
-      "lots_validos": 76,
+      "ultima_sale": "2027-02-04",
+      "lots_validos": 86,
       "cobertura": {
         "address_pct": 100.0,
-        "value_pct": 98.7,
+        "value_pct": 87.2,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 46,
-        "REVISAR": 14,
-        "PASSA": 14
+        "LANCE": 47,
+        "REVISAR": 15,
+        "PASSA": 18
       },
-      "quality_score": 99,
+      "quality_score": 98,
       "status": "verde",
       "issues": []
     },
@@ -270,7 +270,7 @@
       },
       "decisoes": {
         "REVISAR": 1,
-        "PASSA": 33
+        "PASSA": 32
       },
       "quality_score": 100,
       "status": "verde",
@@ -284,16 +284,16 @@
       "sales_futuras": 3,
       "proxima_sale": "2026-11-19",
       "ultima_sale": "2026-12-10",
-      "lots_validos": 63,
+      "lots_validos": 64,
       "cobertura": {
-        "address_pct": 96.8,
-        "value_pct": 96.8,
+        "address_pct": 96.9,
+        "value_pct": 96.9,
         "sqft_pct": 100.0
       },
       "decisoes": {
-        "LANCE": 42,
+        "LANCE": 43,
         "REVISAR": 8,
-        "PASSA": 12
+        "PASSA": 10
       },
       "quality_score": 98,
       "status": "verde",
@@ -331,10 +331,10 @@
       "sales_futuras": 8,
       "proxima_sale": "2026-11-18",
       "ultima_sale": "2027-01-07",
-      "lots_validos": 21,
+      "lots_validos": 23,
       "cobertura": {
-        "address_pct": 95.2,
-        "value_pct": 95.2,
+        "address_pct": 95.7,
+        "value_pct": 95.7,
         "sqft_pct": 100.0
       },
       "decisoes": {
@@ -440,15 +440,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-17 18:47:48",
+      "ran_at": "2026-11-17 22:22:52",
       "log": ""
     },
     {
       "worker": "scoring_engine",
       "status": "success",
-      "items": 597,
+      "items": 610,
       "errors": 0,
-      "ran_at": "2026-11-17 18:47:47",
+      "ran_at": "2026-11-17 22:22:51",
       "log": ""
     },
     {
@@ -456,15 +456,15 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-17 18:33:35",
+      "ran_at": "2026-11-17 22:08:38",
       "log": ""
     },
     {
       "worker": "pa_playwright_spa",
       "status": "success",
-      "items": 0,
+      "items": 6,
       "errors": 0,
-      "ran_at": "2026-11-17 18:17:11",
+      "ran_at": "2026-11-17 21:54:15",
       "log": ""
     },
     {
@@ -472,7 +472,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-11-17 18:17:11",
+      "ran_at": "2026-11-17 21:54:15",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -480,32 +480,32 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-17 18:11:55",
+      "ran_at": "2026-11-17 21:49:00",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 447,
+      "items": 463,
       "errors": 0,
-      "ran_at": "2026-11-17 17:59:42",
+      "ran_at": "2026-11-17 21:36:48",
       "log": ""
     },
     {
       "worker": "calendar_scraper",
       "status": "success",
-      "items": 103,
+      "items": 104,
       "errors": 0,
-      "ran_at": "2026-11-17 17:58:30",
+      "ran_at": "2026-11-17 21:35:59",
       "log": ""
     },
     {
       "worker": "property_appraiser",
-      "status": "success",
-      "items": 60,
-      "errors": 151,
-      "ran_at": "2026-11-16 20:49:19",
-      "log": ""
+      "status": "degraded",
+      "items": 44,
+      "errors": 133,
+      "ran_at": "2026-11-17 19:38:43",
+      "log": "DEGRADED: so 44/597 (7%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     }
   ],
   "problemas": [
@@ -516,8 +516,8 @@
     },
     {
       "severidade": "ALTA",
-      "categoria": "enrichment",
-      "msg": "PA Playwright SPA processou so 0 lots/run — patterns nao casam pra maioria dos condados"
+      "categoria": "worker",
+      "msg": "Worker property_appraiser com status degraded (44 items, 133 erros) — DEGRADED: so 44/597 (7%) processados. Esperado >10%. Provavel parser quebrado pra maioria dos condados."
     },
     {
       "severidade": "ALTA",
