@@ -439,6 +439,22 @@
       "status": "pending"
     },
     {
+      "parcel": "2111705",
+      "county": "Brevard",
+      "state": "FL",
+      "address": "4850 WHITE HERON LN MELBOURNE ",
+      "city": "",
+      "bid": 1640.52,
+      "just_value": 92730.0,
+      "ratio": 56.52,
+      "sale_date": "2026-12-10",
+      "flood_zone": "",
+      "workers_score": 90.0,
+      "workers_decision": "LANCE",
+      "ranking_score": 56.52,
+      "status": "pending"
+    },
+    {
       "parcel": "232429824500740",
       "county": "Orange",
       "state": "FL",
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 20.13,
-      "status": "pending"
-    },
-    {
-      "parcel": "2317337",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "337 RONALD ST",
-      "city": "COCOA",
-      "bid": 2977.07,
-      "just_value": 54780.0,
-      "ratio": 18.4,
-      "sale_date": "2026-12-10",
-      "flood_zone": "",
-      "workers_score": 62.2,
-      "workers_decision": "REVISAR",
-      "ranking_score": 18.4,
       "status": "pending"
     }
   ]
