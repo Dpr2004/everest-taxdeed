@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-21T17:17:14.979532+00:00",
+  "gerado_em": "2026-11-21T20:50:46.521033+00:00",
   "resumo": {
     "total_condados": 19,
     "condados_verdes": 13,
@@ -436,7 +436,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-21 17:17:14",
+      "ran_at": "2026-11-21 20:50:45",
       "log": ""
     },
     {
@@ -444,7 +444,7 @@
       "status": "success",
       "items": 480,
       "errors": 0,
-      "ran_at": "2026-11-21 17:17:13",
+      "ran_at": "2026-11-21 20:50:45",
       "log": ""
     },
     {
@@ -452,7 +452,7 @@
       "status": "running",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-21 17:03:00",
+      "ran_at": "2026-11-21 20:36:32",
       "log": ""
     },
     {
@@ -460,7 +460,7 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-21 16:43:15",
+      "ran_at": "2026-11-21 20:16:59",
       "log": ""
     },
     {
@@ -468,7 +468,7 @@
       "status": "degraded",
       "items": 0,
       "errors": 1,
-      "ran_at": "2026-11-21 16:43:14",
+      "ran_at": "2026-11-21 20:16:58",
       "log": "DEGRADED: 1 candidatos retornados pela query mas 0 processados (1 erros). Provavel: secret faltando, parser quebrado ou todos sites bloqueando. Investigar ANTES do proximo run."
     },
     {
@@ -476,15 +476,15 @@
       "status": "success",
       "items": 0,
       "errors": 0,
-      "ran_at": "2026-11-21 16:40:31",
+      "ran_at": "2026-11-21 20:11:42",
       "log": ""
     },
     {
       "worker": "lot_scraper_playwright",
       "status": "success",
-      "items": 321,
+      "items": 323,
       "errors": 0,
-      "ran_at": "2026-11-21 16:29:23",
+      "ran_at": "2026-11-21 20:00:28",
       "log": ""
     },
     {
@@ -492,7 +492,7 @@
       "status": "success",
       "items": 47,
       "errors": 0,
-      "ran_at": "2026-11-21 16:28:55",
+      "ran_at": "2026-11-21 19:59:12",
       "log": ""
     },
     {
@@ -500,7 +500,7 @@
       "status": "success",
       "items": 49,
       "errors": 143,
-      "ran_at": "2026-11-20 18:58:26",
+      "ran_at": "2026-11-21 17:53:04",
       "log": ""
     }
   ],
