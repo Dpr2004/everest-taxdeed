@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-23",
+  "gerado_em": "2026-11-24",
   "total_candidatos": 30,
   "total_leiloes": 18,
   "ratio_minimo": 4.0,
@@ -52,6 +52,38 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 6.01,
+      "status": "pending"
+    },
+    {
+      "parcel": "14-44-27-04-00016.0060",
+      "county": "Lee",
+      "state": "FL",
+      "address": "1312 COLUMBUS AVE",
+      "city": "LEHIGH ACRES",
+      "bid": 2977.81,
+      "just_value": 20995.0,
+      "ratio": 7.05,
+      "sale_date": "2026-12-01",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 5.99,
+      "status": "pending"
+    },
+    {
+      "parcel": "14-44-27-04-00016.0070",
+      "county": "Lee",
+      "state": "FL",
+      "address": "1310 COLUMBUS AVE",
+      "city": "LEHIGH ACRES",
+      "bid": 2977.81,
+      "just_value": 20995.0,
+      "ratio": 7.05,
+      "sale_date": "2026-12-01",
+      "flood_zone": "",
+      "workers_score": 0.0,
+      "workers_decision": "REVISAR",
+      "ranking_score": 5.99,
       "status": "pending"
     },
     {
@@ -132,22 +164,6 @@
       "workers_score": 0.0,
       "workers_decision": "REVISAR",
       "ranking_score": 3.92,
-      "status": "pending"
-    },
-    {
-      "parcel": "12-44-27-07-00027.001A",
-      "county": "Lee",
-      "state": "FL",
-      "address": "3700 E 19TH ST",
-      "city": "LEHIGH ACRES",
-      "bid": 2510.49,
-      "just_value": 10498.0,
-      "ratio": 4.18,
-      "sale_date": "2026-12-01",
-      "flood_zone": "",
-      "workers_score": 0.0,
-      "workers_decision": "REVISAR",
-      "ranking_score": 3.55,
       "status": "pending"
     },
     {
@@ -468,22 +484,6 @@
       "workers_score": 90.0,
       "workers_decision": "LANCE",
       "ranking_score": 20.13,
-      "status": "pending"
-    },
-    {
-      "parcel": "2317337",
-      "county": "Brevard",
-      "state": "FL",
-      "address": "337 RONALD ST",
-      "city": "COCOA",
-      "bid": 2977.07,
-      "just_value": 54780.0,
-      "ratio": 18.4,
-      "sale_date": "2026-12-10",
-      "flood_zone": "",
-      "workers_score": 62.2,
-      "workers_decision": "REVISAR",
-      "ranking_score": 18.4,
       "status": "pending"
     }
   ]
