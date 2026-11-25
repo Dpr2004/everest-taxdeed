@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-24",
+  "gerado_em": "2026-11-25",
   "total_candidatos": 30,
-  "total_leiloes": 20,
+  "total_leiloes": 21,
   "ratio_minimo": 4.0,
   "top_per_auction": 10,
   "max_bid_pct_market": "<= 50% just_value (ratio >= 2.0)",
@@ -471,19 +471,19 @@
       "status": "pending"
     },
     {
-      "parcel": "232429824500740",
-      "county": "Orange",
+      "parcel": "2111705",
+      "county": "Brevard",
       "state": "FL",
-      "address": "12313 GRECO DR",
-      "city": "ORLANDO",
-      "bid": 18671.7,
-      "just_value": 420418.0,
-      "ratio": 22.52,
+      "address": "900 PALM ST COCOA FL 32927",
+      "city": "",
+      "bid": 1640.52,
+      "just_value": 245450.0,
+      "ratio": 149.62,
       "sale_date": "2026-12-10",
       "flood_zone": "",
       "workers_score": 90.0,
       "workers_decision": "LANCE",
-      "ranking_score": 20.26,
+      "ranking_score": 149.62,
       "status": "pending"
     }
   ]
