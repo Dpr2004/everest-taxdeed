@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-25",
+  "gerado_em": "2026-11-26",
   "total_candidatos": 30,
   "total_leiloes": 21,
   "ratio_minimo": 4.0,
@@ -471,19 +471,19 @@
       "status": "pending"
     },
     {
-      "parcel": "2111705",
+      "parcel": "2429936",
       "county": "Brevard",
       "state": "FL",
       "address": "900 PALM ST COCOA FL 32927",
-      "city": "",
-      "bid": 1640.52,
+      "city": "CAPE CANAVERAL",
+      "bid": 5986.9,
       "just_value": 245450.0,
-      "ratio": 149.62,
+      "ratio": 41.0,
       "sale_date": "2026-12-10",
       "flood_zone": "",
       "workers_score": 90.0,
       "workers_decision": "LANCE",
-      "ranking_score": 149.62,
+      "ranking_score": 41.0,
       "status": "pending"
     }
   ]
