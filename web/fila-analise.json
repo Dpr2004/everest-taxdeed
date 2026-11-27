@@ -471,19 +471,19 @@
       "status": "pending"
     },
     {
-      "parcel": "2429936",
+      "parcel": "2428121",
       "county": "Brevard",
       "state": "FL",
-      "address": "900 PALM ST COCOA FL 32927",
-      "city": "CAPE CANAVERAL",
-      "bid": 5986.9,
-      "just_value": 245450.0,
-      "ratio": 41.0,
+      "address": "636 WISTERIA DR MELBOURNE FL 3",
+      "city": "",
+      "bid": 2125.42,
+      "just_value": 146600.0,
+      "ratio": 68.97,
       "sale_date": "2026-12-10",
       "flood_zone": "",
       "workers_score": 90.0,
       "workers_decision": "LANCE",
-      "ranking_score": 41.0,
+      "ranking_score": 68.97,
       "status": "pending"
     }
   ]
